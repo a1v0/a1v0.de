@@ -5,10 +5,10 @@ function Header() {
     return (
         <div className="Header">
             <nav className="max-width">
-                <ul>
-                    <li>Articles</li>
-                    <li>GitHub</li>
-                </ul>
+                <div className="logo">
+                    <a href="#">a1v0</a>
+                </div>
+                <div>Menu</div>
             </nav>
         </div>
     );
