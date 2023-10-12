@@ -12,7 +12,7 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 | Text (light) | #ffffff |
 | Background (white) | #ffffff |
 | Background (grey) | #f0f4f5 |
-| Brand colour | #85B09a[^1] |
+| Brand colour | #85b09a[^1] |
 | Accent colour | #ffc72c[^2] |
 
 [^1]: Cambridge blue
