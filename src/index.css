@@ -6,3 +6,8 @@
     --brand-colour: #85b09a;
     --accent-colour: #ffc72c;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+}
