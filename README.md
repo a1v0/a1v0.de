@@ -6,7 +6,7 @@ A simple blog site where I intend to add occasional help articles/notes/explaine
 
 I'm modelling my design on simple UK government websites like [GOV.UK](https://www.gov.uk/) and [NHS.UK](https://www.nhs.uk/). This is in part because I find the designs beautiful in their simplicity and in part because I am not much of a designer myself.
 
-| *Item* | *Colour (hex)* |
+| **Item** | **Colour (hex)** |
 | - | - |
 | Text (dark) | #000000 |
 | Text (light) | #ffffff |
