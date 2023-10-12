@@ -1,8 +1,17 @@
 import React from "react";
-import "./App.css";
+import "./Header.css";
 
 function Header() {
-    return <div className="Header"></div>;
+    return (
+        <div className="Header">
+            <nav className="max-width">
+                <ul>
+                    <li>Articles</li>
+                    <li>GitHub</li>
+                </ul>
+            </nav>
+        </div>
+    );
 }
 
 export default Header;
