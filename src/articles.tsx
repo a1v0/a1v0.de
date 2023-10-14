@@ -6,7 +6,11 @@ class Article {
 		this.path = path;
 
 		allArticles.push(this);
-	}
+	},
 
-	static allArticles = [];
+	static allArticles = [],
+
+	getContent() {
+		// promise or async method to retrieve contents of static article
+	}
 }
