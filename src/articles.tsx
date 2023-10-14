@@ -1,9 +1,9 @@
 class Article {
-	constructor (title, author = "a1v0", date, path) {
+	constructor (title, date, slug /* file name without extension */, author = "a1v0") {
 		this.title = title;
-		this.author = author;
 		this.date = date;
-		this.path = path;
+		this.slug = slug;
+		this.author = author;
 
 		allArticles.push(this);
 	},
@@ -14,3 +14,5 @@ class Article {
 		// promise or async method to retrieve contents of static article
 	}
 }
+
+const dummyArticle = new Article("Fake news!", "today", "test-article");
