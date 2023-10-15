@@ -21,13 +21,15 @@ function App() {
             <Menu />
             <h1>Hello!</h1>
             <p>The plan is as follows:</p>
-            <ol>
+            <ol style={{ marginLeft: "40px" }}>
                 <li style={{ textDecoration: "line-through" }}>
                     Create a colour scheme
                 </li>
                 <li>Create header bar</li>
                 <li>Create footer bar</li>
-                <li>Find way to import static HTML or markdown content</li>
+                <li style={{ textDecoration: "line-through" }}>
+                    Find way to import static HTML or markdown content
+                </li>
                 <li>
                     Parse static HTML using this
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
