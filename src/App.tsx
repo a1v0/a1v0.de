@@ -29,6 +29,10 @@ function App() {
                 <li>Create footer bar</li>
                 <li>Find way to import static HTML or markdown content</li>
                 <li>
+                    Parse static HTML using this
+                    https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
+                </li>
+                <li>
                     Enable server-side rendering (see
                     https://www.freecodecamp.org/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e)
                 </li>
