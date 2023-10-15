@@ -8,9 +8,11 @@ function App() {
     const [content, setContent] = useState("");
 
     useEffect(() => {
-        Article.allArticles[0].getContent().then((retrievedContent) => {
-            setContent(retrievedContent);
-        });
+        Article.allArticles[0]
+            .getContent()
+            .then(({ data: retrievedContent }) => {
+                setContent(retrievedContent);
+            });
     });
 
     return (
