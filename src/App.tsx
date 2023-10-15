@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Header";
 import Menu from "./Menu";
+import Article from "./articles";
 
 function App() {
+    const [content, setContent] = useState("");
+
+    useEffect(() => {
+        Article.allArticles[0].getContent().then((retrievedContent) => {
+            setContent(retrievedContent);
+        });
+    });
+
     return (
         <div className="App">
             <Header />
@@ -24,6 +33,7 @@ function App() {
                 <li>Find a way to do breadcrumbs with static content</li>
                 <li>Create table of contents component</li>
             </ol>
+            {content}
         </div>
     );
 }
