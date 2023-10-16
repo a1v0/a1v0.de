@@ -1,24 +1,8 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import Header from "./Header";
-import Menu from "./Menu";
-import Article from "./articles";
+import styles from "./page.module.css";
 
-function App() {
-    const [content, setContent] = useState("");
-
-    useEffect(() => {
-        Article.allArticles[0]
-            .getContent()
-            .then(({ data: retrievedContent }) => {
-                setContent(retrievedContent);
-            });
-    });
-
+export default function Home() {
     return (
-        <div className="App">
-            <Header />
-            <Menu />
+        <main className={styles.main}>
             <h1>Hello!</h1>
             <p>The plan is as follows:</p>
             <ol style={{ marginLeft: "40px" }}>
@@ -41,9 +25,6 @@ function App() {
                 <li>Find a way to do breadcrumbs with static content</li>
                 <li>Create table of contents component</li>
             </ol>
-            {content}
-        </div>
+        </main>
     );
 }
-
-export default App;
