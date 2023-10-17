@@ -1,32 +1,32 @@
 import Article from "@/app/articles";
-import { useEffect, useState } from "react";
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export function generateStaticParams() {
-    return Article.allArticles.map((article) => {
-        slug: article.slug;
-    });
+    const allSlugs = Object.keys(Article.allArticles);
+    return allSlugs;
+}
+
+async function getData(slug: string) {
+    return await Article.allArticles[slug].getContent();
 }
 
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
-export default function ArticlePage({
+export default async function ArticlePage({
     params
 }: {
-    params: any /* I know this is bad practice but I couldn't find the under-the-hood data type of params */;
+    params: any /* I know using 'any' is bad practice but I couldn't find the under-the-hood data type of `params` */;
 }) {
     const { slug } = params;
-    const currentArticle = Article.allArticles.find((article) => {
-        return (article.slug = slug);
-    });
 
-    currentArticle?.getContent().then(({ data }) => {
-        console.log(data);
-    });
+    const currentArticle = Article.allArticles[slug];
+
+    const articleContent = await getData(slug);
 
     return (
         <main>
-            <h1>{currentArticle?.title}</h1>
+            <h1>{currentArticle.title}</h1>
+            {articleContent}
         </main>
     );
 }
