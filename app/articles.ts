@@ -1,6 +1,10 @@
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:3000";
 
+interface ArticleIndex {
+    [key: string]: Article;
+}
+
 class Article {
     title: string;
     date: string;
@@ -18,10 +22,10 @@ class Article {
         this.slug = slug;
         this.author = author;
 
-        Article.allArticles.push(this);
+        Article.allArticles[this.slug] = this;
     }
 
-    static allArticles: Array<Article> = [];
+    static allArticles: ArticleIndex = {};
 
     getContent() {
         return axios.get("./articles/" + this.slug + ".txt");
