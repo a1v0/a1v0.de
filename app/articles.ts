@@ -33,6 +33,7 @@ class Article {
     }
 }
 
-const dummyArticle = new Article("Fake news!", "today", "test-article");
+const dummyArticle1 = new Article("Fake news!", "today", "test-article");
+const dummyArticle2 = new Article("Real news!", "today", "test-article1");
 
 export default Article;
