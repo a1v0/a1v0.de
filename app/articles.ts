@@ -27,8 +27,9 @@ class Article {
 
     static allArticles: ArticleIndex = {};
 
-    getContent() {
-        return axios.get("./articles/" + this.slug + ".txt");
+    async getContent() {
+        const content = await axios.get("./articles/" + this.slug + ".txt");
+        return content.data;
     }
 }
 
