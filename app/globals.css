@@ -19,3 +19,7 @@
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
+
+.brand-colour-background {
+    background-color: var(--brand-colour);
+}
