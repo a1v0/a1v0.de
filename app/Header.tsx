@@ -1,16 +1,19 @@
 import React from "react";
 import styles from "./Header.module.css";
+import Logo from "./Logo";
 
 function Header() {
     return (
-        <div className={styles.Header}>
-            <nav className="max-width">
-                <div className={styles.logo}>
-                    <a href="#">a1v0</a>
+        <header className={`${styles.Header} brand-colour-background`}>
+            <nav className="max-width navbar ">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="/">
+                        <Logo />
+                        a1v0.de
+                    </a>
                 </div>
-                <div>Menu</div>
             </nav>
-        </div>
+        </header>
     );
 }
 
