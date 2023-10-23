@@ -1,0 +1,12 @@
+.LogoLink div {
+    margin-right: 10px;
+    background-color: var(--accent-colour);
+    padding: 10px;
+    display: inline-block;
+    border-radius: 3px 20px 3px 20px;
+    transition: all 0.5s ease;
+}
+
+.LogoLink:hover div {
+    border-radius: 20px 3px 20px 3px;
+}
