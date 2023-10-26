@@ -23,5 +23,4 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 | Softer black       | `#2c2a29`[^2]    |
 
 [^1]: Cambridge blue
-
 [^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/app/uploads/2020/08/CUBC-Brand-Guidelines.pdf). Cambridge blue is difficult to match, so I took an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
