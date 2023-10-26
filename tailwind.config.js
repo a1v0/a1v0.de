@@ -18,7 +18,11 @@ module.exports = {
         fontFamily: {
             sans: ["Jost", "sans-serif"]
         },
-        extend: {}
+        extend: {
+            maxWidth: {
+                gutter: "960px"
+            }
+        }
     },
     plugins: []
 };
