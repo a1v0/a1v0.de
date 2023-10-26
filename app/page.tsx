@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -7,6 +6,7 @@ export default function Home() {
             <h1>Hello!</h1>
             <p>The plan is as follows:</p>
             <ol style={{ marginLeft: "40px" }}>
+                <li>Replace Bootstrap with Tailwind</li>
                 <li>Create header bar</li>
                 <li>Create footer bar</li>
                 <li>
