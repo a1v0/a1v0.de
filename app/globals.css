@@ -3,20 +3,12 @@
 @tailwind utilities;
 
 :root {
-    --text-dark: #000000;
-    --text-light: #ffffff;
-    --background-white: #ffffff;
-    --background-grey: #f0f4f5;
-    --brand-colour: #85b09a;
-    --accent-colour: #ffc72c;
-    --softer-black: #2c2a29;
     --content-max-width: 960px;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: "Jost", sans-serif;
     box-sizing: border-box;
 }
 
