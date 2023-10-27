@@ -3,8 +3,8 @@ import styles from "./LogoLink.module.css";
 
 export default function LogoLink() {
     return (
-        <a href="/">
-            <div className="mr-2.5 inline-block rounded-bl-2xl rounded-br rounded-tl rounded-tr-2xl bg-accent-colour p-2.5 transition-all duration-500 ease-in-out hover:rounded-bl hover:rounded-br-2xl hover:rounded-tl-2xl hover:rounded-tr">
+        <a href="/" className="group flex flex-row items-center text-xl font-medium">
+            <div className="mr-2.5 inline-block rounded-bl-2xl rounded-br rounded-tl rounded-tr-2xl bg-accent-colour p-2.5 transition-all duration-500 ease-in-out group-hover:rounded-bl group-hover:rounded-br-2xl group-hover:rounded-tl-2xl group-hover:rounded-tr">
                 <svg
                     viewBox="114 40.26 9.65 13.16" // calculated using https://codepen.io/mkmllr/pen/vpJmEK
                     style={{ height: "1.5rem" }}
