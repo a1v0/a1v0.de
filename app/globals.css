@@ -14,4 +14,34 @@
         @apply my-0;
         @apply max-w-gutter;
     }
+
+    h1 {
+        @apply font-medium;
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply font-medium;
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply font-medium;
+        @apply text-lg;
+    }
+
+    h4 {
+        @apply font-medium;
+        @apply text-base;
+    }
+
+    h5 {
+        @apply font-medium;
+        @apply text-sm;
+    }
+
+    h6 {
+        @apply font-medium;
+        @apply text-xs;
+    }
 }
