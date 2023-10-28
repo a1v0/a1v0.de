@@ -14,17 +14,23 @@ function Header() {
             "M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z";
     return (
         <header>
-            <nav className="bg-brand-colour p-1">
+            <nav className="bg-brand-colour">
                 <div className="clear-gutters flex items-stretch justify-between p-0">
-                    <div>
+                    <div className="py-1">
                         <LogoLink />
                     </div>
-                    <div>
+                    <div
+                        className={`border-y-4 ${
+                            showMenu
+                                ? "border-hidden bg-background-grey"
+                                : "border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour"
+                        }`}
+                    >
                         <button
                             onClick={() => {
                                 setShowMenu(!showMenu);
                             }}
-                            className="flex h-full w-full items-center border-x-2 border-y-4 border-x-softer-black border-y-brand-colour px-4 py-1 text-lg hover:border-y-4 hover:border-b-softer-black"
+                            className="flex h-full w-full items-center border-x-2 border-x-softer-black px-4 py-1 text-lg"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
