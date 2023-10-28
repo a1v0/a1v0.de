@@ -8,4 +8,10 @@
         @apply p-0;
         @apply box-border;
     }
+
+    .clear-gutters {
+        @apply mx-auto;
+        @apply my-0;
+        @apply max-w-gutter;
+    }
 }
