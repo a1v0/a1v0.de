@@ -7,8 +7,7 @@ export default function Logo() {
     return (
         <svg
             viewBox="114 40.26 9.65 13.16" // calculated using https://codepen.io/mkmllr/pen/vpJmEK
-            style={{ height: "1.5rem" }}
-            className="fill-softer-black"
+            className="h-6 fill-softer-black"
         >
             <path
                 xmlns="http://www.w3.org/2000/svg"
