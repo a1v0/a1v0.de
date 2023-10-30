@@ -13,6 +13,8 @@ export default function Home() {
                     Create Articles page to show list of all content, so it can
                     be spidered
                 </li>
+                <li>Make site mobile-friendly</li>
+                <li>Make site a11y-friendly</li>
                 <li>
                     Parse static HTML using this
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
