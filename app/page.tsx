@@ -6,9 +6,8 @@ export default function Home() {
             <h1>Hello!</h1>
             <p>The plan is as follows:</p>
             <ol style={{ marginLeft: "40px" }}>
-                <li>Create menu component</li>
-                <li>Create footer bar</li>
                 <li>Create home page</li>
+                <li>Add styling to menu links</li>
                 <li>
                     Create Articles page to show list of all content, so it can
                     be spidered
@@ -20,6 +19,12 @@ export default function Home() {
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
                 </li>
                 <li>Find a way to do breadcrumbs with static content</li>
+                <li style={{ textDecoration: "line-through" }}>
+                    Create menu component
+                </li>
+                <li style={{ textDecoration: "line-through" }}>
+                    Create footer bar
+                </li>
                 <li style={{ textDecoration: "line-through" }}>
                     Replace Bootstrap with Tailwind
                 </li>
