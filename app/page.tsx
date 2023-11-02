@@ -12,11 +12,22 @@ export default function Home() {
                     Create Articles page to show list of all content, so it can
                     be spidered
                 </li>
+                <li>Replace `a` tags with `Link` tags</li>
+                <li>
+                    Add sitemap
+                    https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
+                </li>
                 <li>Make site mobile-friendly</li>
-                <li>Make site a11y-friendly</li>
+                <li>Make site a11y-friendly, including with skip link</li>
                 <li>
                     Parse static HTML using this
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
+                    <ul>
+                        <li>
+                            Might be better as Markdown
+                            https://github.com/markedjs/marked
+                        </li>
+                    </ul>
                 </li>
                 <li>Find a way to do breadcrumbs with static content</li>
                 <li style={{ textDecoration: "line-through" }}>
