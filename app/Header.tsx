@@ -37,7 +37,7 @@ function Header() {
                                 viewBox="0 0 16 16"
                             >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d={
                                         showMenu
                                             ? upChevronPath

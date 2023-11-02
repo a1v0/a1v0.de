@@ -23,7 +23,7 @@ function Footer() {
                                     viewBox="0 0 100 100"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <path fill-rule="evenodd" d={gitHubPath} />
+                                    <path fillRule="evenodd" d={gitHubPath} />
                                 </svg>
                                 a1v0 on GitHub
                             </a>
