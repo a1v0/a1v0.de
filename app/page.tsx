@@ -1,11 +1,9 @@
-import styles from "./page.module.css";
-
 export default function Home() {
     return (
-        <main className={styles.main}>
+        <main>
             <h1>Hello!</h1>
             <p>The plan is as follows:</p>
-            <ol style={{ marginLeft: "40px" }}>
+            <ol className="ml-8">
                 <li>Create home page</li>
                 <li>Add styling to menu links</li>
                 <li>
@@ -32,26 +30,18 @@ export default function Home() {
                     </ul>
                 </li>
                 <li>Find a way to do breadcrumbs with static content</li>
-                <li style={{ textDecoration: "line-through" }}>
-                    Create menu component
-                </li>
-                <li style={{ textDecoration: "line-through" }}>
-                    Create footer bar
-                </li>
-                <li style={{ textDecoration: "line-through" }}>
+                <li className="line-through">Create menu component</li>
+                <li className="line-through">Create footer bar</li>
+                <li className="line-through">
                     Replace Bootstrap with Tailwind
                 </li>
-                <li style={{ textDecoration: "line-through" }}>
-                    Create header bar
-                </li>
-                <li style={{ textDecoration: "line-through" }}>
+                <li className="line-through">Create header bar</li>
+                <li className="line-through">
                     Enable server-side rendering (see
                     https://www.freecodecamp.org/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e)
                 </li>
-                <li style={{ textDecoration: "line-through" }}>
-                    Create a colour scheme
-                </li>
-                <li style={{ textDecoration: "line-through" }}>
+                <li className="line-through">Create a colour scheme</li>
+                <li className="line-through">
                     Find way to import static HTML or markdown content
                 </li>
             </ol>
