@@ -25,7 +25,9 @@ export default function Home() {
                     <ul>
                         <li>
                             Might be better as Markdown
-                            https://github.com/markedjs/marked
+                            https://github.com/markedjs/marked, but how will
+                            this work with, for example, adding classes for
+                            Highlight.js to work?
                         </li>
                     </ul>
                 </li>
