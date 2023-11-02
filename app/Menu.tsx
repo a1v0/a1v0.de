@@ -13,9 +13,9 @@ export default function Menu() {
                 <div className="flex-1">
                     <h2>Articles</h2>
                     <ul>
-                        {articles.map((article: Article) => {
+                        {articles.map((article: Article, index) => {
                             return (
-                                <li>
+                                <li key={index}>
                                     <a href={`/articles/${article.slug}`}>
                                         {article.title}
                                     </a>
