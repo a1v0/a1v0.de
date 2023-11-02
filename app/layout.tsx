@@ -28,9 +28,11 @@ export default function RootLayout({
                 />
             </head>
             <body>
-                <Header />
-                {children}
-                <Footer />
+                <div className="flex min-h-screen flex-col items-stretch justify-between">
+                    <Header />
+                    <div className="grow">{children}</div>
+                    <Footer />
+                </div>
             </body>
         </html>
     );
