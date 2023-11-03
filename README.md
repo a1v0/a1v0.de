@@ -21,6 +21,10 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 | Brand colour       | `#85b09a`[^1]    |
 | Accent colour      | `#ffc72c`[^2]    |
 | Softer black       | `#2c2a29`[^2]    |
+| Link               | `#1d70b8`[^3]    |
+| Link (hover)       | `#003078`[^3]    |
+| Link (visited)     | `#4c2c92`[^3]    |
 
-[^1]: Cambridge blue
+[^1]: Cambridge blue.
 [^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/app/uploads/2020/08/CUBC-Brand-Guidelines.pdf). Cambridge blue is difficult to match, so I took an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
+[^3]: Taken from GOV.UK.
