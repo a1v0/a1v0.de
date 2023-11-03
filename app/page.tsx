@@ -15,8 +15,6 @@ export default function Home() {
                 <h2>What to expect</h2>
                 <p></p>
             </article>
-            <h1>Hello!</h1>
-            <p>The plan is as follows:</p>
             <ol className="ml-8 list-decimal">
                 <li>Create home page</li>
                 <li>
@@ -28,11 +26,18 @@ export default function Home() {
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
                 </li>
                 <li>Make site mobile-friendly</li>
-                <li>Make site a11y-friendly, including with skip link</li>
+                <li>
+                    Make site a11y-friendly
+                    <ul className="ml-8 list-disc">
+                        <li>Semantic HTML</li>
+                        <li>Skip link</li>
+                        <li>Anything else</li>
+                    </ul>
+                </li>
                 <li>
                     Parse static HTML using this
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
-                    <ul>
+                    <ul className="ml-8 list-disc">
                         <li>
                             Might be better as Markdown
                             https://github.com/markedjs/marked, but how will
@@ -41,6 +46,7 @@ export default function Home() {
                         </li>
                     </ul>
                 </li>
+                <li>Attempt to use content tags</li>
                 <li>Find a way to do breadcrumbs with static content</li>
                 <li className="line-through">
                     Replace `a` tags with `Link` tags
