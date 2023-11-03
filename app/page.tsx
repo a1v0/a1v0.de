@@ -1,11 +1,24 @@
 export default function Home() {
     return (
         <main>
+            <div className="bg-accent-colour">
+                <header className="clear-gutters py-16">
+                    <h1 className="m-auto">
+                        <span className="block">a1v0.de</span>
+                        <span className="block lowercase text-softer-black">
+                            The wittering of someone you've never met.
+                        </span>
+                    </h1>
+                </header>
+            </div>
+            <article className="clear-gutters">
+                <h2>What to expect</h2>
+                <p></p>
+            </article>
             <h1>Hello!</h1>
             <p>The plan is as follows:</p>
-            <ol className="ml-8">
+            <ol className="ml-8 list-decimal">
                 <li>Create home page</li>
-                <li>Add styling to menu links</li>
                 <li>
                     Create Articles page to show list of all content, so it can
                     be spidered
@@ -32,6 +45,7 @@ export default function Home() {
                 <li className="line-through">
                     Replace `a` tags with `Link` tags
                 </li>
+                <li className="line-through">Add styling to menu links</li>
                 <li className="line-through">Create menu component</li>
                 <li className="line-through">Create footer bar</li>
                 <li className="line-through">
