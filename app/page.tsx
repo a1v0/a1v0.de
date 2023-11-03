@@ -13,7 +13,17 @@ export default function Home() {
             </div>
             <article className="clear-gutters">
                 <h2>What to expect</h2>
-                <p></p>
+                <p>
+                    Like all developers, I spend my life in agony. Hacking away
+                    through the jungle of bad documentation with my blunt
+                    machete, I curse the lack of information on whichever topic
+                    I am currently struggling with.
+                </p>
+                <p>
+                    On this site, I aim to post useful bits of knowledge about
+                    this and that, in the hope that I might spare another dev
+                    all the anguish that I go through.
+                </p>
             </article>
             <ol className="ml-8 list-decimal">
                 <li>Create home page</li>
