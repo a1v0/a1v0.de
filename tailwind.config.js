@@ -13,7 +13,10 @@ module.exports = {
             "background-grey": "#f0f4f5",
             "brand-colour": "#85b09a",
             "accent-colour": "#ffc72c",
-            "softer-black": "#2c2a29"
+            "softer-black": "#2c2a29",
+            "link-normal": "#1d70b8",
+            "link-hover": "#003078",
+            "link-visited": "#4c2c92"
         },
         fontFamily: {
             sans: ["Jost", "sans-serif"]
