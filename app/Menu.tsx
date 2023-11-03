@@ -1,5 +1,6 @@
 import React from "react";
 import Article from "@/app/articles";
+import Link from "next/link";
 
 export default function Menu() {
     const articles = [];
@@ -16,9 +17,9 @@ export default function Menu() {
                         {articles.map((article: Article, index) => {
                             return (
                                 <li key={index}>
-                                    <a href={`/articles/${article.slug}`}>
+                                    <Link href={`/articles/${article.slug}`}>
                                         {article.title}
-                                    </a>
+                                    </Link>
                                 </li>
                             );
                         })}
@@ -28,9 +29,9 @@ export default function Menu() {
                     <h2>Links</h2>
                     <ul>
                         <li>
-                            <a href="https://github.com/a1v0">
+                            <Link href="https://github.com/a1v0">
                                 GitHub [possibly also a link to this repo?]
-                            </a>
+                            </Link>
                         </li>
                         <li>[LinkedIn?]</li>
                     </ul>

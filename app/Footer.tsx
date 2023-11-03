@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./Logo";
+import Link from "next/link";
 
 function Footer() {
     const gitHubPath =
@@ -17,7 +18,10 @@ function Footer() {
                     <Logo height="h-9" />
                     <ul className="ml-3 border-l-2 border-l-softer-black pl-3">
                         <li>
-                            <a className="flex" href="https://github.com/a1v0/">
+                            <Link
+                                className="flex"
+                                href="https://github.com/a1v0/"
+                            >
                                 <svg
                                     className="mr-1 h-auto w-6  fill-softer-black"
                                     viewBox="0 0 100 100"
@@ -26,7 +30,7 @@ function Footer() {
                                     <path fillRule="evenodd" d={gitHubPath} />
                                 </svg>
                                 a1v0 on GitHub
-                            </a>
+                            </Link>
                         </li>
                         <li>[another link. Contact?]</li>
                     </ul>

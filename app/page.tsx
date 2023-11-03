@@ -10,7 +10,6 @@ export default function Home() {
                     Create Articles page to show list of all content, so it can
                     be spidered
                 </li>
-                <li>Replace `a` tags with `Link` tags</li>
                 <li>
                     Add sitemap
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
@@ -30,6 +29,9 @@ export default function Home() {
                     </ul>
                 </li>
                 <li>Find a way to do breadcrumbs with static content</li>
+                <li className="line-through">
+                    Replace `a` tags with `Link` tags
+                </li>
                 <li className="line-through">Create menu component</li>
                 <li className="line-through">Create footer bar</li>
                 <li className="line-through">
