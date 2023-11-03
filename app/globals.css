@@ -67,7 +67,7 @@
     a:active {
         @apply bg-accent-colour;
         @apply decoration-4;
-        @apply rounded;
+        @apply rounded-t;
         @apply text-text-dark;
     }
 }
