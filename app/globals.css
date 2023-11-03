@@ -19,6 +19,11 @@
         @apply max-w-gutter;
     }
 
+    p {
+        @apply mb-4;
+        @apply mt-2;
+    }
+
     h1,
     h2,
     h3,
