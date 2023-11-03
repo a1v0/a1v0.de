@@ -9,6 +9,10 @@
         @apply box-border;
     }
 
+    html {
+        @apply text-lg;
+    }
+
     .clear-gutters {
         @apply mx-auto;
         @apply my-0;
@@ -22,14 +26,15 @@
     h5,
     h6 {
         @apply font-medium;
+        @apply mt-8;
     }
 
     h1 {
-        @apply text-3xl;
+        @apply !text-6xl;
     }
 
     h2 {
-        @apply text-2xl;
+        @apply text-3xl;
     }
 
     h3 {
