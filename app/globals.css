@@ -47,4 +47,27 @@
     h6 {
         @apply text-xs;
     }
+
+    a {
+        @apply underline;
+        @apply decoration-1;
+        @apply text-[#1d70b8];
+    }
+
+    a:hover {
+        @apply underline;
+        @apply decoration-2;
+        @apply text-[#003078];
+    }
+
+    a:visited {
+        @apply text-[#4c2c92];
+    }
+
+    a:active {
+        @apply bg-accent-colour;
+        @apply decoration-4;
+        @apply rounded;
+        @apply text-text-dark;
+    }
 }
