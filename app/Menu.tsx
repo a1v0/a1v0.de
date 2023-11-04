@@ -1,23 +1,19 @@
 import React from "react";
-import Article from "@/app/articles";
 import Link from "next/link";
+import { compareDesc, format, parseISO } from "date-fns";
+import { allArticles, Article } from "contentlayer/generated";
 
 export default function Menu() {
-    const articles = [];
-    for (let article in Article.allArticles) {
-        articles.push(Article.allArticles[article]);
-    }
-
     return (
         <section className="bg-background-grey">
             <div className="clear-gutters flex justify-stretch py-8">
                 <div className="flex-1">
                     <h2>Articles</h2>
                     <ul>
-                        {articles.map((article: Article, index) => {
+                        {allArticles.map((article, index) => {
                             return (
                                 <li key={index}>
-                                    <Link href={`/articles/${article.slug}`}>
+                                    <Link href={article.url}>
                                         {article.title}
                                     </Link>
                                 </li>
