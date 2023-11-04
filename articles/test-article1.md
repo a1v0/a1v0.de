@@ -1,1 +1,0 @@
-This is no mere a test article! It's incredible!
