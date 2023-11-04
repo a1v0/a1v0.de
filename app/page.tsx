@@ -78,6 +78,7 @@ export default function Home() {
                         <li>Anything else</li>
                     </ul>
                 </li>
+                <li>{mvp} Add dynamic Head for SEO</li>
                 <li>
                     {mvp} Parse static HTML using this
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
@@ -88,8 +89,15 @@ export default function Home() {
                             this work with, for example, adding classes for
                             Highlight.js to work?
                         </li>
+                        <li>
+                            <strong>
+                                Decided to use Contentlayer because it's much
+                                better and supports the Link tag
+                            </strong>
+                        </li>
                     </ul>
                 </li>
+                <li>{mvp} Create 404 page</li>
                 <li>Attempt to use content tags</li>
                 <li>Find a way to do breadcrumbs with static content</li>
                 <li className="line-through">
