@@ -32,7 +32,7 @@ function Footer() {
                                 a1v0 on GitHub
                             </Link>
                         </li>
-                        <li>Site Map</li>
+                        <li>[Site Map]</li>
                         <li>[another link. Contact?]</li>
                     </ul>
                 </section>
