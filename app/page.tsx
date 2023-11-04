@@ -9,7 +9,7 @@ export default function Home() {
         <main>
             <div className="bg-accent-colour">
                 <header className="clear-gutters py-16">
-                    <h1 className="m-auto">
+                    <h1 className="m-auto p-0">
                         <span className="block">a1v0.de</span>
                         <span className="block lowercase text-softer-black">
                             The wittering of someone you've never met.
@@ -17,31 +17,59 @@ export default function Home() {
                     </h1>
                 </header>
             </div>
-            <article className="clear-gutters">
-                <h2>What to expect</h2>
-                <p>
-                    Like all developers, I spend my life in agony. Hacking away
-                    through the jungle of bad documentation with my blunt
-                    machete, I curse the lack of information on whichever topic
-                    I am currently struggling with.
-                </p>
-                <p>
-                    On this site, I aim to post useful bits of knowledge about
-                    this and that, in the hope that I might spare another dev
-                    all the anguish that I go through.
-                </p>
-            </article>
+            <div className="bg-background-white">
+                <article className="clear-gutters">
+                    <h2>What to expect</h2>
+                    <p>
+                        Like all developers, I spend my life in agony. Hacking
+                        away through the jungle of bad documentation with my
+                        blunt machete, I curse the lack of information on
+                        whichever topic I am currently struggling with.
+                    </p>
+                    <p>
+                        On this site, I aim to post useful bits of knowledge
+                        about this and that, in the hope that I might spare
+                        another dev all the anguish that I go through.
+                    </p>
+                </article>
+            </div>
+            <div className="bg-background-grey">
+                <article className="clear-gutters">
+                    <h2>What to expect</h2>
+                    <p>
+                        Like all developers, I spend my life in agony. Hacking
+                        away through the jungle of bad documentation with my
+                        blunt machete, I curse the lack of information on
+                        whichever topic I am currently struggling with.
+                    </p>
+                    <p>
+                        On this site, I aim to post useful bits of knowledge
+                        about this and that, in the hope that I might spare
+                        another dev all the anguish that I go through.
+                    </p>
+                </article>
+            </div>
             <ol className="ml-8 list-decimal">
                 <li>{mvp} Create home page</li>
                 <li>
                     Create Articles page to show list of all content, so it can
                     be spidered
                 </li>
+                <li>Add linting to repo</li>
                 <li>
                     {mvp} Add sitemap
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
                 </li>
                 <li>Make site mobile-friendly</li>
+                <li>
+                    Standardise padding and margins
+                    <ul className="ml-8 list-disc">
+                        <li>
+                            Create a class for full-width containers to add
+                            standard amounts of padding on top and bottom
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     Make site a11y-friendly
                     <ul className="ml-8 list-disc">
