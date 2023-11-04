@@ -59,6 +59,7 @@ export default function Home() {
                 <li>
                     {mvp} Add sitemap
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
+                    (or can Contentlayer do it for me?)
                 </li>
                 <li>Make site mobile-friendly</li>
                 <li>
@@ -70,6 +71,7 @@ export default function Home() {
                         </li>
                     </ul>
                 </li>
+                <li>Close Menu once link is clicked</li>
                 <li>
                     Make site a11y-friendly
                     <ul className="ml-8 list-disc">
@@ -79,29 +81,29 @@ export default function Home() {
                     </ul>
                 </li>
                 <li>{mvp} Add dynamic Head for SEO</li>
-                <li>
+                <li>{mvp} Create 404 page</li>
+                <li>Attempt to use content tags</li>
+                <li>Find a way to do breadcrumbs with static content</li>
+                <li className="line-through">
+                    {mvp} Replace `a` tags with `Link` tags
+                </li>
+                <li className="line-through">
                     {mvp} Parse static HTML using this
                     https://medium.com/@uigalaxy7/how-to-render-html-in-react-7f3c73f5cafc
                     <ul className="ml-8 list-disc">
-                        <li>
+                        <li className="line-through">
                             Might be better as Markdown
                             https://github.com/markedjs/marked, but how will
                             this work with, for example, adding classes for
                             Highlight.js to work?
                         </li>
-                        <li>
+                        <li className="line-through">
                             <strong>
                                 Decided to use Contentlayer because it's much
                                 better and supports the Link tag
                             </strong>
                         </li>
                     </ul>
-                </li>
-                <li>{mvp} Create 404 page</li>
-                <li>Attempt to use content tags</li>
-                <li>Find a way to do breadcrumbs with static content</li>
-                <li className="line-through">
-                    {mvp} Replace `a` tags with `Link` tags
                 </li>
                 <li className="line-through">Add styling to menu links</li>
                 <li className="line-through">{mvp} Create menu component</li>
