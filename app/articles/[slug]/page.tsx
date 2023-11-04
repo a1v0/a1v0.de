@@ -1,32 +1,39 @@
-import Article from "@/app/articles";
+import { format, parseISO } from "date-fns";
+import { allArticles } from "contentlayer/generated";
 
-// Return a list of `params` to populate the [slug] dynamic segment
-export function generateStaticParams() {
-    const allSlugs = Object.keys(Article.allArticles);
-    return allSlugs;
-}
+export const generateStaticParams = async () =>
+    allArticles.map((article) => ({ slug: article._raw.flattenedPath }));
 
-async function getData(slug: string) {
-    return await Article.allArticles[slug].getContent();
-}
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+    const post = allArticles.find(
+        (post) => post._raw.flattenedPath === params.slug
+    );
+    if (!post) {
+        throw new Error(`Post not found for slug: ${params.slug}`);
+    }
+    return { title: post.title };
+};
 
-// Multiple versions of this page will be statically generated
-// using the `params` returned by `generateStaticParams`
-export default async function ArticlePage({
-    params
-}: {
-    params: any /* I know using 'any' is bad practice but I couldn't find the under-the-hood data type of `params` */;
-}) {
-    const { slug } = params;
-
-    const currentArticle = Article.allArticles[slug];
-
-    const articleContent = await getData(slug);
+const PostLayout = ({ params }: { params: { slug: string } }) => {
+    const post = allArticles.find(
+        (post) => post._raw.flattenedPath === params.slug
+    );
+    if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
     return (
-        <main>
-            <h1>{currentArticle.title}</h1>
-            {articleContent}
-        </main>
+        <article>
+            <div>
+                <h1>{post.title}</h1>
+                <time dateTime={post.date}>
+                    {format(parseISO(post.date), "LLLL d, yyyy")}
+                </time>
+            </div>
+            <div
+                className="[&>*:last-child]:mb-0 [&>*]:mb-3"
+                dangerouslySetInnerHTML={{ __html: post.body.html }}
+            />
+        </article>
     );
-}
+};
+
+export default PostLayout;
