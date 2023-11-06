@@ -31,27 +31,32 @@ export default function Home() {
                         about this and that, in the hope that I might spare
                         another dev all the anguish that I go through.
                     </p>
+                    <h2>Semper idem</h2>
+                    <p>
+                        I don't revise or update my writings once published, if
+                        I can avoid it. In other words, there is a chance that
+                        my content is out of date when you read it&mdash;bugs
+                        get fixed, software gets updated, but my site stays as
+                        it always was. There's also a chance that what I write
+                        is inaccurate, though I do try to verify what I write as
+                        best as possible.
+                    </p>
                 </article>
             </div>
             <div className="bg-background-grey">
                 <article className="clear-gutters">
-                    <h2>What to expect</h2>
+                    <h2>About me</h2>
                     <p>
-                        Like all developers, I spend my life in agony. Hacking
-                        away through the jungle of bad documentation with my
-                        blunt machete, I curse the lack of information on
-                        whichever topic I am currently struggling with.
-                    </p>
-                    <p>
-                        On this site, I aim to post useful bits of knowledge
-                        about this and that, in the hope that I might spare
-                        another dev all the anguish that I go through.
+                        I'm a humble 1X programmer (you read that right), but
+                        I'm keen as hell; I'm always down to learn something
+                        new. My current interests include C# and a11y, but I
+                        also care deeply about the difference between the -,
+                        &ndash; and &mdash; characters.
                     </p>
                 </article>
             </div>
             <ol className="ml-8 list-decimal">
                 <li>{mvp} Add dynamic Head for SEO</li>
-                <li>{mvp} Create home page</li>
                 <li>
                     {mvp} Add sitemap
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
@@ -59,6 +64,7 @@ export default function Home() {
                 </li>
                 <li>Make site mobile-friendly</li>
                 <li>Add linting to repo</li>
+                <li>Add disclaimers etc.</li>
                 <li>
                     Standardise padding and margins
                     <ul className="ml-8 list-disc">
@@ -68,6 +74,7 @@ export default function Home() {
                         </li>
                     </ul>
                 </li>
+                <li>Apply normal default padding on h and p tags</li>
                 <li>
                     Create Articles page to show list of all content, so it can
                     be spidered
@@ -83,6 +90,7 @@ export default function Home() {
                         <li>Anything else</li>
                     </ul>
                 </li>
+                <li className="line-through">{mvp} Create home page</li>
                 <li className="line-through">
                     {mvp} Replace `a` tags with `Link` tags
                 </li>
