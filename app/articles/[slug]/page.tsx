@@ -1,5 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { allArticles } from "contentlayer/generated";
+import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () =>
     allArticles.map((article) => ({ slug: article._raw.flattenedPath }));
@@ -9,7 +10,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
         (post) => post._raw.flattenedPath === params.slug
     );
     if (!post) {
-        throw new Error(`Post not found for slug: ${params.slug}`);
+        return notFound();
     }
     return { title: post.title };
 };
@@ -18,7 +19,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
     const post = allArticles.find(
         (post) => post._raw.flattenedPath === params.slug
     );
-    if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+    if (!post) {
+        return notFound();
+    }
 
     return (
         <article>
