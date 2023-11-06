@@ -50,18 +50,15 @@ export default function Home() {
                 </article>
             </div>
             <ol className="ml-8 list-decimal">
+                <li>{mvp} Add dynamic Head for SEO</li>
                 <li>{mvp} Create home page</li>
-                <li>
-                    Create Articles page to show list of all content, so it can
-                    be spidered
-                </li>
-                <li>Add linting to repo</li>
                 <li>
                     {mvp} Add sitemap
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
                     (or can Contentlayer do it for me?)
                 </li>
                 <li>Make site mobile-friendly</li>
+                <li>Add linting to repo</li>
                 <li>
                     Standardise padding and margins
                     <ul className="ml-8 list-disc">
@@ -71,6 +68,12 @@ export default function Home() {
                         </li>
                     </ul>
                 </li>
+                <li>
+                    Create Articles page to show list of all content, so it can
+                    be spidered
+                </li>
+                <li>Attempt to use content tags</li>
+                <li>Find a way to do breadcrumbs with static content</li>
                 <li>Close Menu once link is clicked</li>
                 <li>
                     Make site a11y-friendly
@@ -80,10 +83,6 @@ export default function Home() {
                         <li>Anything else</li>
                     </ul>
                 </li>
-                <li>{mvp} Add dynamic Head for SEO</li>
-                <li>{mvp} Create 404 page</li>
-                <li>Attempt to use content tags</li>
-                <li>Find a way to do breadcrumbs with static content</li>
                 <li className="line-through">
                     {mvp} Replace `a` tags with `Link` tags
                 </li>
@@ -105,6 +104,7 @@ export default function Home() {
                         </li>
                     </ul>
                 </li>
+                <li className="line-through">{mvp} Create 404 page</li>
                 <li className="line-through">Add styling to menu links</li>
                 <li className="line-through">{mvp} Create menu component</li>
                 <li className="line-through">{mvp} Create footer bar</li>
