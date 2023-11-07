@@ -44,7 +44,7 @@ export default function Home() {
                 </article>
             </div>
             <div className="bg-background-grey">
-                <article className="clear-gutters">
+                <article className="clear-gutters py-1">
                     <h2>About me</h2>
                     <p>
                         I'm a humble 1X programmer (you read that right), but
@@ -62,26 +62,24 @@ export default function Home() {
                     https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
                     (or can Contentlayer do it for me?)
                 </li>
+                <li>
+                    {mvp} Ensure all Markdown elements (lists, blockquotes,
+                    tables etc.) have good default styles
+                </li>
                 <li>Make site mobile-friendly</li>
                 <li>Add linting to repo</li>
                 <li>Add disclaimers etc.</li>
                 <li>
-                    Standardise padding and margins
-                    <ul className="ml-8 list-disc">
-                        <li>
-                            Create a class for full-width containers to add
-                            standard amounts of padding on top and bottom
-                        </li>
-                    </ul>
-                </li>
-                <li>Apply normal default padding on h and p tags</li>
-                <li>
                     Create Articles page to show list of all content, so it can
                     be spidered
                 </li>
-                <li>Attempt to use content tags</li>
+                <li>
+                    Attempt to use content tags (I think Contentlayer can do
+                    this)
+                </li>
+                <li>Deploy on AWS?</li>
                 <li>Find a way to do breadcrumbs with static content</li>
-                <li>Close Menu once link is clicked</li>
+                <li>Close Menu once page content changes</li>
                 <li>
                     Make site a11y-friendly
                     <ul className="ml-8 list-disc">
@@ -128,6 +126,12 @@ export default function Home() {
                 <li className="line-through">{mvp} Create a colour scheme</li>
                 <li className="line-through">
                     {mvp} Find way to import static HTML or markdown content
+                </li>
+                <li className="line-through">
+                    Standardise padding and margins
+                </li>
+                <li className="line-through">
+                    Apply normal default padding on h and p tags
                 </li>
             </ol>
         </main>
