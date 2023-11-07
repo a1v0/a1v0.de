@@ -6,9 +6,9 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 ## Structure
 
-The frontend is made with Next and TypeScript. For now, I intend to store articles as local text/HTML files in this repo, but I may in future create a NoSQL API to serve these articles. A 'database' of articles is stored in `app/articles.ts`. The database contains various data about the articles (title, slug etc.) but the article's content itself is loaded via an asynchronous Axios `GET` request. To ensure server-side rendering works, therefore, I am using Next's `getStaticProps`.
+The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using [Contentlayer](https://contentlayer.dev/). This brilliant tool handles pretty much everything for me. I think (though don't understand Next enough to verify at present) that it even creates static HTML files for these during the build process. This means, I presume, that the content pages will be loaded statically rather than dynamically. Pretty neat!
 
-## Colour scheme
+## Colour scheme and design
 
 I'm modelling my design on simple UK government websites like [GOV.UK](https://www.gov.uk/) and [NHS.UK](https://www.nhs.uk/). This is in part because I find the designs beautiful in their simplicity and in part because I am not much of a designer myself.
 
