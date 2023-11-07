@@ -20,8 +20,9 @@
     }
 
     p {
-        @apply mb-4;
-        @apply mt-2;
+        /* @apply mb-4;
+        @apply mt-2; */
+        @apply my-[1em];
     }
 
     h1,
@@ -31,31 +32,36 @@
     h5,
     h6 {
         @apply font-medium;
-        @apply mt-8;
     }
 
     h1 {
-        @apply !text-6xl;
+        @apply text-6xl;
+        @apply my-[0.67em];
     }
 
     h2 {
         @apply text-3xl;
+        @apply my-[0.83em];
     }
 
     h3 {
         @apply text-lg;
+        @apply my-[1em];
     }
 
     h4 {
         @apply text-base;
+        @apply my-[1.33em];
     }
 
     h5 {
         @apply text-sm;
+        @apply my-[1.67em];
     }
 
     h6 {
         @apply text-xs;
+        @apply my-[2.33em];
     }
 
     a {
