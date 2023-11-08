@@ -56,15 +56,8 @@ export default function Home() {
                 </article>
             </div>
             <ol className="ml-8 list-decimal">
-                <li>{mvp} Add dynamic Head for SEO</li>
                 <li>
-                    {mvp} Add sitemap
-                    https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
-                    (or can Contentlayer do it for me?)
-                </li>
-                <li>
-                    {mvp} Ensure all Markdown elements (lists, blockquotes,
-                    tables etc.) have good default styles
+                    {mvp} Add synamic sitemap. This gives an indication: https://gist.github.com/ChangoMan/824daa0b4fbd6f824d2e8a2ab1532006 In essence, it's only partially dynamic. Any static content (e.g. contact us, home, privacy policy etc.) needs to be manually included in the map.
                 </li>
                 <li>Make site mobile-friendly</li>
                 <li>Add linting to repo</li>
@@ -79,7 +72,6 @@ export default function Home() {
                 </li>
                 <li>Deploy on AWS?</li>
                 <li>Find a way to do breadcrumbs with static content</li>
-                <li>Close Menu once page content changes</li>
                 <li>
                     Make site a11y-friendly
                     <ul className="ml-8 list-disc">
@@ -88,6 +80,15 @@ export default function Home() {
                         <li>Anything else</li>
                     </ul>
                 </li>
+                <li className="line-through">
+                    {mvp} Add dynamic Head for SEO (
+                    <strong>
+                        achieved through dynamic page titles. Don't think I need
+                        the rest
+                    </strong>
+                    )
+                </li>
+                <li className="line-through">Close Menu once path changes</li>
                 <li className="line-through">{mvp} Create home page</li>
                 <li className="line-through">
                     {mvp} Replace `a` tags with `Link` tags
@@ -116,6 +117,10 @@ export default function Home() {
                 <li className="line-through">{mvp} Create footer bar</li>
                 <li className="line-through">
                     Replace Bootstrap with Tailwind
+                </li>
+                <li className="line-through">
+                    {mvp} Ensure all Markdown elements (lists, blockquotes,
+                    tables etc.) have good default styles
                 </li>
                 <li className="line-through">{mvp} Create header bar</li>
                 <li className="line-through">
