@@ -116,4 +116,13 @@
         @apply px-6;
         @apply !my-10;
     }
+
+    code {
+        @apply rounded-md;
+        @apply bg-background-grey;
+        @apply px-1;
+        @apply py-px;
+        @apply mx-px;
+        @apply font-mono;
+    }
 }

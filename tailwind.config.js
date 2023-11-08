@@ -19,7 +19,17 @@ module.exports = {
             "link-visited": "#4c2c92"
         },
         fontFamily: {
-            sans: ["Jost", "sans-serif"]
+            sans: ["Jost", "sans-serif"],
+            mono: [
+                "ui-monospace",
+                "SFMono-Regular",
+                "Menlo",
+                "Monaco",
+                "Consolas",
+                "Liberation Mono",
+                "Courier New",
+                "monospace"
+            ]
         },
         extend: {
             maxWidth: {
