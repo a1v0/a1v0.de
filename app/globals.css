@@ -10,7 +10,7 @@
     }
 
     html {
-        @apply text-lg;
+        @apply text-xl;
     }
 
     .clear-gutters {
@@ -33,37 +33,37 @@
     }
 
     h1 {
-        @apply text-6xl;
+        @apply text-5xl;
         @apply mt-6;
         @apply mb-5;
     }
 
     h2 {
-        @apply text-3xl;
+        @apply text-4xl;
         @apply mt-5;
         @apply mb-4;
     }
 
     h3 {
-        @apply text-2xl;
+        @apply text-3xl;
         @apply mt-4;
         @apply mb-3;
     }
 
     h4 {
-        @apply text-xl;
+        @apply text-2xl;
         @apply mt-3;
         @apply mb-2;
     }
 
     h5 {
-        @apply text-lg;
+        @apply text-xl;
         @apply mt-2;
         @apply mb-1;
     }
 
     h6 {
-        @apply text-base;
+        @apply text-lg;
         @apply mt-1;
         @apply mb-0;
     }
