@@ -12,7 +12,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     if (!post) {
         return notFound();
     }
-    return { title: post.title };
+    return { title: `${post.title} | a1v0.de` };
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
