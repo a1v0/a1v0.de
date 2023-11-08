@@ -16,7 +16,7 @@ function Footer() {
                 </section>
                 <section className="flex items-center">
                     <Logo height="h-9" />
-                    <ul className="ml-3 border-l-2 border-l-softer-black pl-3">
+                    <ul className="flush !ml-3 border-l-2 border-l-softer-black pl-3">
                         <li>
                             <Link
                                 className="flex"

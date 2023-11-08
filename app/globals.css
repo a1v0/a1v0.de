@@ -110,6 +110,15 @@
         @apply my-2;
     }
 
+    ul.flush {
+        @apply list-none;
+        @apply m-0;
+    }
+
+    ul.flush li {
+        @apply m-0;
+    }
+
     blockquote {
         @apply border-l-[12px];
         @apply border-brand-colour;

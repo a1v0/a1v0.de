@@ -9,7 +9,7 @@ export default function Menu() {
             <div className="clear-gutters flex justify-stretch py-8">
                 <div className="flex-1">
                     <h2>Articles</h2>
-                    <ul>
+                    <ul className="flush">
                         {allArticles.map((article, index) => {
                             return (
                                 <li key={index}>
@@ -23,7 +23,7 @@ export default function Menu() {
                 </div>
                 <div className="flex-1">
                     <h2>Links</h2>
-                    <ul>
+                    <ul className="flush">
                         <li>
                             <Link href="https://github.com/a1v0">
                                 GitHub [possibly also a link to this repo?]
