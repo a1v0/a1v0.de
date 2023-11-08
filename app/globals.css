@@ -90,4 +90,23 @@
         @apply rounded-t;
         @apply text-text-dark;
     }
+
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    ul,
+    ol {
+        @apply list-outside;
+        @apply ml-4;
+    }
+
+    li {
+        @apply ml-4;
+        @apply my-2;
+    }
 }
