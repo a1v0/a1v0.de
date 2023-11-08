@@ -109,4 +109,11 @@
         @apply ml-4;
         @apply my-2;
     }
+
+    blockquote {
+        @apply border-l-[12px];
+        @apply border-brand-colour;
+        @apply px-6;
+        @apply !my-10;
+    }
 }
