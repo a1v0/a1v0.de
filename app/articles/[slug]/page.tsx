@@ -24,7 +24,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
     }
 
     return (
-        <article>
+        <article className="clear-gutters">
             <div>
                 <h1>{post.title}</h1>
                 <time dateTime={post.date}>
