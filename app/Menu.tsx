@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { compareDesc, format, parseISO } from "date-fns";
-import { allArticles, Article } from "contentlayer/generated";
+import { allArticles } from "contentlayer/generated";
 
 export default function Menu() {
     return (
