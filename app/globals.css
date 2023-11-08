@@ -125,4 +125,19 @@
         @apply mx-px;
         @apply font-mono;
     }
+
+    pre {
+        @apply w-full;
+        @apply h-fit;
+        @apply overflow-x-scroll;
+        @apply bg-background-grey;
+        @apply !p-5;
+        @apply rounded-md;
+    }
+
+    pre > code {
+        @apply h-fit;
+        @apply w-full;
+        @apply !bg-[#00000000];
+    }
 }
