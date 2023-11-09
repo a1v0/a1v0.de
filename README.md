@@ -32,13 +32,18 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 ## To-do
 
 1. Deploy site (Netlify?)
-2. Make site a11y-friendly
+    - Ensure SSL works
+    - Ensure sitemap works
+    - Check how Google's spiders see my site
+2. Update menu links
+3. Add content
+4. Make site a11y-friendly
     - Semantic HTML
     - Skip link
     - Anything else (see WCAG)
-3. Make site mobile-friendly
-4. Add linting to repo
-5. Add disclaimers etc.
-6. Create Articles page to show list of all content
-7. Find a way to do breadcrumbs with static content
-8. Attempt to use content tags (I think Contentlayer can do this)
+5. Make site mobile-friendly
+6. Add linting to repo
+7. Add disclaimers etc.
+8. Create Articles page to show list of all content
+9. Find a way to do breadcrumbs with static content
+10. Attempt to use content tags (I think Contentlayer can do this)
