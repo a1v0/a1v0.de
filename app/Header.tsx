@@ -10,9 +10,7 @@ function Header() {
 
     const pathname = usePathname();
     useEffect(() => {
-        if (showMenu) {
-            setShowMenu(false);
-        }
+        setShowMenu(false);
     }, [pathname]);
 
     const downChevronPath =
