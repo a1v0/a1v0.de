@@ -28,3 +28,17 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 [^1]: Cambridge blue.
 [^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/app/uploads/2020/08/CUBC-Brand-Guidelines.pdf). Cambridge blue is difficult to match, so I took an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
 [^3]: Taken from GOV.UK.
+
+## To-do
+
+1. Deploy site (Netlify?)
+2. Make site a11y-friendly
+    - Semantic HTML
+    - Skip link
+    - Anything else (see WCAG)
+3. Make site mobile-friendly
+4. Add linting to repo
+5. Add disclaimers etc.
+6. Create Articles page to show list of all content
+7. Find a way to do breadcrumbs with static content
+8. Attempt to use content tags (I think Contentlayer can do this)

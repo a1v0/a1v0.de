@@ -55,29 +55,6 @@ export default function Home() {
                     </p>
                 </article>
             </div>
-            <ol className="ml-8 list-decimal">
-                <li>Make site mobile-friendly</li>
-                <li>Add linting to repo</li>
-                <li>Add disclaimers etc.</li>
-                <li>
-                    Create Articles page to show list of all content, so it can
-                    be spidered
-                </li>
-                <li>
-                    Attempt to use content tags (I think Contentlayer can do
-                    this)
-                </li>
-                <li>Deploy on AWS?</li>
-                <li>Find a way to do breadcrumbs with static content</li>
-                <li>
-                    Make site a11y-friendly
-                    <ul className="ml-8 list-disc">
-                        <li>Semantic HTML</li>
-                        <li>Skip link</li>
-                        <li>Anything else</li>
-                    </ul>
-                </li>
-            </ol>
         </main>
     );
 }
