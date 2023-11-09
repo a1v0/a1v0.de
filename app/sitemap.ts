@@ -1,56 +1,55 @@
-// the bulk of the code here is taken or adapted from https://gist.github.com/ChangoMan/824daa0b4fbd6f824d2e8a2ab1532006
-
 import { MetadataRoute } from "next";
 import { allArticles } from "contentlayer/generated";
 
-const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
-
-interface SitemapEntry {
-    url: string;
-    lastModified: string;
-    changeFrequency: string;
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
-    const yearlyChangeFrequency = "yearly";
+    const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
+
+    type changeFrequency =
+        | "always"
+        | "hourly"
+        | "daily"
+        | "weekly"
+        | "monthly"
+        | "yearly"
+        | "never";
+
+    interface SitemapEntry {
+        url: string;
+        lastModified: string;
+        changeFrequency: changeFrequency;
+    }
+
+    const yearlyChangeFrequency = "yearly" as changeFrequency;
 
     const allPages = allArticles.map((article) => {
-        // map articles here
+        const url = BASE_URL + article.url,
+            lastModified = article.date,
+            changeFrequency = yearlyChangeFrequency;
+
+        const sitemapEntry: SitemapEntry = {
+            url,
+            lastModified,
+            changeFrequency
+        };
+
+        return sitemapEntry;
     });
 
-    // push static pages to allPages, then return
+    const routes = ["", "/articles"]; // add any other routes here
 
-    return [
-        {
-            url: "https://example.com",
-            lastModified: new Date()
-        },
-        {
-            url: "https://example.com/hello",
-            lastModified: new Date()
-        },
-        {
-            url: "https://example.com/goodbye",
-            lastModified: new Date()
-        }
-    ];
+    routes.forEach((route) => {
+        const url = BASE_URL + route,
+            lastModified = new Date().toISOString(),
+            changeFrequency = yearlyChangeFrequency;
+
+        const sitemapEntry: SitemapEntry = {
+            url,
+            lastModified,
+            changeFrequency
+        };
+
+        allPages.push(sitemapEntry);
+    });
+
+    return allPages;
 }
-
-// export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-//   let articles = await getAllArticles()
-//   const changeFrequency = 'daily' as changeFrequency
-
-//   const posts = articles.map(({ slug, date }) => ({
-//     url: `${WEBSITE_HOST_URL}/posts/${slug}`,
-//     lastModified: date,
-//     changeFrequency,
-//   }))
-
-//   const routes = ['', '/about', '/posts'].map((route) => ({
-//     url: `${WEBSITE_HOST_URL}${route}`,
-//     lastModified: new Date().toISOString(),
-//     changeFrequency,
-//   }))
-
-//   return [...routes, ...posts]
-// }

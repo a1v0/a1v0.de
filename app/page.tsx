@@ -56,9 +56,6 @@ export default function Home() {
                 </article>
             </div>
             <ol className="ml-8 list-decimal">
-                <li>
-                    {mvp} Add synamic sitemap. This gives an indication: https://gist.github.com/ChangoMan/824daa0b4fbd6f824d2e8a2ab1532006 In essence, it's only partially dynamic. Any static content (e.g. contact us, home, privacy policy etc.) needs to be manually included in the map.
-                </li>
                 <li>Make site mobile-friendly</li>
                 <li>Add linting to repo</li>
                 <li>Add disclaimers etc.</li>
@@ -92,6 +89,13 @@ export default function Home() {
                 <li className="line-through">{mvp} Create home page</li>
                 <li className="line-through">
                     {mvp} Replace `a` tags with `Link` tags
+                </li>
+                <li className="line-through">
+                    {mvp} Add synamic sitemap. This gives an indication:
+                    https://gist.github.com/ChangoMan/824daa0b4fbd6f824d2e8a2ab1532006
+                    In essence, it's only partially dynamic. Any static content
+                    (e.g. contact us, home, privacy policy etc.) needs to be
+                    manually included in the map.
                 </li>
                 <li className="line-through">
                     {mvp} Parse static HTML using this
