@@ -5,6 +5,12 @@ import { allArticles } from "contentlayer/generated";
 
 const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
 
+interface SitemapEntry {
+    url: string;
+    lastModified: string;
+    changeFrequency: string;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const yearlyChangeFrequency = "yearly";
 
