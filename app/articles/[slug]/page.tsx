@@ -2,8 +2,11 @@ import { format, parseISO } from "date-fns";
 import { allArticles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
-export const generateStaticParams = async () =>
-    allArticles.map((article) => ({ slug: article._raw.flattenedPath }));
+export const generateStaticParams = async () => {
+    return allArticles.map((article) => {
+        return { slug: article._raw.flattenedPath };
+    });
+};
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     const post = allArticles.find(
