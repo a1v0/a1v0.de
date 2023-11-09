@@ -12,7 +12,7 @@ export default function Home() {
                     <h1 className="m-auto p-0">
                         <span className="block">a1v0.de</span>
                         <span className="block lowercase text-softer-black">
-                            The wittering of someone you've never met.
+                            The wittering of someone you&apos;ve never met.
                         </span>
                     </h1>
                 </header>
@@ -33,13 +33,13 @@ export default function Home() {
                     </p>
                     <h2>Semper idem</h2>
                     <p>
-                        I don't revise or update my writings once published, if
-                        I can avoid it. In other words, there is a chance that
-                        my content is out of date when you read it&mdash;bugs
-                        get fixed, software gets updated, but my site stays as
-                        it always was. There's also a chance that what I write
-                        is inaccurate, though I do try to verify what I write as
-                        best as possible.
+                        I don&apos;t revise or update my writings once
+                        published, if I can avoid it. In other words, there is a
+                        chance that my content is out of date when you read
+                        it&mdash;bugs get fixed, software gets updated, but my
+                        site stays as it always was. There&apos;s also a chance
+                        that what I write is inaccurate, though I do try to
+                        verify what I write as best as possible.
                     </p>
                 </article>
             </div>
@@ -47,11 +47,11 @@ export default function Home() {
                 <article className="clear-gutters py-1">
                     <h2>About me</h2>
                     <p>
-                        I'm a humble 1X programmer (you read that right), but
-                        I'm keen as hell; I'm always down to learn something
-                        new. My current interests include C# and a11y, but I
-                        also care deeply about the difference between the -,
-                        &ndash; and &mdash; characters.
+                        I&apos;m a humble 1X programmer (you read that right),
+                        but I&apos;m keen as hell; I&apos;m always down to learn
+                        something new. My current interests include C# and a11y,
+                        but I also care deeply about the difference between the
+                        -, &ndash; and &mdash; characters.
                     </p>
                 </article>
             </div>

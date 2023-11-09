@@ -15,9 +15,9 @@ function NotFoundPage() {
                 <article className="clear-gutters">
                     <h2>What do I do now?</h2>
                     <p>
-                        I'm sorry it's come to this. All that's left at this
-                        point is to go home and rethink your life. Nothing good
-                        will come of you lingering on this page.
+                        I&apos;m sorry it&apos;s come to this. All that&apos;s
+                        left at this point is to go home and rethink your life.
+                        Nothing good will come of you lingering on this page.
                     </p>
                 </article>
             </div>
