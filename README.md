@@ -31,7 +31,7 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 
 ## To-do
 
-1. Deploy site (Netlify?)
+1. Add content
 2. Make site a11y-friendly
     - Semantic HTML
     - Skip link

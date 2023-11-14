@@ -11,6 +11,7 @@
 
     html {
         @apply text-xl;
+        @apply bg-brand-colour;
     }
 
     .clear-gutters {
@@ -148,5 +149,9 @@
         @apply h-fit;
         @apply w-full;
         @apply !bg-[#00000000];
+    }
+
+    .text-content {
+        @apply py-2;
     }
 }
