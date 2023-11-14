@@ -1,10 +1,4 @@
 export default function Home() {
-    const mvp = (
-        <span className="small-caps text-xs font-extrabold text-[red]">
-            MVP:
-        </span>
-    );
-
     return (
         <main className="flex grow flex-col bg-background-white">
             <div className="bg-accent-colour">
