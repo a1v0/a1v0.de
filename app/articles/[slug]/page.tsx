@@ -27,18 +27,22 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
     }
 
     return (
-        <article className="clear-gutters">
+        <main className="grow bg-background-white">
             <div>
-                <h1>{post.title}</h1>
-                <time dateTime={post.date}>
-                    {format(parseISO(post.date), "LLLL d, yyyy")}
-                </time>
+                <article className="clear-gutters text-content bg-background-white">
+                    <div>
+                        <h1>{post.title}</h1>
+                        <time dateTime={post.date}>
+                            {format(parseISO(post.date), "LLLL d, yyyy")}
+                        </time>
+                    </div>
+                    <div
+                        className="[&>*:last-child]:mb-0 [&>*]:mb-3"
+                        dangerouslySetInnerHTML={{ __html: post.body.html }}
+                    />
+                </article>
             </div>
-            <div
-                className="[&>*:last-child]:mb-0 [&>*]:mb-3"
-                dangerouslySetInnerHTML={{ __html: post.body.html }}
-            />
-        </article>
+        </main>
     );
 };
 

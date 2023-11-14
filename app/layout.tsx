@@ -30,7 +30,7 @@ export default function RootLayout({
             <body>
                 <div className="flex min-h-screen flex-col items-stretch justify-between">
                     <Header />
-                    <div className="grow">{children}</div>
+                    <div className="flex grow flex-col">{children}</div>
                     <Footer />
                 </div>
             </body>

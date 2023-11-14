@@ -6,7 +6,7 @@ export default function Home() {
     );
 
     return (
-        <main className="bg-background-white">
+        <main className="grow bg-background-white">
             <div className="bg-accent-colour">
                 <header className="clear-gutters py-16">
                     <h1 className="m-auto p-0">
@@ -44,7 +44,7 @@ export default function Home() {
                 </article>
             </div>
             <div className="bg-background-grey">
-                <article className="clear-gutters text-content py-1">
+                <article className="clear-gutters text-content">
                     <h2>About me</h2>
                     <p>
                         I&apos;m a humble 1X programmer (you read that right),
