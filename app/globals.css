@@ -152,6 +152,6 @@
     }
 
     .text-content {
-        @apply py-4;
+        @apply py-2;
     }
 }
