@@ -6,7 +6,7 @@ export default function Home() {
     );
 
     return (
-        <main>
+        <main className="bg-background-white">
             <div className="bg-accent-colour">
                 <header className="clear-gutters py-16">
                     <h1 className="m-auto p-0">
@@ -17,8 +17,8 @@ export default function Home() {
                     </h1>
                 </header>
             </div>
-            <div className="bg-background-white">
-                <article className="clear-gutters">
+            <div>
+                <article className="clear-gutters text-content">
                     <h2>What to expect</h2>
                     <p>
                         Like all developers, I spend my life in agony. Hacking
@@ -44,7 +44,7 @@ export default function Home() {
                 </article>
             </div>
             <div className="bg-background-grey">
-                <article className="clear-gutters py-1">
+                <article className="clear-gutters text-content py-1">
                     <h2>About me</h2>
                     <p>
                         I&apos;m a humble 1X programmer (you read that right),
