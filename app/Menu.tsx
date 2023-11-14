@@ -25,10 +25,17 @@ export default function Menu() {
                     <ul className="flush">
                         <li>
                             <Link href="https://github.com/a1v0">
-                                GitHub [possibly also a link to this repo?]
+                                My GitHub
                             </Link>
                         </li>
-                        <li>[LinkedIn?]</li>
+                        <li>
+                            <Link href="https://github.com/a1v0/a1v0.de">
+                                This Website on GitHub
+                            </Link>
+                        </li>
+                        {/* 
+                        - LinkedIn?
+                        */}
                     </ul>
                 </div>
             </div>
