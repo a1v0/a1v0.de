@@ -6,7 +6,7 @@ export default function Home() {
     );
 
     return (
-        <main className="grow bg-background-white">
+        <main className="flex grow flex-col bg-background-white">
             <div className="bg-accent-colour">
                 <header className="clear-gutters py-16">
                     <h1 className="m-auto p-0">
@@ -17,7 +17,7 @@ export default function Home() {
                     </h1>
                 </header>
             </div>
-            <div>
+            <div className="grow">
                 <article className="clear-gutters text-content">
                     <h2>What to expect</h2>
                     <p>
@@ -43,7 +43,7 @@ export default function Home() {
                     </p>
                 </article>
             </div>
-            <div className="bg-background-grey">
+            <div className="grow bg-background-grey">
                 <article className="clear-gutters text-content">
                     <h2>About me</h2>
                     <p>
