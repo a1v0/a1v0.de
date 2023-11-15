@@ -37,15 +37,16 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 
 ## To-do
 
-1. Add content
-2. Make site a11y-friendly
+1. Make site a11y-friendly
     - Semantic HTML
     - Skip link
     - Anything else (see WCAG)
-3. Make site mobile-friendly
-4. Add linting to repo
-5. Add disclaimers etc.
-6. Create Articles page to show list of all content
-7. Find a way to do breadcrumbs with static content
-8. Attempt to use content tags (I think Contentlayer can do this)
-9. Add TOC to articles?
+2. Make site mobile-friendly
+3. Add linting to repo
+4. Add disclaimers etc.
+5. Create Articles page to show list of all content
+6. Find a way to do breadcrumbs with static content
+7. Attempt to use content tags (I think Contentlayer can do this)
+8. Add TOC to articles?
+9. Download Highlight.js theme as a local file: <https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css>
+    - While you're at it, why not actually create your own theme, using that file as a guide?
