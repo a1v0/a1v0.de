@@ -1,0 +1,67 @@
+pre code.hljs {
+    @apply block;
+}
+
+.hljs {
+    /* this is the default font colour for when no other style applies */
+    @apply text-softer-black;
+}
+
+.hljs-comment,
+.hljs-quote {
+    @apply text-[#ff7700];
+}
+
+.hljs-regexp {
+    @apply text-[#ca2828];
+}
+
+.hljs-deletion,
+.hljs-name,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-tag,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-attr,
+.hljs-built_in,
+.hljs-link,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-params,
+.hljs-type {
+    @apply text-[#187152];
+}
+
+.hljs-addition,
+.hljs-bullet,
+.hljs-string,
+.hljs-symbol {
+    @apply text-[#de4abc];
+}
+
+.hljs-section,
+.hljs-title {
+    @apply text-[#2466bb];
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+    @apply text-[#7b2e9f];
+}
+
+.hljs-emphasis {
+    @apply italic;
+}
+
+.hljs-strong {
+    @apply font-bold;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .hljs-keyword,
+    .hljs-selector-tag {
+        @apply font-bold;
+    }
+}

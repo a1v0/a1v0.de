@@ -31,6 +31,8 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 | Link (hover)       | `#003078`[^3]    |
 | Link (visited)     | `#4c2c92`[^3]    |
 
+The colours in my Highlight.JS theme were incredibly hard to pick well, so I ended up choosing colours almost at random. They're not worth putting into the above table because they don't really fit with the overall brand.
+
 [^1]: Cambridge blue.
 [^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/app/uploads/2020/08/CUBC-Brand-Guidelines.pdf). Cambridge blue is difficult to match, so I took an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
 [^3]: Taken from GOV.UK.
@@ -46,8 +48,8 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 4. Add disclaimers etc.
 5. Create Articles page to show list of all content
 6. Find a way to do breadcrumbs with static content
-7. Attempt to use content tags (I think Contentlayer can do this)
+7. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
+    - Create new property at the top of every article
+    - If Contentlayer allows, make it an array or CSV of tags
+    - Failing all that, consider instead categorising content into topics by splitting content into folders
 8. Add TOC to articles?
-9. Download Highlight.js theme as a local file: <https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css>
-    - While you're at it, why not actually create your own theme, using that file as a guide?
-    - Modify paragraph padding within code blocks to prevent too-large gaps
