@@ -50,3 +50,4 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 8. Add TOC to articles?
 9. Download Highlight.js theme as a local file: <https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css>
     - While you're at it, why not actually create your own theme, using that file as a guide?
+    - Modify paragraph padding within code blocks to prevent too-large gaps
