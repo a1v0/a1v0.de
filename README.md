@@ -46,8 +46,8 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 4. Add disclaimers etc.
 5. Create Articles page to show list of all content
 6. Find a way to do breadcrumbs with static content
-7. Attempt to use content tags (I think Contentlayer can do this)
+7. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
+    - Create new property at the top of every article
+    - If Contentlayer allows, make it an array or CSV of tags
+    - Failing all that, consider instead categorising content into topics by splitting content into folders
 8. Add TOC to articles?
-9. Download Highlight.js theme as a local file: <https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css>
-    - While you're at it, why not actually create your own theme, using that file as a guide?
-    - Modify paragraph padding within code blocks to prevent too-large gaps
