@@ -3,12 +3,13 @@ pre code.hljs {
 }
 
 .hljs {
-    /* @apply text-softer-black; */
+    /* this is the default font colour for when no other style applies */
+    @apply text-softer-black;
 }
 
 .hljs-comment,
 .hljs-quote {
-    /* @apply text-link-visited; */
+    /* @apply text-link-hover; */
 }
 
 .hljs-deletion,
@@ -47,7 +48,7 @@ pre code.hljs {
 
 .hljs-keyword,
 .hljs-selector-tag {
-    /* @apply text-[#7928a1]; */
+    @apply text-[#b53da5];
 }
 
 .hljs-emphasis {
