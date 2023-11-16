@@ -1,5 +1,6 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import highlight from "rehype-highlight";
+import { Pluggable } from "unified";
 
 export const Article = defineDocumentType(() => ({
     name: "Article",
@@ -19,5 +20,5 @@ export const Article = defineDocumentType(() => ({
 export default makeSource({
     contentDirPath: "articles",
     documentTypes: [Article],
-    markdown: { rehypePlugins: [highlight] }
+    markdown: { rehypePlugins: [highlight] as Pluggable[] }
 });
