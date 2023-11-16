@@ -20,10 +20,10 @@ pre code.hljs {
 .hljs-tag,
 .hljs-template-variable,
 .hljs-variable {
-    /* @apply text-[#d91e18]; */
+    @apply text-[#226b51];
 }
 
-.hljs-attribute,
+.hljs-attr,
 .hljs-built_in,
 .hljs-link,
 .hljs-literal,
@@ -31,7 +31,7 @@ pre code.hljs {
 .hljs-number,
 .hljs-params,
 .hljs-type {
-    /* @apply text-[#aa5d00]; */
+    @apply text-[#226b51];
 }
 
 .hljs-addition,
@@ -43,7 +43,7 @@ pre code.hljs {
 
 .hljs-section,
 .hljs-title {
-    /* @apply text-[#007faa]; */
+    /* @apply text-[#226b51]; */
 }
 
 .hljs-keyword,
