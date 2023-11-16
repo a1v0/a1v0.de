@@ -51,16 +51,16 @@ pre code.hljs {
 }
 
 .hljs-emphasis {
-    /* @apply italic; */
+    @apply italic;
 }
 
 .hljs-strong {
-    /* @apply font-bold; */
+    @apply font-bold;
 }
 
 @media screen and (-ms-high-contrast: active) {
     .hljs-keyword,
     .hljs-selector-tag {
-        /* @apply font-bold; */
+        @apply font-bold;
     }
 }
