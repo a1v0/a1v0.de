@@ -20,7 +20,7 @@ pre code.hljs {
 .hljs-tag,
 .hljs-template-variable,
 .hljs-variable {
-    @apply text-[#226b51];
+    @apply text-[#187152];
 }
 
 .hljs-attr,
@@ -31,7 +31,7 @@ pre code.hljs {
 .hljs-number,
 .hljs-params,
 .hljs-type {
-    @apply text-[#226b51];
+    @apply text-[#187152];
 }
 
 .hljs-addition,
@@ -43,7 +43,7 @@ pre code.hljs {
 
 .hljs-section,
 .hljs-title {
-    /* @apply text-[#226b51]; */
+    @apply text-[#2466bb];
 }
 
 .hljs-keyword,
