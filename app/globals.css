@@ -121,10 +121,13 @@
     }
 
     blockquote {
+        @apply bg-background-grey;
         @apply border-l-[12px];
         @apply border-brand-colour;
         @apply px-6;
+        @apply py-1;
         @apply !my-10;
+        @apply rounded-r-md;
     }
 
     code {

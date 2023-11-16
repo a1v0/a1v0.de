@@ -8,6 +8,12 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using [Contentlayer](https://contentlayer.dev/). This brilliant tool handles pretty much everything for me. I think (though don't understand Next enough to verify at present) that it even creates static HTML files for these during the build process. This means, I presume, that the content pages will be loaded statically rather than dynamically. Pretty neat!
 
+## Deployment
+
+This site is deployed by Netlify and runs on a custom domain, [a1v0.de](https://a1v0.de). `main` is the production branch.
+
+Development is done in `dev`. Articles, too, are written in `dev`, just to keep things simple. However, while an article is still in a draft state, they are kept in the `draft-articles` directory.
+
 ## Colour scheme and design
 
 I'm modelling my design on simple UK government websites like [GOV.UK](https://www.gov.uk/) and [NHS.UK](https://www.nhs.uk/). This is in part because I find the designs beautiful in their simplicity and in part because I am not much of a designer myself.
@@ -31,14 +37,17 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 
 ## To-do
 
-1. Add content
-2. Make site a11y-friendly
+1. Make site a11y-friendly
     - Semantic HTML
     - Skip link
     - Anything else (see WCAG)
-3. Make site mobile-friendly
-4. Add linting to repo
-5. Add disclaimers etc.
-6. Create Articles page to show list of all content
-7. Find a way to do breadcrumbs with static content
-8. Attempt to use content tags (I think Contentlayer can do this)
+2. Make site mobile-friendly
+3. Add linting to repo
+4. Add disclaimers etc.
+5. Create Articles page to show list of all content
+6. Find a way to do breadcrumbs with static content
+7. Attempt to use content tags (I think Contentlayer can do this)
+8. Add TOC to articles?
+9. Download Highlight.js theme as a local file: <https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css>
+    - While you're at it, why not actually create your own theme, using that file as a guide?
+    - Modify paragraph padding within code blocks to prevent too-large gaps
