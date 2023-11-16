@@ -12,17 +12,17 @@ pre code.hljs {
     /* @apply text-link-hover; */
 }
 
+.hljs-regexp {
+    @apply text-[#ca2828];
+}
+
 .hljs-deletion,
 .hljs-name,
-.hljs-regexp,
 .hljs-selector-class,
 .hljs-selector-id,
 .hljs-tag,
 .hljs-template-variable,
-.hljs-variable {
-    @apply text-[#187152];
-}
-
+.hljs-variable,
 .hljs-attr,
 .hljs-built_in,
 .hljs-link,
