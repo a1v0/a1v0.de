@@ -9,7 +9,7 @@ pre code.hljs {
 
 .hljs-comment,
 .hljs-quote {
-    /* @apply text-link-hover; */
+    @apply text-[#ff7700];
 }
 
 .hljs-regexp {
