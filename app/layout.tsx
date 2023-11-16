@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import "./globals.css";
+import "./highlight-theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,13 +17,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-light.min.css"
-                    integrity="sha512-WDk6RzwygsN9KecRHAfm9HTN87LQjqdygDmkHSJxVkVI7ErCZ8ZWxP6T8RvBujY1n2/E4Ac+bn2ChXnp5rnnHA=="
-                    crossOrigin="anonymous"
-                    referrerPolicy="no-referrer"
-                />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
                     rel="preconnect"

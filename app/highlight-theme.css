@@ -1,0 +1,66 @@
+pre code.hljs {
+    @apply block;
+}
+
+.hljs {
+    /* @apply text-softer-black; */
+}
+
+.hljs-comment,
+.hljs-quote {
+    /* @apply text-link-visited; */
+}
+
+.hljs-deletion,
+.hljs-name,
+.hljs-regexp,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-tag,
+.hljs-template-variable,
+.hljs-variable {
+    /* @apply text-[#d91e18]; */
+}
+
+.hljs-attribute,
+.hljs-built_in,
+.hljs-link,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-params,
+.hljs-type {
+    /* @apply text-[#aa5d00]; */
+}
+
+.hljs-addition,
+.hljs-bullet,
+.hljs-string,
+.hljs-symbol {
+    /* @apply text-[green]; */
+}
+
+.hljs-section,
+.hljs-title {
+    /* @apply text-[#007faa]; */
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+    /* @apply text-[#7928a1]; */
+}
+
+.hljs-emphasis {
+    /* @apply italic; */
+}
+
+.hljs-strong {
+    /* @apply font-bold; */
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .hljs-keyword,
+    .hljs-selector-tag {
+        /* @apply font-bold; */
+    }
+}
