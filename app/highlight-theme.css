@@ -38,7 +38,7 @@ pre code.hljs {
 .hljs-bullet,
 .hljs-string,
 .hljs-symbol {
-    /* @apply text-[green]; */
+    @apply text-[#de4abc];
 }
 
 .hljs-section,
@@ -48,7 +48,7 @@ pre code.hljs {
 
 .hljs-keyword,
 .hljs-selector-tag {
-    @apply text-[#b53da5];
+    @apply text-[#7b2e9f];
 }
 
 .hljs-emphasis {
