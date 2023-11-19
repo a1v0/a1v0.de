@@ -15,11 +15,43 @@ title: What does the 'at' symbol mean in C#
 date: 2023-11-04
 ---
 
-The use of the `@` sign (aka 'at' symbol) in C# is pretty well documented all over the internet. The problem is, search engines don't like the `@` character. They ignore it, and, as far as I could find, there's no good way to escape the character in search strings.
+The use of the `@` sign (aka 'at' symbol) in C# is pretty well documented all over the internet. The problem is, search engines don't like the `@` character. They ignore it, and, as far as I could find, there's no good way to escape the character when typing stuff into their search bars.
 
 In order for this page to be easily findable, I'll have to add my own explanation to flesh out the text. However, if you want, you can go direct to [Microsoft's own page](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim) on this topic.
 
 ## What does `@` do in regular C#?
+
+The `@` symbol is what's technically known as a _verbatim identifier_. You use it to identify something that should be interpreted literally, exactly as written. Below are some examples to illustrate.
+
+### Strings with special characters
+
+There are many ways to print special characters in strings. If you want to print a line break, you can use `\n`, e.g.:
+
+```cs
+Console.WriteLine("line1\nline2");
+// output:
+// line1
+// line2
+```
+
+But what if you wanted to print `\n` without it being rendered as a line break? A realistic use case is if you're printing a regular expression. Printing `/\n/` would ordinarily print two lines with one forward slash each.
+
+This is where the verbatim identifier comes in. Add a `@` before your string and the `\n` will _not_ be escaped:
+
+```cs
+Console.WriteLine("/\n/");
+// output:
+// /
+// /
+
+Console.WriteLine(@"/\n/");
+// output:
+// /\n/
+```
+
+### Variables with reserved names
+
+### third use case as per docs
 
 <!-- 
 - explain what verbatim identifier is
