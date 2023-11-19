@@ -34,7 +34,7 @@ Console.WriteLine("line1\nline2");
 // line2
 ```
 
-But what if you wanted to print `\n` without it being rendered as a line break? A realistic use case is if you're printing a regular expression. Printing `/\n/` would ordinarily print two lines with one forward slash each.
+But what if you wanted to print `\n` without it being rendered as a line break? A realistic use case is if you're printing a regular expression. Printing `/\n/` would ordinarily print two lines with one forward slash each. You could escape the `\` character in the usual way, by adding another `\` in front, but that can be hard and confusing to read: `/\\n/`.
 
 This is where the verbatim identifier comes in. Add a `@` before your string and the `\n` will _not_ be escaped:
 
@@ -48,6 +48,12 @@ Console.WriteLine(@"/\n/");
 // output:
 // /\n/
 ```
+
+#### Verbatim string vs. string literal
+
+Isn't a verbatim string the same as a string literal, then?
+
+Basically yes, though you mustn't forget that C# has a [second type of string literal](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals), too, using the `"""` syntax.
 
 ### Variables with reserved names
 
@@ -68,12 +74,6 @@ The question is: why on earth would you want to give your variable a reserved na
 ### Avoiding confusion in naming conflicts
 
 The Microsoft docs give a third use case for the 'at' symbol in C#, though I will hold up my hand and say that I'm too much of a beginner at C# to understand what on earth it's about. Feel free to [read for yourself](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim).
-
-### Verbatim vs. string literal
-
-<!-- 
-- explain why verbatim isn't necessarily the same thing as a string literal
- -->
 
 ## What about ASP.NET Razor?
 
