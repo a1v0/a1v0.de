@@ -67,14 +67,7 @@ The question is: why on earth would you want to give your variable a reserved na
 
 ### Avoiding confusion in naming conflicts
 
-<!-- 
-- explain what verbatim identifier is
-- give use cases:
-  - giving variables names that are otherwise reserved keywords, e.g. @var
-    - though I can't think why you'd really want to do that. seems like awful practice
-    - the fact that this is possible is simply a side-effect, I THINK, of...
-  - ...the third use case in the MS docs, which I haven't fully understood
- -->
+The Microsoft docs give a third use case for the 'at' symbol in C#, though I will hold up my hand and say that I'm too much of a beginner at C# to understand what on earth it's about. Feel free to [read for yourself](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim).
 
 ### Verbatim vs. string literal
 
