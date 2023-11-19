@@ -75,9 +75,6 @@ The question is: why on earth would you want to give your variable a reserved na
 
 The Microsoft docs give a third use case for the 'at' symbol in C#, though I will hold up my hand and say that I'm too much of a beginner at C# to understand what on earth it's about. Feel free to [read for yourself](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim).
 
-## What about ASP.NET Razor?
+## What about Blazor?
 
-<!-- 
-- primary source is https://weblogs.asp.net/scottgu/asp-net-mvc-3-razor-s-and-lt-text-gt-syntax
-- https://haacked.com/archive/2011/01/06/razor-syntax-quick-reference.aspx/
- -->
+Finally, it's worth mentioning that `@` has its own meaning within Blazor. This is something I know virtually nothing about, but here's a [Stack Overflow thread](https://stackoverflow.com/questions/71161139/why-do-some-blazor-component-properties-start-with-an-at-symbol) on the subject.
