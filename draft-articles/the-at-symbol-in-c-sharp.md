@@ -51,13 +51,25 @@ Console.WriteLine(@"/\n/");
 
 ### Variables with reserved names
 
-### third use case as per docs
+Like all languages, C# has a bunch of reserved words, like `for`, `while`, `return`, `string`, `var` and so on. You can't name a variable `var`, for instance, without your compiler shouting at you.
+
+This is where the magic `@` comes along. Prefixing your variable with the 'at' symbol will let you give it a name like `string`, e.g.:
+
+```cs
+string string = "Hello"; // causes an error
+
+string @string = "hello"; // no error
+
+Console.WriteLine(@hello); // the @ is part of the variable's name so you need to use it when referring to it
+```
+
+The question is: why on earth would you want to give your variable a reserved name? That's surely a recipe for confusion, right? At any rate, I've not been able to divine a use case for it and would advise against it if at all possible.
+
+### Avoiding confusion in naming conflicts
 
 <!-- 
 - explain what verbatim identifier is
 - give use cases:
-  - printing regex (e.g. /\n/)
-    - equivalent in HTML is giving you ability to write < rather than &lt;
   - giving variables names that are otherwise reserved keywords, e.g. @var
     - though I can't think why you'd really want to do that. seems like awful practice
     - the fact that this is possible is simply a side-effect, I THINK, of...
