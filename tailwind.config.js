@@ -33,7 +33,7 @@ module.exports = {
         },
         extend: {
             maxWidth: {
-                gutter: "960px"
+                gutter: "768px"
             }
         }
     },
