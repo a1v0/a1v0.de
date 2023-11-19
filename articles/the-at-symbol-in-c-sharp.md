@@ -50,11 +50,11 @@ Like all languages, C# has a bunch of reserved words, like `for`, `while`, `retu
 This is where the magic `@` comes along. Prefixing your variable with the 'at' symbol will let you give it a name like `string`, e.g.:
 
 ```cs
-string string = "Hello"; // causes an error
+string string = "hello"; // causes an error
 
 string @string = "hello"; // no error
 
-Console.WriteLine(@hello); // the @ is part of the variable's name
+Console.WriteLine(@string); // the @ is part of the variable's name
                            // so you need to use it when referring to it
 ```
 
