@@ -38,6 +38,9 @@ function Footer() {
                         <li>
                             <Link href="/sitemap.xml">Sitemap</Link>
                         </li>
+                        <li>
+                            <Link href="/disclaimer">Disclaimer</Link>
+                        </li>
                     </ul>
                 </section>
             </div>
