@@ -1,5 +1,5 @@
 ---
-title: The UPS Shipping API Returns 201
+title: Where can I store a non-unique order number in the UPS Shipping API?
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -18,17 +18,21 @@ title: The UPS Shipping API Returns 201
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
- date: 2023-11-14
+date: 2023-11-14
 ---
 
 The UPS Shipping API is an unwieldy beast. The documentation [INCLUDE LINK] leaves a lot to be desired and is a source of constant frustration for developers, and the tech support UPS offers is even worse. For such an enormous company with so many resources available, and such a small number of APIs, I really felt that they could do so, _so_ much better.
 
 This page lists things I have learned while using UPS's website, its API and its documentation, in the hope that others might be spared some of the troubles I underwent.
 
-## 2. The Shipping API returns `201`, not `200`
+## 3. Non-unique order number field
 
-The docs suggest that the UPS Shipping API returns `200` when a successful request is given. In fact, the response is `201`.
+The Shipping API has numerous fields to store reference numbers. However, most of them expect a unique value.
 
-Any tests that assert that the returned status is `200` will therefore fail. If you're careless (like me, alas), you might not notice for a while that your request is successful, despite a failing Jest test suite.
+This is no good if you need to re-use a reference number. For example, if order no. 1234 gets shipped, returned by the customer, then shipped again, you'll probably want to link the second shipment to order no. 1234 fpr your own bookkeeping.
 
-I attribute this error simply to carelessness on UPS's part. I'd feel less upset by it if it were a small startup or a private project, because mixing up `200` and `201` is easily done. But the fact that the error hasn't been spotted in UPS's documentation shows a lack of care.
+The field to use in this case is `ReferenceNumber/Value`. This will link the shipment to the order number and the order number will normally display on the generated invoice.
+
+[mention about the field to use in an international shipment]
+
+[mention the various other order no fields on offer, and when to use them]

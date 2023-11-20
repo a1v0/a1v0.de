@@ -43,13 +43,13 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - Semantic HTML
     - Skip link
     - Anything else (see WCAG)
-2. Make site mobile-friendly
-3. Add linting to repo
-4. Add disclaimers etc.
-5. Create Articles page to show list of all content
-6. Find a way to do breadcrumbs with static content
-7. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
+2. Add linting to repo
+3. Add padding/margins to links in menu and footer so they're more legible on smaller screens
+4. Create Articles page to show list of all content
+5. Find a way to do breadcrumbs with static content
+6. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
     - Create new property at the top of every article
     - If Contentlayer allows, make it an array or CSV of tags
     - Failing all that, consider instead categorising content into topics by splitting content into folders
-8. Add TOC to articles?
+7. Add TOC to articles?
+8. Remove padding/margins from paragraphs and other elements inside `pre` and `code` tags

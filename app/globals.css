@@ -15,7 +15,8 @@
     }
 
     .clear-gutters {
-        @apply mx-auto;
+        @apply mx-2;
+        @apply md:mx-auto;
         @apply my-0;
         @apply max-w-gutter;
     }

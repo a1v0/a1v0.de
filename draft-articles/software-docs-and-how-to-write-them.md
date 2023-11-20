@@ -1,5 +1,5 @@
 ---
-title: The UPS Shipping API Returns 201
+title: Software docs and how to write them
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -18,17 +18,28 @@ title: The UPS Shipping API Returns 201
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
- date: 2023-11-14
+date: 2023-11-15
 ---
 
-The UPS Shipping API is an unwieldy beast. The documentation [INCLUDE LINK] leaves a lot to be desired and is a source of constant frustration for developers, and the tech support UPS offers is even worse. For such an enormous company with so many resources available, and such a small number of APIs, I really felt that they could do so, _so_ much better.
+Artikel über wie wichtig es ist, Docs zu schreiben. Selbst ein paar Bulletpoints während man ein Programm entwickelt, die man dann zum Schluss ergänzt, sind besser als nichts
 
-This page lists things I have learned while using UPS's website, its API and its documentation, in the hope that others might be spared some of the troubles I underwent.
-
-## 2. The Shipping API returns `201`, not `200`
-
-The docs suggest that the UPS Shipping API returns `200` when a successful request is given. In fact, the response is `201`.
-
-Any tests that assert that the returned status is `200` will therefore fail. If you're careless (like me, alas), you might not notice for a while that your request is successful, despite a failing Jest test suite.
-
-I attribute this error simply to carelessness on UPS's part. I'd feel less upset by it if it were a small startup or a private project, because mixing up `200` and `201` is easily done. But the fact that the error hasn't been spotted in UPS's documentation shows a lack of care.
+- intro
+  - docs super important
+  - so why are we so poor at writing them?
+  - we always leave them to the last minute, by which time we've forgotten about half of the features
+- why are docs useful
+  - training material
+    - for you and your colleagues
+    - for client at handover
+    - for third party API users
+  - handover to client
+- why docs are a pain to write
+  - docs are always out of date if your project is still in its "constantly in flux" phase
+  - you're overworked as it is!
+- how to write good docs with one simple trick
+  - if you, like most people, don't have a dedicated docs-writing team working for you, follow these steps
+  - make a document right at the start of the project
+  - add bullet point notes of the stuff you need to document as you go along
+    - no need to add too much detail, because it might lose its accuracy throughout the dev process
+  - periodically review to see which bits of the program are closed off/complete and document them
+  - this way, you can get as much documentation out of the way during the dev process as possible and you have a list of remaining bits of content
