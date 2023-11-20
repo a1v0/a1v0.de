@@ -44,7 +44,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - Skip link
     - Anything else (see WCAG)
 2. Add linting to repo
-3. Add disclaimers etc.
+3. Add padding/margins to links in menu and footer so they're more legible on smaller screens
 4. Create Articles page to show list of all content
 5. Find a way to do breadcrumbs with static content
 6. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
