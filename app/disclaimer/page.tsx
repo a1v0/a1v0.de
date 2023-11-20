@@ -9,7 +9,7 @@ export default function Disclaimer() {
                         incorrect or outdated information given. We do our best
                         to ensure our posts are accurate and properly proofread,
                         and we try to ensure that the limitations of our posts
-                        are stated clearly, but nobody's perfect.
+                        are stated clearly, but nobody&apos;s perfect.
                     </p>
                     <p>
                         At the end of the day, the contents of this site are
