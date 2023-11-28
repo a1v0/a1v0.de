@@ -52,6 +52,14 @@ This was another one that I rather liked but sadly had to ditch. [`markdown-to-j
 
 The problem I had was that `markdown-to-jsx` does not convert links to Next's `<Link>` tag. Instead, it turns them into `<a>` tags. This means that any links within your Markdown content cause the page to fully reload, instead of just partially reloading. Since the ability to rerender individual components is one of Next's raisons d'&ecirc;tre, I found myself having to reject this otherwise nice package.
 
-- Contentlayer easy to use and does all the heavy lifting.
-  - has good docs, too
-  - uses DangerouslySet... itself
+## And the winner is... Contentlayer
+
+I was growing frustrated with my failure to find a good Markdown renderer when in comes [Contentlayer](https://contentlayer.dev/). This is a professionally managed package that handles the entire show for you. It has none of the drawbacks that the aforementioned packages have, and it has some pretty great documentation.
+
+Contentlayer does more than just render Markdown, too. It can handle content metadata, such as publish dates and article titles. It works very well in conjunction with Next.js.
+
+It turns links into `<Link>` tags (you can check this by using the React or Next dev tools), it works properly in conjunction with the `app` router and it sanitises the HTML output.
+
+Interestingly, Contentlayer does use `dangerouslySetInnerHTML` under the hood, but I don't consider this a drawback. Unlike with `marked`, I can be sure that nothing unsafe will happen when Markdown is rendered.
+
+As a product, Contentlayer really impressed me. It's flexible, too, allowing you to render local Markdown files or retrieve them from a database. I hope you have as much fun using it as I did!
