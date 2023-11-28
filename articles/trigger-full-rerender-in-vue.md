@@ -16,9 +16,7 @@ The solution? Trigger a full rerender of the component.
 
 In short: give the parent element of the component a `key` attribute, and then change it! Vue always rerenders content once its key has changed.
 
->
 > **tl;dr:** Changing the key of an element within your `<template>` will force a full rerender, including all children.
->
 
 In the below code sample, the `<div>` that contains the template's content has been given a `key` attribute of `changingKey`. When we run `triggerReload()`, the value of `changingKey` changes, triggering a full reload of the `<div>` and all its child content.
 
@@ -28,7 +26,7 @@ In the below code sample, the `<div>` that contains the template's content has b
 
     const triggerReload = () => {
         ++changingKey;
-    }
+    };
 </script>
 <template>
     <div :key="changingKey">
