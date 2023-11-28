@@ -40,7 +40,12 @@ While there are packages you can install that can sanitise `marked`'s output, it
 
 I don't want write potentially unsafe code unless I can be sure that there's no way anything can go wrong. A setting where I'm forced to render unsanitised HTML output is not a good idea in my book.
 
-- marked doesn't sanitise and forces you to use DangerouslySetHTML
+### `remark-rehype` with `react-remark`
+
+Having rejected `marked`, I investigated the combination of [`remark-rehype`](https://github.com/remarkjs/remark-rehype) with `react-remark`.
+
+I actually quite liked this one, but it was not suitable to my repo, because it hasn't yet been adapted for Next's new `app` router. Soon enough, I'm sure, it'll be a viable option.
+
 - remark-rehypem react-remark etc. don't work well with app routing
 - markdown-to-jsx works fine but doesn't support `<Link>`
 - Contentlayer easy to use and does all the heavy lifting.
