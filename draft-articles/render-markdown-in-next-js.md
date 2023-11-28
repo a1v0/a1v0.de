@@ -46,8 +46,12 @@ Having rejected `marked`, I investigated the combination of [`remark-rehype`](ht
 
 I actually quite liked this one, but it was not suitable to my repo, because it hasn't yet been adapted for Next's new `app` router. Soon enough, I'm sure, it'll be a viable option.
 
-- remark-rehypem react-remark etc. don't work well with app routing
-- markdown-to-jsx works fine but doesn't support `<Link>`
+### `markdown-to-jsx`
+
+This was another one that I rather liked but sadly had to ditch. [`markdown-to-jsx`](https://www.npmjs.com/package/markdown-to-jsx) is a nice package that converts Markdown into JSX, rather than HTML. This means you don't need to use anything like `dangerouslySetInnerHTML`.
+
+The problem I had was that `markdown-to-jsx` does not convert links to Next's `<Link>` tag. Instead, it turns them into `<a>` tags. This means that any links within your Markdown content cause the page to fully reload, instead of just partially reloading. Since the ability to rerender individual components is one of Next's raisons d'&ecirc;tre, I found myself having to reject this otherwise nice package.
+
 - Contentlayer easy to use and does all the heavy lifting.
   - has good docs, too
   - uses DangerouslySet... itself
