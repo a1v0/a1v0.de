@@ -21,6 +21,8 @@ title: "Help! I can't access my C# classes from xUnit!"
 date: 2023-11-15
 ---
 
+Unit testing in C# with xUnit can at times be unwieldy, especially if, like me, you're accustomed to something like [Jest](https://jestjs.io/). One thing the tutorials often forget to tell you is how to link your test suite project to your primary project.
+
 - outline the problem
   - happens when you create a sibling repo to your main one as part of solution folder
     - give folder structure
