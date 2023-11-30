@@ -5,9 +5,9 @@ date: 2023-11-30
 
 Unit testing in C# with xUnit can at times be unwieldy, especially if, like me, you're accustomed to something flexible and easy like [Jest](https://jestjs.io/). One thing the tutorials often forget to tell you is how to link your test suite project to your primary project. This causes your test suite to be unable to "see" the classes from your main project.
 
-## The Problem
+## The Problem in a Nutshell
 
-Here's how the problem arises. You create a solution contains two projects: `ExampleProject` and `ExampleProject.Tests`. They're in sibling directories, so that the structure looks like this:
+Here's how the problem arises. You create a solution that contains two projects: `ExampleProject` and `ExampleProject.Tests`. They're in sibling directories, so that the file structure looks like this:
 
 ```txt
 solution-root
@@ -27,7 +27,7 @@ However, you get a compiler error when you try to access classes from the `Examp
 
 ## The Solution
 
-The solution is to link the main project to the test project. There are multiple ways to achieve this, but I will show you three ways: in Visual Studio, in the console and manually. I'm sure there's a way to do it in JetBrains, too, though I've never used it before.
+The solution is to explicitly link the main project to the test project by adding a **project reference**. I will show you three ways to achieve this: in Visual Studio, in the console, and manually.
 
 > Whichever solution you choose, don't forget to add a `using` statement to your test file, otherwise you'll still have trouble!
 
@@ -35,7 +35,7 @@ The solution is to link the main project to the test project. There are multiple
 
 If you're using Visual Studio (not VS Code), then it's pretty easy to add a project reference to your test project.
 
-All you have to do is right-click your test repo directory (i.e. `ExampleProject.Tests`) in the Solution Explorer. In the context menu (shown below), go to **Add > Project Reference...** A popup will open showing you all local repos available to link to. Select `ExampleProject`, press OK and you're done!
+All you have to do is right-click your test project directory (i.e. `ExampleProject.Tests`) in the Solution Explorer. In the context menu (shown below), go to **Add > Project Reference...** A popup will open showing you all local repos available to link to. Select `ExampleProject`, press OK and you're done!
 
 ![Visual Studio context menu](../images/cant-access-classes-from-xunit-context-menu.png)
 
@@ -46,14 +46,13 @@ The command-line way to do it is just as easy as it is in Visual Studio directly
 Then enter the following command into your terminal:
 
 ```sh
-$ dotnet add reference ../ExampleProject/ExampleProject.csproj
+$ dotnet add reference ..\ExampleProject\ExampleProject.csproj
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                        Put the relative path to your main
-                       project here. The direction of slashes
-                       obviously depends on your operating
-                       system.
+                       project here.
 
-Output: Reference `..\ExampleProject\ExampleProject.csproj` added to the project.
+Output:
+Reference `..\ExampleProject\ExampleProject.csproj` added to the project.
 ```
 
 That's all! You're now good to go.
