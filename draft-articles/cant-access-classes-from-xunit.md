@@ -49,6 +49,12 @@ The solution is to link the main project to the test project. There are multiple
 
 ### In Visual Studio
 
+If you're using Visual Studio (not VS Code), then it's pretty easy to add a project reference to your test project.
+
+All you have to do is right-click your test repo directory (i.e. `ExampleProject.Tests`) in the Solution Explorer. In the context menu (shown below), go to **Add > Project Reference...** A popup will open showing you all local repos available to link to. Select `ExampleProject`, press OK and you're done!
+
+![Visual Studio context menu](../images/cant-access-classes-from-xunit-context-menu.png)
+
 ### In the console
 
 ### Manually
