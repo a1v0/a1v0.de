@@ -57,6 +57,25 @@ All you have to do is right-click your test repo directory (i.e. `ExampleProject
 
 ### In the console
 
+The command-line way to do it is just as easy as it is in Visual Studio directly. First, navigate to the folder containing your test project (i.e. `ExampleProject.Tests`).
+
+Then enter the following command into your terminal:
+
+```sh
+$ dotnet add reference ../ExampleProject/ExampleProject.csproj
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       Put the relative path to your main
+                       project here. The direction of slashes
+                       obviously depends on your operating
+                       system.
+
+Output: Reference `..\ExampleProject\ExampleProject.csproj` added to the project.
+```
+
+That's all! You're now good to go.
+
+You can find out more about the `dotnet add reference` command [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference).
+
 ### Manually
 
 If all else fails, there's the not-so-good way to do it: by hand. Open your test project file (i.e. `ExampleProject.Tests.csproj`). You'll see a bunch of XML inside a `<Project>` tag. All you have to do is add this code inside that main tag, replacing the path as necessary:
