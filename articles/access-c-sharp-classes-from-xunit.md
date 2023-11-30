@@ -1,5 +1,5 @@
 ---
-title: "Help! I can't access my C# classes from xUnit!"
+title: Accessing C# classes from xUnit
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
