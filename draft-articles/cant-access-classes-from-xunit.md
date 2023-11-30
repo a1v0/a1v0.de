@@ -23,6 +23,24 @@ date: 2023-11-15
 
 Unit testing in C# with xUnit can at times be unwieldy, especially if, like me, you're accustomed to something like [Jest](https://jestjs.io/). One thing the tutorials often forget to tell you is how to link your test suite project to your primary project.
 
+## The Problem
+
+Here's how the problem arises. You create a solution contains two projects: `ExampleProject` and `ExampleProject.Tests`. They're in sibling directories, so that the structure looks like this:
+
+```txt
+solution-root
+├── solution.sln
+├── ExampleProject
+│   ├── ExampleProject.csproj
+│   ├── Program.cs
+│   └── ExampleClass.cs
+└── ExampleProject.Tests
+    ├── ExampleProject.Tests.csproj
+    └── Test.cs
+```
+
+However, you get a compiler error when you try to access classes from the `ExampleProject` namespace, e.g. `ExampleProject.ExampleClass`, from the xUnit project. xUnit can't "see" those things, even if you add a big fat `using` statement at the top of `Test.cs`.
+
 - outline the problem
   - happens when you create a sibling repo to your main one as part of solution folder
     - give folder structure
@@ -31,6 +49,7 @@ Unit testing in C# with xUnit can at times be unwieldy, especially if, like me, 
   - solution in VS
   - solution from command line (if there is one)
   - don't forget to add a using statement
+- if you figure out, during the writing of this article, why this problem happens in the first place, then write something somewhere about it
 
 artikel ueber warum xunit tests nicht funktionieren
 
