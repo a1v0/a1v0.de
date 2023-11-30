@@ -88,4 +88,4 @@ If all else fails, there's the not-so-good way to do it: by hand. Open your test
   </ItemGroup>
   ```
 
-This is essentially what the other solutions, above, do for you. This XML code functions like a highest-level `using` statement.
+This is what the other solutions, above, do for you. This XML code functions like a highest-level `using` statement.
