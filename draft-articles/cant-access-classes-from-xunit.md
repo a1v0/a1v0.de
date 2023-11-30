@@ -41,10 +41,28 @@ solution-root
 
 However, you get a compiler error when you try to access classes from the `ExampleProject` namespace, e.g. `ExampleProject.ExampleClass`, from the xUnit project. xUnit can't "see" those things, even if you add a big fat `using` statement at the top of `Test.cs`.
 
-- outline the problem
-  - happens when you create a sibling repo to your main one as part of solution folder
-    - give folder structure
-  - classes from main project aren't available in test project
+(N.B. The projects don't necessarily need to be siblings for this problem to occur. They could be nested, too.)
+
+## The Solution
+
+The solution is to link the main project to the test project. There are multiple ways to achieve this, but I will show you three ways: in Visual Studio, in the console and manually. I'm sure there's a way to do it in JetBrains, too, though I've never used it before.
+
+### In Visual Studio
+
+### In the console
+
+### Manually
+
+If all else fails, there's the not-so-good way to do it: by hand. Open your test project file (i.e. `ExampleProject.Tests.csproj`). You'll see a bunch of XML inside a `<Project>` tag. All you have to do is add this code inside that main tag, replacing the path as necessary:
+
+```xml
+  <ItemGroup>
+    <ProjectReference Include="..\ExampleProject\ExampleProject.csproj" />
+  </ItemGroup>
+  ```
+
+This is essentially what the other solutions, above, do for you. This XML code functions like a highest-level `using` statement.
+
 - how to solve
   - solution in VS
   - solution from command line (if there is one)
