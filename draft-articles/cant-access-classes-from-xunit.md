@@ -47,6 +47,8 @@ However, you get a compiler error when you try to access classes from the `Examp
 
 The solution is to link the main project to the test project. There are multiple ways to achieve this, but I will show you three ways: in Visual Studio, in the console and manually. I'm sure there's a way to do it in JetBrains, too, though I've never used it before.
 
+> Whichever solution you choose, don't forget to add a `using` statement to your test file, otherwise you'll still have trouble!
+
 ### In Visual Studio
 
 If you're using Visual Studio (not VS Code), then it's pretty easy to add a project reference to your test project.
