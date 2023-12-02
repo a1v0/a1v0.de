@@ -29,7 +29,7 @@ However, you get a compiler error when you try to access classes from the `Examp
 
 The solution is to explicitly link the main project to the test project by adding a **project reference**. I will show you three ways to achieve this: in Visual Studio, in the console, and manually.
 
-> Whichever solution you choose, don't forget to add a `using` statement to your test file, otherwise you'll still have trouble!
+> Once you've done this, you won't even need a `using` statement in your test suite. xUnit knows where to look.
 
 ### In Visual Studio
 
@@ -69,4 +69,4 @@ If all else fails, there's the not-so-good way to do it: by hand. Open your test
   </ItemGroup>
   ```
 
-This is what the other solutions, above, do for you. This XML code functions like a highest-level `using` statement.
+This is what the other solutions, above, do for you under the hood. This XML code functions like a highest-level `using` statement.
