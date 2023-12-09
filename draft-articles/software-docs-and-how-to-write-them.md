@@ -27,10 +27,14 @@ Docs are crucial to any software project, so why are we so bad at writing them? 
 
 In this article I'll go over why docs are important, why they're annoying to write and, crucially, the way to write docs so that they're not such a chore.
 
-- intro
-  - docs super important
-  - so why are we so poor at writing them?
-  - we always leave them to the last minute, by which time we've forgotten about half of the features
+## Why documentation is useful
+
+Docs are useful for one primary reason: training. Most of the time, the creators aren't the end-user, so there needs to be some guide explaining how the code works. That applies no matter who the end-user is: a company, some random teenager working on a hobby project using your package, or someone within your organisation.
+
+However, docs are more than just a deliverable when handing over a project to the client. They're also beneficial for _you_ and your colleagues. Many companies use their own docs as training materials for new starters. Additionally, as a project grows in size, you might forget how your own project handles things that you coded two years ago. The docs are there to support you through that.
+
+Bad or absent docs make life difficult for all manner of folks, including a down-the-line you. Trawling through source code to figure things out for yourself is an enormous drain on time; far better to guide users with docs.
+
 - why are docs useful
   - training material
     - for you and your colleagues
