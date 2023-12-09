@@ -35,15 +35,14 @@ However, docs are more than just a deliverable when handing over a project to th
 
 Bad or absent docs make life difficult for all manner of folks, including a down-the-line you. Trawling through source code to figure things out for yourself is an enormous drain on time; far better to guide users with docs.
 
-- why are docs useful
-  - training material
-    - for you and your colleagues
-    - for client at handover
-    - for third party API users
-  - handover to client
-- why docs are a pain to write
-  - docs are always out of date if your project is still in its "constantly in flux" phase
-  - you're overworked as it is!
+## Why docs are a pain to write
+
+Don't get me wrong: I'm greatly pro-doc. But they _are_ a huge nuisance to write, especially during phases where your project is in flux.
+
+We're often overworked and short on time, and adding the writing of documentation into the mix feels like an own goal. If you've drafted some docs but then decide to take your code in a different direction, your docs have become obsolete before they ever got published. That's rubbish! You'll have to go back and rewrite the damned things!
+
+But have courage, because there's an easier way that will make everyone happy: you won't have to work too hard and your end-user gets their docs on time.
+
 - how to write good docs with one simple trick
   - if you, like most people, don't have a dedicated docs-writing team working for you, follow these steps
   - make a document right at the start of the project
