@@ -53,3 +53,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - Failing all that, consider instead categorising content into topics by splitting content into folders
 7. Add TOC to articles?
 8. Remove padding/margins from paragraphs and other elements inside `pre` and `code` tags
+9. Add different background colour for `code` tags inside blockquotes
