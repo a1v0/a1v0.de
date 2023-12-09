@@ -46,10 +46,11 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 2. Add linting to repo
 3. Add padding/margins to links in menu and footer so they're more legible on smaller screens
 4. Create Articles page to show list of all content
+    - Could also make a page for various categories, e.g. UPS, ServiceNow etc.
 5. Find a way to do breadcrumbs with static content
 6. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
     - Create new property at the top of every article
     - If Contentlayer allows, make it an array or CSV of tags
     - Failing all that, consider instead categorising content into topics by splitting content into folders
 7. Add TOC to articles?
-8. Remove padding/margins from paragraphs and other elements inside `pre` and `code` tags
+8. Add different background colour for `code` tags inside blockquotes

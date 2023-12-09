@@ -64,9 +64,9 @@ You can find out more about the `dotnet add reference` command [here](https://le
 If all else fails, there's the not-so-good way to do it: by hand. Open your test project file (i.e. `ExampleProject.Tests.csproj`). You'll see a bunch of XML inside a `<Project>` tag. All you have to do is add this code inside that main tag, replacing the path as necessary:
 
 ```xml
-  <ItemGroup>
+<ItemGroup>
     <ProjectReference Include="..\ExampleProject\ExampleProject.csproj" />
-  </ItemGroup>
-  ```
+</ItemGroup>
+```
 
 This is what the other solutions, above, do for you under the hood. This XML code functions like a highest-level `using` statement.
