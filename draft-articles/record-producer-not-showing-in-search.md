@@ -1,5 +1,5 @@
 ---
-title: Record producers not showing up in portal search
+title: Record producers not showing up in ServiceNow portal search
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -31,3 +31,9 @@ date: 2023-11-15
 - obvious solution:
   - available for and not available for
   - roles of user trying to access
+
+Here's the scenario: you've just created a record producer in ServiceNow. You go into your portal's home page, type the necessary words into the search bar, but no results are found.
+
+Where the heck is your record producer?
+
+There are two reasons for this problem. One is obvious, the other much less so. I will start with the less obvious one, on the assumption that you're unlikely to stumble upon this humble website unless you're at your wits' end.
