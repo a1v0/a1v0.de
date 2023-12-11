@@ -5,7 +5,7 @@ date: 2023-11-20
 
 I've plenty to say about the UPS Shipping API and will post a few articles about it on this site. It's all pretty unwieldy, for sure.
 
-But to begin with, here's a pretty fundamental problem with the UPS website itself:
+But to begin with, here's a pretty fundamental problem with the UPS website itself: the UPS site only works on Chrome.
 
 > The UPS website is designed for Google Chrome and doesn't work correctly in other browsers.
 
@@ -24,7 +24,7 @@ Google Chrome is [by far the dominant browser](https://gs.statcounter.com/) in t
 1. At time of writing, Chrome has a [market share on desktop](https://gs.statcounter.com/browser-market-share/desktop/worldwide) of just under 65%. This leaves just over 35% of people who _don't_ use Chrome. UPS's design choice prevents a fat chunk of the global population from using its site.
 2. Not everybody has access to Chrome. For instance, many company-issued computers restrict the software available to employees, and you may not be able to install Chrome on your machine. (I've been stuck with Edge and Internet Explorer(!) often enough.)
 
-## "But I can load the site just fine..."
+## "But I can load the site just fine outside of Chrome..."
 
 It's true that I'm using a broken contact form to write off an entire website. However, the fact that the most basic and fundamental of website tools&mdash;the humble contact form&mdash;isn't designed to work outside of Chrome puts the entire website in doubt.
 
