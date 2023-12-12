@@ -49,3 +49,11 @@ The solution is to look for **Text Indexes** in your left nav. Once there, look 
 Enter the text index record and click on the UI action at the bottom of the form called "Regenerate Text Index".
 
 Voilà, the problem should now be fixed!
+
+## Available For roles
+
+The more likely cause of your problem has nothing to do with indexing. It's rather more banal: availability.
+
+Have you made your record producer available for the right sort of user? Check the **Available For** and **Not Available For** related lists at the bottom of your record producer. Have you made it available for anybody? Is there a conflicting entry in the Not Available For section?
+
+Annoyingly, the Available For records don't work like ACLs. Instead of it giving you a list of roles to choose from, like you would in an ACL, you get a list of preconfigured types of user, called things like "Users with snc_internal". If you've picked something more specific, make sure that that record truly does contain the role you think it does.
