@@ -15,6 +15,8 @@ Docs are useful for one primary reason: training. Most of the time, the creators
 
 However, docs are more than just a deliverable when handing over a project to the client. They're also beneficial for _you_ and your colleagues. Many companies use their own docs as training materials for new starters. Additionally, as a project grows in size, you might forget how your own project handles things that you coded two years ago. The docs are there to support you through that.
 
+> Documentation can be useful even for the author of the code.
+
 Bad or absent docs make life difficult for all manner of folks, including a down-the-line you. Trawling through source code to figure things out for yourself is an enormous drain on time&mdash;far better to guide users with docs.
 
 ## Why docs are a pain to write
