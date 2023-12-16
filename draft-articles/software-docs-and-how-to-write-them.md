@@ -43,11 +43,14 @@ We're often overworked and short on time, and adding the writing of documentatio
 
 But have courage, because there's an easier way that will make everyone happy: you won't have to work too hard and your end-user gets their docs on time.
 
-- how to write good docs with one simple trick
-  - if you, like most people, don't have a dedicated docs-writing team working for you, follow these steps
-  - make a document right at the start of the project
-  - add bullet point notes of the stuff you need to document as you go along
-    - no need to add too much detail, because it might lose its accuracy throughout the dev process
-  - periodically review to see which bits of the program are closed off/complete and document them
-  - this way, you can get as much documentation out of the way during the dev process as possible and you have a list of remaining bits of content
-  - you can use tools like (what's the name of the docstrings thing?), but don't be too lazy
+## How to write good docs with one simple trick
+
+If you, like most people, don't have a dedicated docs-writing team working for you, then follow these steps:
+
+1. **Create a blank document right at the start of the project.** Word; Notepad; [Obsidian](https://obsidian.md/); pen and paper; or whatever floats your boat.
+2. **Add bullet-point notes as you go along.** No need to add too much detail, since the specific content will likely change as the project progresses. Add the bare minimum, e.g. the names of features and what their purpose. Just enough to remind you what you need to write about when the time comes.
+3. **Fill in the blanks when possible.** Periodically review the file and, when a feature is closed/complete, you can write the documentation for it. This way, you can get as much documentation done during the project as possible, reducing the workload right at the end.
+
+Feel free to use nifty features like [docstrings](https://en.wikipedia.org/wiki/Docstring) from which certain docs can be auto-generated, but don't be too lazy! Docs are important and need to be taken seriously.
+
+Following the above three steps, you'll be able to deliver on your documentation requirements without all the painful drawbacks. Happy writing!
