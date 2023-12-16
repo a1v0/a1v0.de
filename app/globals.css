@@ -139,6 +139,9 @@
         @apply mx-px;
         @apply font-mono;
     }
+    blockquote code {
+        @apply bg-[#d9d9d9];
+    }
 
     pre {
         @apply w-full;
