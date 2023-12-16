@@ -43,7 +43,7 @@ We're often overworked and short on time, and adding the writing of documentatio
 
 But have courage, because there's an easier way that will make everyone happy: you won't have to work too hard and your end-user gets their docs on time.
 
-## How to write good docs with one simple trick
+## How to write good docs in three simple steps
 
 If you, like most people, don't have a dedicated docs-writing team working for you, then follow these steps:
 
