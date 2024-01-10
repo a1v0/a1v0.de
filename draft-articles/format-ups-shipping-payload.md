@@ -1,5 +1,5 @@
 ---
-title: How to correctly format the payload in the UPS Shipping API
+title: How to format the payload in the UPS Shipping API
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -21,9 +21,18 @@ title: How to correctly format the payload in the UPS Shipping API
 date: 2023-11-15
 ---
 
-This is the bare-minimum object:
+The UPS documentation page [INSERT LINK!] is pretty unwieldy at times. Not only does it not work properly on browsers other than Chrome [INSERT LINK!], but it's also generally user-unfriendly:
 
-```js
+They've overridden the standard Ctrl+F, in favour of an inferior custom "find" utility; there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions; and their indication of what is and isn't mandatory isn't quite right.
+
+## Minimum viable payload for UPS Shipping API
+
+To make your life easier, here's the bare minimum JSON payload for a shipment. It's a little more than the docs would have you believe.
+
+[THE BELOW ISN'T QUITE THE BARE MINIMUM. USE METRO API AS A GUIDE]
+[ADD PROPER 4-SPACE INDENTATION TO BELOW]
+
+```json
 {
   "ShipmentRequest": {
     "Request": {
