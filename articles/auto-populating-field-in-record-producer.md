@@ -7,13 +7,20 @@ In Utah, ServiceNow introduced an _auto-populate_ feature for record producers, 
 
 This is incredibly handy and saves you having to use catalog client scripts with client-callable script includes. (I usually cry into my coffee every time I have to use GlideAjax for something trivial.) Well done ServiceNow!
 
-However, the way the feature has been implemented means that it cannot work on the CSM portal. A refqual is specifically block users who don't have `snc_internal`.
+However, the way the feature has been implemented means that it cannot work on the CSM portal. A refqual is specifically block users who have `snc_external`.
 
-> Auto-populate will always fail when users without `snc_internal` interect with a record producer.
+> Auto-populate will always fail when users with `snc_external` interect with a record producer.
 
 ## Why is this happening?
 
-Currently, the auto-populate feature calls an API to retrieve a dynamic value. That API has a protection rule in place that limits use to users with `snc_internal`. Anyone else using the form will receive an error message saying, "Something went wrong, and your request could not be submitted. Please contact your system administrator."
+Currently, the auto-populate feature calls an API to retrieve a dynamic value. An ACL prevents external users from calling scripted REST endpoints by default (see ACL called "Scripted REST External Default").
+
+```js
+// Script inside "Scripted REST External Default" ACL
+answer = !gs.hasRole("snc_external");
+```
+
+Since auto-populate only works with access to this REST endpoint, anyone external using the form will receive an error message saying, "Something went wrong, and your request could not be submitted. Please contact your system administrator."
 
 ## How do I fix it?
 
