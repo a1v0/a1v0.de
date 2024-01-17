@@ -33,3 +33,12 @@ article about how servicenow prod environments aren't seeded like non-prod
     - a flaw that's incredibly hard to debug
     - requires you to do a bunch of manual stuff
     - especially unhelpful since a) not being able to run flows is a pretty major flaw and b) go-lives are very stressful as it is
+- add link to article about text indices
+
+After many months, our project finally wound to a close. It was time, at last, to go live. I logged into our as yet unused production instance for the first time and was migrating all of our update sets across.
+
+The migration went smoothly enough. Sure, we had a couple of merge conflicts, but they were quickly resolved. Nevertheless, **loads of things were broken**. After a lot of investigation, I came to the conclusion that ServiceNow seeds its production instances differently to its non-prod instances.
+
+> ServiceNow's seed file for production is full of bugs.
+
+(This article naturally carries the caveat that ServiceNow fixes the bugs in question by the time you read this.)
