@@ -42,3 +42,11 @@ The migration went smoothly enough. Sure, we had a couple of merge conflicts, bu
 > ServiceNow's seed file for production is full of bugs.
 
 (This article naturally carries the caveat that ServiceNow fixes the bugs in question by the time you read this.)
+
+## Why use a different seeding process for production?
+
+I haven't worked out why exactly ServiceNow has made a different seeding process for prod environments. Sure, there'll be some differences here and there, but there's an awful lot of divergence.
+
+I don't know ServiceNow's processes, obviously, but it seems like they've got a fully separate seed, rather than, for example, seeding all environments in the same way, then making the necessary changes afterwards for production environments.
+
+Perhaps I'm being na&iuml;ve, not least because people much cleverer than me are designing this stuff. Nonetheless, it wouldn't be the first time that there have been eyebrow-raising design decisions made by ServiceNow...
