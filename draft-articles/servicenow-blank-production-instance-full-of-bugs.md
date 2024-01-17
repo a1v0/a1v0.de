@@ -43,7 +43,7 @@ Beyond Flows, there were a few more minor things here and there that were easy t
 
 ## Why use a different seeding process for production?
 
-I haven't worked out why exactly ServiceNow has made a different seeding process for prod environments. Sure, there'll be some differences here and there, but there's an awful lot of divergence.
+I haven't worked out why exactly ServiceNow has made a different seeding process for prod environments. Sure, there need to be some differences here and there, but it feels like those differences are comparatively minor and don't warrant a separate seed.
 
 I don't know ServiceNow's processes, obviously, but it seems like they've got a fully separate seed, rather than, for example, seeding all environments in the same way, then making the necessary changes afterwards for production environments.
 
