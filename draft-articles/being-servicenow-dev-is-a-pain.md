@@ -39,17 +39,24 @@ Add to this the fact that many ServiceNow users are reluctant: they liked whatev
 
 Failing silently ensures confusion is kept to a minimum. Sure, some errors might cause confusion in a different way, but most errors are invisible to normal users. If one "before update" business rule fails, for example, the record will normally still be updated and the user will be none the wiser. Great, right?
 
-- ...except the devs
-  - we can agree that failing silently on a platform that potentially has tens of thousands of users is good
-  - but it makes developing a pain
-  - many things in ServiceNow require scripting, and scripts always always ALWAYS go horribly wrong during the dev process (the fact that JavaScript isn't type-safe doesn't help...)
-    - we make stupid typos
-    - we use methods on GlideDateTime that don't exist within the current scope
-    - we provide a Boolean `true` when we meant to provide a string of `"true"`
-  - when the system fails silently, we don't always have a harpy screeching at us about our error. The script will run and fail and you'll have to delve into the system logs to find out why
-    - you'll only find a legible JavaScript error if you're lucky
-    - if unlucky you'll have nothing or some gibberish Java error
+## Developers prefer their errors to be loud and proud
+
+- we can agree that failing silently on a platform that potentially has tens of thousands of users is good
+- but it makes developing a pain
+- many things in ServiceNow require scripting, and scripts always always ALWAYS go horribly wrong during the dev process (the fact that JavaScript isn't type-safe doesn't help...)
+  - we make stupid typos
+  - we use methods on GlideDateTime that don't exist within the current scope
+  - we provide a Boolean `true` when we meant to provide a string of `"true"`
+- when the system fails silently, we don't always have a harpy screeching at us about our error. The script will run and fail and you'll have to delve into the system logs to find out why
+  - you'll only find a legible JavaScript error if you're lucky
+  - if unlucky you'll have nothing or some gibberish Java error
 - shouldn't devs just be better at their job and ensure no errors get raised?
+  - ideally yes, but there are always problems:
+    - a script depends on the latest version of a script include that hasn't yet been imported
+    - a weird, niche edge case happens that was accidentally not considered
+    - a critical piece of infrastructure breaks because of an API key that has expired
+    - an honest mistake is made, e.g. typo in one of the refqual fields that doesn't get spellchecked
+    - or just something that was overlooked throughout the entire dev cycle through the instances (it happens)
 - conclusion: servicenow is mostly a fit-and-forget product
   - you do the development, the testing and then the deployment
   - by the time it reaches users, it's supposed to be perfect
