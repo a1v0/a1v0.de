@@ -21,12 +21,14 @@ title: Why being a ServiceNow dev can be a pain
 date: 2023-11-15
 ---
 
-article about failing silently
+I've moaned about ServiceNow a lot, but really it's a brilliant platform. It's feature-rich, user-friendly and highly useful. It scratches an itch that a huge amount of large companies have in a way that other, similar platforms don't. Moreover, its low-code/no-code features make it enormously powerful, enabling great levels of tailored customisation.
 
-- intro: ServiceNow is great platform. feature-rich, useful, user-friendly
-  - not dev-friendly, though
-  - I mean more than the little bugbears we all have (e.g. why does the code editor shout at you when you're missing a semicolon but doesn't tell you that you've forgotten to write gr.query()?!)
-  - what if I told you that the fact that the system is a pain to debug is actually deliberate and positive (for users, that is)?
+The drawback is that it's not developer-friendly. And here I don't mean the various pet peeves we all have (e.g. why does the code editor shout at you for missing out a semicolon but doesn't tell you that you've forgotten to write `gr.query()`?!). I mean more fundamentally: coding on ServiceNow is often trickier in many respects that vanilla programming.
+
+Vanilla programming can be quite easy to debug. If something goes terribly wrong, you'll usually get a giant stack trace telling you exactly where the program failed. Not so in ServiceNow. But what if I told you that the fact that the system is a pain to debug is actually deliberate and _positive_ (for users, that is)?
+
+## Failing silently
+
 - Failing Silently
   - to provide a good UX for the many users of an instance (some instances have only 50-odd regular users, but many have thousands upon thousands), you can't be blurting out "SyntaxError" all over the place
     - check the system logs: you'll see countless Java errors caused by some bug inside ServiceNow. Huge stacjk traces
