@@ -29,12 +29,16 @@ Vanilla programming can be quite easy to debug. If something goes terribly wrong
 
 ## Failing silently
 
-- Failing Silently
-  - to provide a good UX for the many users of an instance (some instances have only 50-odd regular users, but many have thousands upon thousands), you can't be blurting out "SyntaxError" all over the place
-    - check the system logs: you'll see countless Java errors caused by some bug inside ServiceNow. Huge stacjk traces
-  - if something like that happened, you'd instantly get a billion support cases raised
-  - there may also be a lot of reluctant users, who resent their company's decision to change its ITSM product and who haven't yet been won over by ServiceNow. a loud failure, as petty as it sounds, could cause unrest within an organisation
-  - instead, you fail silently. this way, no user's faith in the system is compromised and nobody is confused...
+I've worked on ServiceNow instances that have only about 50 regular users, but there are many out there that have thousands upon thousands of users. If something goes wrong, it won't do for the platform to scream "SyntaxError" at the top of its lungs. Instead, ServiceNow _fails silently_.
+
+Check the system logs: you'll see tonnes of gigantic Java null-pointer errors that are triggered by some benign bug. Imagine if that incomprehensible stack trace appear as a red info box at the top of the page. A user would be totally confused.
+
+Failing loudly is awful user experience. In their confusion, users might resubmit forms or they might raise incidents. Imagine getting thousands of incidents because all of your users encountered a confusing and irrelevant error message!
+
+Add to this the fact that many ServiceNow users are reluctant: they liked whatever ITSM tool their company used to use and have had to adopt ServiceNow "by force". A loud, confusing error message can easily add to this resentment and could trigger a lot of whingeing. Sounds petty, but organisations need to think practically.
+
+Failing silently ensures confusion is kept to a minimum. Sure, some errors might cause confusion in a different way, but most errors are invisible to normal users. If one "before update" business rule fails, for example, the record will normally still be updated and the user will be none the wiser. Great, right?
+
 - ...except the devs
   - we can agree that failing silently on a platform that potentially has tens of thousands of users is good
   - but it makes developing a pain
@@ -45,6 +49,7 @@ Vanilla programming can be quite easy to debug. If something goes terribly wrong
   - when the system fails silently, we don't always have a harpy screeching at us about our error. The script will run and fail and you'll have to delve into the system logs to find out why
     - you'll only find a legible JavaScript error if you're lucky
     - if unlucky you'll have nothing or some gibberish Java error
+- shouldn't devs just be better at their job and ensure no errors get raised?
 - conclusion: servicenow is mostly a fit-and-forget product
   - you do the development, the testing and then the deployment
   - by the time it reaches users, it's supposed to be perfect
