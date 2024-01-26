@@ -51,13 +51,20 @@ You'll only find a legible JavaScript error if you're lucky: not every bug trigg
 
 The developer experience is a lot more regimented on ServiceNow. We don't have the same freedoms offered by something like VS Code. Moreover, as our processes become more complex, there are a lot more places where problems could arise: Flows, Workflows, business rules, script includes, ACLs etc. With a vanilla codebase, all of your code is in one place. This makes tracing and hunting down bugs much simpler than in ServiceNow.
 
-- shouldn't devs just be better at their job and ensure no errors get raised?
-  - ideally yes, but there are always problems:
-    - a script depends on the latest version of a script include that hasn't yet been imported
-    - a weird, niche edge case happens that was accidentally not considered
-    - a critical piece of infrastructure breaks because of an API key that has expired
-    - an honest mistake is made, e.g. typo in one of the refqual fields that doesn't get spellchecked
-    - or just something that was overlooked throughout the entire dev cycle through the instances (it happens)
+## Why not just stop making mistakes?
+
+Shouldn't it be our job as professional software developers to write good code that works? After all, surgeons don't operate carefully and iron out problems during a second attempt. Why aren't we capable of getting it right first time?
+
+In an ideal world, of course, we'd be able to write perfect code that runs correctly the first time round. I admit that we can be a careless lot at times. But there are always complications, e.g.:
+
+- a script that depends on the latest version of another script include that hasn't yet been imported;
+- a user managing to trigger a weird, niche edge case that was accidentally not considered during development;
+- a critical piece of infrastructure that breaks because of an API key that has expired;
+- an honest mistake, e.g. typo in one of the refqual fields that doesn't get spellchecked (you could say it's careless, but the odds are against you in these situations);
+- or just something that was overlooked throughout the entire release cycle (it happens).
+
+There are many places where failure can happen. Some software projects have such an extensive list of users stories that it's nigh impossible to prevent the occasional problem. _C'est la vie._
+
 - conclusion: servicenow is mostly a fit-and-forget product
   - you do the development, the testing and then the deployment
   - by the time it reaches users, it's supposed to be perfect
