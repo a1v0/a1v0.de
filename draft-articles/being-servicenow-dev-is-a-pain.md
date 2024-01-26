@@ -41,15 +41,16 @@ Failing silently ensures confusion is kept to a minimum. Sure, some errors might
 
 ## Developers prefer their errors to be loud and proud
 
-- we can agree that failing silently on a platform that potentially has tens of thousands of users is good
-- but it makes developing a pain
-- many things in ServiceNow require scripting, and scripts always always ALWAYS go horribly wrong during the dev process (the fact that JavaScript isn't type-safe doesn't help...)
-  - we make stupid typos
-  - we use methods on GlideDateTime that don't exist within the current scope
-  - we provide a Boolean `true` when we meant to provide a string of `"true"`
-- when the system fails silently, we don't always have a harpy screeching at us about our error. The script will run and fail and you'll have to delve into the system logs to find out why
-  - you'll only find a legible JavaScript error if you're lucky
-  - if unlucky you'll have nothing or some gibberish Java error
+While we can all agree that failing silently on a platform that potentially has tens of thousands of users is a good thing, it definitely makes developing a pain.
+
+Many things in ServiceNow require scripting, and scripts always, _always_, ALWAYS go horribly wrong during the dev process (the fact that JavaScript isn't type-safe doesn't help...). We make stupid typos, we use methods on `GlideDateTime` that don't exist within the current scope, we provide a Boolean `true` when we meant to provide a string of `"true"`.
+
+When the system fails silently, we don't always have a harpy screeching at us about our error. The script will run and fail and you'll have to delve into the system logs to find out why.
+
+You'll only find a legible JavaScript error if you're lucky: not every bug triggers a JavaScript exception. And, if you're especially unlucky, you'll have some gibberish Java error because your code has somehow crashed Rhino (I've done it before!).
+
+The developer experience is a lot more regimented on ServiceNow. We don't have the same freedoms offered by something like VS Code. Moreover, as our processes become more complex, there are a lot more places where problems could arise: Flows, Workflows, business rules, script includes, ACLs etc. With a vanilla codebase, all of your code is in one place. This makes tracing and hunting down bugs much simpler than in ServiceNow.
+
 - shouldn't devs just be better at their job and ensure no errors get raised?
   - ideally yes, but there are always problems:
     - a script depends on the latest version of a script include that hasn't yet been imported
