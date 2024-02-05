@@ -63,10 +63,12 @@ In an ideal world, of course, we'd be able to write perfect code that runs corre
 - an honest mistake, e.g. typo in one of the refqual fields that doesn't get spellchecked (you could say it's careless, but the odds are against you in these situations);
 - or just something that was overlooked throughout the entire release cycle (it happens).
 
-There are many places where failure can happen. Some software projects have such an extensive list of users stories that it's nigh impossible to prevent the occasional problem. _C'est la vie._
+There are many places where failure can happen. Some software projects have such an extensive list of user stories that it's nigh impossible to prevent the occasional problem. _C'est la vie._
 
-- conclusion: servicenow is mostly a fit-and-forget product
-  - you do the development, the testing and then the deployment
-  - by the time it reaches users, it's supposed to be perfect
-    - there will always be bugs here and there the creep in, however slight (the major ones ought to have been ironed out by now)
-  - the upshot of it all is that you need people to have faith in the final product, to accept it, and to be able to use it without running into work-blocking syntax errors etc.
+## Fit and forget
+
+ServiceNow is mostly treated as a fit-and-forget product: you spend loads of effort setting the system up, but once it's all set up, you leave it in place without making any significant changes.
+
+In other words, after it has passed through the development stage, testing and deployment, i.e. by the time real users touch it, it's _supposed_ to be perfect.
+
+However, given that (small) bugs are inevitable, even in production, you need a system that can silently handle any bugs without causing confusion to the user. End-users need to have faith in the final product, with the ability to use it without running into work-blocking JavaScript errors.
