@@ -55,7 +55,7 @@ string string = "hello"; // causes an error
 string @string = "hello"; // no error
 
 Console.WriteLine(@string); // the @ is part of the variable's name
-                           // so you need to use it when referring to it
+                            // so you need to use it when referring to it
 ```
 
 The question is: why on earth would you want to give your variable a reserved name? That's surely a recipe for confusion, right? At any rate, I've not been able to divine a use case for it and would advise against it if at all possible.

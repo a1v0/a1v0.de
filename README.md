@@ -48,10 +48,11 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
       - `<code>` tags with a horizontal scrollbar need to be accessible via `tabindex="0"`. Contentlayer doesn't give me a way to set a tab index for `<code>` tags; my only solution would be to run a script on every page to set one automatically. Not sure quite how to implement that in a non-clunky way
 2. Add linting to repo
 3. Create Articles page to show list of all content
-    - Could also make a page for various categories, e.g. UPS, ServiceNow etc.
+    - Could also make a page for various categories, e.g. UPS, ServiceNow etc. (<https://contentlayer.dev/docs/reference/source-files/field-types-defe41e9>)
 4. Find a way to do breadcrumbs with static content
 5. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
     - Create new property at the top of every article
     - If Contentlayer allows, make it an array or CSV of tags
     - Failing all that, consider instead categorising content into topics by splitting content into folders
-7. Add TOC to articles?
+6. Add TOC to articles?
+7. The logo flashes really big sometimes when the page loads. Presumably that can be fixed by scaling down the SVG
