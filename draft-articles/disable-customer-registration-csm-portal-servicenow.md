@@ -39,11 +39,11 @@ Within this record, update the `public` field.
 
 Stay on that page, though! We need it for the next step.
 
-## 2. Unpublish all widget instances
+## 2. Unpublish all pages containing the widget
 
-We'll have to do the next best thing: find every instance of the widget and unpublish those instances.
+Now that we've set the visibility, we can also unpublish any pages that contain the widget.
 
-By default, there's only one instance of the widget on a page called `csm_registration`. Set that page's status to "Draft".
+At the bottom of the widget form (see step 1) there's a related list called "Included in Pages". By default, there is just one record in that list called `csm_registration`. Set the fields `public=false` and `draft=true`.
 
 ## 3. Remove "Registration" link from CSM menu
 
