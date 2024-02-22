@@ -26,3 +26,5 @@ You're here because the person in charge of security on your project has asked y
 That's because there isn't an obvious way, as such. You'd expect there to be a system property that will enable or disable it, but no such thing exists.
 
 There are two steps to effectively disabling CSM registration, which I will go into below.
+
+> **tl;dr:** The two steps are setting the `csm_registration` page's publication state to "Draft" and deactivating the "Registration" link in the menu.
