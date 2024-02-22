@@ -25,7 +25,7 @@ You're here because the person in charge of security on your project has asked y
 
 That's because there isn't an obvious way, as such. You'd expect there to be a system property that will enable or disable it, but no such thing exists.
 
-There are two steps to effectively disabling CSM registration, which I will go into below.
+There are two steps to effectively disabling CSM registration, which I will go into below. Both steps take place in the Global application, so that's where to make your update set.
 
 > **tl;dr:** The two steps are setting the `csm_registration` page's publication state to "Draft" and deactivating the "Registration" link in the portal menu.
 
@@ -38,3 +38,11 @@ We can't delete the widget, either, since it's bad practice to delete out-of-the
 We'll have to do the next best thing: find every instance of the widget and unpublish those instances.
 
 By default, there's only one instance of the widget on a page called `csm_registration`. Set that page's status to "Draft".
+
+## 2. Remove "Registration" link from CSM menu
+
+In the left menu, navigate to **Service Portal > Portals**. In the list, select Customer Support (URL suffix `csm`).
+
+In the form, open the record in the Main Menu field (by default it's "CSM Header Menu").
+
+In the Menu Items list, set the Register link to `active=false` and you're all set.
