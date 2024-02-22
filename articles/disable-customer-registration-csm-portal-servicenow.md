@@ -45,7 +45,7 @@ The reason is that, should the world turn upside-down and somehow CSM registrati
 
 Navigate to the System Properties table and search for `sn_ext_usr_reg.allowed_email_domains`. If no such property exists, create a new one of type `string`.
 
-Set the value as a comma-separated list (no spaces) of acceptable email domains.
+Set the value as a comma-separated list (no spaces) of acceptable email domains. (You can read more about this system property [here](https://docs.servicenow.com/bundle/vancouver-platform-security/page/administer/security-center/reference/sc-external-user-registration-email-domain-allowlist.html).)
 
 > **Hint:** Since we're trying to stop people registering, it's best to keep this list as short as possible (without leaving it empty). One domain is sufficient, e.g. `a1v0.de` (don't include the @ symbol).
 
