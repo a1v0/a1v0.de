@@ -25,7 +25,7 @@ You're here because the person in charge of security on your project has asked y
 
 That's because there isn't an obvious way, as such. You'd expect there to be a system property that will enable or disable it, but no such thing exists.
 
-There are three steps to effectively disabling CSM registration, which I will go into below. Each step takes place in the Global application, so that's where to make your update set.
+There are four steps to effectively disabling CSM registration, which I will go into below. Each step takes place in the Global application, so that's where to make your update set.
 
 ## 1. Set the widget to `public=false`
 
@@ -52,3 +52,13 @@ In the left menu, navigate to **Service Portal > Portals**. In the list, select 
 In the form, open the record in the Main Menu field (by default it's "CSM Header Menu").
 
 In the Menu Items list, set the Register link to `active=false` and you're all set.
+
+## 4. Create an email domain allowlist
+
+It sounds counter-intuitive: why should we create an allowlist for emails when we're trying to stop people from registering?
+
+The reason is that, should the world turn upside-down and somehow CSM registration is enabled again, you can limit the users who can register.
+
+Navigate to the System Properties table and search for `sn_ext_usr_reg.allowed_email_domains`. If no such property exists, create a new one of type `string`.
+
+Set the value as a comma-separated list (no spaces) of acceptable email domains. Since we're trying to stop people registering, it's best to keep this list as short as possible (without leaving it empty). One domain is sufficient, e.g. `a1v0.de` or `example.com` (don't include the @ symbol).
