@@ -25,21 +25,27 @@ You're here because the person in charge of security on your project has asked y
 
 That's because there isn't an obvious way, as such. You'd expect there to be a system property that will enable or disable it, but no such thing exists.
 
-There are two steps to effectively disabling CSM registration, which I will go into below. Both steps take place in the Global application, so that's where to make your update set.
+There are three steps to effectively disabling CSM registration, which I will go into below. Each step takes place in the Global application, so that's where to make your update set.
 
-> **tl;dr:** The two steps are setting the `csm_registration` page's publication state to "Draft" and deactivating the "Registration" link in the portal menu.
+## 1. Set the widget to `public=false`
 
-## 1. Unpublish all widget instances
+Like most things in CSM, user registration is controlled by a widget. In our case, the widget is called Customer Registration (ID `customer-registration`). However, since there's no "Active" flag on a widget, we'll have to try something else.
 
-Like most things in CSM, user registration is controlled by a widget. In our case, the widget is called `WIDGET_NAME_HERE`. However, since there's no "Active" flag on a widget, we'll have to try something else.
+We can't delete the widget, either, since it's bad practice to delete out-of-the-box widgets. We'll have to do the next best thing: set its visibility to `public=false`.
 
-We can't delete the widget, either, since it's bad practice to delete out-of-the-box widgets.
+Navigate to **Service Portal > Widgets** and select Customer Registration from the list.
+
+Within this record, update the `public` field.
+
+Stay on that page, though! We need it for the next step.
+
+## 2. Unpublish all widget instances
 
 We'll have to do the next best thing: find every instance of the widget and unpublish those instances.
 
 By default, there's only one instance of the widget on a page called `csm_registration`. Set that page's status to "Draft".
 
-## 2. Remove "Registration" link from CSM menu
+## 3. Remove "Registration" link from CSM menu
 
 In the left menu, navigate to **Service Portal > Portals**. In the list, select Customer Support (URL suffix `csm`).
 
