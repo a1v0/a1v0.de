@@ -33,18 +33,16 @@ Here are the usual "ingredients" that lead to this issue:
 
 - dummy data has been removed
 - your theme is customised (I haven't been able to conclusively link this problem to the Theme Builder plugin, but it might be linked)
-- MFA is enabled
+- MFA is enabled for some users (by default, admins are enrolled into MFA)
 
 You will know that your issue is being caused by the above concoction of factors because **the logo on your login page won't be displaying**.
 
-- when does it happen?
-  - removal of dummy data (via Support portal)
-  - theme is customised (possibly linked to Theme Builder but I'm not sure)
-  - MFA is enabled
-  - you will know it is happening because the logo you've configured is appearing as a broken link in the login screen
-- what actually happens?
-  - logo is missing
-  - absent logo causes a redirect to fail, leading to a loop
+## What actually happens?
+
+You will notice that the logo is missing from the login screen.
+
+The broken link to the logo file leads to a redirection failure, leading to an endless loop during the login process. You will never make it into the platform as a result.
+
 - how to solve
   - if you have SSO enabled, login via SSO
     - if you're completely locked out of the instance, contact NOW support for assistance
