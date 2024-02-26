@@ -5,6 +5,8 @@ date: 2024-02-26
 
 Are you unable to use local login on your ServiceNow instance? Is your organisation's logo missing from the login screen? Then you've come to the right place.
 
+In this article, we provide an explanation as to what's happening, why, and how to fix it.
+
 > **Nice to know:** This problem doesn't affect web service users or SSO login, only users logging in locally.
 
 ## When does it happen?
