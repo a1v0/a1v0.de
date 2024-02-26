@@ -21,6 +21,10 @@ title: Local login fails after removing dummy data
 date: 2023-11-15
 ---
 
+Are you unable to use local login on your ServiceNow instance? Is your organisation's logo missing from the login screen? Then you've come to the right place.
+
+> **Nice to know:** This problem doesn't affect web service users or SSO login, only users logging in locally.
+
 - intro
   - unable to access instance via local login following removal of dummy data
   - (SSO and web service users aren't affected because they don't use this login page)
