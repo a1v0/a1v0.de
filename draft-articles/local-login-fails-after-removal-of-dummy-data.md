@@ -31,8 +31,8 @@ Broken local login typically occurs following the removal of dummy data from you
 
 Here are the usual "ingredients" that lead to this issue:
 
-- dummy data has been removed
-- your theme is customised (I haven't been able to conclusively link this problem to the Theme Builder plugin, but it might be linked)
+- Dummy data has been removed
+- Your theme is customised (I haven't been able to conclusively link this problem to the Theme Builder plugin, but it might be linked)
 - MFA is enabled for some users (by default, admins are enrolled into MFA)
 
 You will know that your issue is being caused by the above concoction of factors because **the logo on your login page won't be displaying**.
