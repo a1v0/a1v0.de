@@ -27,7 +27,7 @@ Are you unable to use local login on your ServiceNow instance? Is your organisat
 
 ## When does it happen?
 
-Broken local login typically occurs following the removal of dummy data from your instance. Dummy data can be purged via a service request on the NOW Support portal.
+Broken local login typically occurs following the removal of dummy data from your instance. Dummy data can be purged via a service request on the NowSupport portal.
 
 Here are the usual "ingredients" that lead to this issue:
 
@@ -47,7 +47,7 @@ The broken link to the logo file leads to a redirection failure, leading to an e
 
 First, you'll need access to your instance. If you're lucky, you might have SSO set up, giving you an option to gain access that way.
 
-Alternatively, you'll need to raise a case with NOW Support. They'll be able to get you in by disabling MFA.
+Alternatively, you'll need to raise a case with NowSupport. They'll be able to get you in by disabling MFA.
 
 Once you're in, re-upload the missing logo to the `sys_attachment` table. Then copy the `sys_id` of that record.
 
@@ -57,13 +57,8 @@ Replace the value of those properties to `sys_id_of_new_logo.iix` (if your norma
 
 That's all you need to do. Bear in mind that the system needs to accept and cache the solution, too. The first couple of login attempts might yield some funky redirection behaviour, but after that, all will be perfect.
 
-- how to solve
-  - if you have SSO enabled, login via SSO
-    - if you're completely locked out of the instance, contact NOW support for assistance
-  - re-upload the logo file to the system, then copy sys_id of that file
-  - open system Properties and search for `glide.product.image`. In this property should be a file name of `[sys_id].iix`
-  - Replace the value of that sys_id with `[copied sys_id].iix`
-  - Now all should be working
-- more info
-  - supposedly it's a bug frmo San Dieago
-  - given that, it seems surprising that it's been happening to me (Vancouver user)
+## Future outlook
+
+This is a bug that was first reported in San Diego. I first experienced the problem in Vancouver. So far as I have been able to find, there is currently no schedule for a bug fix.
+
+I find it surprising, since ServiceNow is aware of this bug. Maybe I'm being a na&iuml;ve back-seat driver, but is it _that_ hard to prevent the deletion of the non-dummy `sys_attachment` record?
