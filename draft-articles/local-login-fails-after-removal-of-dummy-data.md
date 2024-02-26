@@ -39,3 +39,6 @@ date: 2023-11-15
   - open system Properties and search for `glide.product.image`. In this property should be a file name of `[sys_id].iix`
   - Replace the value of that sys_id with `[copied sys_id].iix`
   - Now all should be working
+- more info
+  - supposedly it's a bug frmo San Dieago
+  - given that, it seems surprising that it's been happening to me (Vancouver user)
