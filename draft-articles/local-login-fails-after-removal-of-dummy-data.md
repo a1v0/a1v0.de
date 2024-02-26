@@ -25,9 +25,18 @@ Are you unable to use local login on your ServiceNow instance? Is your organisat
 
 > **Nice to know:** This problem doesn't affect web service users or SSO login, only users logging in locally.
 
-- intro
-  - unable to access instance via local login following removal of dummy data
-  - (SSO and web service users aren't affected because they don't use this login page)
+## When does it happen?
+
+Broken local login typically occurs following the removal of dummy data from your instance. Dummy data can be purged via a service request on the NOW Support portal.
+
+Here are the usual "ingredients" that lead to this issue:
+
+- dummy data has been removed
+- your theme is customised (I haven't been able to conclusively link this problem to the Theme Builder plugin, but it might be linked)
+- MFA is enabled
+
+You will know that your issue is being caused by the above concoction of factors because **the logo on your login page won't be displaying**.
+
 - when does it happen?
   - removal of dummy data (via Support portal)
   - theme is customised (possibly linked to Theme Builder but I'm not sure)
