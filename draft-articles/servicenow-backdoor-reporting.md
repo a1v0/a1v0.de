@@ -18,8 +18,10 @@ title: Major security flaw in ServiceNow's reporting
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-date: 2023-11-15
+date: 2024-01-01
 ---
+
+## [validate that this is still the case in Washington]
 
 - intro
 - summary of problem

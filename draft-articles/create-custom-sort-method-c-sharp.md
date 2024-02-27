@@ -18,10 +18,10 @@ title: Create a custom sort method in C#
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-date: 2023-11-15
+date: 2024-01-01
 ---
 
-use this as a guide: https://makersinstitute.gitbooks.io/c-basics/content/arrays/custom-sorting.html
+use this as a guide: <https://makersinstitute.gitbooks.io/c-basics/content/arrays/custom-sorting.html>
 
 - explain how C# uses an interface
 - just add suitable comparer method to your class and C# will know what to do when you use Array.Sort()
