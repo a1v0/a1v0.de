@@ -21,6 +21,8 @@ title: Major security flaw in ServiceNow's reporting
 date: 2024-01-01
 ---
 
+## [validate that this is still the case in Washington]
+
 - intro
 - summary of problem
   - dot-walking (explain term) allows you to access data that you oughtn't see
