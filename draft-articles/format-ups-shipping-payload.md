@@ -18,7 +18,7 @@ title: How to format the payload in the UPS Shipping API
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-date: 2023-11-15
+date: 2024-01-01
 ---
 
 The UPS documentation page [INSERT LINK!] is pretty unwieldy at times. Not only does it not work properly on browsers other than Chrome [INSERT LINK!], but it's also generally user-unfriendly:
