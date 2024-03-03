@@ -27,7 +27,10 @@ I went to the Plugins module and saw that the application was installed, but I c
 
 The App Store was no help either.
 
-- Go to plugins module
-- Click “Switch to Classic App Manager” in top right
-- Search for your app
-- Don’t be fooled by the version number on the right: click the dropdown menu and look for the version that has “[installed]” next to it.
+I was a bit forlorn, but eventually I found a solution:
+
+1. Go to the Plugins module
+2. In the top right of the page, click "Switch to Classic App Manager"
+3. Search for your application there
+4. At the right of the search result, you'll see a version number. Be careful, though! The version number shown there is usually the number of the _latest_ version of the app, not of the current version
+5. Click the version number and a bunch of versions will appear in a drop-down list. Your version is the one with [installed] written next to it, e.g. "3.0.0 [installed]"
