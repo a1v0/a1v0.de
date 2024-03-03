@@ -3,22 +3,22 @@ import highlight from "rehype-highlight";
 import { Pluggable } from "unified";
 
 export const Article = defineDocumentType(() => ({
-    name: "Article",
-    filePathPattern: `**/*.md`,
-    fields: {
-        title: { type: "string", required: true },
-        date: { type: "date", required: true }
-    },
-    computedFields: {
-        url: {
-            type: "string",
-            resolve: (article) => `/articles/${article._raw.flattenedPath}`
-        }
-    }
+	name: "Article",
+	filePathPattern: `**/*.md`,
+	fields: {
+		title: { type: "string", required: true },
+		date: { type: "date", required: true }
+	},
+	computedFields: {
+		url: {
+			type: "string",
+			resolve: (article) => `/articles/${article._raw.flattenedPath}`
+		}
+	}
 }));
 
 export default makeSource({
-    contentDirPath: "articles",
-    documentTypes: [Article],
-    markdown: { rehypePlugins: [highlight] as Pluggable[] }
+	contentDirPath: "articles",
+	documentTypes: [Article],
+	markdown: { rehypePlugins: [highlight] as Pluggable[] }
 });
