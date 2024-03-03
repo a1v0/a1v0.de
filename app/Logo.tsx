@@ -6,11 +6,12 @@ export default function Logo(props: { height: string }) {
 
 	return (
 		<svg
+			height="30"
 			viewBox="114 40.26 9.65 13.16" // calculated using https://codepen.io/mkmllr/pen/vpJmEK
 			className={`${props.height} fill-softer-black`}
+			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
-				xmlns="http://www.w3.org/2000/svg"
 				style={{
 					stroke: "none",
 					fillRule: "nonzero",
