@@ -1,5 +1,5 @@
 ---
-title: ServiceNow's blank production instances are full of bugs 
+title: ServiceNow's blank production instances are full of bugs
 date: 2024-01-17
 ---
 
