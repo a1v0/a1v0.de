@@ -3,164 +3,164 @@
 @tailwind utilities;
 
 @layer base {
-    * {
-        @apply m-0;
-        @apply p-0;
-        @apply box-border;
-    }
+	* {
+		@apply m-0;
+		@apply p-0;
+		@apply box-border;
+	}
 
-    html {
-        @apply text-xl;
-        @apply bg-brand-colour;
-    }
+	html {
+		@apply text-xl;
+		@apply bg-brand-colour;
+	}
 
-    .clear-gutters {
-        @apply mx-2;
-        @apply md:mx-auto;
-        @apply my-0;
-        @apply max-w-gutter;
-    }
+	.clear-gutters {
+		@apply mx-2;
+		@apply md:mx-auto;
+		@apply my-0;
+		@apply max-w-gutter;
+	}
 
-    p {
-        @apply my-[1em];
-    }
+	p {
+		@apply my-[1em];
+	}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @apply font-medium;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-medium;
+	}
 
-    h1 {
-        @apply text-5xl;
-        @apply mt-6;
-        @apply mb-5;
-    }
+	h1 {
+		@apply text-5xl;
+		@apply mt-6;
+		@apply mb-5;
+	}
 
-    h2 {
-        @apply text-4xl;
-        @apply mt-5;
-        @apply mb-4;
-    }
+	h2 {
+		@apply text-4xl;
+		@apply mt-5;
+		@apply mb-4;
+	}
 
-    h3 {
-        @apply text-3xl;
-        @apply mt-4;
-        @apply mb-3;
-    }
+	h3 {
+		@apply text-3xl;
+		@apply mt-4;
+		@apply mb-3;
+	}
 
-    h4 {
-        @apply text-2xl;
-        @apply mt-3;
-        @apply mb-2;
-    }
+	h4 {
+		@apply text-2xl;
+		@apply mt-3;
+		@apply mb-2;
+	}
 
-    h5 {
-        @apply text-xl;
-        @apply mt-2;
-        @apply mb-1;
-    }
+	h5 {
+		@apply text-xl;
+		@apply mt-2;
+		@apply mb-1;
+	}
 
-    h6 {
-        @apply text-lg;
-        @apply mt-1;
-        @apply mb-0;
-    }
+	h6 {
+		@apply text-lg;
+		@apply mt-1;
+		@apply mb-0;
+	}
 
-    a {
-        @apply underline;
-        @apply decoration-1;
-        @apply text-link-normal;
-    }
+	a {
+		@apply underline;
+		@apply decoration-1;
+		@apply text-link-normal;
+	}
 
-    a:hover {
-        @apply underline;
-        @apply decoration-2;
-        @apply text-link-hover;
-    }
+	a:hover {
+		@apply underline;
+		@apply decoration-2;
+		@apply text-link-hover;
+	}
 
-    a:visited {
-        @apply text-link-visited;
-    }
+	a:visited {
+		@apply text-link-visited;
+	}
 
-    a:active {
-        @apply bg-accent-colour;
-        @apply decoration-4;
-        @apply rounded-t;
-        @apply text-text-dark;
-    }
+	a:active {
+		@apply bg-accent-colour;
+		@apply decoration-4;
+		@apply rounded-t;
+		@apply text-text-dark;
+	}
 
-    ul {
-        @apply list-disc;
-    }
+	ul {
+		@apply list-disc;
+	}
 
-    ol {
-        @apply list-decimal;
-    }
+	ol {
+		@apply list-decimal;
+	}
 
-    ul,
-    ol {
-        @apply list-outside;
-        @apply ml-4;
-    }
+	ul,
+	ol {
+		@apply list-outside;
+		@apply ml-4;
+	}
 
-    li {
-        @apply ml-4;
-        @apply my-2;
-    }
+	li {
+		@apply ml-4;
+		@apply my-2;
+	}
 
-    ul.flush {
-        @apply list-none;
-        @apply m-0;
-    }
+	ul.flush {
+		@apply list-none;
+		@apply m-0;
+	}
 
-    ul.flush li {
-        @apply m-0;
-        @apply py-1;
-        @apply leading-5;
-    }
+	ul.flush li {
+		@apply m-0;
+		@apply py-1;
+		@apply leading-5;
+	}
 
-    blockquote {
-        @apply bg-background-grey;
-        @apply border-l-[12px];
-        @apply border-brand-colour;
-        @apply px-6;
-        @apply py-1;
-        @apply !my-10;
-        @apply rounded-r-md;
-    }
+	blockquote {
+		@apply bg-background-grey;
+		@apply border-l-[12px];
+		@apply border-brand-colour;
+		@apply px-6;
+		@apply py-1;
+		@apply !my-10;
+		@apply rounded-r-md;
+	}
 
-    code {
-        @apply rounded-md;
-        @apply bg-background-grey;
-        @apply px-1;
-        @apply py-px;
-        @apply mx-px;
-        @apply font-mono;
-    }
-    blockquote code {
-        @apply bg-[#d9d9d9];
-    }
+	code {
+		@apply rounded-md;
+		@apply bg-background-grey;
+		@apply px-1;
+		@apply py-px;
+		@apply mx-px;
+		@apply font-mono;
+	}
+	blockquote code {
+		@apply bg-[#d9d9d9];
+	}
 
-    pre {
-        @apply w-full;
-        @apply h-fit;
-        @apply overflow-x-scroll;
-        @apply bg-background-grey;
-        @apply !p-5;
-        @apply rounded-md;
-    }
+	pre {
+		@apply w-full;
+		@apply h-fit;
+		@apply overflow-x-scroll;
+		@apply bg-background-grey;
+		@apply !p-5;
+		@apply rounded-md;
+	}
 
-    pre > code {
-        @apply h-fit;
-        @apply w-full;
-        @apply !bg-[#00000000];
-    }
+	pre > code {
+		@apply h-fit;
+		@apply w-full;
+		@apply !bg-[#00000000];
+	}
 
-    .text-content {
-        @apply py-2;
-    }
+	.text-content {
+		@apply py-2;
+	}
 }
