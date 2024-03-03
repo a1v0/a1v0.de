@@ -57,4 +57,3 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 6. Add TOC to articles?
    - <https://webtech-note.com/posts/tocbot-contentlayer> This is a good guide on how to do it
 7. The logo flashes really big sometimes when the page loads. Presumably that can be fixed by scaling down the SVG
-8. See if there's a good italic version of the font
