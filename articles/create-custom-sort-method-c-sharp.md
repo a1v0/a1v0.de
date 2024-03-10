@@ -3,8 +3,6 @@ title: Create a custom sort method in C#
 date: 2024-03-10
 ---
 
-use this as a guide: <https://makersinstitute.gitbooks.io/c-basics/content/arrays/custom-sorting.html>
-
 - explain how C# uses an interface
 - just add suitable comparer method to your class and C# will know what to do when you use Array.Sort()
 - what if my class already inherits from elsewhere?
@@ -55,3 +53,5 @@ public class Car : IComparable
 ```
 
 I chose to stay relatively simple with my example, but you can make your `CompareTo` logic as complicated as you like.
+
+Once you've create a `CompareTo` method, C# will know what to do when you run `Array.Sort()` (or indeed any other comparison function).
