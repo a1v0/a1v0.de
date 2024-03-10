@@ -55,3 +55,14 @@ public class Car : IComparable
 I chose to stay relatively simple with my example, but you can make your `CompareTo` logic as complicated as you like.
 
 Once you've create a `CompareTo` method, C# will know what to do when you run `Array.Sort()` (or indeed any other comparison function).
+
+### What if my class already inherits from elsewhere?
+
+It's no problem if your class already inherits stuff from elsewhere. Adding an interface won't break anything. Here's what you can do:
+
+```c#
+public class ClassName : BaseClass, IInterface
+{
+    ...
+}
+```
