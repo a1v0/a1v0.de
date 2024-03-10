@@ -5,7 +5,7 @@ date: 2024-03-10
 
 Most, if not all, of C#'s pre-made classes can be sorted in ascending or descending order. In other words, if you make an array full of them, C# will be able to sort them.
 
-But what happens when you create your own class? How can I define my own sorting order?
+But what happens when you create your own class? How can you define your own, custom sorting order?
 
 ## The `IComparable` interface
 
@@ -27,8 +27,9 @@ public class Car : IComparable
 
     public int CompareTo(object objectToCompareTo)
     {
-        /* If the two Cars have different makes, we compare the makes alphabetically.
-         * Otherwise we compare the models alphabetically.
+        /* If the two Cars have different makes,
+         * we compare the makes alphabetically.
+         * Otherwise, we compare the models alphabetically.
          */
 
         Car comparison = (Car)objectToCompareTo;
@@ -41,15 +42,15 @@ public class Car : IComparable
         }
 
         if (Model < comparison.Model) return -1;
-        else if (Model < comparison.Model) return 1;
+        else if (Model > comparison.Model) return 1;
         return 0;
     }
 }
 ```
 
-I chose to stay relatively simple with my example, but you can make your `CompareTo` logic as complicated as you like.
+I chose to stay relatively simple with my example, but you can make your `CompareTo()` logic as complicated as you need.
 
-Once you've create a `CompareTo` method, C# will know what to do when you run `Array.Sort()` (or indeed any other comparison function).
+Once you've created a `CompareTo()` method, C# will know what to do when you run `Array.Sort()` (or indeed any other comparison function).
 
 ### What if my class already inherits from elsewhere?
 
