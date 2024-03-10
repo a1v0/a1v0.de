@@ -71,3 +71,5 @@ public class Car : IComparable
     }
 }
 ```
+
+I chose to stay relatively simple with my example, but you can make your `CompareTo` logic as complicated as you like.
