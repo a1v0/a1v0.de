@@ -56,5 +56,3 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - Failing all that, consider instead categorising content into topics by splitting content into folders
 6. Add TOC to articles?
    - <https://webtech-note.com/posts/tocbot-contentlayer> This is a good guide on how to do it
-7. The logo flashes really big sometimes when the page loads. Presumably that can be fixed by scaling down the SVG
-   - A potential fix was made on 3/3/24. Verify that the fix worked.
