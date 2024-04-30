@@ -1,5 +1,5 @@
 ---
-title: Next JS&colon; "Deploy directory 'build' does not exist" error in Netlify
+title: 'Next JS: "Deploy directory ''build'' does not exist" error in Netlify'
 date: 2024-04-30
 ---
 
