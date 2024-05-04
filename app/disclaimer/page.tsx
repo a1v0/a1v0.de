@@ -1,3 +1,7 @@
+export const metadata = {
+	title: "Disclaimer"
+};
+
 export default function Disclaimer() {
 	return (
 		<main className="flex grow flex-col bg-background-white">
