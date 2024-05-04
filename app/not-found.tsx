@@ -1,3 +1,7 @@
+export const metadata = {
+	title: "404"
+};
+
 function NotFoundPage() {
 	return (
 		<main className="flex grow flex-col">
