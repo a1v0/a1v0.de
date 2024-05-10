@@ -47,7 +47,7 @@ Before I begin, I must explain the limitation of this regex: it does not check w
 Here is my regex:
 
 ```js
-/[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=\s|$)/gim
+/(?<=\s|^)(a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=\s|$)/gim
 ```
 
 I will explain it in more detail below so that you can tweak it to suit your needs.
@@ -62,7 +62,15 @@ First of all, the flags `gim` mean:
 - **`i` == case insensitive**: this is useful when you receive user input, because people can be lazy and won't always capitalise their postcodes properly.
 - **`m` == multiline**: beginning and end markers (i.e. `^` and `$`) will match the start/end of a line rather than the start/end of the whole string.
 
-/[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=\s|$)/gim
+### Lookarounds
+
+Next, let's look at the top and tail of the regex, aka the lookarounds:
+
+- `(?<=\s|^)`: positive lookbehind. Any match will only be valid if this lookbehind also matches. In this case, we're looking either for a space or the start of a new line (this will prevent matches where a valid postcode is lodged inside a word).
+  - **Warning:** these aren't supported by every browser.
+- `(?=\s|$)`: positive lookahead. Any match will only be valid if this lookahead also matches. For the same reason as above, we're only accepting matches if they're followed by a space or the end of a line.
+
+/(?<=\s|^)(a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=\s|$)/
 
 - explain how Eircode works
 - link to website etc.
