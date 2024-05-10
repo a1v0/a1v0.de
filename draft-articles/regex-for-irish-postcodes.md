@@ -25,6 +25,21 @@ Ireland has one of the most&mdash;if not _the_ most&mdash;sophisticated postcode
 
 I have created a **regex** that will help you extract a valid Eircode from an address. I have also given an explanation about what it does, as well as adding a JavaScript method that builds the regex for you.
 
+## The shape of an Eircode
+
+Eircodes follow this pattern:
+
+1. A prefix of one letter and two digits
+   - There's only one exception to this rule so far, which is D6W
+2. Four characters arranged in one of seven different combinations of letters and numbers
+   1. A111
+   2. AA11
+   3. AAA1
+   4. AA1A
+   5. A1A1
+   6. A1AA
+   7. A11A
+
 - explain how Eircode works
 - link to website etc.
 - regex itself
