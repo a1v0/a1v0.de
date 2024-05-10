@@ -45,9 +45,24 @@ Eircodes follow this pattern:
 Before I begin, I must explain the limitation of this regex: it does not check whether a given Eircode is real. The regex for _that_ would be a mile long. All it does is check for the presence of the general pattern of an Eircode.
 
 Here is my regex:
-`/[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=s|$)/gim`
+
+```js
+/[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=\s|$)/gim
+```
 
 I will explain it in more detail below so that you can tweak it to suit your needs.
+
+### Regex breakdown
+
+### `gim`
+
+First of all, the flags `gim` mean:
+
+- **`g` == global** (i.e. checks for _all_ instances of a postcode in a string): if an address contains more than one postcode, you'll need to know so as to flag any potential ambiguity in the address.
+- **`i` == case insensitive**: this is useful when you receive user input, because people can be lazy and won't always capitalise their postcodes properly.
+- **`m` == multiline**: beginning and end markers (i.e. `^` and `$`) will match the start/end of a line rather than the start/end of the whole string.
+
+/[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=\s|$)/gim
 
 - explain how Eircode works
 - link to website etc.
