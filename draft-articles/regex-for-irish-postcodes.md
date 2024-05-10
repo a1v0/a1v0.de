@@ -40,13 +40,21 @@ Eircodes follow this pattern:
    6. A1AA
    7. A11A
 
+## The Eircode regex
+
+Before I begin, I must explain the limitation of this regex: it does not check whether a given Eircode is real. The regex for _that_ would be a mile long. All it does is check for the presence of the general pattern of an Eircode.
+
+Here is my regex:
+`/[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=s|$)/gim`
+
+I will explain it in more detail below so that you can tweak it to suit your needs.
+
 - explain how Eircode works
 - link to website etc.
 - regex itself
 - explanation of regex
 - method to build it to make it more readable
 
- /[?<=\s|^](a-z)\d[\dw]\s{0,1}[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])(?=s|$)/gim
  const getIrishRegex = () => {
     const prefix = "[a-z]\\d[\\dw]";
     const threeDigits = "\\d{3}",
