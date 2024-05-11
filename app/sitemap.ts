@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		return sitemapEntry;
 	});
 
-	const routes = ["", "/articles"]; // add any other routes here
+	const routes = ["", "/disclaimer"]; // add any other routes here
 
 	routes.forEach((route) => {
 		const url = BASE_URL + route,

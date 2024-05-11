@@ -10,10 +10,15 @@ export default function Disclaimer() {
 					<h1>Disclaimer</h1>
 					<p>
 						This website, a1v0.de, can accept no liability for any
-						incorrect or outdated information given. We do our best
-						to ensure our posts are accurate and properly proofread,
-						and we try to ensure that the limitations of our posts
-						are stated clearly, but nobody&apos;s perfect.
+						incorrect or outdated information given. I do my best to
+						ensure my posts are accurate and properly proofread, and
+						I try to ensure that the limitations of my posts are
+						stated clearly, but nobody&apos;s perfect.
+					</p>
+					<p>
+						It is the responsibility of anyone who chooses to copy
+						and paste code from this website to ensure that it is
+						suitable for their system.
 					</p>
 					<p>
 						At the end of the day, the contents of this site are
