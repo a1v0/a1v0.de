@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
 	return (
 		<main className="flex grow flex-col bg-background-white">
@@ -6,7 +8,7 @@ export default function Home() {
 					<h1 className="m-auto p-0">
 						<span className="block">a1v0.de</span>
 						<span className="block lowercase text-softer-black">
-							The wittering of someone you&apos;ve never met.
+							The wittering of yet another guy on the internet.
 						</span>
 					</h1>
 				</header>
@@ -29,11 +31,12 @@ export default function Home() {
 					<p>
 						I don&apos;t revise or update my writings once
 						published, if I can avoid it. In other words, there is a
-						chance that my content is out of date when you read
-						it&mdash;bugs get fixed, software gets updated, but my
-						site stays as it always was. There&apos;s also a chance
-						that what I write is inaccurate, though I do try to
-						verify what I write as best as possible.
+						chance that my content is out of date by the time you
+						read it&mdash;bugs get fixed, software gets updated, but
+						my site stays as it always was. There&apos;s also a
+						chance that what I write is inaccurate, though{" "}
+						<Link href="/disclaimer">I do try</Link> to verify what
+						I write as best as possible.
 					</p>
 				</article>
 			</div>
@@ -45,7 +48,7 @@ export default function Home() {
 						but I&apos;m keen as hell; I&apos;m always down to learn
 						something new. My current interests include C# and a11y,
 						but I also care deeply about the difference between the
-						-, &ndash; and &mdash; characters.
+						-, &ndash;, &mdash; and &#8213; characters.
 					</p>
 				</article>
 			</div>
