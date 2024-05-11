@@ -81,7 +81,19 @@ The postcode's prefix is defined as `[a-z]\d[\dw]\s{0,1}` which, in order, is:
 
 N.B.: I mentioned above that the only prefix that contains a W is D6W. This regex would permit other, non-existent variations, e.g. R8W or C0W. I chose to be a bit more relaxed about it, just in case a new prefix with W is introduced in future.
 
-/[a-z](\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])/
+### The rest
+
+The remainder of the regex is essentially just a simple string of `OR` conditions. We begin with `[a-z]`, since every single suffix type begins with a single letter, and then we continue with `(\d{3}|[a-z]\d{2}|[a-z]\d[a-z]|\d[a-z]\d|[a-z]{2}\d|\d[a-z]{2}|\d{2}[a-z])`. Let me split them up into each individual condition:
+
+- `\d{3}`: three digits.
+- `[a-z]\d{2}`: one letter, two digits.
+- `[a-z]\d[a-z]`: letter, digit, letter.
+- `\d[a-z]\d`: digit, letter, digit.
+- `[a-z]{2}\d`: two letters, one digit.
+- `\d[a-z]{2}`: one digit, two letters.
+- `\d{2}[a-z]`: two digits, one letter.
+
+I could have simplified this bit, allowing any combination of three letters and numbers, e,g, `[\da-z]{3}`. However, this would have permitted three letters, which is the one combination of three letters and digits that's not permitted in an Eircode. (If anyone can find a more elegant solution than mine, I'm all ears!)
 
 - explain how Eircode works
 - link to website etc.
