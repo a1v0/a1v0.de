@@ -95,13 +95,12 @@ The remainder of the regex is essentially just a simple string of `OR` condition
 
 I could have simplified this bit, allowing any combination of three letters and numbers, e,g, `[\da-z]{3}`. However, this would have permitted three letters, which is the one combination of three letters and digits that's not permitted in an Eircode. (If anyone can find a more elegant solution than mine, I'm all ears!)
 
-- explain how Eircode works
-- link to website etc.
-- regex itself
-- explanation of regex
-- method to build it to make it more readable
+## Method to build an Eircode regex
 
- const getIrishRegex = () => {
+Since this regex is long and a bit tricky to read, I created a method to build the regex for me. This means that, in future, if ever I need to edit the regex, I can easily see how it works without needing to decipher it anew. It's in JavaScript but can easily be 'translated' into any language.
+
+```js
+const getIrishRegex = () => {
     const prefix = "[a-z]\\d[\\dw]";
     const threeDigits = "\\d{3}",
         letterDigitDigit = "[a-z]\\d{2}",
@@ -112,9 +111,16 @@ I could have simplified this bit, allowing any combination of three letters and 
         digitDigitLetter = "\\d{2}[a-z]";
 
     const completeRegex = new RegExp(
-        `(?<=\\s|^)${prefix}\\s{0,1}[a-z](${threeDigits}|${letterDigitDigit}|${letterDigitLetter}|${digitLetterDigit}|${letterLetterDigit}|${digitLetterLetter}|${digitDigitLetter})(?=\s|$)`,
+        `(?<=\\s|^)${prefix}\\s{0,1}[a-z]` +
+            `(${threeDigits}|${letterDigitDigit}|` +
+            `${letterDigitLetter}|${digitLetterDigit}|` +
+            `${letterLetterDigit}|${digitLetterLetter}|` +
+            `${digitDigitLetter})(?=\\s|$)`,
         "gim"
     );
 
     return completeRegex;
 };
+```
+
+I've written more elegant code in my life, but the method above is self-explanatory and fulfils its purpose of demystifying the regex.
