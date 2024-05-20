@@ -1,5 +1,5 @@
 ---
-title: ServiceNow's blank production instances are full of bugs
+title: ServiceNow's blank production instances are (sometimes) full of bugs
 date: 2024-01-17
 ---
 
@@ -7,15 +7,15 @@ After many months, our project finally wound to a close&mdash;it was time, at la
 
 The migration went smoothly enough. Sure, we had a couple of merge conflicts, but they were quickly resolved. Nevertheless, when we got to testing, we found that **loads of things were broken**. After much investigation, I came to the conclusion that ServiceNow seeds its production instances differently to its non-prod instances.
 
-> ServiceNow's seed file for production is full of bugs.
+> ServiceNow's seed file for production can produce bugs that don't appear in other instances.
 
-(This article naturally carries the caveat that ServiceNow fixes the bugs in question by the time you read this. I was using Utah and Vancouver when I encountered these issues.)
+(This article naturally carries the caveat that ServiceNow may fix the bugs in question by the time you read this. I was using Utah and Vancouver when I encountered these issues.)
 
 ## The problem in a nutshell
 
 Basically, a whole bunch of config is **missing** from prod environments that are there by default in sub-prod instances.
 
-On two separate projects, the fresh production instance didn't contain the config to allow it to run Flows! Not only is that an absolutely enormous oversight, it's also a flaw that's incredibly hard to debug. Moreover, to fix it, you need to go really deep into the nitty-gritty elements of the platform, entering tables whose names you've never heard of and never will hear of again.
+On two separate projects, the fresh production instance didn't contain the config to allow it to run something as fundamental as Flows! Not only is that an absolutely enormous oversight, it's also a flaw that's incredibly hard to debug. Moreover, to fix it, you need to go really deep into the nitty-gritty elements of the platform, entering tables whose names you've never heard of and never will hear of again.
 
 > We found that, sometimes, the config that enables you to run Flows doesn't make it into the production instance and needs to be enabled manually.
 
