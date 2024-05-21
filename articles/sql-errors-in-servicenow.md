@@ -17,6 +17,18 @@ In practice, SQL errors happen when database operations run in parallel and crea
 
 > SQL errors often happen when multiple bits of logic run at the same time, e.g. Flows, Workflows and business rules. Check for any such conflicts when you encounter SQL errors.
 
+### Example error: unique key violations
+
+The most common type of SQL error you will encounter in ServiceNow is a unique key violation, i.e. when an operation attempts to give a record a non-unique sys ID.
+
+```
+FAILED TRYING TO EXECUTE ON CONNECTION glide.13 (connpid=123456): INSERT INTO table_name...
+...
+Unique Key violation detected by database ((conn=123456) Duplicate entry 'blablabla...' for key 'column_name')
+```
+
+As you can see, the error message is surprisingly helpful: it tells you what the problem is and what is causing it. All you need to figure out is why the error is being triggered. It is most likely a Flow or Workflow.
+
 ## How to prevent SQL errors in ServiceNow
 
 True prevention is impossible, unfortunately, because it's not possible to predict the exact scenarios where SQL errors can arise.
