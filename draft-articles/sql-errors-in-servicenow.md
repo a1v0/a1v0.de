@@ -34,3 +34,11 @@ The problem is that it is also a highly configurable platform, giving us all man
 In practice, SQL errors happen when database operations run in parallel and create some sort of conflict. For example, you may have a business rule doing one thing and a Flow or Workflow in the background is also running against the same table or record.
 
 > SQL errors often happen when multiple bits of logic run at the same time, e.g. Flows, Workflows and business rules. Check for any such conflicts when you encounter SQL errors.
+
+## How to prevent SQL errors in ServiceNow
+
+True prevention is impossible, unfortunately, because it's not possible to predict the exact scenarios where SQL errors can arise.
+
+It is nonetheless useful to act upon SQL errors when you see them in the logs. Even if you cannot see any consequence of the error beyond the existence of a log message, e.g. if your `gs.insert()` works exactly as anticipated despite the log, you never know what other nonsense could happen under different circumstances.
+
+As mentioned above, the platform shouldn't be allowing SQL errors, so the fact that an error has made it through the cracks is cause for legitimate concern.
