@@ -40,11 +40,13 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 ## To-do
 
 1. Make site a11y-friendly
-    - Run Chrome Lighthouse on site
-      - Run Lighthouse specifically on the C# xUnit article, too, because it has an image in it
     - Semantic HTML
     - Skip link
     - Anything else (see WCAG)
+    - Lighthouse comments:
+      - JavaScript takes too long to load
+      - First paint takes too long
+      - Custom font takes ages to load
     - Axe Dev Tools comments:
       - Colour contrast isn't good enough in some HLJS `<code>` tags. This isn't great, admittedly, but I don't know if there is an HLJS colour scheme that's a11y-friendly
       - `<code>` tags with a horizontal scrollbar need to be accessible via `tabindex="0"`. Contentlayer doesn't give me a way to set a tab index for `<code>` tags; my only solution would be to run a script on every page to set one automatically. Not sure quite how to implement that in a non-clunky way
