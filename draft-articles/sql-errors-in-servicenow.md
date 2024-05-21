@@ -21,3 +21,6 @@ title: SQL errors in ServiceNow
 date: 2024-01-01
 ---
 
+ServiceNow runs on SQL. Everybody knows that. But nobody should ever see any SQL on the platform. After all, isn't the entire purpose of ServiceNow to prevent us from needing to use SQL?
+
+So why do we sometimes get SQL errors in the ServiceNow system logs? And what should I do to prevent them?
