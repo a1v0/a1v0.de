@@ -40,6 +40,8 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 ## To-do
 
 1. Make site a11y-friendly
+    - Run Chrome Lighthouse on site
+      - Run Lighthouse specifically on the C# xUnit article, too, because it has an image in it
     - Semantic HTML
     - Skip link
     - Anything else (see WCAG)
