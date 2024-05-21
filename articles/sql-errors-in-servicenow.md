@@ -3,17 +3,19 @@ title: SQL errors in ServiceNow
 date: 2024-05-21
 ---
 
-ServiceNow runs on SQL. Everybody knows that. But nobody should ever see any SQL on the platform. After all, isn't the entire purpose of ServiceNow to prevent us from needing to use SQL?
+ServiceNow runs on SQL. Everybody knows that. But nobody should ever see any SQL on the platform. After all, isn't the entire purpose of ServiceNow to prevent us from using SQL?
 
-So why do we sometimes get SQL errors in the ServiceNow system logs? And what should I do to prevent them?
+So why do we sometimes get SQL errors in the ServiceNow system logs, and what can be done to prevent them?
 
 ## Why do we get SQL errors?
 
-ServiceNow is a clever frontend to a database. As such, it should be battle-tested enough to prevent any SQL errors from happening. The good news is that it _is_ good enough for that.
+ServiceNow is a clever front-end to a database. As such, it should be battle-tested enough to prevent any SQL errors from happening. The good news is that it _is_ good enough for that, in general. Basically any nefarious or erroneous dealings are blocked, including injection and inserting the wrong data types.
 
-The problem is that it is also a highly configurable platform, giving us all manner of freedoms. The SQL errors are usually caused by bits of logic added by customers.
+The problem is that ServiceNow is also a highly configurable platform, giving us all manner of freedoms. The SQL errors are usually caused by bits of logic added by customers.
 
 In practice, SQL errors happen when database operations run in parallel and create some sort of conflict. For example, you may have a business rule doing one thing and a Flow or Workflow in the background is also running against the same table or record.
+
+Your business rule script might be perfectly sound, but if there's some out-of-the-box Flow that runs in parallel, you may find you're out of luck.
 
 > SQL errors often happen when multiple bits of logic run at the same time, e.g. Flows, Workflows and business rules. Check for any such conflicts when you encounter SQL errors.
 
@@ -21,7 +23,7 @@ In practice, SQL errors happen when database operations run in parallel and crea
 
 The most common type of SQL error you will encounter in ServiceNow is a unique key violation, i.e. when an operation attempts to give a record a non-unique sys ID.
 
-```
+```txt
 FAILED TRYING TO EXECUTE ON CONNECTION glide.13 (connpid=123456): INSERT INTO table_name...
 ...
 Unique Key violation detected by database ((conn=123456) Duplicate entry 'blablabla...' for key 'column_name')
