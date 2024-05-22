@@ -97,13 +97,16 @@ const getIrishRegex = () => {
         digitLetterLetter = "\\d[a-z]{2}",
         digitDigitLetter = "\\d{2}[a-z]";
 
-    const completeRegex = new RegExp(
-        `(?<=\\s|^)${prefix}\\s{0,1}[a-z]` +
-            `(${threeDigits}|${letterDigitDigit}|` +
+    const orConditions = `${threeDigits}|${letterDigitDigit}|` +
             `${letterDigitLetter}|${digitLetterDigit}|` +
             `${letterLetterDigit}|${digitLetterLetter}|` +
-            `${digitDigitLetter})(?=\\s|$)`,
-        "gim"
+            `${digitDigitLetter}`;
+    const flags = "gim";
+
+    const completeRegex = new RegExp(
+        `(?<=\\s|^)${prefix}\\s{0,1}[a-z]` +
+        `(${orConditions})(?=\\s|$)`,
+        flags
     );
 
     return completeRegex;
