@@ -32,4 +32,10 @@ The `SPEntryPage` script is easy to get wrong and there are many articles about 
 
 ## Checking that the script isn't running
 
-Before you begin, 
+Before you begin, make sure that the script definitely _isn't_ being called upon login.
+
+To do this, set the *[INSERT BOOLEAN DEBUG FLAG HERE]* to `true`. If the system calls the `SPEntryPage` script upon SSO login, you should be seeing debug log messages in the system logs.
+
+If you can see any logs, it means that the script is running. If the redirect isn't happening the way you want, you need to validate your code.
+
+However, if you _can't_ see any logs, keep reading. I have answers in store!
