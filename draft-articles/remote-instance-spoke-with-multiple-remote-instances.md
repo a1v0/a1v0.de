@@ -35,7 +35,7 @@ date: 2024-01-01
 
 ServiceNow's Remote Instance Spoke is a great, user-friendly tool for allowing two systems to keep each other's records harmonised.
 
-There's one huge flaw, though: **it only supports one single remote instance.** This is an inconvenient fact, because there are many use-cases for wanting to sync with multiple instances.
+There's one huge flaw, though: **it only supports one single remote instance.** ServiceNow has hard-coded one specific connection alias into the Flow Actions. This is an inconvenient fact, because there are many use-cases for wanting to sync with multiple instances.
 
 This article will explain how to enable multiple remote connections.
 
