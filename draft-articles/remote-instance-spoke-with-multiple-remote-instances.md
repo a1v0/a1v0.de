@@ -77,3 +77,13 @@ For anyone else, the solution is fairly straightforward:
 3. Add logic to send the retrieved data into a local (not remote) import set
 
 It's not hugely complicated, though you'll need to write much of this code yourself, instead of relying on OOB code like we did for outbound connections.
+
+### Journal entries
+
+The one thing that's not handled properly when running an inbound sync is journal fields (work notes and comments).
+
+I couldn't find anything in the Spoke that suggests that this is handled at all. However, this might be where the Data Stream Action does something clever.
+
+If you can't download all un-synced comments via the Spoke, you might want to consider using ServiceNow's [Table API](https://docs.servicenow.com/bundle/washingtondc-api-reference/page/integrate/inbound-rest/concept/c_TableAPI.html). With it, you can either download a big text dump of all journal fields, or you can query the `sys_journal_field` table.
+
+(Querying `sys_journal_field` has always struck me as bad practice, given that it's such an enormous table, but ServiceNow recommends it as a way to tackle the issue of journal fields.)
