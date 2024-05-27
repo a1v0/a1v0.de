@@ -34,7 +34,7 @@ In other words, if worst absolutely came to worst, you could build the logic fro
 The solution for outbound connections is quite straightforward.
 
 0. Make sure you're in the right scope, i.e. "ServiceNow Remote Instance Spoke". It doesn't work very well when you mix and match scopes
-1. Find the Flow Action that you would like to modify, e.g. Update Remote Records Using Import Set **[VALIDATE THE NAME OF THE ACTION]**
+1. Find the Flow Action that you would like to modify, e.g. Update Remote Records Using Import Set
 2. Create a copy of the Action (the OOB Action won't be editable)
 3. Add a new input: reference field, referring to the Connection & Credential Alias table
 4. In the Script Step of the Flow Action, instead of hard-coding the endpoint, put in your new input
