@@ -63,3 +63,17 @@ The solution for outbound connections is quite straightforward.
 You must also follow the above steps for any dependent Actions, e.g. the action that retrieves remote import sets.
 
 ## Retrieving remote records (inbound synchronisation)
+
+The inbound actions are trickier, since they use Data Streams. I have never had access to Integration Hub Pro and so could never see the contents of the Data Stream used by the Spoke.
+
+As such, I can't say whether it's OK to simply clone the Action, as before, and add in a variable. The Data Stream might also contain some hard-coded logic, after all.
+
+If you're fortunate enough to have a Pro subscription, have a look to see what the Data Stream Action does and act accordingly.
+
+For anyone else, the solution is fairly straightforward:
+
+1. Create a new Flow Action (don't copy the existing Action)
+2. Create variables and a REST step similar to the outbound Actions. You'll need to change some bits of config, because we're retrieving, rather than sending
+3. Add logic to send the retrieved data into a local (not remote) import set
+
+It's not hugely complicated, though you'll need to write much of this code yourself, instead of relying on OOB code like we did for outbound connections.
