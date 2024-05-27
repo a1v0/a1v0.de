@@ -43,4 +43,13 @@ This article will explain how to enable multiple remote connections.
 
 ## Sending local records to the remote instance (outbound synchronisation)
 
+The solution for outbound connections is quite straightforward.
+
+1. Find the Flow Action that you would like to modify, e.g. Update Remote Records Using Import Set **[VALIDATE THE NAME OF THE ACTION]**
+2. Create a copy of the Action (the OOB Action won't be editable in any case)
+3. Add a new input: reference field, referring to the Connection & Credential Alias table
+4. In the Script Step of the Flow Action, instead of hard-coding the endpoint, put in your new input
+
+You must also follow the above steps for any dependent Actions, e.g. the action that retrieves remote import sets.
+
 ## Retrieving remote records (inbound synchronisation)
