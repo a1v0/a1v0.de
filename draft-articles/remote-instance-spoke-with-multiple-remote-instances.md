@@ -45,6 +45,8 @@ This article will explain how to enable multiple remote connections.
 
 The Remote Instance Spoke has been designed very inconsistently. Some Actions use Flow Data Streams, others ingest data in a different way. This can make unpicking it a little confusing at times. Moreover, you need Integration Hub Professional or Enterprise to see and use Data Streams, which means you may never be able to see precisely how a specific Action works.
 
+The Spoke contains so many Actions that I can't cover them all in this article. If you run into questions that I've not covered, you might need to improvise.
+
 The good news is that the Spoke doesn't really do anything particularly adventurous: it makes a REST call to another instance, runs a `GET` or `POST` with a single record as a payload and stuffs it into an import set.
 
 In other words, if worst absolutely came to worst, you could build the logic from scratch without too much fuss.
