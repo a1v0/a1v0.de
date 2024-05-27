@@ -40,3 +40,7 @@ There's one huge flaw, though: **it only supports one single remote instance.** 
 This article will explain how to enable multiple remote connections.
 
 > The Remote Instance Spoke supports exactly one remote instance out of the box.
+
+## Sending local records to the remote instance (outbound synchronisation)
+
+## Retrieving remote records (inbound synchronisation)
