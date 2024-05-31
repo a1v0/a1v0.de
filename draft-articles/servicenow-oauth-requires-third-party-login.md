@@ -43,4 +43,10 @@ Ironically, the most security-conscious organisations will be the ones unable to
 
 I regret that there is currently no way for a third party to specify a trusted instance in advance, saying, "If a1v0's instance comes knocking on my door with a valid client secret in his hand, give him a token."
 
-## Shouldn't the client secret be enough?
+## Shouldn't the client ID and secret be enough?
+
+I've made a whole bunch of API calls in my time that use OAuth and ServiceNow is the only one that enforces more than just the provision of a client secret and client ID.
+
+The extra step doesn't make much sense, considering anyone with a username and password for the third-party instance can cause all manner of havoc with a simple `curl` request.
+
+_Methinks the Lady doth enforce superfluous, counterproductive security hurdles too much._
