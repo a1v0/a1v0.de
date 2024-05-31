@@ -37,3 +37,7 @@ Company A wants to send data to Company B. Both companies use SSO, both companie
 In practice, this means that it's impossible to access Company B's instance from your Company A laptop: your IP address will be wrong, as will the laptop you're using.
 
 Without this access, you won't be able to generate a token, and therefore can't use OAuth.
+
+## The solution
+
+## Shouldn't the client secret be enough?
