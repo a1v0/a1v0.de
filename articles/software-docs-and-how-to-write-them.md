@@ -31,9 +31,9 @@ But have courage, because there's an easier way that will make everyone happy: y
 
 If you, like most people, don't have a dedicated docs-writing team working for you, then follow these steps:
 
-1. **Create a blank document right at the start of the project.** Microsoft Word; Notepad; [Obsidian](https://obsidian.md/); pen and paper; or whatever floats your boat.
-2. **Add bullet-point notes as you go along.** No need to add too much detail, since the specific content will likely change as the project progresses. Add the bare minimum, e.g. the names of features and what they do. Just enough to remind you what you need to write about when the time comes.
-3. **Fill in the blanks when possible.** Periodically review the document and, when a feature is closed or complete, you can write the documentation for it. This way, you can get as much documentation done during the project as possible, reducing the workload right at the end.
+0. **Create a blank document right at the start of the project.** Microsoft Word; Notepad; [Obsidian](https://obsidian.md/); pen and paper; or whatever floats your boat.
+1. **Add bullet-point notes as you go along.** No need to add too much detail, since the specific content will likely change as the project progresses. Add the bare minimum, e.g. the names of features and what they do. Just enough to remind you what you need to write about when the time comes.
+2. **Fill in the blanks when possible.** Periodically review the document and, when a feature is closed or complete, you can write the documentation for it. This way, you can get as much documentation done during the project as possible, reducing the workload right at the end.
 
 Feel free to use nifty features like [docstrings](https://en.wikipedia.org/wiki/Docstring) from which certain docs can be auto-generated, but don't be too lazy! Docs are important and need to be taken seriously.
 

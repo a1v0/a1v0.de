@@ -9,7 +9,7 @@ That's because there isn't an obvious way, as such. You'd expect there to be a s
 
 There are four steps to effectively disabling CSM registration. Each step takes place in the Global application, so that's where to make your update set.
 
-## 1. Set the widget to `public=false`
+## 0. Set the widget to `public=false`
 
 Like most things in CSM, user registration is controlled by a widget. In our case, the widget is called Customer Registration (ID `customer-registration`). However, since there's no "Active" flag on a widget, we'll have to try something else.
 
@@ -21,13 +21,13 @@ Within this record, update the `public` field.
 
 Stay on that page, though: we'll need it for the next step.
 
-## 2. Unpublish all pages containing the widget
+## 1. Unpublish all pages containing the widget
 
 Now that we've set the widget's visibility, we can also unpublish any pages that contain it.
 
 At the bottom of the widget form (see step 1), there's a related list called "Included in Pages". By default, there is just one record in that list called `csm_registration`. Open it, and set the fields `public=false` and `draft=true`.
 
-## 3. Remove "Registration" link from CSM menu
+## 2. Remove "Registration" link from CSM menu
 
 Hiding the pages is a great start, but people can still click on the "Registration" link in the CSM header menu. They'll get an unexpected 404 page, so it's best to remove the link from view.
 
@@ -37,7 +37,7 @@ In the form, open the record contained within the Main Menu field (by default it
 
 In the Menu Items list, set the "Register" link to `active=false` and you're all set.
 
-## 4. Create an email domain allowlist
+## 3. Create an email domain allowlist
 
 It sounds counter-intuitive: why should we create an allowlist for emails when we're trying to _stop_ people from registering?
 
@@ -60,9 +60,9 @@ There's nothing we can do about that, but this might reassure you:
 
 Without being able to access the pages or the widget, there's not really anything that could go wrong aside from a malicious admin.
 
-Even if the system broke and someone were able to access the registration widget, they'd need access to a permitted email address to register. Sure, they could type in `hacker@a1v0.de` and submit the form but:
+Even if the system broke and someone were able to access the registration widget, they'd need access to a permitted email address to register. Sure, they could type in `XxXhackerXxX@a1v0.de` and submit the form but:
 
-1. they'd still be subject to all the approvals on the inside; and
-2. even if approved, without access to an `a1v0.de` inbox, they'd never be able to receive a password.
+0. they'd still be subject to all the approvals on the inside; and
+1. even if approved, without access to an `a1v0.de` inbox, they'd never be able to receive a password.
 
 > Yes, it feels odd that there's no system property to switch external registration off. I wish there were. But the steps given above cover all bases nicely.

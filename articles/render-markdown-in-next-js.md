@@ -15,8 +15,8 @@ We have a fair few Markdown packages at our disposal to use in Next.js, but they
 
 [`marked`](https://github.com/markedjs/marked) is a blunt instrument that does the job, but has two big flaws (among some smaller drawbacks):
 
-1. The HTML output isn't sanitised, which poses a security risk
-2. You're required to use Next's `dangerouslySetInnerHTML` property to render the output, which is another security risk
+0. The HTML output isn't sanitised, which poses a security risk
+1. You're required to use Next's `dangerouslySetInnerHTML` property to render the output, which is another security risk
 
 While there are packages you can install that can sanitise `marked`'s output, it makes the dev experience more confusing overall.
 

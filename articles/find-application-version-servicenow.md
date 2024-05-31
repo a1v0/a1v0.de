@@ -13,11 +13,11 @@ The App Store was no help either.
 
 I was a bit forlorn, but eventually I found a solution:
 
-1. Go to the Plugins module
-2. In the top right of the page, click "Switch to Classic App Manager"
-3. Search for your application there
-4. At the right of the search result, you'll see a version number. Be careful, though! The version number shown there is usually the number of the _latest available_ version of the app, not of the currently installed version
-5. Click the version number and a bunch of versions will appear in a drop-down list. Your version is the one with "[installed]" written next to it, e.g. "3.0.0 [installed]"
+0. Go to the Plugins module
+1. In the top right of the page, click "Switch to Classic App Manager"
+2. Search for your application there
+3. At the right of the search result, you'll see a version number. Be careful, though! The version number shown there is usually the number of the _latest available_ version of the app, not of the currently installed version
+4. Click the version number and a bunch of versions will appear in a drop-down list. Your version is the one with "[installed]" written next to it, e.g. "3.0.0 [installed]"
 
 > **Useful tip:** If ServiceNow offers multiple UIs to achieve the same thing (e.g. Classic UI vs Workspace; Plugins module vs Classic App Manager; Form Designer vs Form Layout), it's rarely correct to assume that one version has all the functionality that the other has.
 >

@@ -13,9 +13,9 @@ It looks like your only option is to try to debug the ACLs in that unpleasant po
 
 Fortunately, there's a hack to spare you all that ghastliness:
 
-1. Open the ACL debugger (look for Debug Security Rules in the left navigation menu)
-2. (Optional) Impersonate the person whose ACLs you're looking to debug
-3. Open a new tab and go to `http://<instance-name>.service-now.com/ui_page.do`
+0. Open the ACL debugger (look for Debug Security Rules in the left navigation menu)
+1. (Optional) Impersonate the person whose ACLs you're looking to debug
+2. Open a new tab and go to `http://<instance-name>.service-now.com/ui_page.do`
 
 You'll be shown a virtually blank page that's useless at first, but, as you start to play around inside the portal, this tab will fill up with the conventional ACL debugger output.
 
