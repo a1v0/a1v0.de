@@ -40,4 +40,12 @@ Without this access, you won't be able to generate a token, and therefore can't 
 
 ## The solution
 
+Sadly, there's not really a solution to this. This article exists mainly to confirm that this OAuth problem is a simple fact of life. Your solution is to deliver the bad news to the security people in charge of each instance, telling them you'll be using Basic Auth instead.
+
+ServiceNow doesn't recognise this as a problem. Instead, they seem to consider it a security feature: it's an extra layer of security on top of all the security already provided by OAuth.
+
+Ironically, the most security-conscious organisations will be the ones unable to use OAuth, being instead reduced to using Basic Auth, which has no fancy security requirements in place.
+
+I regret that there is currently no way for a third party to specify a trusted instance in advance, saying, "If a1v0's instance comes knocking on my door with a valid client secret in his hand, give him a token."
+
 ## Shouldn't the client secret be enough?
