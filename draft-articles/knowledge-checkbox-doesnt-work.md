@@ -1,5 +1,5 @@
 ---
-title: The Knowledge checkbox doesn't work on Incident or Problem
+title: The Knowledge checkbox doesn't work on Problem
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -21,3 +21,6 @@ title: The Knowledge checkbox doesn't work on Incident or Problem
 date: 2024-01-01
 ---
 
+- Problem Create Knowledge business rule condition is wrong
+- current.problem_state.changesTo(107) && current.knowledge == true is correct
+- current.problem_state.changesTo(4) && current.knowledge == true is wrong // MAKE SURE THIS IS THERE OOB
