@@ -21,10 +21,6 @@ title: The Knowledge checkbox doesn't work on Problem
 date: 2024-01-01
 ---
 
-- Problem Create Knowledge business rule condition is wrong
-- current.problem_state.changesTo(107) && current.knowledge == true is correct
-- current.problem_state.changesTo(4) && current.knowledge == true is wrong // MAKE SURE THIS IS THERE OOB
-
 In theory, if the `knowledge` field is set to `true` on a ServiceNow Problem record, then a draft knowledge article will be created on resolution of the problem.
 
 In practice, this doesn't happen out of the box (as of the Washington release).
