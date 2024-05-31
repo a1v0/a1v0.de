@@ -17,10 +17,10 @@ In a nutshell, when you deploy a website on Netlify, it adds some default build 
 
 The solution was to update my build settings on Netlify:
 
-1. Go to your website's settings on Netlify.
-2. Open the **Site Configuration** section.
-3. From there go to **Build &amp; deploy > Continuous deployment > Build settings**.
-4. Make sure these settings are in place:
+0. Go to your website's settings on Netlify.
+1. Open the **Site Configuration** section.
+2. From there go to **Build &amp; deploy > Continuous deployment > Build settings**.
+3. Make sure these settings are in place:
     - Runtime: Next.js
     - Build command: `npm run build`
     - Publish directory: `.next`

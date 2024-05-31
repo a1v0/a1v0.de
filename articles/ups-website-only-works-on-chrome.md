@@ -21,8 +21,8 @@ And it's hardly as though a functional contact form is a difficult thing to achi
 
 Google Chrome is [by far the dominant browser](https://gs.statcounter.com/) in the world, but there are at least two reasons why this shouldn't make a difference to UPS:
 
-1. At time of writing, Chrome has a [market share on desktop](https://gs.statcounter.com/browser-market-share/desktop/worldwide) of just under 65%. This leaves just over 35% of people who _don't_ use Chrome. UPS's design choice prevents a fat chunk of the global population from using its site.
-2. Not everybody has access to Chrome. For instance, many company-issued computers restrict the software available to employees, and you may not be able to install Chrome on your machine. (I've been stuck with Edge and Internet Explorer(!) often enough.)
+0. At time of writing, Chrome has a [market share on desktop](https://gs.statcounter.com/browser-market-share/desktop/worldwide) of just under 65%. This leaves just over 35% of people who _don't_ use Chrome. UPS's design choice prevents a fat chunk of the global population from using its site.
+1. Not everybody has access to Chrome. For instance, many company-issued computers restrict the software available to employees, and you may not be able to install Chrome on your machine. (I've been stuck with Edge and Internet Explorer(!) often enough.)
 
 ## "But I can load the site just fine outside of Chrome..."
 

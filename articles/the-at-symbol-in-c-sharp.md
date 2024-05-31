@@ -11,7 +11,7 @@ In order for this page to be easily findable, I'll have to add my own explanatio
 
 The `@` symbol is what's technically known as a _verbatim identifier_ in C#. You use it to identify something that should be interpreted literally, exactly as written. Below are some examples to illustrate.
 
-### 1. Strings with special characters
+### 0. Strings with special characters
 
 There are many ways to print special characters in strings. If you want to print a line break, you can use `\n`, e.g.:
 
@@ -43,7 +43,7 @@ Isn't a verbatim string the same as a string literal, then?
 
 Basically yes, though you mustn't forget that C# has a [second type of string literal](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#string-literals), too, using the `"""` syntax.
 
-### 2. Variables with reserved names
+### 1. Variables with reserved names
 
 Like all languages, C# has a bunch of reserved words, like `for`, `while`, `return`, `string`, `var` and so on. You can't name a variable `var`, for instance, without your compiler shouting at you.
 
@@ -60,7 +60,7 @@ Console.WriteLine(@string); // the @ is part of the variable's name
 
 The question is: why on earth would you want to give your variable a reserved name? That's surely a recipe for confusion, right? At any rate, I've not been able to divine a use case for it and would advise against it if at all possible.
 
-### 3. Avoiding confusion in certain naming conflicts
+### 2. Avoiding confusion in certain naming conflicts
 
 The Microsoft docs give a third use case for the 'at' symbol in C#, though I will hold up my hand and say that I'm too much of a beginner at C# to understand what on earth it's about. Feel free to [read for yourself](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim).
 

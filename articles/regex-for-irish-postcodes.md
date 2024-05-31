@@ -11,17 +11,18 @@ I have created a **regex** that will help you extract a valid Eircode from an ad
 
 Eircodes follow this pattern:
 
-1. A prefix of one letter and two digits, e.g. W12
+0. A prefix of one letter and two digits, e.g. W12
    - There's only one exception to this rule so far, which is D6W
-2. A space (though it's theoretically optional)
-3. Four characters arranged in one of seven different combinations of letters and numbers
-   1. A111
-   2. AA11
-   3. AAA1
-   4. AA1A
-   5. A1AA
-   6. A1A1
-   7. A11A
+1. A space (though it's theoretically optional)
+2. Four characters arranged in one of seven different combinations of letters and numbers
+
+   0. A111
+   1. AA11
+   2. AAA1
+   3. AA1A
+   4. A1AA
+   5. A1A1
+   6. A11A
 
 ## The Eircode regex
 
@@ -59,10 +60,10 @@ Next, let's look at the top and tail of the regex, aka the lookarounds:
 
 The postcode's prefix is defined as `[a-z]\d[\dw]\s{0,1}` which, in order, is:
 
-1. `[a-z]`: exactly one letter.
-2. `\d`: exactly one digit.
-3. `[\dw]`: one digit or the letter W.
-4. `\s{0,1}`: exactly zero or one spaces. If you want to enforce a minimum of one space, or if you want to allow more than one space, here's the place to do it.
+0. `[a-z]`: exactly one letter.
+1. `\d`: exactly one digit.
+2. `[\dw]`: one digit or the letter W.
+3. `\s{0,1}`: exactly zero or one spaces. If you want to enforce a minimum of one space, or if you want to allow more than one space, here's the place to do it.
 
 N.B.: I mentioned above that the only prefix that contains a W is D6W. This regex would permit other, non-existent prefixes, e.g. R8W or C0W. I chose to be a bit more relaxed about it, just in case a new prefix with W is introduced in future.
 
