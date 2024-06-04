@@ -28,3 +28,8 @@ date: 2024-01-01
     - give pros and cons of each approach
     - advise against using syslog_transaction
 
+If you're running a script in which you need to know the IP address of the current session, but all you're getting is `null`, then keep reading.
+
+This article explains why `gs.getSession().getClientIP()` returns `null` under specific circumstances. It also offers a potential workaround.
+
+> The `getClientIP()` method basically always works, with few, specific exceptions. When it fails, it returns `null`.
