@@ -36,7 +36,7 @@ This article explains why `gs.getSession().getClientIP()` returns `null` under s
 
 ## Why do we sometimes get `null`?
 
-I'm honestly not 100% sure why `getClientIP` sometimes returns a `null` value. In every scenario that I tested, I was able to use other `GlideSession` methods, like `getRoles()`.
+I'm honestly not 100% sure why `getClientIP()` sometimes returns a `null` value. In every scenario that I tested, I was able to use other `GlideSession` methods, like `getRoles()`.
 
 I have some guesses as to why, all of which could easily be wide of the mark:
 
@@ -45,3 +45,20 @@ I have some guesses as to why, all of which could easily be wide of the mark:
 1. IP addresses can change, especially if using a VPN. As such, it's conceivable that there is a background process that keeps track of your current IP address and regularly updates the `GlideSession` object. However, if a script runs asynchronously, it might not have access to the most up-to-date IP, and therefore falls back on returning `null`.
     - This assumes that ServiceNow doesn't automatically terminate your session if your IP changes. I don't know if this is the case and have no way to check.
 
+## Alternatives to `getClientIP()`
+
+I was able to find two locations which store the IP address of a logged in user.
+
+### `sys_user_login_history`
+
+The `sys_user_login_history` stores details of every login, including times, details of success or failure, login methods and, crucially, IP addresses.
+
+Pros:
+- The size of this table can vary, depending on your organisation, but it's at least an order of magnitude smaller than the alternative below.
+- It allows you to create business rules and, given its size, the business rule won't impact system performance.
+- It's simple to use and unequivocal. It's easy to find precisely the right record.
+
+Cons:
+- The table's records get updated by the system. My assumption is that the updates happen only when a session is ended, but I don't know for sure. If there's a process that updates the record during a session, is there a chance that the IP field could be affected?
+
+On balance, I'd say `sys_user_login_history` is safe to use.
