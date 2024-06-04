@@ -55,10 +55,26 @@ The `sys_user_login_history` stores details of every login, including times, det
 
 Pros:
 - The size of this table can vary, depending on your organisation, but it's at least an order of magnitude smaller than the alternative below.
-- It allows you to create business rules and, given its size, the business rule won't impact system performance.
+- Its normal size allows you to create business rules which won't impact system performance.
 - It's simple to use and unequivocal. It's easy to find precisely the right record.
 
 Cons:
 - The table's records get updated by the system. My assumption is that the updates happen only when a session is ended, but I don't know for sure. If there's a process that updates the record during a session, is there a chance that the IP field could be affected?
 
 On balance, I'd say `sys_user_login_history` is safe to use.
+
+### `syslog_transaction`
+
+It is perhaps my least favourite ServiceNow table, but `syslog_transaction` _does_ log the IP address of each transaction.
+
+The table, instead of listing against specific `sys_user` records, lists transactions against session IDs.
+
+Pros:
+- The IP address is logged against individual transactions, meaning that, should the IP change mid-session, you'll be able to see it.
+
+Cons:
+- It's a gigantic table. Querying it, especially if you query it regularly, will impact system performance.
+- It receives a tonne of inserts per second. Any business rule that runs here will impact performance.
+- It logs all transactions, even invisible, behind-the-scenes ones. Any query you run will return plenty of results. It's pretty wasteful, in that regard.
+
+Basically, try to avoid using `syslog_transaction` if all you need is the current IP address.
