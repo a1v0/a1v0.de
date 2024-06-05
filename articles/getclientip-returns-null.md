@@ -1,6 +1,6 @@
 ---
 title: getClientIP returns null in ServiceNow
-date: 2024-05-04
+date: 2024-06-04
 ---
 
 If you're running a script in which you need to know the IP address of the current session, but all you're getting is `null`, then keep reading.
