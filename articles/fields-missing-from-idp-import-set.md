@@ -1,5 +1,5 @@
 ---
-title: Fields missing from SSO identity provider transform map in ServiceNow
+title: Fields missing from SSO identity provider import set
 date: 2024-06-29
 ---
 
