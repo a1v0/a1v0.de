@@ -3,10 +3,6 @@ title: Fields missing from SSO identity provider import set
 date: 2024-06-29
 ---
 
-- explain problem
-- solution: ensure relevant fields are being sent in SAML response as Attributes
-- not good enough that the claim comes through in the NameID tag. Must be an Attribute
-
 If you are implementing SSO user provisioning via an identity provider (IdP) in ServiceNow, but not all fields are present in the transform map, this article is for you.
 
 Before you begin, it's a good idea to enable SSO debug logging. (It's best practice to enable debug logging in a non-production instance.)
