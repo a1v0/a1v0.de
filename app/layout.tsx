@@ -1,5 +1,5 @@
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import "./globals.css";
 import "./highlight-theme.css";
 import type { Metadata } from "next";
