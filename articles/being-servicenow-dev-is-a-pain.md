@@ -1,7 +1,7 @@
 ---
 title: Why being a ServiceNow dev can be a pain
 date: 2024-02-22
-category: ServiceNow
+category: servicenow
 ---
 
 I've moaned about ServiceNow a lot, but really it's a brilliant platform. It's feature-rich, user-friendly and highly useful. It scratches an itch that a huge amount of large companies have in a way that other, similar platforms don't. Moreover, its low-code/no-code features make it enormously powerful, enabling great levels of tailored customisation.

@@ -1,7 +1,7 @@
 ---
 title: SQL errors in ServiceNow
 date: 2024-05-21
-category: ServiceNow
+category: servicenow
 ---
 
 ServiceNow runs on SQL. Everybody knows that. But nobody should ever see any SQL on the platform. After all, isn't the entire purpose of ServiceNow to prevent us from using SQL?

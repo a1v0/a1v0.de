@@ -1,7 +1,7 @@
 ---
 title: SPEntryPage doesn't work with SSO
 date: 2024-05-31
-category: ServiceNow
+category: servicenow
 ---
 
 You want a custom login redirect on your platform. You have customised the `SPEntryPage` script and have added appropriate system properties to make it run. But it's _not_ running!

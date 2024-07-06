@@ -1,7 +1,7 @@
 ---
 title: Find current application version in ServiceNow
 date: 2024-03-03
-category: ServiceNow
+category: servicenow
 ---
 
 I was recently faced with a user story that required me to ensure that a certain application was installed on our ServiceNow instance.

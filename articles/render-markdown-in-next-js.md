@@ -1,7 +1,7 @@
 ---
 title: How to render Markdown in Next.js
 date: 2023-11-28
-category: Next.js
+category: next.js
 ---
 
 Markdown is a wonderful rich-text markup language. It is human readable even without being rendered and its limited set of formatting options makes it easy to work with. Its linting rules, moreover, make it a very screen-reader-friendly format. Why wouldn't you, therefore, use Markdown as the medium for storing and rendering your website's content?

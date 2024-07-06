@@ -19,5 +19,5 @@ title: My discount isn't showing when using UPS Shipping API
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 date: 2024-01-01
-category: UPS API
+category: ups-api
 ---

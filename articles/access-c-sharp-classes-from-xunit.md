@@ -1,7 +1,7 @@
 ---
 title: Accessing C# classes from xUnit
 date: 2023-11-30
-category: C-Sharp
+category: c-sharp
 ---
 
 Unit testing in C# with xUnit can at times be unwieldy, especially if, like me, you're accustomed to something flexible and easy like [Jest](https://jestjs.io/). One thing the tutorials often forget to tell you is how to link your test suite project to your primary project. This causes your test suite to be unable to "see" the classes from your main project.

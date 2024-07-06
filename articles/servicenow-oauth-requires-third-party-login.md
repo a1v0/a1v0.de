@@ -1,7 +1,7 @@
 ---
 title: ServiceNow OAuth connections require third-party login
 date: 2024-05-31
-category: ServiceNow
+category: servicenow
 ---
 
 When setting up a connection to a third-party ServiceNow instance via OAuth, you will need to generate an OAuth token. This process requires you to log into the third party instance from your local instance.

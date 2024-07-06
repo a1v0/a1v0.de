@@ -1,7 +1,7 @@
 ---
 title: Disable customer registration in the CSM portal in ServiceNow
 date: 2024-02-22
-category: ServiceNow
+category: servicenow
 ---
 
 You're here because the person in charge of security on your project has asked you to disable customer self-registration on the CSM portal in ServiceNow, but you can't find any obvious way to do it, right?

@@ -1,7 +1,7 @@
 ---
 title: Create a custom sort method in C#
 date: 2024-03-10
-category: C-Sharp
+category: c-sharp
 ---
 
 Most, if not all, of C#'s pre-made classes can be sorted in ascending or descending order. In other words, if you make an array full of them, C# will be able to sort them.

@@ -1,7 +1,7 @@
 ---
 title: Auto-populating a field in a record producer not working
 date: 2024-01-17
-category: ServiceNow
+category: servicenow
 ---
 
 In Utah, ServiceNow introduced an **auto-populate** feature for reference fields in record producers, enabling you to automatically set the value of a form field, based on the user's input for a different field.

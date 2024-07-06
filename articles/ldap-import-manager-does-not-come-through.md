@@ -1,7 +1,7 @@
 ---
 title: "LDAP import: the Manager field doesn't come through"
 date: 2024-06-29
-category: ServiceNow
+category: servicenow
 ---
 
 Often, when using LDAP user data imports in ServiceNow, the setting of the Manager field doesn't work: despite all the necessary LDAP import scripts being present out of the box, the Manager doesn't get populated after the transform is complete.

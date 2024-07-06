@@ -1,7 +1,7 @@
 ---
 title: CAB being skipped in ServiceNow, despite correct config
 date: 2024-06-05
-category: ServiceNow
+category: servicenow
 ---
 
 Organisations like to customise the hell out of the Change process in ServiceNow, which can cause all sorts of bugs. However, this article is specifically for the weird case where CAB is being skipped, _in spite of_ correct config.
