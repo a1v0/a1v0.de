@@ -37,6 +37,7 @@
 //
 //
 //
+import { categoriesMap } from "@/app/article-categories";
 import { allArticles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
@@ -54,7 +55,8 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 		return notFound();
 	}
 
-	return { title: post.category };
+	const categoryName = categoriesMap[post.category].displayName;
+	return { title: categoryName };
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
@@ -65,7 +67,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 		return notFound();
 	}
 
-	return <h1>category title here</h1>;
+	const categoryName = categoriesMap[post.category].displayName;
+
+	return <h1>{categoryName}</h1>;
 };
 
 export default PostLayout;
