@@ -1,7 +1,7 @@
 ---
 title: What does the 'at' symbol mean in C#
 date: 2023-11-19
-category: C#
+category: C-Sharp
 ---
 
 The use of the `@` sign (aka 'at' symbol) in C# is pretty well documented all over the internet. The problem is, search engines don't like the `@` character. They ignore it, and, as far as I could find, there's no good way to escape the character when typing stuff into their search bars.
