@@ -4,14 +4,16 @@ import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => {
 	return allArticles.map((article) => {
-		return { slug: article._raw.flattenedPath };
+		return { slug: article._raw.flattenedPath.toLowerCase() };
 	});
 };
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-	const post = allArticles.find(
-		(post) => post._raw.flattenedPath === params.slug
-	);
+	const post = allArticles.find((post) => {
+		return (
+			post._raw.flattenedPath.toLowerCase() === params.slug.toLowerCase()
+		);
+	});
 	if (!post) {
 		return notFound();
 	}
@@ -20,9 +22,11 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
-	const post = allArticles.find(
-		(post) => post._raw.flattenedPath === params.slug
-	);
+	const post = allArticles.find((post) => {
+		return (
+			post._raw.flattenedPath.toLowerCase() === params.slug.toLowerCase()
+		);
+	});
 	if (!post) {
 		return notFound();
 	}
