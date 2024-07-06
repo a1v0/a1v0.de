@@ -44,19 +44,13 @@ export const generateStaticParams = async () => {
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
 	const post = allArticles.find(
-		//
-		//
-		//
-		// this probably isn't right
-		//
-		//
-		//
-		(post) =>
-			post._raw.flattenedPath.toLowerCase() === params.slug.toLowerCase()
+		(post) => post.category.toLowerCase() === params.slug.toLowerCase()
 	);
 	if (!post) {
 		return notFound();
 	}
+
+	return <h1>category title here</h1>;
 };
 
 export default PostLayout;
