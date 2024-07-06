@@ -42,6 +42,17 @@ export const generateStaticParams = async () => {
 	});
 };
 
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+	const post = allArticles.find((post) => {
+		return post.category.toLowerCase() === params.slug.toLowerCase();
+	});
+	if (!post) {
+		return notFound();
+	}
+
+	return { title: post.category };
+};
+
 const PostLayout = ({ params }: { params: { slug: string } }) => {
 	const post = allArticles.find(
 		(post) => post.category.toLowerCase() === params.slug.toLowerCase()
