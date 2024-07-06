@@ -1,6 +1,7 @@
 ---
 title: How to trigger a full rerender of a Vue component
 date: 2023-11-15
+category: Vue
 ---
 
 I was working on WYSIWYG content editor website at work recently. It runs on [Vue](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/) and has two main elements:

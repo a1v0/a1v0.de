@@ -1,6 +1,7 @@
 ---
 title: ServiceNow's blank production instances are (sometimes) full of bugs
 date: 2024-01-17
+category: ServiceNow
 ---
 
 After many months, our project finally wound to a close&mdash;it was time, at last, to go live. I logged into our as yet unused production instance for the first time and was migrating all of our update sets.

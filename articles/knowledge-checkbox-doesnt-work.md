@@ -1,6 +1,7 @@
 ---
 title: The Knowledge checkbox doesn't work on Problem
 date: 2024-05-31
+category: ServiceNow
 ---
 
 In theory, if the Knowledge checkbox in a ServiceNow Problem record is set to `true`, then a draft knowledge article will be created on resolution of the problem.

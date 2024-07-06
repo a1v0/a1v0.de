@@ -1,6 +1,7 @@
 ---
 title: Local login fails after removing instance dummy data
 date: 2024-02-26
+category: ServiceNow
 ---
 
 Are you unable to use local login on your ServiceNow instance? Is your organisation's logo missing from the login screen? Then you've come to the right place.

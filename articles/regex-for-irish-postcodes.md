@@ -1,6 +1,7 @@
 ---
 title: A regex for Irish postcodes
 date: 2024-05-11
+category: Regex
 ---
 
 Ireland has one of the most&mdash;if not _the_ most&mdash;sophisticated postcode systems in the world. Unlike most postal codes and ZIP codes, which represent a geographical area, the [Eircode](https://www.eircode.ie/) pinpoints exact locations. You might not even need to put a name and address on a letter for it to arrive, so long as you put the correct Eircode on. How cool is that?
