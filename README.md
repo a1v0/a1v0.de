@@ -60,3 +60,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - Failing all that, consider instead categorising content into topics by splitting content into folders
 6. Add TOC to articles?
    - <https://webtech-note.com/posts/tocbot-contentlayer> This is a good guide on how to do it
+7. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
