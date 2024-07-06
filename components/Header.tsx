@@ -11,6 +11,7 @@ function Header() {
 	const pathname = usePathname();
 	useEffect(() => {
 		setShowMenu(false);
+		window.scrollTo(0, 0);
 	}, [pathname]);
 
 	const downChevronPath =
