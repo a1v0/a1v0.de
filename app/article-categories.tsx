@@ -1,24 +1,24 @@
 interface mappedCategory {
-	name: string;
+	displayName: string;
 }
 
 export const categoriesMap: { [key: string]: mappedCategory } = {
 	"c-sharp": {
-		name: "C#"
+		displayName: "C#"
 	},
 	general: {
-		name: "General"
+		displayName: "General"
 	},
 	"next.js": {
-		name: "Next.js"
+		displayName: "Next.js"
 	},
 	regex: {
-		name: "Regular expressions (regex)"
+		displayName: "Regular expressions (regex)"
 	},
 	servicenow: {
-		name: "ServiceNow"
+		displayName: "ServiceNow"
 	},
 	"ups-api": {
-		name: "UPS API"
+		displayName: "UPS API"
 	}
 };
