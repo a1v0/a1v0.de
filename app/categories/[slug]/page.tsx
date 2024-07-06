@@ -36,9 +36,23 @@
 import { allArticles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
+export const generateStaticParams = async () => {
+	return allArticles.map((article) => {
+		return { slug: article.category.toLowerCase() };
+	});
+};
+
 const PostLayout = ({ params }: { params: { slug: string } }) => {
 	const post = allArticles.find(
-		(post) => post._raw.flattenedPath === params.slug // this probably isn't right
+		//
+		//
+		//
+		// this probably isn't right
+		//
+		//
+		//
+		(post) =>
+			post._raw.flattenedPath.toLowerCase() === params.slug.toLowerCase()
 	);
 	if (!post) {
 		return notFound();
