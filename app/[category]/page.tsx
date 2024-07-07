@@ -26,9 +26,9 @@ export const generateMetadata = ({
 };
 
 const PostLayout = ({ params }: { params: { category: string } }) => {
-	const post = allArticles.find(
-		(post) => post.category.toLowerCase() === params.category.toLowerCase()
-	);
+	const post = allArticles.find((post) => {
+		return post.category.toLowerCase() === params.category.toLowerCase();
+	});
 	if (!post) {
 		return notFound();
 	}
