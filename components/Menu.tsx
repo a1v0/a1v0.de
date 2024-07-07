@@ -1,19 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import { allArticles } from "contentlayer/generated";
+import { categoriesMap } from "@/app/article-categories";
 
 export default function Menu() {
 	return (
 		<section className="bg-background-grey">
 			<div className="clear-gutters flex justify-stretch py-8">
 				<div className="flex-1">
-					<h2>Articles</h2>
+					<h2>Categories</h2>
 					<ul className="flush">
-						{allArticles.map((article, index) => {
+						{Object.keys(categoriesMap).map((category, index) => {
 							return (
 								<li key={index}>
-									<Link href={article.url}>
-										{article.title}
+									<Link href={"/" + category}>
+										{categoriesMap[category].displayName}
 									</Link>
 								</li>
 							);
