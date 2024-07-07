@@ -21,9 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	const yearlyChangeFrequency = "yearly" as changeFrequency;
 
-	const allPages = allArticles.map((article) => {
-		const url = BASE_URL + article.url,
-			lastModified = article.date,
+	const allPages: SitemapEntry[] = [];
+
+	const staticRoutes = ["", "/disclaimer"]; // add any other static routes here
+
+	staticRoutes.forEach((route) => {
+		const url = BASE_URL + route,
+			lastModified = new Date().toISOString(),
 			changeFrequency = yearlyChangeFrequency;
 
 		const sitemapEntry: SitemapEntry = {
@@ -32,14 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency
 		};
 
-		return sitemapEntry;
+		allPages.push(sitemapEntry);
 	});
 
-	const routes = ["", "/disclaimer"]; // add any other routes here
-
-	routes.forEach((route) => {
-		const url = BASE_URL + route,
-			lastModified = new Date().toISOString(),
+	allArticles.forEach((article) => {
+		const url = BASE_URL + article.url,
+			lastModified = article.date,
 			changeFrequency = yearlyChangeFrequency;
 
 		const sitemapEntry: SitemapEntry = {
