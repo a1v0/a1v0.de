@@ -7,7 +7,7 @@ export default function Menu() {
 		<section className="bg-background-grey">
 			<div className="clear-gutters flex justify-stretch py-8">
 				<div className="flex-1">
-					<h2>Categories</h2>
+					<h2>Topics</h2>
 					<ul className="flush">
 						{Object.keys(categoriesMap).map((category, index) => {
 							return (
