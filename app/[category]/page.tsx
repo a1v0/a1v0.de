@@ -70,29 +70,27 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 
 	return (
 		<main className="grow bg-background-white">
-			<div>
-				<article className="clear-gutters text-content bg-background-white">
-					<div>
-						<h1>{categoryName}</h1>
-					</div>
-					<div>
-						Articles in this category:
-						<ul>
-							{allArticles.map((article, index) => {
-								const articleIsInCategory =
-									article.category === post.category;
-								return articleIsInCategory ? (
-									<li key={index}>
-										<Link href={article.url}>
-											{article.title}
-										</Link>
-									</li>
-								) : null;
-							})}
-						</ul>
-					</div>
-				</article>
-			</div>
+			<article className="clear-gutters text-content bg-background-white">
+				<div>
+					<h1>{categoryName}</h1>
+				</div>
+				<div>
+					Articles in this category:
+					<ul>
+						{allArticles.map((article, index) => {
+							const articleIsInCategory =
+								article.category === post.category;
+							return articleIsInCategory ? (
+								<li key={index}>
+									<Link href={article.url}>
+										{article.title}
+									</Link>
+								</li>
+							) : null;
+						})}
+					</ul>
+				</div>
+			</article>
 		</main>
 	);
 };
