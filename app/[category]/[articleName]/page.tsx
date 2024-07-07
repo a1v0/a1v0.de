@@ -11,13 +11,15 @@ export const generateStaticParams = async () => {
 export const generateMetadata = ({
 	params
 }: {
-	params: { articleName: string };
+	params: { articleName: string; category: string };
 }) => {
 	const post = allArticles.find((post) => {
-		return (
-			post._raw.flattenedPath.toLowerCase() ===
-			params.articleName.toLowerCase()
-		);
+		const hasCorrectName =
+				post._raw.flattenedPath.toLowerCase() ===
+				params.articleName.toLowerCase(),
+			hasCorrectCategory =
+				post.category.toLowerCase() === params.category.toLowerCase();
+		return hasCorrectName && hasCorrectCategory;
 	});
 	if (!post) {
 		return notFound();
@@ -26,7 +28,11 @@ export const generateMetadata = ({
 	return { title: post.title };
 };
 
-const PostLayout = ({ params }: { params: { articleName: string } }) => {
+const PostLayout = ({
+	params
+}: {
+	params: { articleName: string; category: string };
+}) => {
 	const post = allArticles.find((post) => {
 		return (
 			post._raw.flattenedPath.toLowerCase() ===
