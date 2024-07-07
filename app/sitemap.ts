@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { allArticles } from "contentlayer/generated";
+import { categoriesMap } from "./article-categories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
@@ -21,7 +22,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	const yearlyChangeFrequency = "yearly" as changeFrequency;
 
-	const allPages = allArticles.map((article) => {
+	const allPages: SitemapEntry[] = [];
+
+	const staticRoutes = ["/", "/disclaimer"]; // add any other static routes here
+
+	staticRoutes.forEach((route) => {
+		const url = BASE_URL + route,
+			lastModified = new Date().toISOString(),
+			changeFrequency = yearlyChangeFrequency;
+
+		const sitemapEntry: SitemapEntry = {
+			url,
+			lastModified,
+			changeFrequency
+		};
+
+		allPages.push(sitemapEntry);
+	});
+
+	allArticles.forEach((article) => {
 		const url = BASE_URL + article.url,
 			lastModified = article.date,
 			changeFrequency = yearlyChangeFrequency;
@@ -32,13 +51,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency
 		};
 
-		return sitemapEntry;
+		allPages.push(sitemapEntry);
 	});
 
-	const routes = ["", "/disclaimer"]; // add any other routes here
-
-	routes.forEach((route) => {
-		const url = BASE_URL + route,
+	Object.keys(categoriesMap).forEach((category) => {
+		const url = BASE_URL + "/" + category,
 			lastModified = new Date().toISOString(),
 			changeFrequency = yearlyChangeFrequency;
 

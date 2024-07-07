@@ -1,6 +1,7 @@
 ---
 title: 'Next JS: "Deploy directory ''build'' does not exist" error in Netlify'
 date: 2024-04-30
+category: next.js
 ---
 
 I was recently deploying a Next JS website on [Netlify](https://www.netlify.com) and I kept getting an error message during deployment: "Deploy directory 'build' does not exist".

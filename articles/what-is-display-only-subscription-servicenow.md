@@ -1,6 +1,7 @@
 ---
 title: What is a "display only" subscription in ServiceNow?
 date: 2024-04-30
+category: servicenow
 ---
 
 In your list of subscriptions, you may have encountered a subscription type of "display only". What on earth is it?

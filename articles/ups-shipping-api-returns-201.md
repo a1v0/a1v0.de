@@ -1,6 +1,7 @@
 ---
 title: The UPS Shipping API Returns 201
 date: 2023-12-9
+category: ups-api
 ---
 
 This is just a quick note about the UPS Shipping API (though I've got more to say about UPS&mdash;watch this space). The [documentation](https://developer.ups.com/api/reference?loc=en_US#operation/Shipment) has many flaws, one of which is that it gives you the wrong HTTP response code for a successful API call.

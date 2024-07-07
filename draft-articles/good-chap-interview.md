@@ -19,6 +19,7 @@ title: The "good chap" interview; or, the Myth of the inclusive tech sector
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 date: 2024-01-01
+category: General
 ---
 
 - intro

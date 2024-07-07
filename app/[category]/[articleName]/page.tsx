@@ -4,14 +4,23 @@ import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => {
 	return allArticles.map((article) => {
-		return { slug: article._raw.flattenedPath };
+		return { articleName: article._raw.flattenedPath.toLowerCase() };
 	});
 };
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-	const post = allArticles.find(
-		(post) => post._raw.flattenedPath === params.slug
-	);
+export const generateMetadata = ({
+	params
+}: {
+	params: { articleName: string; category: string };
+}) => {
+	const post = allArticles.find((post) => {
+		const hasCorrectName =
+				post._raw.flattenedPath.toLowerCase() ===
+				params.articleName.toLowerCase(),
+			hasCorrectCategory =
+				post.category.toLowerCase() === params.category.toLowerCase();
+		return hasCorrectName && hasCorrectCategory;
+	});
 	if (!post) {
 		return notFound();
 	}
@@ -19,10 +28,17 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 	return { title: post.title };
 };
 
-const PostLayout = ({ params }: { params: { slug: string } }) => {
-	const post = allArticles.find(
-		(post) => post._raw.flattenedPath === params.slug
-	);
+const PostLayout = ({
+	params
+}: {
+	params: { articleName: string; category: string };
+}) => {
+	const post = allArticles.find((post) => {
+		return (
+			post._raw.flattenedPath.toLowerCase() ===
+			params.articleName.toLowerCase()
+		);
+	});
 	if (!post) {
 		return notFound();
 	}

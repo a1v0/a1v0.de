@@ -7,12 +7,14 @@ export const Article = defineDocumentType(() => ({
 	filePathPattern: `**/*.md`,
 	fields: {
 		title: { type: "string", required: true },
-		date: { type: "date", required: true }
+		date: { type: "date", required: true },
+		category: { type: "string", required: true }
 	},
 	computedFields: {
 		url: {
 			type: "string",
-			resolve: (article) => `/articles/${article._raw.flattenedPath}`
+			resolve: (article) =>
+				`/${article.category}/${article._raw.flattenedPath}`
 		}
 	}
 }));

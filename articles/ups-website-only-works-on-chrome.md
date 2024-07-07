@@ -1,6 +1,7 @@
 ---
 title: The UPS website only works on Chrome
 date: 2023-11-20
+category: ups-api
 ---
 
 I've plenty to say about the UPS Shipping API and will post a few articles about it on this site. It's all pretty unwieldy, for sure.

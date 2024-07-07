@@ -1,6 +1,7 @@
 ---
 title: Fields missing from SSO identity provider import set
 date: 2024-06-29
+category: servicenow
 ---
 
 If you are implementing SSO user provisioning via an identity provider (IdP) in ServiceNow, but not all fields are present in the import set and transform map, then this article is for you.

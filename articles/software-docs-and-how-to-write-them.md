@@ -1,6 +1,7 @@
 ---
 title: Software docs and how to write them
 date: 2023-12-16
+category: general
 ---
 
 We all love coding, so we code and code and code. Then, when the project is over, our boss tells us we need to write documentation for it. We grunt in agony as we realise how annoying the next few days are going to be. "[Can't someone else do it?](https://www.youtube.com/watch?v=GZOuz-SG7-g)"

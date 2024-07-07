@@ -1,6 +1,7 @@
 ---
 title: How to connect the Remote Instance Spoke to multiple remote instances
 date: 2024-05-29
+category: servicenow
 ---
 
 ServiceNow's Remote Instance Spoke is a great, user-friendly tool for allowing two systems to keep each other's records harmonised.

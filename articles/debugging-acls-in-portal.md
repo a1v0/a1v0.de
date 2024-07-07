@@ -1,6 +1,7 @@
 ---
 title: How to debug ACLs inside a ServiceNow portal
 date: 2024-02-27
+category: servicenow
 ---
 
 Most of the time, when something isn't showing up in a ServiceNow portal, it's not due to ACLs but due to the Available For and Not Available For settings on a catalog item or record producer.
