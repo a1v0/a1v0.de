@@ -1,36 +1,3 @@
-//
-// to-do:
-// - move the articles page into a category subfolder so that each article renders as part of its category
-// - replace menu links with category links
-//
-// https://medium.com/frontendweb/how-to-build-the-static-blog-with-content-layer-markdown-and-nextjs-29f6ac93d06
-// this article can guide if necessary
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 import { categoriesMap } from "@/app/article-categories";
 import { allArticles } from "contentlayer/generated";
 import Link from "next/link";
