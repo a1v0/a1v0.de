@@ -4,9 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => {
-	return allArticles.map((article) => {
-		return { category: article.category.toLowerCase() };
-	});
+	return Object.keys(categoriesMap);
 };
 
 export const generateMetadata = ({
@@ -14,26 +12,24 @@ export const generateMetadata = ({
 }: {
 	params: { category: string };
 }) => {
-	const post = allArticles.find((post) => {
-		return post.category.toLowerCase() === params.category.toLowerCase();
-	});
+	const category = params.category.toLowerCase();
+	const post = categoriesMap[category];
 	if (!post) {
 		return notFound();
 	}
 
-	const categoryName = categoriesMap[post.category].displayName;
+	const categoryName = categoriesMap[category].displayName;
 	return { title: categoryName };
 };
 
 const PostLayout = ({ params }: { params: { category: string } }) => {
-	const post = allArticles.find(
-		(post) => post.category.toLowerCase() === params.category.toLowerCase()
-	);
+	const category = params.category.toLowerCase();
+	const post = categoriesMap[category];
 	if (!post) {
 		return notFound();
 	}
 
-	const categoryName = categoriesMap[post.category].displayName;
+	const categoryName = categoriesMap[category].displayName;
 
 	return (
 		<main className="grow bg-background-white">
@@ -46,7 +42,7 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 					<ul>
 						{allArticles.map((article, index) => {
 							const articleIsInCategory =
-								article.category === post.category;
+								article.category === category;
 							return articleIsInCategory ? (
 								<li key={index}>
 									<Link href={article.url}>
