@@ -54,10 +54,6 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 3. Create Articles page to show list of all content
     - Could also make a page for various categories, e.g. UPS, ServiceNow etc. (<https://contentlayer.dev/docs/reference/source-files/field-types-defe41e9>)
 4. Find a way to do breadcrumbs with static content
-5. Attempt to use content tags. The below proposal might not be the optimal way of doing it, but it's A way...
-    - Create new property at the top of every article
-    - If Contentlayer allows, make it an array or CSV of tags
-    - Failing all that, consider instead categorising content into topics by splitting content into folders
-6. Add TOC to articles?
+5. Add TOC to articles?
    - <https://webtech-note.com/posts/tocbot-contentlayer> This is a good guide on how to do it
-7. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
+6. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
