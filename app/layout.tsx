@@ -32,9 +32,14 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
+				<a href="#main-content" className="skip-link">
+					Skip to main content
+				</a>
 				<div className="flex min-h-screen flex-col items-stretch justify-between">
 					<Header />
-					<div className="flex grow flex-col">{children}</div>
+					<div id="main-content" className="flex grow flex-col">
+						{children}
+					</div>
 					<Footer />
 				</div>
 			</body>
