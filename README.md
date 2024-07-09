@@ -41,7 +41,6 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 1. Make site a11y-friendly
     - Semantic HTML
-    - Skip link
     - Anything else (see WCAG)
     - Lighthouse comments:
       - JavaScript takes too long to load
