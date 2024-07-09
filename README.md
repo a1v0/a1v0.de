@@ -59,3 +59,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 7. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
    - could the factory pattern be helpful here?
 8. Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
+9. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
