@@ -9,11 +9,11 @@ pre code.hljs {
 
 .hljs-comment,
 .hljs-quote {
-	@apply text-[#ff7700];
+	@apply text-[#6a0000];
 }
 
 .hljs-regexp {
-	@apply text-[#ca2828];
+	@apply text-[#9e1f1f];
 }
 
 .hljs-deletion,
@@ -31,24 +31,24 @@ pre code.hljs {
 .hljs-number,
 .hljs-params,
 .hljs-type {
-	@apply text-[#187152];
+	@apply text-[#0d1cbf];
 }
 
 .hljs-addition,
 .hljs-bullet,
 .hljs-string,
 .hljs-symbol {
-	@apply text-[#de4abc];
+	@apply text-[#931b77];
 }
 
 .hljs-section,
 .hljs-title {
-	@apply text-[#2466bb];
+	@apply text-[#005c34];
 }
 
 .hljs-keyword,
 .hljs-selector-tag {
-	@apply text-[#7b2e9f];
+	@apply text-[#294c9e];
 }
 
 .hljs-emphasis {
