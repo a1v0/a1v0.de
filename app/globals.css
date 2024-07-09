@@ -164,4 +164,20 @@
 	.text-content {
 		@apply py-2;
 	}
+
+	.skip-link {
+		@apply bg-accent-colour;
+		@apply absolute;
+		@apply block;
+		@apply !w-0;
+		@apply !h-0;
+		@apply overflow-hidden;
+	}
+
+	.skip-link:focus {
+		@apply static;
+		@apply p-1;
+		@apply !w-full;
+		@apply !h-auto;
+	}
 }
