@@ -2,26 +2,26 @@ import { MetadataRoute } from "next";
 import { allArticles } from "contentlayer/generated";
 import { categoriesMap } from "./article-categories";
 
+const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
+
+type changeFrequency =
+	| "always"
+	| "hourly"
+	| "daily"
+	| "weekly"
+	| "monthly"
+	| "yearly"
+	| "never";
+
+const yearlyChangeFrequency = "yearly" as changeFrequency;
+
+interface SitemapEntry {
+	url: string;
+	lastModified: string;
+	changeFrequency: changeFrequency;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-	const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
-
-	type changeFrequency =
-		| "always"
-		| "hourly"
-		| "daily"
-		| "weekly"
-		| "monthly"
-		| "yearly"
-		| "never";
-
-	interface SitemapEntry {
-		url: string;
-		lastModified: string;
-		changeFrequency: changeFrequency;
-	}
-
-	const yearlyChangeFrequency = "yearly" as changeFrequency;
-
 	const allPages: SitemapEntry[] = [];
 
 	const staticRoutes = ["/", "/disclaimer", "/sitemap"]; // add any other static routes here
