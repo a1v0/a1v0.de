@@ -18,6 +18,9 @@ export const categoriesMap: { [key: string]: mappedCategory } = {
 	servicenow: {
 		displayName: "ServiceNow"
 	},
+	vue: {
+		displayName: "Vue"
+	},
 	"ups-api": {
 		displayName: "UPS API"
 	}
