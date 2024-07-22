@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { allArticles } from "contentlayer/generated";
 import { categoriesMap } from "./article-categories";
+import getPostMetadata from "@/utils/getPostMetadata";
 
 const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
 
@@ -28,20 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	addStaticPages(staticRoutes, allRoutes);
 
 	addCategoriesAndArticles(allRoutes);
-
-	allArticles.forEach((article) => {
-		const url = BASE_URL + article.url,
-			lastModified = article.date,
-			changeFrequency = yearlyChangeFrequency;
-
-		const sitemapEntry: SitemapEntry = {
-			url,
-			lastModified,
-			changeFrequency
-		};
-
-		allRoutes.push(sitemapEntry);
-	});
 
 	return allRoutes;
 }
@@ -76,6 +63,24 @@ function addCategoriesAndArticles(allRoutes: SitemapEntry[]) {
 
 		allRoutes.push(sitemapEntry);
 
-		addArticles(allRoutes);
+		addArticles(category, allRoutes);
+	});
+}
+
+function addArticles(category: string, allRoutes: SitemapEntry[]) {
+	const articles = getPostMetadata(category);
+
+	articles.forEach((article) => {
+		const url = `${BASE_URL}/${category}/${article.slug}`,
+			lastModified = article.date,
+			changeFrequency = yearlyChangeFrequency;
+
+		const sitemapEntry: SitemapEntry = {
+			url,
+			lastModified,
+			changeFrequency
+		};
+
+		allRoutes.push(sitemapEntry);
 	});
 }
