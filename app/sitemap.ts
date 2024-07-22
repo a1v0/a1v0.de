@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	const allPages: SitemapEntry[] = [];
 
-	const staticRoutes = ["/", "/disclaimer"]; // add any other static routes here
+	const staticRoutes = ["/", "/disclaimer", "/sitemap"]; // add any other static routes here
 
 	staticRoutes.forEach((route) => {
 		const url = BASE_URL + route,
