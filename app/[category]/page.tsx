@@ -53,17 +53,6 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 								);
 							}
 						)}
-						{/* {allArticles.map((article, index) => {
-							const articleIsInCategory =
-								article.category === category;
-							return articleIsInCategory ? (
-								<li key={index}>
-									<Link href={article.url}>
-										{article.title}
-									</Link>
-								</li>
-							) : null;
-						})} */}
 					</ul>
 				</div>
 			</article>
