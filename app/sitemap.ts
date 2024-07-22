@@ -22,10 +22,10 @@ interface SitemapEntry {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const allPages: SitemapEntry[] = [];
+	const allRoutes: SitemapEntry[] = [];
 
 	const staticRoutes = ["/", "/disclaimer", "/sitemap"]; // add any other static routes here
-	addStaticPages(staticRoutes, allPages);
+	addStaticPages(staticRoutes, allRoutes);
 
 	allArticles.forEach((article) => {
 		const url = BASE_URL + article.url,
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency
 		};
 
-		allPages.push(sitemapEntry);
+		allRoutes.push(sitemapEntry);
 	});
 
 	Object.keys(categoriesMap).forEach((category) => {
@@ -52,10 +52,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency
 		};
 
-		allPages.push(sitemapEntry);
+		allRoutes.push(sitemapEntry);
 	});
 
-	return allPages;
+	return allRoutes;
 }
 
 function addStaticPages(staticRoutes: string[], allRoutes: SitemapEntry[]) {
@@ -70,6 +70,6 @@ function addStaticPages(staticRoutes: string[], allRoutes: SitemapEntry[]) {
 			changeFrequency
 		};
 
-		allPages.push(sitemapEntry);
+		allRoutes.push(sitemapEntry);
 	});
 }
