@@ -25,20 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const allPages: SitemapEntry[] = [];
 
 	const staticRoutes = ["/", "/disclaimer", "/sitemap"]; // add any other static routes here
-
-	staticRoutes.forEach((route) => {
-		const url = BASE_URL + route,
-			lastModified = new Date().toISOString(),
-			changeFrequency = yearlyChangeFrequency;
-
-		const sitemapEntry: SitemapEntry = {
-			url,
-			lastModified,
-			changeFrequency
-		};
-
-		allPages.push(sitemapEntry);
-	});
+	addStaticPages(staticRoutes, allPages);
 
 	allArticles.forEach((article) => {
 		const url = BASE_URL + article.url,
@@ -55,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	});
 
 	Object.keys(categoriesMap).forEach((category) => {
-		const url = BASE_URL + "/" + category,
+		const url = `${BASE_URL}/${category}`,
 			lastModified = new Date().toISOString(),
 			changeFrequency = yearlyChangeFrequency;
 
@@ -69,4 +56,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	});
 
 	return allPages;
+}
+
+function addStaticPages(staticRoutes: string[], allRoutes: SitemapEntry[]) {
+	staticRoutes.forEach((route) => {
+		const url = BASE_URL + route,
+			lastModified = new Date().toISOString(),
+			changeFrequency = yearlyChangeFrequency;
+
+		const sitemapEntry: SitemapEntry = {
+			url,
+			lastModified,
+			changeFrequency
+		};
+
+		allPages.push(sitemapEntry);
+	});
 }
