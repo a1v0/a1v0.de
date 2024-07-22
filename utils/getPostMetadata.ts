@@ -15,7 +15,13 @@ export default function getPostMetadata(basePath: string) {
 		return file.endsWith(".md");
 	});
 
-	const posts = markdownFiles.map((filename) => {
+	const posts = getPosts(markdownFiles, basePath);
+
+	return posts;
+}
+
+function getPosts(markdownFiles: string[], basePath: string) {
+	return markdownFiles.map((filename) => {
 		const fileContents = fs.readFileSync(
 			`${basePath}/${filename}`,
 			"utf-8"
@@ -32,6 +38,4 @@ export default function getPostMetadata(basePath: string) {
 
 		return metadata;
 	});
-
-	return posts;
 }
