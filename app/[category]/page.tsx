@@ -1,6 +1,5 @@
 import { categoriesMap } from "@/app/article-categories";
 import getPostMetadata from "@/utils/getPostMetadata";
-import { allArticles } from "contentlayer/generated";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
