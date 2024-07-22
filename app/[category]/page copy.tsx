@@ -1,5 +1,4 @@
 import { categoriesMap } from "@/app/article-categories";
-import getPostMetadata from "@/utils/getPostMetadata";
 import { allArticles } from "contentlayer/generated";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -41,20 +40,7 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 				<div>
 					Articles in this category:
 					<ul>
-						{getPostMetadata(`articles/${category}`).map(
-							(article, index) => {
-								return (
-									<li key={index}>
-										<Link
-											href={`${article.category}/${article.slug}`}
-										>
-											{article.title}
-										</Link>
-									</li>
-								);
-							}
-						)}
-						{/* {allArticles.map((article, index) => {
+						{allArticles.map((article, index) => {
 							const articleIsInCategory =
 								article.category === category;
 							return articleIsInCategory ? (
@@ -64,7 +50,7 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 									</Link>
 								</li>
 							) : null;
-						})} */}
+						})}
 					</ul>
 				</div>
 			</article>
