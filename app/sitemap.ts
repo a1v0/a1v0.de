@@ -27,23 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const staticRoutes = ["/", "/disclaimer", "/sitemap"]; // add any other static routes here
 	addStaticPages(staticRoutes, allRoutes);
 
+	addCategoriesAndArticles(allRoutes);
+
 	allArticles.forEach((article) => {
 		const url = BASE_URL + article.url,
 			lastModified = article.date,
-			changeFrequency = yearlyChangeFrequency;
-
-		const sitemapEntry: SitemapEntry = {
-			url,
-			lastModified,
-			changeFrequency
-		};
-
-		allRoutes.push(sitemapEntry);
-	});
-
-	Object.keys(categoriesMap).forEach((category) => {
-		const url = `${BASE_URL}/${category}`,
-			lastModified = new Date().toISOString(),
 			changeFrequency = yearlyChangeFrequency;
 
 		const sitemapEntry: SitemapEntry = {
@@ -71,5 +59,23 @@ function addStaticPages(staticRoutes: string[], allRoutes: SitemapEntry[]) {
 		};
 
 		allRoutes.push(sitemapEntry);
+	});
+}
+
+function addCategoriesAndArticles(allRoutes: SitemapEntry[]) {
+	Object.keys(categoriesMap).forEach((category) => {
+		const url = `${BASE_URL}/${category}`,
+			lastModified = new Date().toISOString(),
+			changeFrequency = yearlyChangeFrequency;
+
+		const sitemapEntry: SitemapEntry = {
+			url,
+			lastModified,
+			changeFrequency
+		};
+
+		allRoutes.push(sitemapEntry);
+
+		addArticles(allRoutes);
 	});
 }
