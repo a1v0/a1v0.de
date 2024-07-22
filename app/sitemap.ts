@@ -1,5 +1,4 @@
 import { MetadataRoute } from "next";
-import { allArticles } from "contentlayer/generated";
 import { categoriesMap } from "./article-categories";
 import getPostMetadata from "@/utils/getPostMetadata";
 
