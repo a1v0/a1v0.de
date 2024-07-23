@@ -1,3 +1,16 @@
+// loop through all articles and directories
+// check for folders that don't exist
+// ensure category in file matches folder
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 const reset = "\x1b[0m";
 
 const fgBlack = "\x1b[30m",
