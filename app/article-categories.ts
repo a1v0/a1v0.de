@@ -1,8 +1,8 @@
-interface mappedCategory {
+interface MappedCategory {
 	displayName: string;
 }
 
-export const categoriesMap: { [key: string]: mappedCategory } = {
+export const categoriesMap: { [key: string]: MappedCategory } = {
 	"c-sharp": {
 		displayName: "C#"
 	},
