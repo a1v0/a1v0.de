@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "node pre-build-checks.ts; next build",
+		"build": "npx tsc pre-build-checks.ts; node pre-build-checks.js; next build",
 		"start": "next start",
 		"lint": "next lint",
 		"format": "npx prettier . --write"
