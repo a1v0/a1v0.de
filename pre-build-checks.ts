@@ -11,6 +11,57 @@
 //
 //
 
+import { categoriesMap } from "./app/article-categories";
+
+const fs = require("fs");
+
+const dirEntries: any[] = fs.readdirSync("articles/", {
+	recursive: true,
+	withFileTypes: true
+});
+
+const directories: any[] = [],
+	articles: any[] = [];
+const missingCategories: string[] = [];
+
+dirEntries.forEach((dirEntry: any) => {
+	if (dirEntry.isDirectory()) {
+		directories.push(dirEntry);
+		return;
+	}
+
+	articles.push(dirEntry);
+});
+
+validateDirectories();
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 const reset = "\x1b[0m";
 
 const fgBlack = "\x1b[30m",
@@ -41,3 +92,11 @@ console.log(
 
 console.log();
 console.log();
+
+function validateDirectories() {
+	directories.forEach((directory) => {
+		if (!categoriesMap[directory]) {
+			missingCategories.push(directory);
+		}
+	});
+}
