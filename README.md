@@ -46,11 +46,10 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
       - Investigate the use of the `<dl>` tag for lists (is this more a11y-friendly?)
     - Anything else (see WCAG)
     - Axe Dev Tools comments:
-        - `<code>` tags with a horizontal scrollbar need to be accessible via `tabindex="0"`. Contentlayer doesn't give me a way to set a tab index for `<code>` tags; my only solution would be to run a script on every page to set one automatically. Not sure quite how to implement that in a non-clunky way
+        - `<code>` tags with a horizontal scrollbar need to be accessible via `tabindex="0"`. `remark-rehype` doesn't give me a way to set a tab index for `<code>` tags; my only solution would be to run a script on every page to set one automatically. Not sure quite how to implement that in a non-clunky way
 3. Add linting to repo (future Alvo: what did I mean by this? Did I mean to enforce well linted code before publication?)
 4. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
 5. Add TOC to articles
-    - <https://webtech-note.com/posts/tocbot-contentlayer> This is a good guide on how to do it
 6. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
 7. See what happens when you vertically centre the text in the footer (it might look daft)
 8. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
@@ -61,3 +60,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - JavaScript takes too long to load
     - First paint takes too long
     - Custom font takes ages to load (there's a warning about this at the build stage, but that might just be a bug from the deprecated `pages` router of Next)
+12. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
