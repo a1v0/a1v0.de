@@ -7,6 +7,7 @@ import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
+import { deepStrictEqual } from "assert";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -46,6 +47,17 @@ const getPostContent = (articleName: string, category: string) => {
 	return matterResult;
 };
 
+const getDateString = (isoDate: string) => {
+	const date = new Date(isoDate);
+	const options: Intl.DateTimeFormatOptions = {
+		year: "numeric",
+		month: "long",
+		day: "numeric"
+	};
+
+	return date.toLocaleDateString("en-US", options);
+};
+
 const PostLayout = ({
 	params
 }: {
@@ -67,10 +79,7 @@ const PostLayout = ({
 					<div>
 						<h1>{articleMetadata.title}</h1>
 						<time dateTime={articleMetadata.date}>
-							{format(
-								parseISO(articleMetadata.date),
-								"LLLL d, yyyy"
-							)}
+							{getDateString(articleMetadata.date)}
 						</time>
 					</div>
 					<Markdown className="[&>*:last-child]:mb-0 [&>*]:mb-3">
