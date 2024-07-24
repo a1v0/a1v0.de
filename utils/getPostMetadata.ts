@@ -6,6 +6,7 @@ interface PostMetadata {
 	date: string;
 	category: string;
 	slug: string;
+	path: string;
 }
 
 export default function getPostMetadata(category: string) {
@@ -66,12 +67,14 @@ function getPosts(markdownFiles: string[], category: string) {
 		);
 
 		const matterResult = matter(fileContents);
+		const slug = filename.replace(".md", "");
 
 		const metadata: PostMetadata = {
 			title: matterResult.data.title,
 			date: matterResult.data.date,
 			category: matterResult.data.category,
-			slug: filename.replace(".md", "")
+			slug: slug,
+			path: `${matterResult.data.category}/${slug}`
 		};
 
 		return metadata;
