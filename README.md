@@ -6,7 +6,7 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 ## Structure
 
-The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using [Contentlayer](https://contentlayer.dev/). This brilliant tool handles pretty much everything for me. I think (though don't understand Next enough to verify at present) that it even creates static HTML files for these during the build process. This means that the content pages will be loaded statically rather than dynamically. Pretty neat!
+The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. At present, it's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
 
 ## Deployment
 
