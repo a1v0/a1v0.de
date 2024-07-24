@@ -39,7 +39,8 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Purge Contentlayer from site, since it is a discontinued product
+1. Replace `markdown-to-jsx` with `remark-rehype`
+    - Make sure syntax highlighting works properly
 2. Make site a11y-friendly
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site)
       - Investigate the use of the `<dl>` tag for lists (is this more a11y-friendly?)
