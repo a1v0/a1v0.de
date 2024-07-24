@@ -8,6 +8,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
 import { deepStrictEqual } from "assert";
+import Link from "next/link";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -82,7 +83,16 @@ const PostLayout = ({
 							{getDateString(articleMetadata.date)}
 						</time>
 					</div>
-					<Markdown className="[&>*:last-child]:mb-0 [&>*]:mb-3">
+					<Markdown
+						className="[&>*:last-child]:mb-0 [&>*]:mb-3"
+						options={{
+							overrides: {
+								a: {
+									component: Link
+								}
+							}
+						}}
+					>
 						{article.content}
 					</Markdown>
 				</article>
