@@ -39,7 +39,7 @@ I will explain it in more detail below so that you can tweak it to suit your nee
 
 > This regex doesn't check whether a given Eircode is real, only that it matches the pattern.
 
-### Regex breakdown
+## Regex breakdown
 
 ### `gim`
 
