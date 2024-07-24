@@ -37,9 +37,9 @@ export const generateMetadata = ({
 	return { title: article.title };
 };
 
-function getPostContent(slug: string, category: string) {
+function getPostContent(articleName: string, category: string) {
 	const folder = `articles/${category}/`;
-	const file = folder + `${slug}.md`;
+	const file = folder + `${articleName}.md`;
 	const content = fs.readFileSync(file, "utf-8");
 
 	const matterResult = matter(content);
@@ -51,13 +51,12 @@ const PostLayout = ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	const post = allArticles.find((post) => {
-		return (
-			post._raw.flattenedPath.toLowerCase() ===
-			params.articleName.toLowerCase()
-		);
-	});
-	if (!post) {
+	const article = getPostContent(params.articleName, params.category),
+		articleMetadata = getPostMetadata(params.category).find((item) => {
+			return item.slug === params.articleName.toLowerCase();
+		});
+
+	if (!articleMetadata) {
 		return notFound();
 	}
 
@@ -66,15 +65,17 @@ const PostLayout = ({
 			<div>
 				<article className="clear-gutters text-content bg-background-white">
 					<div>
-						<h1>{post.title}</h1>
-						<time dateTime={post.date}>
-							{format(parseISO(post.date), "LLLL d, yyyy")}
+						<h1>{articleMetadata.title}</h1>
+						<time dateTime={articleMetadata.date}>
+							{format(
+								parseISO(articleMetadata.date),
+								"LLLL d, yyyy"
+							)}
 						</time>
 					</div>
-					<div
-						className="[&>*:last-child]:mb-0 [&>*]:mb-3"
-						dangerouslySetInnerHTML={{ __html: post.body.html }}
-					/>
+					<Markdown className="[&>*:last-child]:mb-0 [&>*]:mb-3">
+						{article.content}
+					</Markdown>
 				</article>
 			</div>
 		</main>
