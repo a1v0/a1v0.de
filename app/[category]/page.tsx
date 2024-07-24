@@ -43,9 +43,7 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 						{getPostMetadata(category).map((article, index) => {
 							return (
 								<li key={index}>
-									<Link
-										href={`${article.category}/${article.slug}`}
-									>
+									<Link href={`${article.path}`}>
 										{article.title}
 									</Link>
 								</li>

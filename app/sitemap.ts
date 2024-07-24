@@ -70,7 +70,7 @@ function addArticles(category: string, allRoutes: SitemapEntry[]) {
 	const articles = getPostMetadata(category);
 
 	articles.forEach((article) => {
-		const url = `${BASE_URL}/${category}/${article.slug}`,
+		const url = `${BASE_URL}/${article.path}`,
 			lastModified = article.date,
 			changeFrequency = yearlyChangeFrequency;
 
