@@ -20,6 +20,23 @@ export const generateStaticParams = async () => {
 	});
 };
 
+export const generateMetadata = ({
+	params
+}: {
+	params: { articleName: string; category: string };
+}) => {
+	const articles = getPostMetadata(params.category);
+	const article = articles.find((item) => {
+		return item.slug === params.articleName.toLowerCase();
+	});
+
+	if (!article) {
+		return notFound();
+	}
+
+	return { title: article.title };
+};
+
 function getPostContent(slug: string, category: string) {
 	const folder = `articles/${category}/`;
 	const file = folder + `${slug}.md`;
@@ -28,26 +45,6 @@ function getPostContent(slug: string, category: string) {
 	const matterResult = matter(content);
 	return matterResult;
 }
-
-export const generateMetadata = ({
-	params
-}: {
-	params: { articleName: string; category: string };
-}) => {
-	const post = allArticles.find((post) => {
-		const hasCorrectName =
-				post._raw.flattenedPath.toLowerCase() ===
-				params.articleName.toLowerCase(),
-			hasCorrectCategory =
-				post.category.toLowerCase() === params.category.toLowerCase();
-		return hasCorrectName && hasCorrectCategory;
-	});
-	if (!post) {
-		return notFound();
-	}
-
-	return { title: post.title };
-};
 
 const PostLayout = ({
 	params
