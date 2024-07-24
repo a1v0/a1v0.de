@@ -4,7 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => {
-	return Object.keys(categoriesMap);
+	return Object.keys(categoriesMap).map((category) => {
+		return { category };
+	});
 };
 
 export const generateMetadata = ({
