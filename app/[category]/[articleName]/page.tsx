@@ -1,12 +1,33 @@
 import { format, parseISO } from "date-fns";
 import { allArticles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
+import Markdown from "markdown-to-jsx";
+import getPostMetadata, { PostMetadata } from "@/utils/getPostMetadata";
+import React from "react";
+import fs from "fs";
+import matter from "gray-matter";
+import { categoriesMap } from "@/app/article-categories";
 
 export const generateStaticParams = async () => {
+	const allArticles: PostMetadata[] = [];
+	Object.keys(categoriesMap).forEach((category) => {
+		const articles = getPostMetadata(category);
+		allArticles.push(...articles);
+	});
+
 	return allArticles.map((article) => {
-		return { articleName: article._raw.flattenedPath.toLowerCase() };
+		return { articleName: article.slug, category: article.category };
 	});
 };
+
+function getPostContent(slug: string, category: string) {
+	const folder = `articles/${category}/`;
+	const file = folder + `${slug}.md`;
+	const content = fs.readFileSync(file, "utf-8");
+
+	const matterResult = matter(content);
+	return matterResult;
+}
 
 export const generateMetadata = ({
 	params
