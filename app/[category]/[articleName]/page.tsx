@@ -1,5 +1,3 @@
-import { format, parseISO } from "date-fns";
-import { allArticles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import Markdown from "markdown-to-jsx";
 import getPostMetadata, { PostMetadata } from "@/utils/getPostMetadata";
@@ -7,7 +5,6 @@ import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
-import { deepStrictEqual } from "assert";
 import Link from "next/link";
 
 export const generateStaticParams = async () => {
