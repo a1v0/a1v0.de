@@ -37,14 +37,14 @@ export const generateMetadata = ({
 	return { title: article.title };
 };
 
-function getPostContent(articleName: string, category: string) {
+const getPostContent = (articleName: string, category: string) => {
 	const folder = `articles/${category}/`;
 	const file = folder + `${articleName}.md`;
 	const content = fs.readFileSync(file, "utf-8");
 
 	const matterResult = matter(content);
 	return matterResult;
-}
+};
 
 const PostLayout = ({
 	params
