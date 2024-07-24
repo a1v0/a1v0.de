@@ -90,6 +90,12 @@ const PostLayout = ({
 								a: {
 									component: Link
 								}
+							},
+							namedCodesToUnicode: {
+								mdash: "\u2014",
+								minus: "\u2212",
+								ecirc: "\u00EA",
+								iuml: "\u00EF"
 							}
 						}}
 					>
