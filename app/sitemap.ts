@@ -1,31 +1,38 @@
 import { MetadataRoute } from "next";
-import { allArticles } from "contentlayer/generated";
 import { categoriesMap } from "./article-categories";
+import getPostMetadata from "@/utils/getPostMetadata";
+
+const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
+
+type changeFrequency =
+	| "always"
+	| "hourly"
+	| "daily"
+	| "weekly"
+	| "monthly"
+	| "yearly"
+	| "never";
+
+const yearlyChangeFrequency = "yearly" as changeFrequency;
+
+interface SitemapEntry {
+	url: string;
+	lastModified: string;
+	changeFrequency: changeFrequency;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const BASE_URL = process.env.SITE_URL || "https://www.a1v0.de";
+	const allRoutes: SitemapEntry[] = [];
 
-	type changeFrequency =
-		| "always"
-		| "hourly"
-		| "daily"
-		| "weekly"
-		| "monthly"
-		| "yearly"
-		| "never";
+	const staticRoutes = ["/", "/disclaimer", "/sitemap"]; // add any other static routes here
+	addStaticPages(staticRoutes, allRoutes);
 
-	interface SitemapEntry {
-		url: string;
-		lastModified: string;
-		changeFrequency: changeFrequency;
-	}
+	addCategoriesAndArticles(allRoutes);
 
-	const yearlyChangeFrequency = "yearly" as changeFrequency;
+	return allRoutes;
+}
 
-	const allPages: SitemapEntry[] = [];
-
-	const staticRoutes = ["/", "/disclaimer"]; // add any other static routes here
-
+function addStaticPages(staticRoutes: string[], allRoutes: SitemapEntry[]) {
 	staticRoutes.forEach((route) => {
 		const url = BASE_URL + route,
 			lastModified = new Date().toISOString(),
@@ -37,25 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency
 		};
 
-		allPages.push(sitemapEntry);
+		allRoutes.push(sitemapEntry);
 	});
+}
 
-	allArticles.forEach((article) => {
-		const url = BASE_URL + article.url,
-			lastModified = article.date,
-			changeFrequency = yearlyChangeFrequency;
-
-		const sitemapEntry: SitemapEntry = {
-			url,
-			lastModified,
-			changeFrequency
-		};
-
-		allPages.push(sitemapEntry);
-	});
-
+function addCategoriesAndArticles(allRoutes: SitemapEntry[]) {
 	Object.keys(categoriesMap).forEach((category) => {
-		const url = BASE_URL + "/" + category,
+		const url = `${BASE_URL}/${category}`,
 			lastModified = new Date().toISOString(),
 			changeFrequency = yearlyChangeFrequency;
 
@@ -65,8 +60,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency
 		};
 
-		allPages.push(sitemapEntry);
-	});
+		allRoutes.push(sitemapEntry);
 
-	return allPages;
+		addArticles(category, allRoutes);
+	});
+}
+
+function addArticles(category: string, allRoutes: SitemapEntry[]) {
+	const articles = getPostMetadata(category);
+
+	articles.forEach((article) => {
+		const url = `${BASE_URL}/${article.path}`,
+			lastModified = article.date,
+			changeFrequency = yearlyChangeFrequency;
+
+		const sitemapEntry: SitemapEntry = {
+			url,
+			lastModified,
+			changeFrequency
+		};
+
+		allRoutes.push(sitemapEntry);
+	});
 }

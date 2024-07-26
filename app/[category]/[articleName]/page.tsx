@@ -1,10 +1,20 @@
-import { format, parseISO } from "date-fns";
-import { allArticles } from "contentlayer/generated";
 import { notFound } from "next/navigation";
+import getPostMetadata, { PostMetadata } from "@/utils/getPostMetadata";
+import React from "react";
+import fs from "fs";
+import matter from "gray-matter";
+import { categoriesMap } from "@/app/article-categories";
+import { renderMarkdown } from "@/utils/renderMarkdown";
 
 export const generateStaticParams = async () => {
+	const allArticles: PostMetadata[] = [];
+	Object.keys(categoriesMap).forEach((category) => {
+		const articles = getPostMetadata(category);
+		allArticles.push(...articles);
+	});
+
 	return allArticles.map((article) => {
-		return { articleName: article._raw.flattenedPath.toLowerCase() };
+		return { articleName: article.slug, category: article.category };
 	});
 };
 
@@ -13,50 +23,66 @@ export const generateMetadata = ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	const post = allArticles.find((post) => {
-		const hasCorrectName =
-				post._raw.flattenedPath.toLowerCase() ===
-				params.articleName.toLowerCase(),
-			hasCorrectCategory =
-				post.category.toLowerCase() === params.category.toLowerCase();
-		return hasCorrectName && hasCorrectCategory;
+	const articles = getPostMetadata(params.category);
+	const article = articles.find((item) => {
+		return item.slug === params.articleName.toLowerCase();
 	});
-	if (!post) {
+
+	if (!article) {
 		return notFound();
 	}
 
-	return { title: post.title };
+	return { title: article.title };
 };
 
-const PostLayout = ({
+const getPostContent = (articleName: string, category: string) => {
+	const folder = `articles/${category}/`;
+	const file = folder + `${articleName}.md`;
+	const content = fs.readFileSync(file, "utf-8");
+
+	const matterResult = matter(content);
+	return matterResult;
+};
+
+const getDateString = (isoDate: string) => {
+	const date = new Date(isoDate);
+	const options: Intl.DateTimeFormatOptions = {
+		year: "numeric",
+		month: "long",
+		day: "numeric"
+	};
+
+	return date.toLocaleDateString("en-US", options);
+};
+
+const PostLayout = async ({
 	params
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	const post = allArticles.find((post) => {
-		return (
-			post._raw.flattenedPath.toLowerCase() ===
-			params.articleName.toLowerCase()
-		);
-	});
-	if (!post) {
+	const article = getPostContent(params.articleName, params.category),
+		articleMetadata = getPostMetadata(params.category).find((item) => {
+			return item.slug === params.articleName.toLowerCase();
+		});
+
+	if (!articleMetadata) {
 		return notFound();
 	}
+
+	const content = await renderMarkdown(article.content);
 
 	return (
 		<main className="grow bg-background-white">
 			<div>
 				<article className="clear-gutters text-content bg-background-white">
 					<div>
-						<h1>{post.title}</h1>
-						<time dateTime={post.date}>
-							{format(parseISO(post.date), "LLLL d, yyyy")}
+						<h1>{articleMetadata.title}</h1>
+						<time dateTime={articleMetadata.date}>
+							{getDateString(articleMetadata.date)}
 						</time>
 					</div>
-					<div
-						className="[&>*:last-child]:mb-0 [&>*]:mb-3"
-						dangerouslySetInnerHTML={{ __html: post.body.html }}
-					/>
+
+					<div dangerouslySetInnerHTML={{ __html: content }} />
 				</article>
 			</div>
 		</main>
