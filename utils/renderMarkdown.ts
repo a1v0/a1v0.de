@@ -9,9 +9,9 @@ export function renderMarkdown(markdown: string): Promise<string> {
 	return unified()
 		.use(remarkParse)
 		.use(remarkRehype)
-		.use(rehypeHighlight)
-		.use(rehypeSlug)
 		.use(rehypeStringify)
+		.use(rehypeSlug)
+		.use(rehypeHighlight)
 		.process(markdown)
 		.then((res) => res.toString());
 }
