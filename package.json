@@ -10,7 +10,6 @@
 		"format": "npx prettier . --write"
 	},
 	"dependencies": {
-		"@jsdevtools/rehype-toc": "^3.0.2",
 		"gray-matter": "^4.0.3",
 		"markdown-to-jsx": "^7.4.7",
 		"next": "^13.5.4",
