@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
-import Markdown from "markdown-to-jsx";
 import getPostMetadata, { PostMetadata } from "@/utils/getPostMetadata";
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
-import Link from "next/link";
+import { renderMarkdown } from "@/utils/renderMarkdown";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -56,7 +55,7 @@ const getDateString = (isoDate: string) => {
 	return date.toLocaleDateString("en-US", options);
 };
 
-const PostLayout = ({
+const PostLayout = async ({
 	params
 }: {
 	params: { articleName: string; category: string };
@@ -70,6 +69,8 @@ const PostLayout = ({
 		return notFound();
 	}
 
+	const content = await renderMarkdown(article.content);
+
 	return (
 		<main className="grow bg-background-white">
 			<div>
@@ -80,24 +81,8 @@ const PostLayout = ({
 							{getDateString(articleMetadata.date)}
 						</time>
 					</div>
-					<Markdown
-						className="[&>*:last-child]:mb-0 [&>*]:mb-3"
-						options={{
-							overrides: {
-								a: {
-									component: Link
-								}
-							},
-							namedCodesToUnicode: {
-								mdash: "\u2014",
-								minus: "\u2212",
-								ecirc: "\u00EA",
-								iuml: "\u00EF"
-							}
-						}}
-					>
-						{article.content}
-					</Markdown>
+
+					<div dangerouslySetInnerHTML={{ __html: content }} />
 				</article>
 			</div>
 		</main>
