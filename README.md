@@ -60,3 +60,5 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - First paint takes too long
 11. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
 12. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
+13. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
+    - Perhaps make methods to check whether a path exists before attempting to extract its content
