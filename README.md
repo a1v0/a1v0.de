@@ -58,6 +58,5 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 10. Speed up site. Lighthouse comments:
     - JavaScript takes too long to load
     - First paint takes too long
-    - Custom font takes ages to load (there's a warning about this at the build stage, but that might just be a bug from the deprecated `pages` router of Next)
 11. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
 12. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
