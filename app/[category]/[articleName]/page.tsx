@@ -40,6 +40,10 @@ export const generateMetadata = ({
 };
 
 const getPostContent = (articleName: string, category: string) => {
+	if (!Object.hasOwn(categoriesMap, category)) {
+		return notFound();
+	}
+
 	const folder = `articles/${category}/`;
 	const file = folder + `${articleName}.md`;
 	const content = fs.readFileSync(file, "utf-8");
@@ -64,6 +68,10 @@ const PostLayout = async ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
+	if (!Object.hasOwn(categoriesMap, params.category)) {
+		return notFound();
+	}
+
 	const article = getPostContent(params.articleName, params.category),
 		articleMetadata = getPostMetadata(params.category).find((item) => {
 			return item.slug === params.articleName.toLowerCase();
