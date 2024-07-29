@@ -41,24 +41,22 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 1. Make site a11y-friendly
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site)
-      - Investigate the use of the `<dl>` tag for lists (is this more a11y-friendly?)
     - Anything else (see WCAG)
     - Axe Dev Tools comments:
         - `<code>` tags with a horizontal scrollbar need to be accessible via `tabindex="0"`. `remark-rehype` doesn't give me a way to set a tab index for `<code>` tags; my only solution would be to run a script on every page to set one automatically. Not sure quite how to implement that in a non-clunky way
-2. Add linting to repo (future Alvo: what did I mean by this? Did I mean to enforce well linted code before publication?)
-3. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
-4. Add TOC to articles
+2. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
+3. Add TOC to articles
     - `rehype-slug` already creates IDs for all headings, which is a start
-5. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
-6. See what happens when you vertically centre the text in the footer (it might look daft)
-7. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
+4. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
+5. See what happens when you vertically centre the text in the footer (it might look daft)
+6. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
     - could the factory pattern be helpful here?
-8. Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
-9. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
-10. Speed up site. Lighthouse comments:
+7. Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
+8. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
+9. Speed up site. Lighthouse comments:
     - JavaScript takes too long to load
     - First paint takes too long
-11. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
-12. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
-13. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
+10. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
+11. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
+12. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
     - Perhaps make methods to check whether a path exists before attempting to extract its content
