@@ -23,6 +23,10 @@ export const generateMetadata = ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
+	if (!Object.hasOwn(categoriesMap, params.category)) {
+		return notFound();
+	}
+
 	const articles = getPostMetadata(params.category);
 	const article = articles.find((item) => {
 		return item.slug === params.articleName.toLowerCase();
