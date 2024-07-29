@@ -3,6 +3,13 @@ import Header from "../components/Header";
 import "./globals.css";
 import "./highlight-theme.css";
 import type { Metadata } from "next";
+import { Jost } from "next/font/google";
+
+const jost = Jost({
+	subsets: ["latin"],
+	style: ["normal", "italic"],
+	display: "swap"
+});
 
 export const metadata: Metadata = {
 	title: {
@@ -20,19 +27,8 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<head>
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link
-					rel="preconnect"
-					href="https://fonts.gstatic.com"
-					crossOrigin=""
-				/>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400..700;1,400..700&display=swap"
-					rel="stylesheet"
-				/>
-			</head>
-			<body>
+			<head></head>
+			<body className={jost.className}>
 				<a href="#main-content" className="skip-link">
 					Skip to main content
 				</a>
