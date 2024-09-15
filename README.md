@@ -40,21 +40,20 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 ## To-do
 
 1. Find out why site not being properly indexed by Google. Currently, only the homepage and disclaimer are indexed, as if the spider couldn't/didn't see the sitemap
-2. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
-3. Make site a11y-friendly
+2. Make site a11y-friendly
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site)
     - Anything else (see WCAG)
-4. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
-5. Add TOC to articles
+3. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
+4. Add TOC to articles
     - `rehype-slug` already creates IDs for all headings, which is a start
-6. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
+5. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
     - Perhaps make methods to check whether a path exists before attempting to extract its content
-7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
-8. Replace boring bullet list of articles in categories with some sort of tile layout
-9. Footer edits:
+6. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
+7. Replace boring bullet list of articles in categories with some sort of tile layout
+8. Footer edits:
     - See what happens when you vertically centre the text in the footer (it might look daft)
     - Experiment with link layouts. A vertical stack doesn't look so good when there are more than three links
-10. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories
+9. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories
     - could the factory pattern be helpful here?
-11. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
-12. COULD ALREADY BE COMPLETE: Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
+10. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
+11. COULD ALREADY BE COMPLETE: Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
