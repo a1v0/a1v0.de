@@ -10,6 +10,10 @@ export default function Disclaimer() {
 					<h1>Contact a1v0</h1>
 					<p>
             CONTENT GOES HERE!
+            {
+              this is some code to ensure the build fails,
+              just in case I forget about this module
+            }
 					</p>
 				</article>
 			</div>
