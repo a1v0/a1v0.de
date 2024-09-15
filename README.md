@@ -51,11 +51,10 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 6. Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
 7. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
 8. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
-9. Identify the reason why I can't install the latest version of Next and ESLint. It'll be a package somewhere that can't handle it
-10. Replace boring bullet list of articles in categories with some sort of tile layout
-11. Footer edits:
+9. Replace boring bullet list of articles in categories with some sort of tile layout
+10. Footer edits:
     - See what happens when you vertically centre the text in the footer (it might look daft)
     - Experiment with link layouts. A vertical stack doesn't look so good when there are more than three links
-12. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories
+11. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories
     - could the factory pattern be helpful here?
-13. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
+12. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
