@@ -47,15 +47,14 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 2. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
 3. Add TOC to articles
     - `rehype-slug` already creates IDs for all headings, which is a start
-4. Make some sort of contact page, whether it's a link to a LinkedIn profile or something else
-5. See what happens when you vertically centre the text in the footer (it might look daft)
-6. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
+4. See what happens when you vertically centre the text in the footer (it might look daft)
+5. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
     - could the factory pattern be helpful here?
-7. Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
-8. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
+6. Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
+7. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
     - Perhaps make methods to check whether a path exists before attempting to extract its content
-9. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
-10. Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
-11. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
-12. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
-13. Identify the reason why I can't install the latest version of Next and ESLint. It'll be a package somewhere that can't handle it.
+8. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
+9. Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
+10. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
+11. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
+12. Identify the reason why I can't install the latest version of Next and ESLint. It'll be a package somewhere that can't handle it.
