@@ -12,7 +12,10 @@ export default function Contact() {
 					<h1>Contact a1v0</h1>
 					<p>
 						The best way to contact me is via my{" "}
-						<Link href="https://www.linkedin.com/in/alvo-von-cossel">
+						<Link
+							href="https://www.linkedin.com/in/alvo-von-cossel"
+							target="_blank"
+						>
 							LinkedIn profile
 						</Link>
 						. Send me a message and I should reply.
