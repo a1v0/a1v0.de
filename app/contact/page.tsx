@@ -21,9 +21,9 @@ export default function Contact() {
 						. Send me a message and I should reply.
 					</p>
 					<p>
-						Make sure to put "a1v0.de" in the title, though,
-						otherwise it'll get lost in the day-to-day spam that
-						LinkedIn users get sent all the time.
+						Make sure to put &ldquo;a1v0.de&rdquo; in the title,
+						though, otherwise it&rsquo;ll get lost in the day-to-day
+						spam that LinkedIn users get sent all the time.
 					</p>
 				</article>
 			</div>
