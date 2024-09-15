@@ -42,21 +42,20 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 1. Make site a11y-friendly
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site)
     - Anything else (see WCAG)
-    - Axe Dev Tools comments:
-        - `<code>` tags with a horizontal scrollbar need to be accessible via `tabindex="0"`. `remark-rehype` doesn't give me a way to set a tab index for `<code>` tags; my only solution would be to run a script on every page to set one automatically. Not sure quite how to implement that in a non-clunky way
 2. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
 3. Add TOC to articles
     - `rehype-slug` already creates IDs for all headings, which is a start
-4. Investigate whether there is a quicker or more efficient way to load articles and their respective categories
-    - could the factory pattern be helpful here?
-5. Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
-6. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
+4. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
     - Perhaps make methods to check whether a path exists before attempting to extract its content
-7. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
-8. Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
-9. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
-10. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
-11. Identify the reason why I can't install the latest version of Next and ESLint. It'll be a package somewhere that can't handle it.
-12. Footer edits:
+5. Find what needs to be done to ensure better indexing by search engines. Do I need to increase loading speeds etc.? Or do I need to use SEO? Should I install Google Analytics?
+6. Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
+7. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
+8. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
+9. Identify the reason why I can't install the latest version of Next and ESLint. It'll be a package somewhere that can't handle it
+10. Replace boring bullet list of articles in categories with some sort of tile layout
+11. Footer edits:
     - See what happens when you vertically centre the text in the footer (it might look daft)
     - Experiment with link layouts. A vertical stack doesn't look so good when there are more than three links
+12. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories
+    - could the factory pattern be helpful here?
+13. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
