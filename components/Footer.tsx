@@ -23,10 +23,13 @@ function Footer() {
 							</Link>
 						</li>
 						<li>
-							<Link href="/sitemap.xml">Sitemap</Link>
+							<Link href="/contact">Contact</Link>
 						</li>
 						<li>
 							<Link href="/disclaimer">Disclaimer</Link>
+						</li>
+						<li>
+							<Link href="/sitemap.xml">Sitemap</Link>
 						</li>
 					</ul>
 				</section>

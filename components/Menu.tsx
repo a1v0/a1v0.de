@@ -33,9 +33,9 @@ export default function Menu() {
 								This Website on GitHub
 							</Link>
 						</li>
-						{/* 
-                        - LinkedIn?
-                        */}
+						<li>
+							<Link href="/contact">Contact a1v0</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
