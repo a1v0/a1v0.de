@@ -39,7 +39,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Find out why site not being indexed by Google
+1. Find out why site not being properly indexed by Google. Currently, only the homepage and disclaimer are indexed, as if the spider couldn't/didn't see the sitemap
 2. Update blog post about rendering Markdown in Next, given that Contentlayer is dead
 3. Make site a11y-friendly
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site)
