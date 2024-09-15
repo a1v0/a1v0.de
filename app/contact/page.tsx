@@ -1,19 +1,26 @@
+import Link from "next/link";
+
 export const metadata = {
 	title: "Contact"
 };
 
-export default function Disclaimer() {
+export default function Contact() {
 	return (
 		<main className="flex grow flex-col bg-background-white">
 			<div>
 				<article className="clear-gutters text-content bg-background-white">
 					<h1>Contact a1v0</h1>
 					<p>
-            CONTENT GOES HERE!
-            {
-              this is some code to ensure the build fails,
-              just in case I forget about this module
-            }
+						The best way to contact me is via my{" "}
+						<Link href="https://www.linkedin.com/in/alvo-von-cossel">
+							LinkedIn profile
+						</Link>
+						. Send me a message and I should reply.
+					</p>
+					<p>
+						Make sure to put "a1v0.de" in the title, though,
+						otherwise it'll get lost in the day-to-day spam that
+						LinkedIn users get sent all the time.
 					</p>
 				</article>
 			</div>
