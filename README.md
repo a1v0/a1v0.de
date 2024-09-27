@@ -6,13 +6,19 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 ## Structure
 
-The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. At present, it's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
+The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. There isn't really a backend. It's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
 
 ## Deployment
 
 This site is deployed by Netlify and runs on a custom domain, [a1v0.de](https://a1v0.de). `main` is the production branch.
 
 Development is done in `dev`. Articles, too, are written in `dev`, just to keep things simple. While an article is still in a draft state, it is kept in the `draft-articles` directory.
+
+## Content structure
+
+Articles live within a category. Each article can have only one category.
+
+The URL structure is `/[category-name]/[article-name]`. This matches the file structure of the `articles` folder, where each category has its own directory.
 
 ## Colour scheme and design
 
