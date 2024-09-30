@@ -6,13 +6,19 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 ## Structure
 
-The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. At present, it's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
+The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. There isn't really a backend. It's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
 
 ## Deployment
 
 This site is deployed by Netlify and runs on a custom domain, [a1v0.de](https://a1v0.de). `main` is the production branch.
 
 Development is done in `dev`. Articles, too, are written in `dev`, just to keep things simple. While an article is still in a draft state, it is kept in the `draft-articles` directory.
+
+## Content structure
+
+Articles live within a category. Each article can have only one category.
+
+The URL structure is `/[category-name]/[article-name]`. This matches the file structure of the `articles` folder, where each category has its own directory.
 
 ## Colour scheme and design
 
@@ -39,21 +45,23 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Find out why site not being properly indexed by Google. Currently, only the homepage and disclaimer are indexed, as if the spider couldn't/didn't see the sitemap
-2. Make site a11y-friendly
-    - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site)
-    - Anything else (see WCAG)
-3. Add breadcrumbs to articles. Given that there is just one layer between root and article (the category), all that's necessary is to add a link to the parent category on each article page
-4. Add TOC to articles
-    - `rehype-slug` already creates IDs for all headings, which is a start
-5. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist
-    - Perhaps make methods to check whether a path exists before attempting to extract its content
-6. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown
-7. Replace boring bullet list of articles in categories with some sort of tile layout
-8. Footer edits:
-    - See what happens when you vertically centre the text in the footer (it might look daft)
-    - Experiment with link layouts. A vertical stack doesn't look so good when there are more than three links
-9. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories
-    - could the factory pattern be helpful here?
-10. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive)
-11. COULD ALREADY BE COMPLETE: Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse)
+1. Make site a11y-friendly.
+    - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site).
+    - Anything else (see WCAG).
+2. Add TOC to articles.
+    - `rehype-slug` already creates IDs for all headings, which is a start.
+3. 404 page doesn't work when you access a non-existent article within a category that _does_ exist.
+4. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist.
+    - Perhaps make methods to check whether a path exists before attempting to extract its content.
+5. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown.
+6. Replace boring bullet list of articles in categories with some sort of tile layout.
+7. Footer edits:
+    - See what happens when you vertically centre the text in the footer (it might look daft).
+    - Experiment with link layouts. A vertical stack doesn't look so good when there are more than three links.
+    - Wrap footer links in `nav` element.
+8. COULD ALREADY BE COMPLETE: Investigate whether there is a quicker or more efficient way to load articles and their respective categories.
+    - Could the factory pattern be helpful here?
+9. COULD ALREADY BE COMPLETE: Move oft-repeated methods into util functions (e.g. anything that loops through all articles, which looks like it's pretty repetitive).
+10. COULD ALREADY BE COMPLETE: Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse).
+11. Find way to improve/refactor CSS, as it is gradually getting bloated.
+12. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.

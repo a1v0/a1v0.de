@@ -180,4 +180,32 @@
 		@apply !w-full;
 		@apply !h-auto;
 	}
+
+	.breadcrumbs ul {
+		@apply m-0;
+		@apply list-none;
+	}
+
+	.breadcrumbs li {
+		@apply m-0;
+		@apply inline-block;
+	}
+
+	.breadcrumbs li:not(:last-of-type) {
+		@apply after:w-5;
+		@apply after:inline-block;
+		@apply after:text-center;
+		@apply after:content-["›"];
+	}
+
+	.breadcrumbs a {
+		@apply no-underline;
+		@apply text-link-normal;
+	}
+
+	.breadcrumbs a:hover {
+		@apply underline;
+		@apply decoration-2;
+		@apply text-link-hover;
+	}
 }
