@@ -5,6 +5,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
 import { renderMarkdown } from "@/utils/renderMarkdown";
+import Link from "next/link";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -82,6 +83,7 @@ const PostLayout = async ({
 	}
 
 	const content = await renderMarkdown(article.content);
+	const categoryName = categoriesMap[params.category].displayName;
 
 	return (
 		<main className="grow bg-background-white">
@@ -89,9 +91,26 @@ const PostLayout = async ({
 				<article className="clear-gutters text-content bg-background-white">
 					<div>
 						<h1>{articleMetadata.title}</h1>
-						<time dateTime={articleMetadata.date}>
-							{getDateString(articleMetadata.date)}
-						</time>
+						<div className="flex justify-between">
+							<nav
+								aria-label="Breadcrumb"
+								className="breadcrumbs"
+							>
+								<ul>
+									<li>
+										<Link href="/">Home</Link>
+									</li>
+									<li>
+										<Link href={`/` + params.category}>
+											{categoryName}
+										</Link>
+									</li>
+								</ul>
+							</nav>
+							<time dateTime={articleMetadata.date}>
+								{getDateString(articleMetadata.date)}
+							</time>
+						</div>
 					</div>
 
 					<div dangerouslySetInnerHTML={{ __html: content }} />
