@@ -1,5 +1,0 @@
-- Puppeteer error when using Firefox
-- main error message: Failed to launch browser
-- subheading: couldn't load XPCOM
-- solution: install GTK3 (at least for Linux. unsure about Windows)
-- `sudo apt-get install libgtk-3-dev`
