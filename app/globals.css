@@ -72,12 +72,14 @@
 
 	a {
 		@apply underline;
+		@apply underline-offset-2;
 		@apply decoration-1;
 		@apply text-link-normal;
 	}
 
 	a:hover {
 		@apply underline;
+		@apply underline-offset-2;
 		@apply decoration-2;
 		@apply text-link-hover;
 	}
@@ -205,6 +207,7 @@
 
 	.breadcrumbs a:hover {
 		@apply underline;
+		@apply underline-offset-2;
 		@apply decoration-2;
 		@apply text-link-hover;
 	}
