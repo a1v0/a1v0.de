@@ -65,3 +65,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 10. COULD ALREADY BE COMPLETE: Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse).
 11. Find way to improve/refactor CSS, as it is gradually getting bloated.
 12. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
+13. Make base URL for sitemap to be "a1v0.de", not "www.a1v0.de"
