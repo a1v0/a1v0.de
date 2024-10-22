@@ -45,13 +45,13 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Make site a11y-friendly.
+1. 404 page doesn't work when you access a non-existent article within a category that _does_ exist.
+2. Make site a11y-friendly.
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site).
     - Anything else (see WCAG).
     - Aria labels for the most obvious things (perhaps skip link?)
-2. Add TOC to articles.
+3. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-3. 404 page doesn't work when you access a non-existent article within a category that _does_ exist.
 4. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist.
     - Perhaps make methods to check whether a path exists before attempting to extract its content.
 5. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown.
@@ -70,4 +70,5 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
      - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
      - Find best CSS way to handle it (is there a selector?).
      - Maybe create a toggle button.
-15. Turn breadcrumbs into a component
+15. Turn breadcrumbs into a component.
+16. Turn skip link into a component.
