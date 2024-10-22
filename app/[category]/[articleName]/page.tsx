@@ -29,9 +29,10 @@ export const generateMetadata = ({
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
+	const articleName = params.articleName.toLowerCase();
 	const articles = getPostMetadata(category);
 	const article = articles.find((item) => {
-		return item.slug === params.articleName.toLowerCase();
+		return item.slug === articleName;
 	});
 
 	if (!article) {
@@ -43,6 +44,7 @@ export const generateMetadata = ({
 
 const getPostContent = (articleName: string, category: string) => {
 	category = category.toLowerCase();
+	articleName = articleName.toLowerCase();
 
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
@@ -79,9 +81,10 @@ const PostLayout = async ({
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
-	const article = getPostContent(params.articleName, category),
+	const articleName = params.articleName.toLowerCase();
+	const article = getPostContent(articleName, category),
 		articleMetadata = getPostMetadata(category).find((item) => {
-			return item.slug === params.articleName.toLowerCase();
+			return item.slug === articleName.toLowerCase();
 		});
 
 	if (!articleMetadata) return notFound();
