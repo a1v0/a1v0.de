@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
 import { renderMarkdown } from "@/utils/renderMarkdown";
 import Link from "next/link";
+import { validateCategory } from "@/utils/validationUtils";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -24,9 +25,8 @@ export const generateMetadata = ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	if (!Object.hasOwn(categoriesMap, params.category)) {
-		return notFound();
-	}
+	const categoryExists = validateCategory(params.category);
+	if (!categoryExists) return notFound();
 
 	const articles = getPostMetadata(params.category);
 	const article = articles.find((item) => {
@@ -41,9 +41,8 @@ export const generateMetadata = ({
 };
 
 const getPostContent = (articleName: string, category: string) => {
-	if (!Object.hasOwn(categoriesMap, category)) {
-		return notFound();
-	}
+	const categoryExists = validateCategory(category);
+	if (!categoryExists) return notFound();
 
 	const folder = `articles/${category}/`;
 	const file = folder + `${articleName}.md`;
@@ -69,9 +68,8 @@ const PostLayout = async ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	if (!Object.hasOwn(categoriesMap, params.category)) {
-		return notFound();
-	}
+	const categoryExists = validateCategory(params.category);
+	if (!categoryExists) return notFound();
 
 	const article = getPostContent(params.articleName, params.category),
 		articleMetadata = getPostMetadata(params.category).find((item) => {
