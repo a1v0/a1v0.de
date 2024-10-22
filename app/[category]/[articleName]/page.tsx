@@ -46,6 +46,10 @@ const getPostContent = (articleName: string, category: string) => {
 
 	const folder = `articles/${category}/`;
 	const file = folder + `${articleName}.md`;
+
+	const fileExists = fs.existsSync(file);
+	if (!fileExists) return notFound();
+
 	const content = fs.readFileSync(file, "utf-8");
 
 	const matterResult = matter(content);
@@ -76,9 +80,7 @@ const PostLayout = async ({
 			return item.slug === params.articleName.toLowerCase();
 		});
 
-	if (!articleMetadata) {
-		return notFound();
-	}
+	if (!articleMetadata) return notFound();
 
 	const content = await renderMarkdown(article.content);
 	const categoryName = categoriesMap[params.category].displayName;
