@@ -13,25 +13,27 @@ function Footer() {
 				</section>
 				<section className="flex items-center">
 					<Logo height="h-9" />
-					<ul className="flush !ml-3 border-l-2 border-l-softer-black pl-3">
-						<li>
-							<Link
-								className="flex"
-								href="https://github.com/a1v0/"
-							>
-								a1v0 on GitHub
-							</Link>
-						</li>
-						<li>
-							<Link href="/contact">Contact</Link>
-						</li>
-						<li>
-							<Link href="/disclaimer">Disclaimer</Link>
-						</li>
-						<li>
-							<Link href="/sitemap.xml">Sitemap</Link>
-						</li>
-					</ul>
+					<nav aria-label="Footer">
+						<ul className="flush !ml-3 border-l-2 border-l-softer-black pl-3">
+							<li>
+								<Link
+									className="flex"
+									href="https://github.com/a1v0/"
+								>
+									a1v0 on GitHub
+								</Link>
+							</li>
+							<li>
+								<Link href="/contact">Contact</Link>
+							</li>
+							<li>
+								<Link href="/disclaimer">Disclaimer</Link>
+							</li>
+							<li>
+								<Link href="/sitemap.xml">Sitemap</Link>
+							</li>
+						</ul>
+					</nav>
 				</section>
 			</div>
 		</footer>
