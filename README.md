@@ -46,27 +46,25 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 ## To-do
 
 1. Footer edits:
-    - Experiment with link layouts. A vertical stack doesn't look so good when there are more than three links.
     - When screen is smaller, put copyright notice above or below links, not beside.
+    - WARNING: **FOOTER IN PROGRESS. DO NOT DEPLOY TO PRODUCTION UNTIL FOOTER IS FIXED.**
 2. COULD ALREADY BE COMPLETE: Speed up site on mobile (performance is solid on desktop, according to Chrome Lighthouse).
 3. Make site a11y-friendly.
     - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site).
     - Anything else (see WCAG).
-    - Aria labels for the most obvious things (perhaps skip link?)
+    - Aria labels (most of the obvious things already have them)
 4. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-5. Make better, more consistent error handling for when a user enters a category or article name that doesn't exist.
-    - Perhaps make methods to check whether a path exists before attempting to extract its content.
-6. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown.
-7. Replace boring bullet list of articles in categories with some sort of tile layout.
-8. Find way to improve/refactor CSS, as it is gradually getting bloated.
-9. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
-10. The bottom corners of active links aren't rounded. This might be because of a conflict with the CSS that controls the logo.
-11. Implement a dark mode (value added to the user is small, but it's good frontend experience):
+5. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown.
+6. Replace boring bullet list of articles in categories with some sort of tile layout.
+7. Find way to improve/refactor CSS, as it is gradually getting bloated.
+8. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
+9. The bottom corners of active links aren't rounded. This might be because of a conflict with the CSS that controls the logo.
+10. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
      - Find best CSS way to handle it (is there a selector?).
      - Maybe create a toggle button.
-12. Make all URLs case insensitive
+11. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
      - Hopefully there's a way to enforce lowercase URLs.
