@@ -7,6 +7,7 @@ import { categoriesMap } from "@/app/article-categories";
 import { renderMarkdown } from "@/utils/renderMarkdown";
 import Link from "next/link";
 import { validateCategory } from "@/utils/validationUtils";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -83,7 +84,6 @@ const PostLayout = async ({
 	if (!articleMetadata) return notFound();
 
 	const content = await renderMarkdown(article.content);
-	const categoryName = categoriesMap[params.category].displayName;
 
 	return (
 		<main className="grow bg-background-white">
@@ -92,21 +92,7 @@ const PostLayout = async ({
 					<div>
 						<h1>{articleMetadata.title}</h1>
 						<div className="flex justify-between">
-							<nav
-								aria-label="Breadcrumb"
-								className="breadcrumbs"
-							>
-								<ul>
-									<li>
-										<Link href="/">Home</Link>
-									</li>
-									<li>
-										<Link href={`/` + params.category}>
-											{categoryName}
-										</Link>
-									</li>
-								</ul>
-							</nav>
+							<Breadcrumbs category={params.category} />
 							<time dateTime={articleMetadata.date}>
 								{getDateString(articleMetadata.date)}
 							</time>
