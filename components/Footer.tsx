@@ -11,9 +11,15 @@ function Footer() {
 					<strong className="font-medium">a1v0.de</strong>. All rights
 					reserved.
 				</section>
-				<section className="flex items-center">
-					<Logo height="h-9" />
-					<nav aria-label="Footer">
+				<section>
+					<Logo classNames="h-9 my-5" />
+					{/* 
+                    REFACTOR THESE LINKS INTO A HORIZONTAL FOOTER AT THE BOTTOM OF THE PAGE
+                    
+                    
+                    
+                    
+                    <nav aria-label="Footer">
 						<ul className="flush !ml-3 border-l-2 border-l-softer-black pl-3">
 							<li>
 								<Link
@@ -33,7 +39,7 @@ function Footer() {
 								<Link href="/sitemap.xml">Sitemap</Link>
 							</li>
 						</ul>
-					</nav>
+					</nav> */}
 				</section>
 			</div>
 		</footer>
