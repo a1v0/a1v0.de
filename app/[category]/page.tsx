@@ -25,7 +25,7 @@ export const generateMetadata = ({
 
 const PostLayout = ({ params }: { params: { category: string } }) => {
 	const category = params.category.toLowerCase();
-	const categoryExists = validateCategory(params.category);
+	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
 	const categoryName = categoriesMap[category].displayName;

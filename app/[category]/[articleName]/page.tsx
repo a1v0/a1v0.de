@@ -5,7 +5,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
 import { renderMarkdown } from "@/utils/renderMarkdown";
-import Link from "next/link";
 import { validateCategory } from "@/utils/validationUtils";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -26,10 +25,11 @@ export const generateMetadata = ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	const categoryExists = validateCategory(params.category);
+	const category = params.category.toLowerCase();
+	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
-	const articles = getPostMetadata(params.category);
+	const articles = getPostMetadata(category);
 	const article = articles.find((item) => {
 		return item.slug === params.articleName.toLowerCase();
 	});
@@ -42,6 +42,8 @@ export const generateMetadata = ({
 };
 
 const getPostContent = (articleName: string, category: string) => {
+	category = category.toLowerCase();
+
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
@@ -73,11 +75,12 @@ const PostLayout = async ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	const categoryExists = validateCategory(params.category);
+	const category = params.category.toLowerCase();
+	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
-	const article = getPostContent(params.articleName, params.category),
-		articleMetadata = getPostMetadata(params.category).find((item) => {
+	const article = getPostContent(params.articleName, category),
+		articleMetadata = getPostMetadata(category).find((item) => {
 			return item.slug === params.articleName.toLowerCase();
 		});
 
@@ -92,7 +95,7 @@ const PostLayout = async ({
 					<div>
 						<h1>{articleMetadata.title}</h1>
 						<div className="flex justify-between">
-							<Breadcrumbs category={params.category} />
+							<Breadcrumbs category={category} />
 							<time dateTime={articleMetadata.date}>
 								{getDateString(articleMetadata.date)}
 							</time>
