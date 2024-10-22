@@ -5,7 +5,7 @@ import Link from "next/link";
 function Footer() {
 	return (
 		<footer className="bg-brand-colour py-2 [&_a]:text-text-dark ">
-			<div className="clear-gutters flex justify-between">
+			<div className="clear-gutters flex items-center justify-between">
 				<section>
 					Copyright &copy; {new Date().getFullYear()}{" "}
 					<strong className="font-medium">a1v0.de</strong>. All rights
