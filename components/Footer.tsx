@@ -6,14 +6,13 @@ function Footer() {
 	return (
 		<footer className="bg-brand-colour py-2 [&_a]:text-text-dark ">
 			<div className="clear-gutters flex items-center justify-between">
-				<section>
+				<p>
 					Copyright &copy; {new Date().getFullYear()}{" "}
 					<strong className="font-medium">a1v0.de</strong>. All rights
 					reserved.
-				</section>
-				<section>
-					<Logo classNames="h-9 my-5" />
-					{/* 
+				</p>
+				<Logo classNames="h-9 my-5" />
+				{/* 
                     REFACTOR THESE LINKS INTO A HORIZONTAL FOOTER AT THE BOTTOM OF THE PAGE
                     
                     
@@ -40,7 +39,6 @@ function Footer() {
 							</li>
 						</ul>
 					</nav> */}
-				</section>
 			</div>
 		</footer>
 	);
