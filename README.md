@@ -69,3 +69,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
      - Make footer look better on mobile
      - Refactor inline CSS on footer
      - Make sure the text in the footer takes up more flex space than the logo, i.e. ensure that the two elements don't each share half the screen width (is `stretch` what I need?).
+12. Move regex article into "General" category.
