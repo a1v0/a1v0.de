@@ -1,3 +1,4 @@
+import SkipLink from "@/components/SkipLink";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./globals.css";
@@ -35,9 +36,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className={jost.className}>
-				<a href="#main-content" className="skip-link">
-					Skip to main content
-				</a>
+				<SkipLink />
 				<div className="flex min-h-screen flex-col items-stretch justify-between">
 					<Header />
 					<div id="main-content" className="flex grow flex-col">

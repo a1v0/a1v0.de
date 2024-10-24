@@ -1,5 +1,6 @@
 import { categoriesMap } from "@/app/article-categories";
 import getPostMetadata from "@/utils/getPostMetadata";
+import { validateCategory } from "@/utils/validationUtils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -15,10 +16,8 @@ export const generateMetadata = ({
 	params: { category: string };
 }) => {
 	const category = params.category.toLowerCase();
-	const post = categoriesMap[category];
-	if (!post) {
-		return notFound();
-	}
+	const categoryExists = validateCategory(category);
+	if (!categoryExists) return notFound();
 
 	const categoryName = categoriesMap[category].displayName;
 	return { title: categoryName };
@@ -26,10 +25,8 @@ export const generateMetadata = ({
 
 const PostLayout = ({ params }: { params: { category: string } }) => {
 	const category = params.category.toLowerCase();
-	const post = categoriesMap[category];
-	if (!post) {
-		return notFound();
-	}
+	const categoryExists = validateCategory(category);
+	if (!categoryExists) return notFound();
 
 	const categoryName = categoriesMap[category].displayName;
 

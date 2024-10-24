@@ -5,7 +5,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
 import { renderMarkdown } from "@/utils/renderMarkdown";
-import Link from "next/link";
+import { validateCategory } from "@/utils/validationUtils";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const generateStaticParams = async () => {
 	const allArticles: PostMetadata[] = [];
@@ -24,13 +25,14 @@ export const generateMetadata = ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	if (!Object.hasOwn(categoriesMap, params.category)) {
-		return notFound();
-	}
+	const category = params.category.toLowerCase();
+	const categoryExists = validateCategory(category);
+	if (!categoryExists) return notFound();
 
-	const articles = getPostMetadata(params.category);
+	const articleName = params.articleName.toLowerCase();
+	const articles = getPostMetadata(category);
 	const article = articles.find((item) => {
-		return item.slug === params.articleName.toLowerCase();
+		return item.slug === articleName;
 	});
 
 	if (!article) {
@@ -41,12 +43,18 @@ export const generateMetadata = ({
 };
 
 const getPostContent = (articleName: string, category: string) => {
-	if (!Object.hasOwn(categoriesMap, category)) {
-		return notFound();
-	}
+	category = category.toLowerCase();
+	articleName = articleName.toLowerCase();
+
+	const categoryExists = validateCategory(category);
+	if (!categoryExists) return notFound();
 
 	const folder = `articles/${category}/`;
 	const file = folder + `${articleName}.md`;
+
+	const fileExists = fs.existsSync(file);
+	if (!fileExists) return notFound();
+
 	const content = fs.readFileSync(file, "utf-8");
 
 	const matterResult = matter(content);
@@ -69,21 +77,19 @@ const PostLayout = async ({
 }: {
 	params: { articleName: string; category: string };
 }) => {
-	if (!Object.hasOwn(categoriesMap, params.category)) {
-		return notFound();
-	}
+	const category = params.category.toLowerCase();
+	const categoryExists = validateCategory(category);
+	if (!categoryExists) return notFound();
 
-	const article = getPostContent(params.articleName, params.category),
-		articleMetadata = getPostMetadata(params.category).find((item) => {
-			return item.slug === params.articleName.toLowerCase();
+	const articleName = params.articleName.toLowerCase();
+	const article = getPostContent(articleName, category),
+		articleMetadata = getPostMetadata(category).find((item) => {
+			return item.slug === articleName.toLowerCase();
 		});
 
-	if (!articleMetadata) {
-		return notFound();
-	}
+	if (!articleMetadata) return notFound();
 
 	const content = await renderMarkdown(article.content);
-	const categoryName = categoriesMap[params.category].displayName;
 
 	return (
 		<main className="grow bg-background-white">
@@ -92,21 +98,7 @@ const PostLayout = async ({
 					<div>
 						<h1>{articleMetadata.title}</h1>
 						<div className="flex justify-between">
-							<nav
-								aria-label="Breadcrumb"
-								className="breadcrumbs"
-							>
-								<ul>
-									<li>
-										<Link href="/">Home</Link>
-									</li>
-									<li>
-										<Link href={`/` + params.category}>
-											{categoryName}
-										</Link>
-									</li>
-								</ul>
-							</nav>
+							<Breadcrumbs category={category} />
 							<time dateTime={articleMetadata.date}>
 								{getDateString(articleMetadata.date)}
 							</time>
