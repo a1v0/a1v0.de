@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function LogoLink() {
 	return (
 		<Link
+			aria-label="Homepage"
 			href="/"
 			className="group flex flex-row items-center pr-2.5 text-xl font-medium text-text-dark no-underline visited:text-text-dark visited:no-underline hover:rounded-bl hover:text-text-dark hover:no-underline active:rounded-br-2xl active:rounded-tl-2xl active:rounded-tr"
 		>
