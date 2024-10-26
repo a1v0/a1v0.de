@@ -46,9 +46,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 ## To-do
 
 1. Accessibility:
-    - Semantic HTML (I already pass the automated Lighthouse and Axe checks, but I will read up on semantic HTML to be confident about this site).
-    - Anything else (see WCAG).
-    - Aria labels (most of the obvious things already have them)
+      - "Make sure every feature can be used when text size is increased by 200% and that content reflows to a single column when it’s increased by 400%." This currently doesn't happen on the footer or main menu.
 2. Find way to improve/refactor CSS, as it is gradually getting bloated.
 3. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
 4. Replace boring bullet list of articles in categories with some sort of tile layout.
