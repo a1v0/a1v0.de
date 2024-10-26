@@ -10,6 +10,7 @@ export default function Logo(props: { classNames: string }) {
 			viewBox="114 40.26 9.65 13.16" // calculated using https://codepen.io/mkmllr/pen/vpJmEK
 			className={`${props.classNames} fill-softer-black`}
 			xmlns="http://www.w3.org/2000/svg"
+			aria-label="logo"
 		>
 			<path
 				style={{
