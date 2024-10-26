@@ -7,14 +7,14 @@ function Breadcrumbs(props: { category: string }) {
 
 	return (
 		<nav aria-label="Breadcrumb" className="breadcrumbs">
-			<ul>
+			<ol>
 				<li>
 					<Link href="/">Home</Link>
 				</li>
 				<li>
 					<Link href={`/${category}`}>{categoryName}</Link>
 				</li>
-			</ul>
+			</ol>
 		</nav>
 	);
 }

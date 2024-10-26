@@ -183,7 +183,7 @@
 		@apply !h-auto;
 	}
 
-	.breadcrumbs ul {
+	.breadcrumbs ol {
 		@apply m-0;
 		@apply list-none;
 	}
