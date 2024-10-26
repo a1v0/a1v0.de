@@ -47,9 +47,12 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 1. Accessibility:
       - "Make sure every feature can be used when text size is increased by 200% and that content reflows to a single column when it’s increased by 400%." This currently doesn't happen on the footer or main menu.
-2. Find way to improve/refactor CSS, as it is gradually getting bloated.
-3. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
-4. Replace boring bullet list of articles in categories with some sort of tile layout.
+2. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
+3. Footer edits:
+     - Make footer look better on mobile
+     - Refactor inline CSS on footer
+     - Make sure the text in the footer takes up more flex space than the logo, i.e. ensure that the two elements don't each share half the screen width (is `stretch` what I need?).
+4. Find way to improve/refactor CSS, as it is gradually getting bloated.
 5. Lighthouse improvements:
      - "Remove unused JavaScript"
      - Legacy JavaScript in use
@@ -59,14 +62,11 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
      - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
      - Find best CSS way to handle it (is there a selector?).
      - Maybe create a toggle button.
-7. Make all URLs case insensitive
+7. Replace boring bullet list of articles in categories with some sort of tile layout.
+8. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
      - Hopefully there's a way to enforce lowercase URLs.
-8. Footer edits:
-     - Make footer look better on mobile
-     - Refactor inline CSS on footer
-     - Make sure the text in the footer takes up more flex space than the logo, i.e. ensure that the two elements don't each share half the screen width (is `stretch` what I need?).
 9. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-10. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown.
+10. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
