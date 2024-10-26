@@ -12,9 +12,6 @@ export const categoriesMap: { [key: string]: MappedCategory } = {
 	"next.js": {
 		displayName: "Next.js"
 	},
-	regex: {
-		displayName: "Regular expressions (regex)"
-	},
 	servicenow: {
 		displayName: "ServiceNow"
 	},

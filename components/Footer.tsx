@@ -15,18 +15,18 @@ function Footer() {
 					<nav aria-label="Footer">
 						<ul className="flush m-0 flex justify-between">
 							<li>
-								<Link href="https://github.com/a1v0/">
-									a1v0 on GitHub
-								</Link>
+								<Link href="/disclaimer">Disclaimer</Link>
 							</li>
 							<li>
 								<Link href="/contact">Contact</Link>
 							</li>
 							<li>
-								<Link href="/disclaimer">Disclaimer</Link>
+								<Link href="/sitemap.xml">Sitemap</Link>
 							</li>
 							<li>
-								<Link href="/sitemap.xml">Sitemap</Link>
+								<Link href="https://github.com/a1v0/">
+									GitHub
+								</Link>
 							</li>
 						</ul>
 					</nav>
