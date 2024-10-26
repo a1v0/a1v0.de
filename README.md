@@ -45,8 +45,11 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Accessibility:
-      - "Make sure every feature can be used when text size is increased by 200% and that content reflows to a single column when it’s increased by 400%." This currently doesn't happen on the footer or main menu.
+1. Accessibility: "Make sure every feature can be used when text size is increased by 200% and that content reflows to a single column when it’s increased by 400%."
+     - Footer (none of the various sections of the footer play well together when enlarged)
+     - Main menu content
+     - Main menu header bar
+     - Breadcrumbs/date section on articles
 2. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
 3. Footer edits:
      - Make footer look better on mobile
