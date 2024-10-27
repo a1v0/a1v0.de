@@ -96,7 +96,9 @@ const PostLayout = async ({
 			<div>
 				<article className="clear-gutters text-content bg-background-white">
 					<div>
-						<h1>{articleMetadata.title}</h1>
+						<h1 className="hyphens-auto">
+							{articleMetadata.title}
+						</h1>
 						<div className="flex justify-between">
 							<Breadcrumbs category={category} />
 							<time dateTime={articleMetadata.date}>
