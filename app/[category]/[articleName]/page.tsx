@@ -99,7 +99,7 @@ const PostLayout = async ({
 						<h1 className="hyphens-auto">
 							{articleMetadata.title}
 						</h1>
-						<div className="flex justify-between">
+						<div className="flex flex-col justify-between sm:flex-row">
 							<Breadcrumbs category={category} />
 							<time dateTime={articleMetadata.date}>
 								{getDateString(articleMetadata.date)}
