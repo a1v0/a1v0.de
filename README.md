@@ -45,31 +45,26 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Accessibility: "Make sure every feature can be used when text size is increased by 200% and that content reflows to a single column when it’s increased by 400%."
-     - Footer (none of the various sections of the footer play well together when enlarged)
-     - Main menu content
-     - Main menu header bar
-     - Breadcrumbs/date section on articles
-2. Improve breadcrumbs on mobile, so that they don't force the publication date to the edge. See especially the Regex category, which has a long display name.
-3. Footer edits:
-     - Make footer look better on mobile
-     - Refactor inline CSS on footer
-     - Make sure the text in the footer takes up more flex space than the logo, i.e. ensure that the two elements don't each share half the screen width (is `stretch` what I need?).
-4. Find way to improve/refactor CSS, as it is gradually getting bloated.
-5. Lighthouse improvements:
+1. Find way to improve/refactor CSS, as it is gradually getting bloated.
+2. Lighthouse improvements:
      - "Remove unused JavaScript"
      - Legacy JavaScript in use
      - <https://a1v0.de/c-sharp/access-c-sharp-classes-from-xunit>: image doesn't have explicit width and height
          - Image also needs to be sized properly for mobile: <https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=devtools>
-6. Implement a dark mode (value added to the user is small, but it's good frontend experience):
+3. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
      - Find best CSS way to handle it (is there a selector?).
      - Maybe create a toggle button.
-7. Replace boring bullet list of articles in categories with some sort of tile layout.
-8. Make all URLs case insensitive
+4. Replace boring bullet list of articles in categories with some sort of tile layout.
+5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
      - Hopefully there's a way to enforce lowercase URLs.
-9. Add TOC to articles.
+6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-10. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
+7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
+8. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
+    - You need to add `&shy;` to the title.
+    - You might need to create a fake HTML element in the DOM, set the string as `innerHTML` and then return its `innerText` to display.
+    - This is convoluted but might be the only way to get it done.
+    - Check all articles to see if full HTML could be useful in their titles.
