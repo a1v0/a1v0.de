@@ -37,6 +37,12 @@ function Header() {
 								setShowMenu(!showMenu);
 							}}
 							className="flex h-full w-full items-center border-x-2 border-x-softer-black px-4 py-1 text-lg"
+							aria-label={
+								showMenu
+									? "Hide navigation menu"
+									: "Show navigation menu"
+							}
+							aria-expanded={showMenu}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

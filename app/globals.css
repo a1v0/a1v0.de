@@ -15,7 +15,7 @@
 	}
 
 	.clear-gutters {
-		@apply mx-2;
+		@apply mx-4;
 		@apply md:mx-auto;
 		@apply my-0;
 		@apply max-w-gutter;
@@ -183,7 +183,7 @@
 		@apply !h-auto;
 	}
 
-	.breadcrumbs ul {
+	.breadcrumbs ol {
 		@apply m-0;
 		@apply list-none;
 	}
@@ -210,5 +210,10 @@
 		@apply underline-offset-2;
 		@apply decoration-2;
 		@apply text-link-hover;
+	}
+
+	footer li {
+		@apply m-0;
+		@apply pr-5;
 	}
 }
