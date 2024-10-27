@@ -211,4 +211,9 @@
 		@apply decoration-2;
 		@apply text-link-hover;
 	}
+
+	footer li {
+		@apply m-0;
+		@apply pr-5;
+	}
 }

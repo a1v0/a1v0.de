@@ -14,16 +14,16 @@ function Footer() {
 					</p>
 					<nav aria-label="Footer">
 						<ul className="flush m-0 flex flex-wrap pt-2">
-							<li className="m-0 pr-5">
+							<li>
 								<Link href="/disclaimer">Disclaimer</Link>
 							</li>
-							<li className="m-0 pr-5">
+							<li>
 								<Link href="/contact">Contact</Link>
 							</li>
-							<li className="m-0 pr-5">
+							<li>
 								<Link href="/sitemap.xml">Sitemap</Link>
 							</li>
-							<li className="m-0 pr-5">
+							<li>
 								<Link href="https://github.com/a1v0/">
 									GitHub
 								</Link>
