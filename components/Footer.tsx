@@ -13,7 +13,7 @@ function Footer() {
 						rights reserved.
 					</p>
 					<nav aria-label="Footer">
-						<ul className="flush m-0 flex flex-wrap">
+						<ul className="flush m-0 flex flex-wrap pt-2">
 							<li className="m-0 pr-5">
 								<Link href="/disclaimer">Disclaimer</Link>
 							</li>
@@ -31,7 +31,7 @@ function Footer() {
 						</ul>
 					</nav>
 				</section>
-				<div className="flex grow-[2] justify-end">
+				<div className="flex grow-[2] justify-end pl-2">
 					<Logo classNames="h-9 my-5" />
 				</div>
 			</div>
