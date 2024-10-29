@@ -48,6 +48,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 1. Find way to improve/refactor CSS, as it is gradually getting bloated.
 2. Lighthouse improvements:
      - "Remove unused JavaScript"
+         - See final answer here <https://github.com/vercel/next.js/discussions/13646>
      - Legacy JavaScript in use
      - <https://a1v0.de/c-sharp/access-c-sharp-classes-from-xunit>: image doesn't have explicit width and height
          - Image also needs to be sized properly for mobile: <https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=devtools>
