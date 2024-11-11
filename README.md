@@ -45,27 +45,24 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Find way to improve/refactor CSS, as it is gradually getting bloated.
-2. Lighthouse improvements:
+1. Lighthouse improvements:
      - "Remove unused JavaScript"
-         - See final answer here <https://github.com/vercel/next.js/discussions/13646>
      - Legacy JavaScript in use
-     - <https://a1v0.de/c-sharp/access-c-sharp-classes-from-xunit>: image doesn't have explicit width and height
-         - Image also needs to be sized properly for mobile: <https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=devtools>
-3. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
-4. Implement a dark mode (value added to the user is small, but it's good frontend experience):
+       - Not sure if this can be fixed by anything other than upgrading packages frequently
+2. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
+3. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
      - Find best CSS way to handle it (is there a selector?).
      - Maybe create a toggle button.
-5. Replace boring bullet list of articles in categories with some sort of tile layout.
-6. Make all URLs case insensitive
+4. Replace boring bullet list of articles in categories with some sort of tile layout.
+5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
      - Hopefully there's a way to enforce lowercase URLs.
-7. Add TOC to articles.
+6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-8. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
-9. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
+7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
+8. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
     - You need to add `&shy;` to the title.
     - You might need to create a fake HTML element in the DOM, set the string as `innerHTML` and then return its `innerText` to display.
     - This is convoluted but might be the only way to get it done.
