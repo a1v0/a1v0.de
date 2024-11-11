@@ -13,7 +13,7 @@ function Footer() {
 						rights reserved.
 					</p>
 					<nav aria-label="Footer">
-						<ul className="flush m-0 flex flex-wrap pt-2">
+						<ul className="flush m-0 flex flex-wrap pt-2 [&>li]:m-0 [&>li]:pr-5">
 							<li>
 								<Link href="/disclaimer">Disclaimer</Link>
 							</li>

@@ -71,17 +71,15 @@
 	}
 
 	a {
+		@apply text-link-normal;
 		@apply underline;
 		@apply underline-offset-2;
 		@apply decoration-1;
-		@apply text-link-normal;
 	}
 
 	a:hover {
-		@apply underline;
-		@apply underline-offset-2;
-		@apply decoration-2;
 		@apply text-link-hover;
+		@apply decoration-2;
 	}
 
 	a:visited {
@@ -89,10 +87,10 @@
 	}
 
 	a:active {
+		@apply text-text-dark;
 		@apply bg-accent-colour;
 		@apply decoration-4;
 		@apply rounded-t;
-		@apply text-text-dark;
 	}
 
 	ul {
@@ -127,25 +125,25 @@
 
 	blockquote {
 		@apply bg-background-grey;
-		@apply border-l-[12px];
 		@apply border-brand-colour;
+		@apply border-l-[12px];
 		@apply px-6;
 		@apply py-1;
 		@apply !my-10;
 		@apply rounded-r-md;
 	}
 
+	blockquote code {
+		@apply bg-[#d9d9d9];
+	}
+
 	code {
-		@apply rounded-md;
 		@apply bg-background-grey;
+		@apply rounded-md;
 		@apply px-1;
 		@apply py-px;
 		@apply mx-px;
 		@apply font-mono;
-	}
-
-	blockquote code {
-		@apply bg-[#d9d9d9];
 	}
 
 	pre {
@@ -167,22 +165,6 @@
 		@apply py-2;
 	}
 
-	.skip-link {
-		@apply bg-accent-colour;
-		@apply absolute;
-		@apply block;
-		@apply !w-0;
-		@apply !h-0;
-		@apply overflow-hidden;
-	}
-
-	.skip-link:focus {
-		@apply static;
-		@apply p-1;
-		@apply !w-full;
-		@apply !h-auto;
-	}
-
 	.breadcrumbs ol {
 		@apply m-0;
 		@apply list-none;
@@ -201,19 +183,14 @@
 	}
 
 	.breadcrumbs a {
-		@apply no-underline;
 		@apply text-link-normal;
+		@apply no-underline;
 	}
 
 	.breadcrumbs a:hover {
+		@apply text-link-hover;
 		@apply underline;
 		@apply underline-offset-2;
 		@apply decoration-2;
-		@apply text-link-hover;
-	}
-
-	footer li {
-		@apply m-0;
-		@apply pr-5;
 	}
 }

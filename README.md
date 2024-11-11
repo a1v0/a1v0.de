@@ -45,12 +45,11 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Find way to improve/refactor CSS, as it is gradually getting bloated.
-2. Lighthouse improvements:
+1. Lighthouse improvements:
      - "Remove unused JavaScript"
      - Legacy JavaScript in use
-     - <https://a1v0.de/c-sharp/access-c-sharp-classes-from-xunit>: image doesn't have explicit width and height
-         - Image also needs to be sized properly for mobile: <https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/?utm_source=lighthouse&utm_medium=devtools>
+       - Not sure if this can be fixed by anything other than upgrading packages frequently
+2. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
 3. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
      - Find best CSS way to handle it (is there a selector?).
