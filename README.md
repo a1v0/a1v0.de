@@ -58,7 +58,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
-     - Hopefully there's a way to enforce lowercase URLs.
+     - <https://www.linkedin.com/pulse/solving-case-sensitivity-issues-nextjs-routes-middleware-islam-cavic/>
 6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
 7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
