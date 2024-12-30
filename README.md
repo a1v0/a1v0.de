@@ -40,7 +40,7 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 The colours in my Highlight.JS theme were incredibly hard to pick well, so I ended up choosing colours almost at random. They're not worth putting into the above table because they don't really fit with the overall brand; they're chosen to ensure some level of accessibility.
 
 [^1]: Cambridge blue.
-[^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/app/uploads/2020/08/CUBC-Brand-Guidelines.pdf). Cambridge blue is difficult to match, so I used an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
+[^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/wp-content/uploads/2024/01/CUBC-BRAND-GUIDE-01112020.pdf). Cambridge blue is difficult to match, so I used an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
 [^3]: Taken from GOV.UK.
 
 ## To-do
