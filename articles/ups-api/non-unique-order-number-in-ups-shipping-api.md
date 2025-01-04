@@ -12,4 +12,4 @@ This is no good if you need to re-use a reference number. For example, if order 
 
 The field to use in this case is `ReferenceNumber.Value`. This will link the shipment to the order number and the order number will normally display on the generated invoice. The full path is **`ShipmentRequest.Shipment.ReferenceNumber.Value`**.
 
-> `ReferenceNumber/Value` is the field to use for a non-unique reference number.
+> `ReferenceNumber.Value` is the field to use for a non-unique reference number.
