@@ -40,7 +40,7 @@ I'm modelling my design on simple UK government websites like [GOV.UK](https://w
 The colours in my Highlight.JS theme were incredibly hard to pick well, so I ended up choosing colours almost at random. They're not worth putting into the above table because they don't really fit with the overall brand; they're chosen to ensure some level of accessibility.
 
 [^1]: Cambridge blue.
-[^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/app/uploads/2020/08/CUBC-Brand-Guidelines.pdf). Cambridge blue is difficult to match, so I used an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
+[^2]: While Cambridge blue is basically an open-source colour, this shade is taken from the Cambridge University Boat Club's [branding](https://cubc.org.uk/wp-content/uploads/2024/01/CUBC-BRAND-GUIDE-01112020.pdf). Cambridge blue is difficult to match, so I used an existing colour scheme. Please contact me if this is not OK&mdash;I've no wish to upset anybody.
 [^3]: Taken from GOV.UK.
 
 ## To-do
@@ -58,7 +58,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
-     - Hopefully there's a way to enforce lowercase URLs.
+     - <https://www.linkedin.com/pulse/solving-case-sensitivity-issues-nextjs-routes-middleware-islam-cavic/>
 6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
 7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
