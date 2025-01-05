@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Footer() {
 	return (
-		<footer className="bg-brand-colour py-2 [&_a]:text-text-dark ">
+		<footer className="bg-brand-colour py-2 dark:bg-text-dark dark:text-text-light [&_a]:text-text-dark dark:[&_a]:text-text-light">
 			<div className="clear-gutters flex items-center justify-between">
 				<section className="flex grow-[3] flex-col">
 					<p className="m-0">
@@ -32,7 +32,7 @@ function Footer() {
 					</nav>
 				</section>
 				<div className="flex grow-[2] justify-end pl-2">
-					<Logo classNames="h-9 my-5" />
+					<Logo classNames="h-9 my-5 dark:fill-accent-colour" />
 				</div>
 			</div>
 		</footer>
