@@ -32,7 +32,7 @@ function Header() {
 						className={`border-y-4 ${
 							showMenu
 								? "border-hidden bg-background-grey"
-								: "border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour                        dark:border-y-text-dark dark:bg-text-dark dark:hover:border-b-brand-colour dark:hover:border-t-text-dark"
+								: "border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:border-y-text-dark dark:bg-text-dark dark:hover:border-b-brand-colour dark:hover:border-t-text-dark"
 						}`}
 					>
 						<button
@@ -49,7 +49,7 @@ function Header() {
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="mr-2 h-4 w-4"
+								className="mr-2 h-4 w-4 dark:fill-brand-colour"
 								viewBox="0 0 16 16"
 							>
 								<path
