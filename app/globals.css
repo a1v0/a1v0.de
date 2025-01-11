@@ -12,7 +12,7 @@
 	html {
 		@apply text-xl;
 		@apply bg-brand-colour;
-		@apply dark:bg-dark-dark-mode-background-dark-grey;
+		@apply dark:bg-dark-mode-background-dark-grey;
 	}
 
 	.clear-gutters {
