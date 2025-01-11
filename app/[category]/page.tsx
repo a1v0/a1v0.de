@@ -31,8 +31,8 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 	const categoryName = categoriesMap[category].displayName;
 
 	return (
-		<main className="grow bg-background-white">
-			<article className="clear-gutters text-content bg-background-white">
+		<main className="dark:bg-dark-mode-background-grey grow bg-background-white">
+			<article className="clear-gutters text-content dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light bg-background-white">
 				<div>
 					<h1>{categoryName}</h1>
 				</div>

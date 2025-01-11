@@ -6,9 +6,9 @@ export const metadata = {
 
 export default function Disclaimer() {
 	return (
-		<main className="flex grow flex-col bg-background-white">
+		<main className="dark:bg-dark-mode-background-grey flex grow flex-col bg-background-white">
 			<div>
-				<article className="clear-gutters text-content bg-background-white">
+				<article className="clear-gutters text-content dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light bg-background-white">
 					<h1>Disclaimer</h1>
 					<p>
 						This website, a1v0.de, and{" "}
