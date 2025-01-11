@@ -73,6 +73,7 @@
 
 	a {
 		@apply text-link-normal;
+		@apply dark:text-dark-mode-link-normal;
 		@apply underline;
 		@apply underline-offset-2;
 		@apply decoration-1;
@@ -80,16 +81,19 @@
 
 	a:hover {
 		@apply text-link-hover;
+		@apply dark:text-dark-mode-link-hover;
 		@apply decoration-2;
 	}
 
 	a:visited {
 		@apply text-link-visited;
+		@apply dark:text-dark-mode-link-visited;
 	}
 
 	a:active {
 		@apply text-text-dark;
 		@apply bg-accent-colour;
+		@apply dark:bg-dark-mode-accent-colour;
 		@apply decoration-4;
 		@apply rounded-t;
 	}
@@ -185,11 +189,13 @@
 
 	.breadcrumbs a {
 		@apply text-link-normal;
+		@apply dark:text-dark-mode-link-normal;
 		@apply no-underline;
 	}
 
 	.breadcrumbs a:hover {
 		@apply text-link-hover;
+		@apply dark:text-dark-mode-link-hover;
 		@apply underline;
 		@apply underline-offset-2;
 		@apply decoration-2;
