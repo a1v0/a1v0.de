@@ -32,7 +32,7 @@ function Footer() {
 					</nav>
 				</section>
 				<div className="flex grow-[2] justify-end pl-2">
-					<Logo classNames="h-9 my-5 dark:fill-accent-colour" />
+					<Logo classNames="h-9 my-5 dark:fill-dark-mode-accent-colour" />
 				</div>
 			</div>
 		</footer>

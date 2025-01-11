@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<main className="flex grow flex-col bg-background-white">
-			<div className="dark:bg-dark-mode-background-grey bg-accent-colour dark:text-accent-colour">
+			<div className="dark:bg-dark-mode-background-grey dark:text-dark-mode-accent-colour bg-accent-colour">
 				<header className="clear-gutters py-16">
 					<h1 className="m-auto p-0">
 						<span className="block">a1v0.de</span>
