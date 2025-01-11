@@ -7,6 +7,7 @@ module.exports = {
 	],
 	theme: {
 		colors: {
+			// Normal colours
 			"text-dark": "#000000",
 			"text-light": "#ffffff",
 			"background-white": "#ffffff",
@@ -16,7 +17,11 @@ module.exports = {
 			"softer-black": "#2c2a29",
 			"link-normal": "#1d70b8",
 			"link-hover": "#003078",
-			"link-visited": "#4c2c92"
+			"link-visited": "#4c2c92",
+			// Dark-mode colours
+			"dark-mode-background-grey": "#ffffff",
+			"dark-mode-background-dark-grey": "#ffffff",
+			"dark-mode-text-light": "#ccc9c9"
 		},
 		fontFamily: {
 			sans: ["Jost", "sans-serif"],
