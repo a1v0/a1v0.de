@@ -144,6 +144,7 @@
 
 	code {
 		@apply bg-background-grey;
+		@apply dark:bg-dark-mode-background-light-grey;
 		@apply rounded-md;
 		@apply px-1;
 		@apply py-px;
@@ -156,6 +157,7 @@
 		@apply h-fit;
 		@apply overflow-x-scroll;
 		@apply bg-background-grey;
+		@apply dark:bg-dark-mode-background-light-grey;
 		@apply !p-5;
 		@apply rounded-md;
 	}
