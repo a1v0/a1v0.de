@@ -19,8 +19,8 @@ module.exports = {
 			"link-hover": "#003078",
 			"link-visited": "#4c2c92",
 			// Dark-mode colours
-			"dark-mode-background-grey": "#ffffff",
-			"dark-mode-background-dark-grey": "#ffffff",
+			"dark-mode-background-grey": "#2c2a29",
+			"dark-mode-background-dark-grey": "#121212",
 			"dark-mode-text-light": "#ccc9c9"
 		},
 		fontFamily: {
