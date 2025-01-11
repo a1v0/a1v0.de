@@ -40,7 +40,7 @@ export default function Home() {
 					</p>
 				</article>
 			</div>
-			<div className="dark:dark-mode-background-grey dark:text-dark-mode-text-light grow bg-background-grey">
+			<div className="dark:dark-mode-background-grey dark:text-dark-mode-text-light bg-dark-mode-background-grey grow">
 				<article className="clear-gutters text-content">
 					<h2>About me</h2>
 					<p>
