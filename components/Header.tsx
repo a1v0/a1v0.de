@@ -21,7 +21,7 @@ function Header() {
 	return (
 		<header>
 			<nav
-				className="bg-brand-colour dark:bg-text-dark dark:text-brand-colour"
+				className="dark:bg-dark-mode-background-dark-grey dark:text-dark-mode-text-light bg-brand-colour"
 				aria-label="Main"
 			>
 				<div className="clear-gutters flex items-stretch justify-between p-0">
@@ -32,7 +32,7 @@ function Header() {
 						className={`border-y-4 ${
 							showMenu
 								? "border-hidden bg-background-grey"
-								: "border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:border-y-text-dark dark:bg-text-dark dark:hover:border-b-brand-colour dark:hover:border-t-text-dark"
+								: "dark:border-y-dark-mode-background-dark-grey dark:bg-dark-mode-background-dark-grey dark:hover:border-t-dark-mode-background-dark-grey border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:hover:border-b-brand-colour"
 						}`}
 					>
 						<button
