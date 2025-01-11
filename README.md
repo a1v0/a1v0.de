@@ -46,11 +46,12 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 ## To-do
 
 1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
-     - Maybe create a toggle button.
+     - Maybe create a dark-mode toggle button.
      - Add note about dark mode to README
      - Ensure a11y is all OK for all pages
      - Currently, the logo looks a bit naff with the monogram in yellow and the text in Cambridge blue. Perhaps decide on one brand colour for dark mode and make the entire logo that colour (e.g. Cambridge blue or yellow). This would have a knock-on effect for active links, since they maybe also ought to be in that colour
      - Make sure skip link module looks good and is accessible/legible etc.
+     - Menu button: the arrow looks a bit naff in green. Should be the normal text colour
 2. Lighthouse improvements:
      - "Remove unused JavaScript"
      - Legacy JavaScript in use
