@@ -45,15 +45,17 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Lighthouse improvements:
+1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
+     - Maybe create a toggle button.
+     - Add note about dark mode to README
+     - Ensure a11y is all OK for all pages
+     - Currently, the logo looks a bit naff with the monogram in yellow and the text in Cambridge blue. Perhaps decide on one brand colour for dark mode and make the entire logo that colour (e.g. Cambridge blue or yellow). This would have a knock-on effect for active links, since they maybe also ought to be in that colour
+     - Make sure skip link module looks good and is accessible/legible etc.
+2. Lighthouse improvements:
      - "Remove unused JavaScript"
      - Legacy JavaScript in use
        - Not sure if this can be fixed by anything other than upgrading packages frequently
-2. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
-3. Implement a dark mode (value added to the user is small, but it's good frontend experience):
-     - Find how best to adapt a colour scheme into a dark mode (my current colours don't look so good in dark).
-     - Find best CSS way to handle it (is there a selector?).
-     - Maybe create a toggle button.
+3. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
 4. Replace boring bullet list of articles in categories with some sort of tile layout.
 5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
