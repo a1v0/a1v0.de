@@ -204,4 +204,12 @@
 		@apply underline-offset-2;
 		@apply decoration-2;
 	}
+
+	a.skip-link {
+		@apply text-text-dark;
+	}
+
+	a.skip-link:hover {
+		@apply text-link-hover;
+	}
 }
