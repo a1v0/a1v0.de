@@ -11,10 +11,12 @@ pre code.hljs {
 .hljs-comment,
 .hljs-quote {
 	@apply text-[#6a0000];
+	@apply dark:text-[#d65151];
 }
 
 .hljs-regexp {
 	@apply text-[#9e1f1f];
+	@apply dark:text-[#f75757];
 }
 
 .hljs-deletion,
@@ -33,6 +35,7 @@ pre code.hljs {
 .hljs-params,
 .hljs-type {
 	@apply text-[#0d1cbf];
+	@apply dark:text-[#969fff];
 }
 
 .hljs-addition,
@@ -40,16 +43,19 @@ pre code.hljs {
 .hljs-string,
 .hljs-symbol {
 	@apply text-[#931b77];
+	@apply dark:text-[#c259a9];
 }
 
 .hljs-section,
 .hljs-title {
 	@apply text-[#005c34];
+	@apply dark:text-[#34c787];
 }
 
 .hljs-keyword,
 .hljs-selector-tag {
 	@apply text-[#294c9e];
+	@apply dark:text-[#6c77f5];
 }
 
 .hljs-emphasis {
