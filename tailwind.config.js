@@ -24,7 +24,7 @@ module.exports = {
 			"dark-mode-background-light-grey": "#404040",
 			"dark-mode-text-light": "#ccc9c9",
 			"dark-mode-accent-colour": "#f0c346", // I'm not perfectly happy with this shade, but it seems good enough
-			"dark-mode-link-normal": "#7ea2c2",
+			"dark-mode-link-normal": "#93b1cc",
 			"dark-mode-link-hover": "#5892c4",
 			"dark-mode-link-visited": "#ac7ee1"
 		},
