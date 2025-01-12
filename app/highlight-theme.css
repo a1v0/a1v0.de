@@ -5,6 +5,7 @@ pre code.hljs {
 .hljs {
 	/* this is the default font colour for when no other style applies */
 	@apply text-softer-black;
+	@apply dark:text-dark-mode-text-light;
 }
 
 .hljs-comment,
