@@ -21,7 +21,7 @@ function Header() {
 	return (
 		<header>
 			<nav
-				className="dark:bg-dark-mode-background-dark-grey dark:text-dark-mode-text-light bg-brand-colour"
+				className="bg-brand-colour dark:bg-dark-mode-background-dark-grey dark:text-dark-mode-text-light"
 				aria-label="Main"
 			>
 				<div className="clear-gutters flex items-stretch justify-between p-0">
@@ -31,8 +31,8 @@ function Header() {
 					<div
 						className={`border-y-4 ${
 							showMenu
-								? "dark:bg-dark-mode-background-light-grey border-hidden bg-background-grey"
-								: "dark:border-y-dark-mode-background-dark-grey dark:bg-dark-mode-background-dark-grey dark:hover:border-t-dark-mode-background-dark-grey border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:hover:border-b-brand-colour"
+								? "border-hidden bg-background-grey dark:bg-dark-mode-background-light-grey"
+								: "border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:border-y-dark-mode-background-dark-grey dark:bg-dark-mode-background-dark-grey dark:hover:border-b-brand-colour dark:hover:border-t-dark-mode-background-dark-grey"
 						}`}
 					>
 						<button
@@ -49,7 +49,7 @@ function Header() {
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="mr-2 h-4 w-4 dark:fill-brand-colour"
+								className="mr-2 h-4 w-4 dark:fill-dark-mode-text-light"
 								viewBox="0 0 16 16"
 							>
 								<path
