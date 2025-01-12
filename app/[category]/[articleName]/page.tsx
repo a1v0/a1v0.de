@@ -92,9 +92,9 @@ const PostLayout = async ({
 	const content = await renderMarkdown(article.content);
 
 	return (
-		<main className="grow bg-background-white">
+		<main className="dark:bg-dark-mode-background-grey grow bg-background-white">
 			<div>
-				<article className="clear-gutters text-content bg-background-white">
+				<article className="clear-gutters text-content dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light bg-background-white">
 					<div>
 						<h1 className="hyphens-auto">
 							{articleMetadata.title}

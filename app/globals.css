@@ -12,6 +12,7 @@
 	html {
 		@apply text-xl;
 		@apply bg-brand-colour;
+		@apply dark:bg-dark-mode-background-dark-grey;
 	}
 
 	.clear-gutters {
@@ -72,6 +73,7 @@
 
 	a {
 		@apply text-link-normal;
+		@apply dark:text-dark-mode-link-normal;
 		@apply underline;
 		@apply underline-offset-2;
 		@apply decoration-1;
@@ -79,16 +81,19 @@
 
 	a:hover {
 		@apply text-link-hover;
+		@apply dark:text-dark-mode-link-hover;
 		@apply decoration-2;
 	}
 
 	a:visited {
 		@apply text-link-visited;
+		@apply dark:text-dark-mode-link-visited;
 	}
 
 	a:active {
 		@apply text-text-dark;
 		@apply bg-accent-colour;
+		@apply dark:bg-dark-mode-accent-colour;
 		@apply decoration-4;
 		@apply rounded-t;
 	}
@@ -125,6 +130,7 @@
 
 	blockquote {
 		@apply bg-background-grey;
+		@apply dark:bg-dark-mode-background-light-grey;
 		@apply border-brand-colour;
 		@apply border-l-[12px];
 		@apply px-6;
@@ -135,10 +141,12 @@
 
 	blockquote code {
 		@apply bg-[#d9d9d9];
+		@apply dark:bg-dark-mode-background-grey;
 	}
 
 	code {
 		@apply bg-background-grey;
+		@apply dark:bg-dark-mode-background-light-grey;
 		@apply rounded-md;
 		@apply px-1;
 		@apply py-px;
@@ -151,6 +159,7 @@
 		@apply h-fit;
 		@apply overflow-x-scroll;
 		@apply bg-background-grey;
+		@apply dark:bg-dark-mode-background-light-grey;
 		@apply !p-5;
 		@apply rounded-md;
 	}
@@ -184,13 +193,23 @@
 
 	.breadcrumbs a {
 		@apply text-link-normal;
+		@apply dark:text-dark-mode-link-normal;
 		@apply no-underline;
 	}
 
 	.breadcrumbs a:hover {
 		@apply text-link-hover;
+		@apply dark:text-dark-mode-link-hover;
 		@apply underline;
 		@apply underline-offset-2;
 		@apply decoration-2;
+	}
+
+	a.skip-link {
+		@apply text-text-dark;
+	}
+
+	a.skip-link:hover {
+		@apply text-link-hover;
 	}
 }

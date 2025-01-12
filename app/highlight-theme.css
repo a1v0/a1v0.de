@@ -5,15 +5,18 @@ pre code.hljs {
 .hljs {
 	/* this is the default font colour for when no other style applies */
 	@apply text-softer-black;
+	@apply dark:text-dark-mode-text-light;
 }
 
 .hljs-comment,
 .hljs-quote {
 	@apply text-[#6a0000];
+	@apply dark:text-[#f2d602];
 }
 
 .hljs-regexp {
 	@apply text-[#9e1f1f];
+	@apply dark:text-[#ea8bd3];
 }
 
 .hljs-deletion,
@@ -32,6 +35,7 @@ pre code.hljs {
 .hljs-params,
 .hljs-type {
 	@apply text-[#0d1cbf];
+	@apply dark:text-[#a4abf9];
 }
 
 .hljs-addition,
@@ -39,16 +43,19 @@ pre code.hljs {
 .hljs-string,
 .hljs-symbol {
 	@apply text-[#931b77];
+	@apply dark:text-[#ff8f8f];
 }
 
 .hljs-section,
 .hljs-title {
 	@apply text-[#005c34];
+	@apply dark:text-[#34c787];
 }
 
 .hljs-keyword,
 .hljs-selector-tag {
 	@apply text-[#294c9e];
+	@apply dark:text-[#d199ff];
 }
 
 .hljs-emphasis {

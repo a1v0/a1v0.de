@@ -7,6 +7,7 @@ module.exports = {
 	],
 	theme: {
 		colors: {
+			// Normal colours
 			"text-dark": "#000000",
 			"text-light": "#ffffff",
 			"background-white": "#ffffff",
@@ -16,7 +17,16 @@ module.exports = {
 			"softer-black": "#2c2a29",
 			"link-normal": "#1d70b8",
 			"link-hover": "#003078",
-			"link-visited": "#4c2c92"
+			"link-visited": "#4c2c92",
+			// Dark-mode colours
+			"dark-mode-background-grey": "#2c2a29",
+			"dark-mode-background-dark-grey": "#121212",
+			"dark-mode-background-light-grey": "#404040",
+			"dark-mode-text-light": "#ccc9c9",
+			"dark-mode-accent-colour": "#f0c346", // I'm not perfectly happy with this shade, but it seems good enough
+			"dark-mode-link-normal": "#93b1cc",
+			"dark-mode-link-hover": "#5892c4",
+			"dark-mode-link-visited": "#ac7ee1"
 		},
 		fontFamily: {
 			sans: ["Jost", "sans-serif"],

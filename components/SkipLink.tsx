@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 function SkipLink() {
 	return (
-		<a
+		<Link
 			href="#main-content"
-			className="absolute block !h-0 !w-0 overflow-hidden bg-accent-colour focus:static focus:!h-auto focus:!w-full focus:p-1"
+			className="skip-link absolute block !h-0 !w-0 overflow-hidden bg-accent-colour focus:static focus:!h-auto focus:!w-full focus:p-1 dark:bg-dark-mode-accent-colour"
 		>
 			Skip to main content
-		</a>
+		</Link>
 	);
 }
 
