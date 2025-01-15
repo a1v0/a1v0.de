@@ -51,7 +51,6 @@ The dark-mode brand colours are variations on the above. I tweaked them to meet 
      - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
 2. Dark mode footer links have wrong colour when active.
 3. Cambridge blue looks a little weak in dark mode. Needs stylistic decision.
-    - The logo looks quite good in white, so we can remove the Cambridge blue from there.
     - When used as an accent colour (e.g. blockquotes and when one hovers over the menu button), it looks quite grey. Perhaps a bolder shade is needed.
     - Replacing it entirely with yellow is, I think, going too far.
 4. Lighthouse improvements:
