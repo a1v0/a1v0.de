@@ -49,8 +49,6 @@ The dark-mode brand colours are variations on the above. I tweaked them to meet 
 
 1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
-     - 404 page needs dark mode.
-     - Check all UI pages to ensure they have a dark mode.
 2. Dark mode footer links have wrong colour when active.
 3. Cambridge blue looks a little weak in dark mode. Needs stylistic decision.
     - The logo looks quite good in white, so we can remove the Cambridge blue from there.
