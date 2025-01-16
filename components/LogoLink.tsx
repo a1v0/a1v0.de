@@ -7,9 +7,9 @@ export default function LogoLink() {
 		<Link
 			aria-label="Homepage"
 			href="/"
-			className="dark:active:text-dark-mode-background-dark-grey group flex flex-row items-center pr-2.5 text-xl font-medium text-text-dark no-underline visited:text-text-dark visited:no-underline hover:rounded-bl hover:text-text-dark hover:no-underline active:rounded-br-2xl active:rounded-tl-2xl active:rounded-tr dark:text-brand-colour dark:visited:text-brand-colour dark:hover:text-brand-colour"
+			className="group flex flex-row items-center pr-2.5 text-xl font-medium text-text-dark no-underline visited:text-text-dark visited:no-underline hover:rounded-bl hover:text-text-dark hover:no-underline active:rounded-br-2xl active:rounded-tl-2xl active:rounded-tr dark:text-dark-mode-text-light dark:visited:text-dark-mode-text-light dark:hover:text-dark-mode-text-light dark:active:text-dark-mode-background-dark-grey"
 		>
-			<div className="dark:bg-dark-mode-accent-colour mr-2.5 inline-block rounded-bl-2xl rounded-br rounded-tl rounded-tr-2xl bg-accent-colour p-2.5 transition-all duration-500 ease-in-out group-hover:rounded-bl group-hover:rounded-br-2xl group-hover:rounded-tl-2xl group-hover:rounded-tr">
+			<div className="mr-2.5 inline-block rounded-bl-2xl rounded-br rounded-tl rounded-tr-2xl bg-accent-colour p-2.5 transition-all duration-500 ease-in-out group-hover:rounded-bl group-hover:rounded-br-2xl group-hover:rounded-tl-2xl group-hover:rounded-tr dark:bg-dark-mode-accent-colour">
 				<Logo classNames="h-6" />
 			</div>
 			a1v0.de

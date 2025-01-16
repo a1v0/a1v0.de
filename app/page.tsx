@@ -3,17 +3,17 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<main className="flex grow flex-col bg-background-white">
-			<div className="dark:bg-dark-mode-background-grey dark:text-dark-mode-accent-colour bg-accent-colour">
+			<div className="bg-accent-colour dark:bg-dark-mode-background-grey dark:text-dark-mode-accent-colour">
 				<header className="clear-gutters py-16">
 					<h1 className="m-auto p-0">
 						<span className="block">a1v0.de</span>
-						<span className="block lowercase text-softer-black dark:text-brand-colour">
+						<span className="dark:text-dark-mode-brand-colour block lowercase text-softer-black">
 							The wittering of yet another guy on the internet.
 						</span>
 					</h1>
 				</header>
 			</div>
-			<div className="dark:bg-dark-mode-background-dark-grey dark:text-dark-mode-text-light grow">
+			<div className="grow dark:bg-dark-mode-background-dark-grey dark:text-dark-mode-text-light">
 				<article className="clear-gutters text-content">
 					<h2>What to expect</h2>
 					<p>
@@ -40,7 +40,7 @@ export default function Home() {
 					</p>
 				</article>
 			</div>
-			<div className="dark:dark-mode-background-grey dark:text-dark-mode-text-light bg-dark-mode-background-grey grow">
+			<div className="dark:dark-mode-background-grey grow bg-dark-mode-background-grey dark:text-dark-mode-text-light">
 				<article className="clear-gutters text-content">
 					<h2>About me</h2>
 					<p>

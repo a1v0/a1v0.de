@@ -5,17 +5,17 @@ export const metadata = {
 function NotFoundPage() {
 	return (
 		<main className="flex grow flex-col">
-			<div className="bg-accent-colour">
+			<div className="bg-accent-colour  dark:bg-dark-mode-background-grey dark:text-dark-mode-accent-colour">
 				<header className="clear-gutters py-16">
 					<h1 className="m-auto p-0">
 						<span className="block">Page not found.</span>
-						<span className="block text-softer-black">
+						<span className="dark:text-dark-mode-brand-colour block text-softer-black">
 							Better luck next time.
 						</span>
 					</h1>
 				</header>
 			</div>
-			<div className="text-content grow bg-background-white">
+			<div className="text-content grow bg-background-white dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light">
 				<article className="clear-gutters">
 					<h2>What do I do now?</h2>
 					<p>
