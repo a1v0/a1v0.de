@@ -7,7 +7,7 @@ export default function Home() {
 				<header className="clear-gutters py-16">
 					<h1 className="m-auto p-0">
 						<span className="block">a1v0.de</span>
-						<span className="block lowercase text-softer-black dark:text-brand-colour">
+						<span className="dark:text-dark-mode-brand-colour block lowercase text-softer-black">
 							The wittering of yet another guy on the internet.
 						</span>
 					</h1>

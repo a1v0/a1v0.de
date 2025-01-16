@@ -32,7 +32,7 @@ function Header() {
 						className={`border-y-4 ${
 							showMenu
 								? "border-hidden bg-background-grey dark:bg-dark-mode-background-light-grey"
-								: "border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:border-y-dark-mode-background-dark-grey dark:bg-dark-mode-background-dark-grey dark:hover:border-b-brand-colour dark:hover:border-t-dark-mode-background-dark-grey"
+								: "dark:hover:border-b-dark-mode-brand-colour border-solid border-y-brand-colour bg-brand-colour hover:border-b-softer-black hover:border-t-brand-colour dark:border-y-dark-mode-background-dark-grey dark:bg-dark-mode-background-dark-grey dark:hover:border-t-dark-mode-background-dark-grey"
 						}`}
 					>
 						<button
