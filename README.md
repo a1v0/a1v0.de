@@ -50,23 +50,20 @@ The dark-mode brand colours are variations on the above. I tweaked them to meet 
 1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
 2. Dark mode footer links have wrong colour when active.
-3. Cambridge blue looks a little weak in dark mode. Needs stylistic decision.
-    - When used as an accent colour (e.g. blockquotes and when one hovers over the menu button), it looks quite grey. Perhaps a bolder shade is needed.
-    - Replacing it entirely with yellow is, I think, going too far.
-4. Lighthouse improvements:
+3. Lighthouse improvements:
      - "Remove unused JavaScript"
      - Legacy JavaScript in use
        - Not sure if this can be fixed by anything other than upgrading packages frequently
-5. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
-6. Replace boring bullet list of articles in categories with some sort of tile layout.
-7. Make all URLs case insensitive
+4. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>
+5. Replace boring bullet list of articles in categories with some sort of tile layout.
+6. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
      - <https://www.linkedin.com/pulse/solving-case-sensitivity-issues-nextjs-routes-middleware-islam-cavic/>
-8. Add TOC to articles.
+7. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-9. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
-10. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
+8. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
+9. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
     - You need to add `&shy;` to the title.
     - You might need to create a fake HTML element in the DOM, set the string as `innerHTML` and then return its `innerText` to display.
     - This is convoluted but might be the only way to get it done.
