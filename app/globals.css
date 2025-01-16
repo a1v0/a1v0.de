@@ -132,6 +132,7 @@
 		@apply bg-background-grey;
 		@apply dark:bg-dark-mode-background-light-grey;
 		@apply border-brand-colour;
+		@apply dark:border-dark-mode-brand-colour;
 		@apply border-l-[12px];
 		@apply px-6;
 		@apply py-1;
