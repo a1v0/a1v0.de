@@ -43,3 +43,11 @@ Here's what's happening:
     "error": "server_error"
 }
 ```
+
+## How to resolve the error
+
+If you're certain that your Curl request is correctly formatted and that your authorization code is correct, then here's what's probably happening:
+
+By default, the `auth_code_lifespan` field in the Application Registry record is set to 60 seconds. Sometimes, because Curl can be clunky and because of other constraints, it can take longer than 60 seconds to prepare and send the request.
+
+To solve the issue, set the `auth_code_lifespan` to something longer to give you more time to make the request.
