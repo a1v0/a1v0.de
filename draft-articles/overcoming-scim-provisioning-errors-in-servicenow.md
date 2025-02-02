@@ -46,3 +46,13 @@ category: servicenow
 User provisioning with SCIM is supposed to be an easy process. Tools like Entra support it and ServiceNow has an API to facilitate it.
 
 The problem is that it's not as easy as it ought to be. For once, ServiceNow's Robust Transform Engine is clunky, confusing and convoluted. But, more than this, SCIM provisioning can cause many errors. This article will explain some of them and will provide potential workarounds.
+
+## Why are there so many errors?
+
+SCIM can trigger many errors in ServiceNow's system log. For many of these, the log level really ought to be "info" or "warning", rather than "error".
+
+However, some of the errors genuinely represent SCIM problems.
+
+It's unclear why these errors happen: is it because of ServiceNow or because of the tool making the SCIM requests (e.g. Entra). As far as I was able to glean, ServiceNow supports SCIM properly, according to the official SCIM specifications. The devil, nonetheless, remains in the detail.
+
+It's most likely a combination of discrepancies between ServiceNow and tools like Entra. The big problem is that neither Entra nor ServiceNow let you see the full payloads being sent/received. This makes troubleshooting very difficult.
