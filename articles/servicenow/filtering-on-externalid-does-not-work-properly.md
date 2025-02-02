@@ -1,24 +1,6 @@
 ---
 title: Filtering on externalId does not work properly in SCIM
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-date: 2025-01-01
+date: 2025-02-02
 category: servicenow
 ---
 
@@ -28,10 +10,10 @@ Before any other filtering is done, ServiceNow always checks to see whether a us
 
 Here's how ServiceNow does it:
 
-0. Check `sys_scim_user` table. If it finds a record with a matching `external_id` value, then send it back to Entra.
-1. If not, check the `sys_user` for someone whose `user_name` matches the given `externalId`.
-2. If not, check for a matching email address.
-3. If nothing is found, inform Entra that no matches are found.
+1. Check `sys_scim_user` table. If it finds a record with a matching `external_id` value, then send it back to Entra.
+2. If not, check the `sys_user` for someone whose `user_name` matches the given `externalId`.
+3. If not, check for a matching email address.
+4. If nothing is found, inform Entra that no matches are found.
 
 (N.B.: The above has been ascertained as best as possible via experience, rather than any documentation.)
 
