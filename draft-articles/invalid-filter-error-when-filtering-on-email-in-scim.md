@@ -44,3 +44,11 @@ These are especially useful if you are using multiple provisioning sources or if
 For example, you may be matching users based on the `user_name` field (using the `userName` filter attribute in SCIM). Entra will run a `GET` request for all users with a `user_name` of `john.doe` and, if it receives an unambiguous result, it will send all provisioning updates as a `PATCH` request.
 
 If it finds too many results or none at all, it will run any secondary/tertiary filter queries (if any are specified). If it still can't find anything, Entra will create a new user account in ServiceNow via a `POST` request.
+
+## Why can't I filter on email when ServiceNow explicitly supports it?
+
+Among the various fields supported by ServiceNow for SCIM filtering is the email address. However, ServiceNow requires the filter to be written in a specific format: "Fixed format only, such as: `[type eq "work" and value eq "emailValue"]`".
+
+It is this fixed format that causes the filtering to fail. Entra cannot be customised (at time of writing) to send the email address in the specified format. Instead, depending on configuration, it sends something like this: `[INSERT FILTER VALUE!!!!!!!!!!!!!!!!!!!!!]`
+
+Since Entra provides few options for customisation and ServiceNow is highly inflexible, there isn't a way to overcome this issue when provisioning with Entra.
