@@ -52,3 +52,24 @@ Among the various fields supported by ServiceNow for SCIM filtering is the email
 It is this fixed format that causes the filtering to fail. Entra cannot be customised (at time of writing) to send the email address in the specified format. Instead, depending on configuration, it sends something like this: `[INSERT FILTER VALUE!!!!!!!!!!!!!!!!!!!!!]`
 
 Since Entra provides few options for customisation and ServiceNow is highly inflexible, there isn't a way to overcome this issue when provisioning with Entra.
+
+## Workaround for some scenarios
+
+When I encountered this issue, I used a workaround that did the trick for me. However, depending on your circumstances, it might not resolve your problem.
+
+My issue was that we had thousands of users who had been provisioned by an old provisioning tool and we were migrating to SCIM. We needed to avoid duplication during the initial provisioning jobs. (Once all users have been provisioned at least once through SCIM, the matching problems disappear.)
+
+The email address was the only field we could use to avoid duplication of users, but ServiceNow wasn't playing ball.
+
+The solution was to do the following before the initial provisioning job:
+0. Set the `externalId` field in Entra to be the primary matcher, not email.
+
+1. Set the value of `externalId` in Entra to be the user's email address.
+2. Copy every user account into the `sys_scim_user` table via script and set the value of `external_id` to be the email address.
+3. Run the provisioning job (use a small number of users at first, to make sure it works!).
+
+Under the hood, ServiceNow checks for users within the `sys_scim_user` table before it does any further matching. By copying everybody into this table and by matching on the `externalId` field, you circumvent ServiceNow's inflexibility with the email field.
+
+Any users who are provisioned from scratch via SCIM are entered into this table automatically.
+
+> The above workaround is viable, too, for fields other than "email".
