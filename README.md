@@ -63,7 +63,8 @@ The dark-mode brand colours are variations on the above. I tweaked them to meet 
 6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
 7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
-8. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
+8. Skip link doesn't set your tab position. It only moves your viewport down a bit.
+9. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
     - You need to add `&shy;` to the title.
     - You might need to create a fake HTML element in the DOM, set the string as `innerHTML` and then return its `innerText` to display.
     - This is convoluted but might be the only way to get it done.
