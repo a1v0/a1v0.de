@@ -42,3 +42,7 @@ category: servicenow
 - the big issue is that neither ServiceNow nor Entra all you to see the JSON payload that is sent/received
 - use API Explorer to test. this should let you see whether your ServiceNow config is right
 - workaround: create two Entra apps
+
+User provisioning with SCIM is supposed to be an easy process. Tools like Entra support it and ServiceNow has an API to facilitate it.
+
+The problem is that it's not as easy as it ought to be. For once, ServiceNow's Robust Transform Engine is clunky, confusing and convoluted. But, more than this, SCIM provisioning can cause many errors. This article will explain some of them and will provide potential workarounds.
