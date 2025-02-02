@@ -56,3 +56,11 @@ However, some of the errors genuinely represent SCIM problems.
 It's unclear why these errors happen: is it because of ServiceNow or because of the tool making the SCIM requests (e.g. Entra). As far as I was able to glean, ServiceNow supports SCIM properly, according to the official SCIM specifications. The devil, nonetheless, remains in the detail.
 
 It's most likely a combination of discrepancies between ServiceNow and tools like Entra. The big problem is that neither Entra nor ServiceNow let you see the full payloads being sent/received. This makes troubleshooting very difficult.
+
+## Troubleshooting SCIM errors
+
+Unfortunately, much of the troubleshooting you can do with SCIM is trial and error. However, one useful thing you can do is to play around with the **ServiceNow API Explorer** (accessible in the navigation menu by searching for "API Explorer").
+
+Here, you can build correctly formatted requests without a third-party tool like Entra and see how ServiceNow responds.
+
+This might help you determine whether an issue is being cause by Entra or by your internal ServiceNow config. Sometimes, invalid/incorrect field mapping in ServiceNow might be the culprit.
