@@ -22,12 +22,6 @@ date: 2025-01-01
 category: servicenow
 ---
 
-- explain what is meant by filtering on externalid
-- explain that this would normally work fine if you're using somethinig like user_name or email as externalId
-- if you're using a custom field, this causes problems
-- workaround, which is suitable for some circumstances, is to prepopulate sys_scim_user table before provisioning
-  - obvs not a good long-term solution, just good for one-off pre-provisioning
-
 By default, whenever you provision anything with SCIM, an `externalId` value is sent. This helps the recipient of SCIM data (e.g. ServiceNow) coalesce incoming data with existing user accounts.
 
 Before any other filtering is done, ServiceNow always checks to see whether a user exists with the same `externalId`. If it finds someone, it returns that user's `sys_id` and other data to the requesting platform (e.g. Entra).
@@ -45,9 +39,9 @@ As you can see, it leaves some scenarios uncovered. For example, what happens if
 
 ## How to overcome the duplication problem
 
-There's one workaround that I was able to use on my project, where we were using a custom field to store the value passed in via the `externalId` field. It's a workaround that is useful when there's only one source of user provisioning in the system.
+There's one workaround that I was able to use on my project, where we were using a custom field to store the value passed in via the `externalId` field. It's a workaround that is most useful when there's only one source of user provisioning in the system.
 
-0. Copy every single existing user into the `sys_scim_user` table, specifying their `external_id` field as appropriate. This prevents duplication for all existing users.
+0. Copy every single existing user into the `sys_scim_user` table, specifying their `external_id` field as appropriate. This prevents duplication for all existing users. (You can also run this step as a scheduled job or business rule if you have multiple provisioning sources.)
 1. Add secondary field matching to Entra as a fail-safe, in case some user accounts are created manually before being properly provisioned via SCIM. This will help prevent duplication for the users not already in `sys_scim_user`.
 2. Ensure the custom field you're using to store the `externalId` within `sys_user` enforces uniqueness. This means that, even if the matching fails, SCIM won't be able to create a duplicate user because the `sys_user` table already contains that particular `externalId`.
 
