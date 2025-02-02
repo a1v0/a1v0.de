@@ -33,5 +33,12 @@ category: servicenow
  - Partial solution: do “Only on object creation” rather than “Always” in Entra. This seems to do the trick. Not sure why it causes an issue in the first place.
 - Value for attribute urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager must be a JSON object
  - This is due to incorrect settings in Azure: you need to specify the manager as a reference field
-     
 ```
+
+- SCIM triggers a lot of errors in ServiceNow's system log. Many of these errors ought really to be "info" or "warning" statements, rather than "errors".
+- ServiceNow and SCIM don't work overly well together
+  - unclear whose fault this is. can't be SCIM's fault as SCIM is just a protocol
+  - most likely a combination of ServiceNow and tools like Entra
+- the big issue is that neither ServiceNow nor Entra all you to see the JSON payload that is sent/received
+- use API Explorer to test. this should let you see whether your ServiceNow config is right
+- workaround: create two Entra apps
