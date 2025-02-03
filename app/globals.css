@@ -33,6 +33,7 @@
 	h5,
 	h6 {
 		@apply font-medium;
+		@apply hyphens-auto;
 	}
 
 	h1 {
