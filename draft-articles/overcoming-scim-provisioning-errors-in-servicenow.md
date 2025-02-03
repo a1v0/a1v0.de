@@ -64,9 +64,9 @@ This might help you determine whether an issue is being cause by Entra or by you
 
 #### Workaround
 
-### Value for attribute urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager must be a JSON object CHECK THAT THIS IS THE FULL ERROR MESSAGE
+### SCIM PROVIDER - Patch op[0]: Value for attribute urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager must be a JSON object, Applying patch ops results in an invalid resource
 
-- **Full error message:**
+- **Full error message:** "SCIM PROVIDER - Patch op[0]: Value for attribute urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager must be a JSON object, Applying patch ops results in an invalid resource"
 
 #### What causes the error?
 
