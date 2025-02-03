@@ -49,9 +49,23 @@ If it finds too many results or none at all, it will run any secondary/tertiary 
 
 Among the various fields supported by ServiceNow for SCIM filtering is the email address. However, ServiceNow requires the filter to be written in a specific format: "Fixed format only, such as: `[type eq "work" and value eq "emailValue"]`".
 
-It is this fixed format that causes the filtering to fail. Entra cannot be customised (at time of writing) to send the email address in the specified format. Instead, depending on configuration, it sends something like this: `[INSERT FILTER VALUE!!!!!!!!!!!!!!!!!!!!!]`
+It is this fixed format that causes the filtering to fail. Entra cannot be customised (at time of writing) to send the email address in the specified format. Instead, depending on configuration, it sends this: `[emails[type eq "work"].value eq someone@example.com]`
 
 Since Entra provides few options for customisation and ServiceNow is highly inflexible, there isn't a way to overcome this issue when provisioning with Entra.
+
+There are two error messages you are likely to receive:
+
+```txt
+SCIM PROVIDER - Invalid filter:[emails[type eq "work"].value eq someone@example.com]: com.unboundid.scim2.common.exceptions.BadRequestException: Invalid filter:[emails[type eq "work"].value eq someone@example.com]
+```
+
+and
+
+```txt
+SCIM PROVIDER - Unexpected character '.value' at position 22: com.unboundid.scim2.common.exceptions.BadRequestException: Unexpected character '.value' at position 22
+```
+
+The latter error is a consequence of the former.
 
 ## Workaround for some scenarios
 
@@ -62,8 +76,8 @@ My issue was that we had thousands of users who had been provisioned by an old p
 The email address was the only field we could use to avoid duplication of users, but ServiceNow wasn't playing ball.
 
 The solution was to do the following before the initial provisioning job:
-0. Set the `externalId` field in Entra to be the primary matcher, not email.
 
+0. Set the `externalId` field in Entra to be the primary matcher, not email.
 1. Set the value of `externalId` in Entra to be the user's email address.
 2. Copy every user account into the `sys_scim_user` table via script and set the value of `external_id` to be the email address.
 3. Run the provisioning job (use a small number of users at first, to make sure it works!).
