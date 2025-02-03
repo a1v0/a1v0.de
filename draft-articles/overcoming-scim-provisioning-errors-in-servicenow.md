@@ -53,7 +53,28 @@ This might help you determine whether an issue is being cause by Entra or by you
 
 #### What causes the error?
 
+This error comes when the name of the schema you are using for SCIM provisioning isn't present in the `schemas` array within the payload.
+
+```json
+{
+    "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "YOUR SCHEMA NAME BELONGS HERE",
+    ]
+}
+```
+
+It seems that Entra sends its `POST` requests without correctly populating the `schemas` array with any custom schemas you are using. It is unclear why; perhaps it will be rectified in future.
+
 #### Workaround
+
+My workaround seems awfully clunky, but it solved our problem: create two SCIM provisioning apps in Entra.
+
+The first app is for sending `POST` requests. This app only provisions fields that live inside the default SCIM schema and therefore can't cause problems when `POST` requests are sent. (They can also send error-free `PATCH` requests.)
+
+The second app handles all the `PATCH` requests. `PATCH` requests are formatted differently to `POST` requests and don't have a `schemas` array in the JSON, so you can use this app to provision all the fields that the first app can't.
+
+Then set your provisioning jobs to run so that the first app always runs before the second, so that any new user accounts will always be created with the simple `POST` app and enhanced with additional fields via the `PATCH` app.
 
 ### SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],  "Operations" : [ { "op" : "add",   "path" : "addresses[type eq \"home\"].country",   "value" : "GB" } ] }
 
