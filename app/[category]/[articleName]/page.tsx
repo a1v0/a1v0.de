@@ -92,13 +92,11 @@ const PostLayout = async ({
 	const content = await renderMarkdown(article.content);
 
 	return (
-		<main className="dark:bg-dark-mode-background-grey grow bg-background-white">
+		<main className="grow bg-background-white dark:bg-dark-mode-background-grey">
 			<div>
-				<article className="clear-gutters text-content dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light bg-background-white">
+				<article className="clear-gutters text-content bg-background-white dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light">
 					<div>
-						<h1 className="hyphens-auto">
-							{articleMetadata.title}
-						</h1>
+						<h1>{articleMetadata.title}</h1>
 						<div className="flex flex-col justify-between sm:flex-row">
 							<Breadcrumbs category={category} />
 							<time dateTime={articleMetadata.date}>
