@@ -89,9 +89,13 @@ Then set your provisioning jobs to run so that the first app always runs before 
 
 I honestly don't know what causes this error. As far as I can glean, there's nothing wrong with this `PATCH` request. However, it only occurred when Entra was set up to provision the culprit field (in this case `addresses[type eq "home"].country`) with every single provisioning job.
 
+On some occasions, it can be due to the use of the `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User` schema, which isn't fully supported by ServiceNow.
+
 #### Workaround
 
-In the Entra provisioning config, ensure that the culprit field is not set to provision "Always" but "Only on object creation". As far as I understand, "Only on object creation" will send the value only once when the user is provisioned for the first time, and then only when the value changes in Entra.
+If the mapping that's causing trouble uses the `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User` schema, then create a custom mapping using one of the ServiceNow schemas (e.g. `urn:ietf:params:scim:schemas:custom:servicenow:2.0:User`) instead.
+
+Otherwise, in the Entra provisioning config, ensure that the culprit field is not set to provision "Always" but "Only on object creation". As far as I understand, "Only on object creation" will send the value only once when the user is provisioned for the first time, and then only when the value changes in Entra.
 
 This workaround is therefore not suitable for everyone (since sometimes you need field values to be sent every time), but it was good enough for the purposes of my project.
 
@@ -108,14 +112,3 @@ This particular error is caused when Entra is configured to send the Manager fie
 #### Workaround
 
 To fix this error, specify the correct data type ("Reference") in the Manager mapping attribute within Entra. This will cause the Manager attribute to be sent as a JSON object rather than as a string.
-
-```txt
-// This is in a `code` block so that backslashes aren't overwritten
-- SCIM PROVIDER - Extended attributes namespace urn:ietf:params:scim:schemas:custom:servicenow:2.0:User must be included in the schemas attribute: com.unboundid.scim2.common.exceptions.BadRequestException: Extended attributes namespace urn:ietf:params:scim:schemas:custom:servicenow:2.0:User must be included in the schemas attribute
- - caused by using custom fields in a POST request
- - Solution: first verify with API explorer. create a second app. One app does POST (without custom fields) and the other does PATCH
- - Also this error: SCIM PROVIDER - Extended attributes namespace urn:ietf:params:scim:schemas:extension:servicenow:2.0:User must be included in the schemas attribute, Extended attributes namespace urn:ietf:params:scim:schemas:extension:servicenow:custom:2.0:User must be included in the schemas attribute
-- SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],  "Operations" : [ { "op" : "add",   "path" : "addresses[type eq \"home\"].country",   "value" : "GB" } ] }
- - Can sometimes be due to the use of urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, which ServiceNow doesn’t really support
- - Partial solution: do “Only on object creation” rather than “Always” in Entra. This seems to do the trick. Not sure why it causes an issue in the first place.
-```
