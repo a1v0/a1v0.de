@@ -83,7 +83,13 @@ Then set your provisioning jobs to run so that the first app always runs before 
 
 #### What causes the error?
 
+I honestly don't know what causes this error. As far as I can glean, there's nothing wrong with this `PATCH` request. However, it only occurred when Entra was set up to provision the culprit field (in this case `addresses[type eq "home"].country`) with every single provisioning job.
+
 #### Workaround
+
+In the Entra provisioning config, ensure that the culprit field is not set to provision "Always" but "Only on object creation". As far as I understand, "Only on object creation" will send the value only once when the user is provisioned for the first time, and then only when the value changes in Entra.
+
+This workaround is therefore not suitable for everyone (since sometimes you need field values to be sent every time), but it was good enough for the purposes of my project.
 
 ### SCIM PROVIDER - Patch op[0]: Value for attribute urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager must be a JSON object, Applying patch ops results in an invalid resource
 
