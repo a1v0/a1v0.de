@@ -97,7 +97,13 @@ This workaround is therefore not suitable for everyone (since sometimes you need
 
 #### What causes the error?
 
+The Manager field in Entra is an object, rather than a string. ServiceNow is set up to be able to handle an incoming object Manager from Entra, even though simple string mappings are the more usual fare.
+
+This particular error is caused when Entra is configured to send the Manager field as a string rather than a reference. ServiceNow expects a JSON object but is getting a string in its stead.
+
 #### Workaround
+
+To fix this error, specify the correct data type ("Reference") in the Manager mapping attribute within Entra. This will cause the Manager attribute to be sent as a JSON object rather than as a string.
 
 ```txt
 // This is in a `code` block so that backslashes aren't overwritten
