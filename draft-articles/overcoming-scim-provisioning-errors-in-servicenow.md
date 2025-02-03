@@ -64,9 +64,13 @@ This error comes when the name of the schema you are using for SCIM provisioning
 }
 ```
 
+This happens when you try to provision data in a custom schema (e.g. `urn:ietf:params:scim:schemas:custom:servicenow:2.0:User`, which isn't native to SCIM) within a `POST` request (i.e. a request that creates a new user account in ServiceNow).
+
 It seems that Entra sends its `POST` requests without correctly populating the `schemas` array with any custom schemas you are using. It is unclear why; perhaps it will be rectified in future.
 
 #### Workaround
+
+Before trying out a workaround, it is worth trying out the ServiceNow API Explorer to send some dummy SCIM `POST` requests without using Entra. This will help you ascertain whether it's an issue on the Entra side or the ServiceNow side. In my case, it was an Entra issue so I proceeded as below.
 
 My workaround seems awfully clunky, but it solved our problem: create two SCIM provisioning apps in Entra.
 
@@ -114,6 +118,4 @@ To fix this error, specify the correct data type ("Reference") in the Manager ma
 - SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],  "Operations" : [ { "op" : "add",   "path" : "addresses[type eq \"home\"].country",   "value" : "GB" } ] }
  - Can sometimes be due to the use of urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, which ServiceNow doesn’t really support
  - Partial solution: do “Only on object creation” rather than “Always” in Entra. This seems to do the trick. Not sure why it causes an issue in the first place.
-- Value for attribute urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager must be a JSON object
- - This is due to incorrect settings in Azure: you need to specify the manager as a reference field
 ```
