@@ -7,7 +7,7 @@ export default function Home() {
 				<header className="clear-gutters py-16">
 					<h1 className="m-auto p-0">
 						<span className="block">a1v0.de</span>
-						<span className="dark:text-dark-mode-brand-colour block lowercase text-softer-black">
+						<span className="block lowercase text-softer-black dark:text-dark-mode-brand-colour">
 							The wittering of yet another guy on the internet.
 						</span>
 					</h1>
@@ -40,7 +40,7 @@ export default function Home() {
 					</p>
 				</article>
 			</div>
-			<div className="dark:dark-mode-background-grey grow bg-dark-mode-background-grey dark:text-dark-mode-text-light">
+			<div className="grow bg-background-grey dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light">
 				<article className="clear-gutters text-content">
 					<h2>About me</h2>
 					<p>
