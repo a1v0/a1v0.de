@@ -18,6 +18,6 @@ If you don't specify in your API payload that your UPS account has a negotiated 
 
 The property you're looking for is **`NegotiatedRatesIndicator`** (full JSON path: `ShipmentRequest.Shipment.ShipmentRatingOptions.NegotiatedRatesIndicator`).
 
-The docs don't specify which value apply. I chose to set it to `Y` and have had no errors.
+The docs don't specify which value to assign. I chose to set it to `"Y"` and have had no errors.
 
 Note that, if your account doesn't have negotiated rates enabled, you won't see a discount. Get in touch with UPS to rectify this: they're usually generous with this sort of thing.
