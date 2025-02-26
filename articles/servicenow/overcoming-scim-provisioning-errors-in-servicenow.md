@@ -81,9 +81,13 @@ I honestly don't know what causes this error. As far as I can work out, there's 
 
 On some occasions, it can be due to the use of the `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User` schema, which isn't fully supported by ServiceNow.
 
+I have also experienced it when a user account being provisioned didn't have their email address populated in ServiceNow. Why email-less accounts should cause trouble is a mystery to me.
+
 #### Workaround
 
 If the mapping that's causing trouble uses the `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User` schema, then create a custom mapping using one of the ServiceNow schemas (e.g. `urn:ietf:params:scim:schemas:custom:servicenow:2.0:User`) instead.
+
+If the user being patched doesn't have an email address in ServiceNow, put something into the field (I got away with a completely random email string like `"a@a.a"`), then try again. You may find that SCIM no longer causes a fuss. The dummy email ought to be overwritten by the correct one from Entra, too.
 
 Otherwise, in the Entra provisioning config, ensure that the culprit field is not set to provision "Always" but "Only on object creation".
 
