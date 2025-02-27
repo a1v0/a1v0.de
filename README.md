@@ -72,3 +72,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - This is convoluted but might be the only way to get it done.
     - Check all articles to see if full HTML could be useful in their titles.
 10. Remove article list pages (i.e. category pages) from Google, if possible.
+11. Logo active-but-not-hover style is messy. Can we create specific exceptions for the logo so that the active style, whether hovering or not, looks a certain way?
