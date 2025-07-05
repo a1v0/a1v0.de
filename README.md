@@ -49,7 +49,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
-     - Active breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode)
+     - Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode)
 2. Lighthouse improvements:
      - Refresh the below Lighthouse comments as they're fairly old
      - "Remove unused JavaScript"
