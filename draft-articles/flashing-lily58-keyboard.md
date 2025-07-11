@@ -28,3 +28,9 @@ category: general
 I recently purchased a Lily58 from [Mechboards](https://mechboards.co.uk/). I was about to embark on a typing journey from which I haven't looked back.
 
 When I first received the keyboard, though, I couldn't work out how to flash it. It was a struggle to find a guide that clearly explains what to do, so here's my guide for you!
+
+## Whom this guide is for
+
+This guide is for anybody with a Lily58 keyboard with Pro Micro controllers, where the controllers have a "RESET" button.
+
+If you don't have these things, my solution may still work, but I can't say for sure.
