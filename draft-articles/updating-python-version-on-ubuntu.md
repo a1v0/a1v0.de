@@ -46,3 +46,29 @@ Most of that code is probably safe to run on a newer version of Python, but not 
 The Python version installed in a system is designed to be fixed.
 
 Python, instead, offers an alternative way to give you access to newer and specific versions: the virtual environment.
+
+## Python virtual environments
+
+A virtual environment is an application-specific environment into which you can load project dependencies (including a specific Python version).
+
+It's independent of the system's Python version and allows you to execute code in newer (or older) versions of the language. This means you don't depend on your system version.
+
+### How to use a virtual environment
+
+First you'll need to create a virtual environment (aka venv) in your project. We're going to put it into a folder in the project's root directory called `venv`.
+
+Open the root directory, then run this command in your terminal:
+
+```bash
+python3 -m venv ./venv
+```
+
+This creates a virtual environment in the `./venv` directory.
+
+To activate the venv, run this from the root directory:
+
+```bash
+. venv/bin/activate
+```
+
+You can read more about venvs [here](https://www.w3schools.com/python/python_virtualenv.asp).
