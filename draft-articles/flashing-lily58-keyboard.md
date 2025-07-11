@@ -34,3 +34,9 @@ When I first received the keyboard, though, I couldn't work out how to flash it.
 This guide is for anybody with a Lily58 keyboard with Pro Micro controllers, where the controllers have a "RESET" button.
 
 If you don't have these things, my solution may still work, but I can't say for sure.
+
+## Installing QMK
+
+First, you'll need to [install QMK](https://msys.qmk.fm/guide). I initially installed regular Windows QMK, but it was extremely slow. I switched to QMK for WSL which worked much better.
+
+Install QMK WSL in your normal Windows system (not on WSL). However, make sure that your `qmk_firmware` is situated in WSL. If not, your keymap compilations will take _forever_.
