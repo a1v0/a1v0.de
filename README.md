@@ -49,7 +49,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
      - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
-     - Active breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode)
+     - Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode)
 2. Lighthouse improvements:
      - Refresh the below Lighthouse comments as they're fairly old
      - "Remove unused JavaScript"
@@ -72,3 +72,5 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - This is convoluted but might be the only way to get it done.
     - Check all articles to see if full HTML could be useful in their titles.
 10. Remove article list pages (i.e. category pages) from Google, if possible.
+11. Logo active-but-not-hover style is messy. Can we create specific exceptions for the logo so that the active style, whether hovering or not, looks a certain way?
+12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on.
