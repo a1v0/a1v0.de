@@ -1,7 +1,7 @@
 ---
 title: Updating Python version on Ubuntu
 date: 2025-07-11
-category: general
+category: linux
 ---
 
 Are you a Linux user? Is the Python version on your machine outdated? Do you want to update it to a specific version? Can't find a good guide online for how to do it?
