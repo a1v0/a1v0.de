@@ -9,6 +9,9 @@ export const categoriesMap: { [key: string]: MappedCategory } = {
 	general: {
 		displayName: "General"
 	},
+	linux: {
+		displayName: "Linux"
+	},
 	"next.js": {
 		displayName: "Next.js"
 	},
