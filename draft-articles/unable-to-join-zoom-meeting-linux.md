@@ -66,4 +66,19 @@ The next bit requires a bit of trial-and-error. You may need to uninstall and re
 
 Go through the list of releases and choose a Linux release. If you care about the latest features, you may as well just cut to the chase and choose the oldest Linux release, since this is the most likely one to work. If you're keen on the newest updates, you'll have to work back from the top.
 
-For example, the September 2025 release applies to Linux. The website gives a release name/number like so: "6.6.0 (4410)".
+For example, the September 2025 release applies to Linux. The website gives a release name/number like so: "6.6.0 (4410)". Make a note of this number.
+
+### Download and install older version
+
+Now that you have chosen a version, you can install it. This is done by combining the download URL from earlier and the release number.
+
+The URL `/client/6.6.11.6052/zoom_x86_64.rpm` contains an encoded release number, `6.6.11.6052`, which corresponds to "6.6.11 (6052)". Therefore, if your chosen release is 6.6.0 (4410), you can simply replace the version portion of the URL with `6.6.0.4410`.
+
+> *Before:* `/client/6.6.11.6052/zoom_x86_64.rpm`
+> *After:* `/client/6.6.0.4410/zoom_x86_64.rpm`
+
+That's the download path for your Zoom version.
+
+To download the package, just add that path onto the base URL `https://zoom.us`, i.e. `https://zoom.us/client/6.6.0.4410/zoom_x86_64.rpm`.
+
+Once downloaded, you'll be able to use your ordinary software manager to install.
