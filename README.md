@@ -75,3 +75,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 11. Logo active-but-not-hover style is messy. Can we create specific exceptions for the logo so that the active style, whether hovering or not, looks a certain way?
 12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on.
 13. The Next version is stuck on 14 because, I think, Tailwind isn't up to scratch. However, to install a newer Tailwind, a larger refactor is possibly needed. Requires investigation.
+14. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
