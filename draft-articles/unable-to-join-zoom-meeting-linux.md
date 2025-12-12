@@ -40,7 +40,11 @@ This problem affects users on a variety of distros and desktop environments. I h
 
 The problem can be fixed by installing an older version of Zoom. Here are the steps to follow:
 
-### Retrieve the download link
+### Uninstall Zoom
+
+This step is self-explanatory: just uninstall Zoom, either from your software centre or via the command line. A full uninstall, including all files, is best.
+
+### Retrieve the generic download link
 
 Go to the official (https://zoom.us/download)[Zoom download site]. Select your Linux type and OS architecture.
 
@@ -51,3 +55,15 @@ If you're unlucky, it's a bit messier: right-click the button and select "Inspec
 In the dev tools, you should be auto-focussed onto the `<button>` tag, or a `<span>` tag inside the button tag. (If you're not overly technical, please don't worry too much&mdash;it'll be fine, I promise!)
 
 The `<button>` tag contains a property called `href`. Mine, at time of writing, says `href="/client/6.6.11.6052/zoom_x86_64.rpm"`. Make a note of the contents of the `href` property.
+
+### Choose an older version
+
+Now that you have a generic download link for the latest version of Zoom, it's fairly easy to download an older version.
+
+To begin, go to the (https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222)[Zoom release notes page]. This page lists all recent releases.
+
+The next bit requires a bit of trial-and-error. You may need to uninstall and repeat this step a few times before you succeed.
+
+Go through the list of releases and choose a Linux release. If you care about the latest features, you may as well just cut to the chase and choose the oldest Linux release, since this is the most likely one to work. If you're keen on the newest updates, you'll have to work back from the top.
+
+For example, the September 2025 release applies to Linux. The website gives a release name/number like so: "6.6.0 (4410)".
