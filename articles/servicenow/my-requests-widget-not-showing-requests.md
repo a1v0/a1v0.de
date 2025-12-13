@@ -4,7 +4,7 @@ date: 2025-12-13
 category: servicenow
 ---
 
-A problem many people eventually face on their instance is that the My Requests widget doesn't show any  requests, even though the user used to be able to see them.
+A problem many people eventually face on their instance is that the My Requests widget doesn't show any of your requests, even though you have some.
 
 If it's not caused by a widget customisation (woe betide anybody who modifies this widget!), then it's likely that your Employee Center plugin is out of date.
 
