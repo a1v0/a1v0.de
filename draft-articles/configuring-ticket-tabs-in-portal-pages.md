@@ -1,5 +1,5 @@
 ---
-title: My Requests not showing any requests in Employee Center
+title: TITLE GOES HERE
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -22,5 +22,8 @@ date: 2024-01-01
 category: servicenow
 ---
 
-- basically, when portal plugin is not up to date, some of the widgets fail
-- particularly an issue after platform upgrade, because plugins don't always get upgraded with the platform
+/*
+    May need a better title.
+    An article about the Standard Ticket Configuration settings you can add to tickets in the portal, e.g. in My Requests, to configure who can see what.
+    ACLs don't do all the heavy lifting and you need to configure it yourself.
+*/
