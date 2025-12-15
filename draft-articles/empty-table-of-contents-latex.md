@@ -50,3 +50,13 @@ If your headings use the asterisk (`*`) modifier to prevent section numbers (e.g
 ```
 
 To explain a bit more, `\addcontentsline` adds a line to the TOC corresponding to the text you put in it. You can change the `{section}` property to `{chapter}` or otherwise, depending on your needs.
+
+## Check your packages
+
+Sometimes, it's a package that prevents the TOC from populating. I don't know enough about LaTeX to know why some packages cause trouble with it, though, or what's needed to rectify the problem without having simply to remove the offending package from the document,
+
+To identify the offending package is a little bit cumbersome. I'd comment out packages one by one and compile the document to see if the TOC is now populated.
+
+Depending on the amount of packages, this can be a long and annoying process. Nonetheless, once you've found the offending package, you can make a decision on the next step: do you remove the package? Do you use your newfound knowledge to refine your troubleshooting search terms? Do you seek an alternative package?
+
+If you know why packages can conflict with the `\tableofcontents` command, or if you know a better way to troubleshoot, please [do let me know](\contact). I would be grateful to learn.
