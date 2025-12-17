@@ -27,3 +27,17 @@ I am always perturbed that ServiceNow has never published any real guidance on c
 This clone guide is for anybody who is cloning instances that contain in-flight configuration that has not yet been approved for release. It's intended as a starting point: your instance might contain plugins that require special treatment, for example.
 
 If you have any suggestions or corrections, please don't hesitate to [get in touch](/contact).
+
+
+
+
+
+
+Sections:
+- pre-clone activities
+  - before everything
+  - in source instance
+  - in target instance
+- post-clone activities
+  - after one clone
+  - after all clones
