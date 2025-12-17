@@ -30,9 +30,10 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 
 ## Pre-clone activities
 
-### Before everything
+### Before you do anything else
 
 > **NOTE TO SELF: THIS BULLET-POINT LAYOUT WILL LIKELY LOOK CRAP IN THE ARTICLE. TURN IT INTO A NUMBER LIST WITH SUBHEADINGS, RATHER THAN AN ORDINARY `<ol>`**
+> **ALSO GO THROUGH ALL BITS OF CODE AND ADD COMMENTS WHERE SENSIBLE ETC.**
 
 1. Ensure that a change freeze is issued across all of your instances. Make sure that all developers and other stakeholders are made aware that they need to keep any of their active config safe in the clone target. Make sure, in particular, that nobody migrates anything up from the development instance during the change freeze.
   - While it's stipulated above that all users should keep their own config safe, this clone guide actually involves _you_ protecting all config.
@@ -58,6 +59,25 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
   - If you remove a remote update set from an instance, be sure to ignore it in all previous instances, too. This ensures it doesn't come in again.
 5. Now that you've thinned out the update sets, go into each instance in dev-to-prod order and retrieve all remote update sets.
 
+### In the source instance
+
+1. In the source instance (typically production), make sure _all_ local update sets that aren't named Default are set to "Ignore". If not, they'll have to be re-imported up all instances and it'll become unmanageable.
+  - If a local update set is batched, then only the parent needs to be marked as "Ignore".
+  - This script will do the work for you. However, check the query before running the script, to make sure there aren't any update sets that get incorrectly ignored, like sets called "Default 2":
+  - var gr = new GlideRecord("sys_update_set");
+  - gr.addEncodedQuery("state!=ignore^ORstate=NULL^parentISEMPTY^name!=Default^ORname=NULL");
+  - gr.query();
+  - counter = 0; // Counter to verify that the correct amount of update sets are updated
+  - while (gr.next()) {
+  - gs.info(++counter);
+  - gr.state = "ignore";
+  - gr.update();
+  - }
+2. Go to the Remote Update Sets **[ADD PAGE ROUTE]** page and export all uncommitted remote update sets as well as all of their contents in the form of XML **[ADD TABLE NAMES FOR BOTH OF THESE]**. Yes, all this stuff would be copied down during the cloning process, but it's very helpful to have some files handy.
+  - This won't be the last time you export XML during the clone process. Make sure you give the files clear names, referring to the instance that they've been extracted from, so that you can easily identify the file later on.
+
+
+
 
 
 
@@ -70,3 +90,4 @@ Sections:
 - post-clone activities
   - after one clone
   - after all clones
+Make sure it's all zero-indexed
