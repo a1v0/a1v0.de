@@ -76,7 +76,26 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 2. Go to the Remote Update Sets **[ADD PAGE ROUTE]** page and export all uncommitted remote update sets as well as all of their contents in the form of XML **[ADD TABLE NAMES FOR BOTH OF THESE]**. Yes, all this stuff would be copied down during the cloning process, but it's very helpful to have some files handy.
   - This won't be the last time you export XML during the clone process. Make sure you give the files clear names, referring to the instance that they've been extracted from, so that you can easily identify the file later on.
 
+### In the target instance
 
+1. Make sure that there's a recent backup of your instance, just in case. You can check this on [Now Support](https://support.servicenow.com/).
+2. Retrieve any remote update sets from lower instances, but don't commit.
+3. Preserve any custom applications (as these aren't always captured in update sets). Ask your dev team to support you here. You can usually export an entire application via the Studio. [This article](https://www.servicenow.com/docs/bundle/yokohama-application-development/page/build/applications/task/preserve-applications-during-clone.html) provides some more info.
+4. Preserve any open local update sets that aren't named "Default".
+  - The easiest way to do this is to create a batch inside the Global scope for all of these.
+  - Make sure you use the "Export to XML" UI Action (it's in the Related Links section of the page). You can only do this if you mark the batch as Complete.
+  - Check the open update sets for any that you no longer need, and ignore these.
+5. Export any uncommitted remote update sets and their contents as XML.
+6. Export a list of all installed plugins installed since the last clone or upgrade. The best way is to go to the `sys_plugins` table. Ensure that the ID and installation date columns are visible. The parent field is also useful sometimes. Then export to Excel.
+  - It's a little clunky, but ServiceNow, at point of writing, doesn't have a better way to do this.
+7. Export the following data, if applicable, and if not already covered by your clone profile:
+  - MID server config
+  - Data sources
+  - Integration endpoints and other parameters specific to your environment
+8. Make a list of anything that you consider worth testing explicitly following the clone. This will vary from instance to instance and from client to client, but instance branding and portal pages are usually a good place to begin.
+9. Schedule the clone.
+  - Sounds stupid, but make sure you select the correct instance and clone profile!
+  - You need to be on hand at the start of the clone, just to ensure that it starts successfully. Once the clone has begun, you'll need to check in with it every 30 minutes or so.
 
 
 
