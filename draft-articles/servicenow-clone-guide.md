@@ -97,6 +97,40 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
   - Sounds stupid, but make sure you select the correct instance and clone profile!
   - You need to be on hand at the start of the clone, just to ensure that it starts successfully. Once the clone has begun, you'll need to check in with it every 30 minutes or so.
 
+## Post-clone activities
+
+### After one close
+
+1. Find out which plugins are missing since the clone. This can be done by exporting a list of installed plugins from `sys_plugins`, as you did before.
+  - Copy the list of plugins from the pre-clone instance into the spreadsheet.
+  - Add a `COUNTIF` function in Excel to check how often each plugin ID exists in your combined list. If something appears only once, then this is part of the delta.
+2. Install any plugins as necessary.
+  - Your list might contain plugins that you don't need anymore, so use this as an opportunity to purge old config.
+  - The list will probably contain loads of plugins that you can't find in the Plugin Manager. This is normal and stems from the fact that ServiceNow doesn't really have a good way to get a user-friendly overview of installed plugins. It's unlikely to be the end of the world if you can't installed all plugins at this stage.
+3. Insert all remote update sets that you exported from higher instances, and their contents. Put them all into one big batch. This script will automate the process for you, so that you don't need to switch scope all the time:
+  - // Script to create parent
+  - var parentGr = new GlideRecord("sys_remote_update_set");
+  - parentGr.initialize();
+  - parentGr.name = "Post-clone batch";
+  - parentGr.description = "Post-clone batch";
+  - var PARENT = parentGr.insert();
+  - var batchedUpdateSetGr = new GlideRecord("sys_remote_update_set");
+  - batchedUpdateSetGr.addEncodedQuery("state!=committed^ORstate=NULL^parent=NULL");
+  - batchedUpdateSetGr.query();
+  - var counter = 0; // Counter to verify that the correct amount of update sets are updated
+  - while (batchedUpdateSetGr.next()) {
+  - gs.info(++counter);
+  - batchedUpdateSetGr.parent = PARENT;
+  - batchedUpdateSetGr.update();
+  - }
+  - Your batch might have a mountain of preview errors. It's often a tricky process to work through these. However, if many of the errors relate to one particular thing, then it could be that you are missing a plugin. Install it, re-preview the batch, and then, hopefully, you'll have far fewer errors to resolve. Make sure you install all plugins _before_ skipping/accepting updates.
+4. Once you've committed the batch, find the local update set that corresponds to that batch. Set its state to "Ignore". This will prevent all those updates from being re-imported up the chain of instances.
+5. Import all open update sets from before the clone and mark them all as In Progress.
+6. Insert all uncommitted remote update sets and all their contents. Don't commit them into the system.
+  - Do not press "Retrieve Remote Update Sets", whatever you do! This will cause you a major headache.
+7. Perform all post-clone checks that you identified before the clone, e.g. branding and portals.
+  - The client can also support you here. They may be able to spot things that you've not noticed.
+
 
 
 
