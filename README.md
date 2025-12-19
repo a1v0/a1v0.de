@@ -66,7 +66,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - GOV.UK has a nice TOC style. Not sure if that'll require a lot of re-structuring of the base page to achieve.
 7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
 8. Skip link doesn't set your tab position. It only moves your viewport down a bit. To be rectified.
-9. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
+9. Fix word wrapping: <https://a1v0.de/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
     - You need to add `&shy;` to the title.
     - You might need to create a fake HTML element in the DOM, set the string as `innerHTML` and then return its `innerText` to display.
     - This is convoluted but might be the only way to get it done.
