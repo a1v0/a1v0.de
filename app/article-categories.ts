@@ -12,9 +12,6 @@ export const categoriesMap: { [key: string]: MappedCategory } = {
 	linux: {
 		displayName: "Linux"
 	},
-	"next.js": {
-		displayName: "Next.js"
-	},
 	servicenow: {
 		displayName: "ServiceNow"
 	},
