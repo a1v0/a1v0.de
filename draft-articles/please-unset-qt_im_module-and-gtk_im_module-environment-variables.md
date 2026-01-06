@@ -21,3 +21,8 @@ title: TITLE GOES HERE
 date: 2024-01-01
 category: linux
 ---
+
+This is the fix: https://discuss.kde.org/t/ibus-issue-with-wayland/3680
+Affects Plasma
+
+article may need new name that references Wayland, unless it's then too long
