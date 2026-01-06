@@ -2,7 +2,65 @@
 title: How to flash a Lily58 keyboard
 date: 2025-07-11
 category: general
+# 
+# 
+# 
+# 
+# 
+# UPDATE PUBLICATION DATE
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 ---
+
+# 
+# 
+# 
+# THIS ARTICLE NEEDS TO BE UPDATED TO INCLUDE A NON-WINDOWS PERSPECTIVE
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 
 I recently purchased a Lily58 from [Mechboards](https://mechboards.co.uk/). I was about to embark on a typing journey from which I haven't looked back.
 
