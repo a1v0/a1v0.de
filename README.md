@@ -6,7 +6,7 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 ## Structure
 
-The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. There isn't really a backend. It's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
+The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. There isn't really a backend. It's a pretty basic affair, with few images and special features; just good, old-fashioned text.
 
 ## Deployment
 
@@ -47,9 +47,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
-     - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
-     - Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode)
+1. Implement a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
 2. Lighthouse improvements:
      - Refresh the below Lighthouse comments as they're fairly old
      - "Remove unused JavaScript"
@@ -73,6 +71,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - Check all articles to see if full HTML could be useful in their titles.
 10. Remove article list pages (i.e. category pages) from Google, if possible.
 11. Logo active-but-not-hover style is messy. Can we create specific exceptions for the logo so that the active style, whether hovering or not, looks a certain way?
-12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on.
+12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on (which is silly of them, but they're not to know).
 13. The Next version is stuck on 14 because, I think, Tailwind isn't up to scratch. However, to install a newer Tailwind, a larger refactor is possibly needed. Requires investigation.
 14. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
+15. Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode). Needs a fix.
