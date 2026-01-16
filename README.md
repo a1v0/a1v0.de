@@ -55,6 +55,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
        - Not sure if this can be fixed by anything other than upgrading packages frequently
 3. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>. Unclear how to solve this other than by moving away from Markdown and going to TSX.
 4. Replace boring bullet list of articles in categories with some sort of tile layout.
+     - This is a decent design for a card/tile: <https://chakra-ui.com/docs/components/card>
 5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
