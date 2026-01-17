@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import getPostMetadata, { PostMetadata } from "@/utils/getPostMetadata";
-import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
