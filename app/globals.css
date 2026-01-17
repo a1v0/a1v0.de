@@ -135,7 +135,7 @@
 		@apply border-l-[12px];
 		@apply px-6;
 		@apply py-1;
-		@apply !my-10;
+		@apply my-10!;
 		@apply rounded-r-md;
 	}
 
@@ -160,14 +160,14 @@
 		@apply overflow-x-scroll;
 		@apply bg-background-grey;
 		@apply dark:bg-dark-mode-background-light-grey;
-		@apply !p-5;
+		@apply p-5!;
 		@apply rounded-md;
 	}
 
 	pre > code {
 		@apply h-fit;
 		@apply w-full;
-		@apply !bg-[#00000000];
+		@apply bg-[#00000000]!;
 	}
 
 	.text-content {
