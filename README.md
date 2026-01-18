@@ -62,7 +62,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
      - <https://www.linkedin.com/pulse/solving-case-sensitivity-issues-nextjs-routes-middleware-islam-cavic/>
 6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-    - GOV.UK has a nice TOC style. Not sure if that'll require a lot of re-structuring of the base page to achieve.
+    - GOV.UK has a nice TOC style. Not sure if that'll require a lot of re-structuring of the base page to achieve. This is a good example: <https://design-system.service.gov.uk/accessibility/accessibility-strategy/ >
 7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
 8. Skip link doesn't set your tab position. It only moves your viewport down a bit. To be rectified.
 9. Fix word wrapping: <https://a1v0.de/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
@@ -71,8 +71,12 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
     - This is convoluted but might be the only way to get it done.
     - Check all articles to see if full HTML could be useful in their titles.
 10. Remove article list pages (i.e. category pages) from Google, if possible.
+    - The problem here is that so many pages aren't indexed by Google at the moment, so the index pages are in a way my only hope.
+    - On the other hand, those index pages won't score well on conversions, I'd guess
 11. Logo active-but-not-hover style is messy. Can we create specific exceptions for the logo so that the active style, whether hovering or not, looks a certain way?
 12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on (which is silly of them, but they're not to know).
 13. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
 14. Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode). Needs a fix.
 15. Switch from zero-indexed lists to normal ones, to avoid confusion.
+16. Add share links to make blog look more professional
+17. Look at <https://www.reddit.com/r/TechSEO/comments/16vignb/understanding_the_cause_of_google_search_consoles/> for advice on improving Google score.
