@@ -44,11 +44,16 @@ Make sure, in particular, that nobody migrates anything up from the development 
 
 If any emergency changes need to be pushed through during the clone period, make sure you keep thorough track of it, because it could otherwise cause you a big headache down the line. It might be safest to migrate emergency updates via XML, rather than through the conventional means.
 
+#### 2. Review your clone profiles
 
-2. Review the clone profiles you intend to use and check whether they still make sense for your business. For example, have any new products been installed into any of the instances that come with some new tables that need excluders/preservers? Does anything currently in development depend on any data that isn't captured in update sets (e.g. dummy data)?
-  - Normally, you won't get a good response from your devs, which is highly annoying! Stress to them that this is highly important, as it can otherwise disrupt their workflow post-clone.
-  - Think about the kind of data that nobody ever thinks about, e.g. categories, subcategories etc. Losing these things would be seriously irritating.
-  - If a table exists in the dev instance but not in production, you won't always be able to apply a preserver/exclusion. This data needs to be exported as XML and then re-imported after the clone.
+Review the clone profiles you intend to use and check whether they still make sense for your business. For example, have any new products been installed into any of the instances that come with some new tables that need excluders/preservers? Does anything currently in development depend on any data that isn't captured in update sets (e.g. dummy data)?
+
+Asking your devs about this doesn't normally yield a helpful response, which is highly annoying! Stress to them that this is highly important, as it can otherwise disrupt their workflow post-clone.
+
+Think about the kind of data that nobody ever thinks about, e.g. categories, subcategories etc. Losing these things would be seriously irritating.
+
+Note, also, that, if a table exists in the dev instance but not in production, you won't always be able to apply a preserver/exclusion. This data needs to be exported as XML and then re-imported after the clone.
+
 3. In each instance that will be cloned, set all empty update sets to "Ignore". This will avoid any confusion and helps clean out old, useless config.
   - This script will help you identify any empty update sets. Make sure that they definitely _are_ empty before ignoring.
   - var updateSetGr = new GlideRecord("sys_update_set");
