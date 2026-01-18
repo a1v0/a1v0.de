@@ -10,12 +10,13 @@ export const generateStaticParams = async () => {
 	});
 };
 
-export const generateMetadata = ({
+export async function generateMetadata({
 	params
 }: {
-	params: { category: string };
-}) => {
-	const category = params.category.toLowerCase();
+	params: Promise<{ category: string }>;
+}) {
+	const categoryInfo = await params;
+	const category = categoryInfo.category.toLowerCase();
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
