@@ -54,7 +54,7 @@ Think about the kind of data that nobody ever thinks about, e.g. categories, sub
 
 Note, also, that, if a table exists in the dev instance but not in production, you won't always be able to apply a preserver/exclusion. This data needs to be exported as XML and then re-imported after the clone.
 
-#### 3. Clean up update sets in all target instances
+#### 3. Clean up useless update sets in all target instances
 
 In each instance that will be cloned, set all empty update sets to "Ignore". This will avoid any confusion and helps clean out old, useless config.
 
@@ -80,8 +80,17 @@ while (updateSetGr.next()) {
 }
 ```
 
-4. Ask your devs to go through all other extant update sets and see whether they're still needed. This applies to any open update sets in dev, as well as any uncommitted retrieved update sets in all other instances, including production. Doing this helps reduce your overall tech debt and reduces the risk surface of the clone.
-  - If you remove a remote update set from an instance, be sure to ignore it in all previous instances, too. This ensures it doesn't come in again.
+#### 4. Clean up extant update sets
+
+Ask your devs to go through all other extant update sets and see whether they're still needed.
+
+This applies to any open update sets in your dev instance, as well as any uncommitted-but-retrieved update sets in all other instances, including production. Doing this helps reduce your overall tech debt and reduces the risk surface of the clone.
+
+Note that, if you remove a remote update set from an instance, be sure to ignore it in all previous instances, too. This ensures it doesn't come in again.
+
+There may also be open update sets in other non-prod instances that need to be inspected.
+
+
 5. Now that you've thinned out the update sets, go into each instance in dev-to-prod order and retrieve all remote update sets.
 
 ### In the source instance
