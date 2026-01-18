@@ -54,19 +54,32 @@ Think about the kind of data that nobody ever thinks about, e.g. categories, sub
 
 Note, also, that, if a table exists in the dev instance but not in production, you won't always be able to apply a preserver/exclusion. This data needs to be exported as XML and then re-imported after the clone.
 
-3. In each instance that will be cloned, set all empty update sets to "Ignore". This will avoid any confusion and helps clean out old, useless config.
-  - This script will help you identify any empty update sets. Make sure that they definitely _are_ empty before ignoring.
-  - var updateSetGr = new GlideRecord("sys_update_set");
-  - updateSetGr.addEncodedQuery("state!=complete^ORstate=NULL^name!=Default^ORname=NULL^state!=ignore^ORstate=NULL^name!=Default 1^ORname=NULL^name!=Default 2^ORname=NULL");
-  - updateSetGr.query();
-  - while (updateSetGr.next()) {
-  - var updatesGr = new GlideRecord("sys_update_xml");
-  - updatesGr.addQuery("update_set", updateSetGr.getUniqueValue());
-  - updatesGr.query();
-  - if (updatesGr.getRowCount() == 0) {
-  - gs.info(updateSetGr.getValue("name"));
-  - }
-  - }
+#### 3. Clean up update sets in all target instances
+
+In each instance that will be cloned, set all empty update sets to "Ignore". This will avoid any confusion and helps clean out old, useless config.
+
+This script will help you identify any empty update sets. Make sure that they definitely _are_ empty before ignoring.
+
+```js
+var updateSetGr = new GlideRecord("sys_update_set");
+
+// You can amend these queries to suit your specific needs
+updateSetGr.addQuery("state", "!=", "complete");
+updateSetGr.addQuery("state", "!=", "ignore");
+updateSetGr.addQuery("name", "!=", "Default");
+
+updateSetGr.query();
+
+while (updateSetGr.next()) {
+    var updatesGr = new GlideRecord("sys_update_xml");
+    updatesGr.addQuery("update_set", updateSetGr.getUniqueValue());
+    updatesGr.query();
+    if (updatesGr.getRowCount() == 0) {
+        gs.info(updateSetGr.getValue("name"));
+    }
+}
+```
+
 4. Ask your devs to go through all other extant update sets and see whether they're still needed. This applies to any open update sets in dev, as well as any uncommitted retrieved update sets in all other instances, including production. Doing this helps reduce your overall tech debt and reduces the risk surface of the clone.
   - If you remove a remote update set from an instance, be sure to ignore it in all previous instances, too. This ensures it doesn't come in again.
 5. Now that you've thinned out the update sets, go into each instance in dev-to-prod order and retrieve all remote update sets.
