@@ -34,12 +34,17 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 
 ### Before you do anything else
 
-> **NOTE TO SELF: THIS BULLET-POINT LAYOUT WILL LIKELY LOOK CRAP IN THE ARTICLE. TURN IT INTO A NUMBER LIST WITH SUBHEADINGS, RATHER THAN AN ORDINARY `<ol>`**
-> **ALSO GO THROUGH ALL BITS OF CODE AND ADD COMMENTS WHERE SENSIBLE ETC.**
+#### 1. Issue a change freeze
 
-1. Ensure that a change freeze is issued across all of your instances. Make sure that all developers and other stakeholders are made aware that they need to keep any of their active config safe in the clone target. Make sure, in particular, that nobody migrates anything up from the development instance during the change freeze.
-  - While it's stipulated above that all users should keep their own config safe, this clone guide actually involves _you_ protecting all config.
-  - If any emergency changes need to be pushed through during the clone period, make sure you keep thorough track of it, because it could otherwise cause you a big headache down the line. Crucially, it might be safest to migrate emergency updates via XML, rather than through the conventional means.
+Ensure that a change freeze is issued across all of your instances.
+
+Make sure that all developers and other stakeholders are aware that they need to keep any of their active config safe in the clone target. (While it's stipulated here that all users should keep their own config safe, this clone guide actually involves _you_ protecting all config.)
+
+Make sure, in particular, that nobody migrates anything up from the development instance during the change freeze.
+
+If any emergency changes need to be pushed through during the clone period, make sure you keep thorough track of it, because it could otherwise cause you a big headache down the line. It might be safest to migrate emergency updates via XML, rather than through the conventional means.
+
+
 2. Review the clone profiles you intend to use and check whether they still make sense for your business. For example, have any new products been installed into any of the instances that come with some new tables that need excluders/preservers? Does anything currently in development depend on any data that isn't captured in update sets (e.g. dummy data)?
   - Normally, you won't get a good response from your devs, which is highly annoying! Stress to them that this is highly important, as it can otherwise disrupt their workflow post-clone.
   - Think about the kind of data that nobody ever thinks about, e.g. categories, subcategories etc. Losing these things would be seriously irritating.
