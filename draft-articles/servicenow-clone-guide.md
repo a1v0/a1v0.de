@@ -90,8 +90,9 @@ Note that, if you remove a remote update set from an instance, be sure to ignore
 
 There may also be open update sets in other non-prod instances that need to be inspected.
 
+#### 5. Retrieve all remote update sets
 
-5. Now that you've thinned out the update sets, go into each instance in dev-to-prod order and retrieve all remote update sets.
+Now that you've thinned out the update sets, go into each instance in dev-to-prod order and retrieve all remote update sets.
 
 ### In the source instance
 
