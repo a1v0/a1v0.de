@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import getPostMetadata, { PostMetadata } from "@/utils/getPostMetadata";
-import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import { categoriesMap } from "@/app/article-categories";
@@ -20,16 +19,17 @@ export const generateStaticParams = async () => {
 	});
 };
 
-export const generateMetadata = ({
+export async function generateMetadata({
 	params
 }: {
-	params: { articleName: string; category: string };
-}) => {
-	const category = params.category.toLowerCase();
+	params: Promise<{ articleName: string; category: string }>;
+}) {
+	const articleInfo = await params;
+	const category = articleInfo.category.toLowerCase();
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
-	const articleName = params.articleName.toLowerCase();
+	const articleName = articleInfo.articleName.toLowerCase();
 	const articles = getPostMetadata(category);
 	const article = articles.find((item) => {
 		return item.slug === articleName;
@@ -72,16 +72,17 @@ const getDateString = (isoDate: string) => {
 	return date.toLocaleDateString("en-US", options);
 };
 
-const PostLayout = async ({
+export default async function PostLayout({
 	params
 }: {
-	params: { articleName: string; category: string };
-}) => {
-	const category = params.category.toLowerCase();
+	params: Promise<{ articleName: string; category: string }>;
+}) {
+	const articleInfo = await params;
+	const category = articleInfo.category.toLowerCase();
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
-	const articleName = params.articleName.toLowerCase();
+	const articleName = articleInfo.articleName.toLowerCase();
 	const article = getPostContent(articleName, category),
 		articleMetadata = getPostMetadata(category).find((item) => {
 			return item.slug === articleName.toLowerCase();
@@ -112,4 +113,3 @@ const PostLayout = async ({
 	);
 };
 
-export default PostLayout;

@@ -1,10 +1,10 @@
 import SkipLink from "@/components/SkipLink";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import "./globals.css";
-import "./highlight-theme.css";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
+import "./globals.css";
+import "./highlight-theme.css";
 
 const jost = Jost({
 	subsets: ["latin"],

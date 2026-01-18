@@ -76,3 +76,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 13. The Next version is stuck on 14 because Tailwind isn't up to scratch. However, to install a newer Tailwind, a larger refactor is possibly needed. Requires investigation. Also, I think the transition to Next 15/16 isn't the easiest in the world, either.
 14. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
 15. Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode). Needs a fix.
+16. Switch from zero-indexed lists to normal ones, to avoid confusion.

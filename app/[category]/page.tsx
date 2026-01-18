@@ -10,12 +10,13 @@ export const generateStaticParams = async () => {
 	});
 };
 
-export const generateMetadata = ({
+export async function generateMetadata({
 	params
 }: {
-	params: { category: string };
-}) => {
-	const category = params.category.toLowerCase();
+	params: Promise<{ category: string }>;
+}) {
+	const categoryInfo = await params;
+	const category = categoryInfo.category.toLowerCase();
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
@@ -23,8 +24,9 @@ export const generateMetadata = ({
 	return { title: categoryName };
 };
 
-const PostLayout = ({ params }: { params: { category: string } }) => {
-	const category = params.category.toLowerCase();
+export default async function PostLayout({ params }: { params: Promise<{ category: string }> }) {
+	const categoryInfo = await params;
+	const category = categoryInfo.category.toLowerCase();
 	const categoryExists = validateCategory(category);
 	if (!categoryExists) return notFound();
 
@@ -54,5 +56,3 @@ const PostLayout = ({ params }: { params: { category: string } }) => {
 		</main>
 	);
 };
-
-export default PostLayout;

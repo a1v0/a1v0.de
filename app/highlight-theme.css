@@ -1,3 +1,5 @@
+@reference "./globals.css";
+
 pre code.hljs {
 	@apply block;
 }
