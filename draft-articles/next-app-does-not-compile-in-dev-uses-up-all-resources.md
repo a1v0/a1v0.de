@@ -19,10 +19,10 @@ title: TITLE GOES HERE
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 date: 2024-01-01
-category: linux
+category: general
 ---
 
-This is the fix: https://discuss.kde.org/t/ibus-issue-with-wayland/3680
-Affects Plasma
-
-article may need new name that references Wayland, unless it's then too long
+/*
+    Needs better title.
+    Article to say that, if you run npm run dev and it loads but the compilation of a specific page gets stuck and it consumes all your CPU resources, the solution is (at least sometimes!) to delete the `.next` folder and, if needed, also `node_modules` and `package-lock.json`.
+*/

@@ -2,7 +2,65 @@
 title: Empty table of contents in LaTeX
 date: 2025-12-15
 category: general
+# 
+# 
+# 
+# 
+# 
+# UPDATE PUBLICATION DATE
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 ---
+
+# 
+# 
+# 
+# THIS ARTICLE NEEDS TO BE UPDATED TO REFLECT THE DOUBLE-COMPILE PROBLEM I ENCOUNTERED DURING "RESEARCH METHODS" MODULE
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
 
 If your `\tableofcontents` command in LaTeX is producing an empty table of contents, then here are two potential solutions.
 

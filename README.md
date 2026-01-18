@@ -6,7 +6,7 @@ It's not much, but it's my attempt to contribute to the world of programming, sp
 
 ## Structure
 
-The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. There isn't really a backend. It's a pretty basic affair, with very few images and special features; just good, old-fashioned text.
+The frontend is made with Next and TypeScript. Articles are currently stored in Markdown format inside my repo and are being served and rendered using `remark-rehype`. There isn't really a backend. It's a pretty basic affair, with few images and special features; just good, old-fashioned text.
 
 ## Deployment
 
@@ -47,9 +47,7 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 
 ## To-do
 
-1. Implement a dark mode (value added to the user is small, but it's good frontend experience):
-     - Maybe create a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
-     - Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode)
+1. Implement a dark-mode toggle button. I assume this'll need to use cookies or similar. <https://blog.logrocket.com/dark-mode-react-in-depth-guide/#accessibility-dark-mode>
 2. Lighthouse improvements:
      - Refresh the below Lighthouse comments as they're fairly old
      - "Remove unused JavaScript"
@@ -57,22 +55,28 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
        - Not sure if this can be fixed by anything other than upgrading packages frequently
 3. `<code>` elements (` `` ` in markdown) don't wrap, leading to overflow issues on page edges on mobile, e.g. <https://a1v0.de/servicenow/disable-customer-registration-csm-portal-servicenow>. Unclear how to solve this other than by moving away from Markdown and going to TSX.
 4. Replace boring bullet list of articles in categories with some sort of tile layout.
+     - This is a decent design for a card/tile: <https://chakra-ui.com/docs/components/card>
 5. Make all URLs case insensitive
      - Currently, you can type a category or slug in any case you want and it renders the page.
      - The same is not true for static pages like `disclaimer`, where `disclaiMer` returns a 404.
      - <https://www.linkedin.com/pulse/solving-case-sensitivity-issues-nextjs-routes-middleware-islam-cavic/>
 6. Add TOC to articles.
     - `rehype-slug` already creates IDs for all headings, which is a start.
-    - GOV.UK has a nice TOC style. Not sure if that'll require a lot of re-structuring of the base page to achieve.
+    - GOV.UK has a nice TOC style. Not sure if that'll require a lot of re-structuring of the base page to achieve. This is a good example: <https://design-system.service.gov.uk/accessibility/accessibility-strategy/ >
 7. See if there's a way to render `<a>` tags as `<Link>` components when rendering markdown. (It doesn't look like there is, unless I replace Markdown entirely with TSX. Don't know if that's a good idea.)
 8. Skip link doesn't set your tab position. It only moves your viewport down a bit. To be rectified.
-9. Fix word wrapping: <http://localhost:3000/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
+9. Fix word wrapping: <https://a1v0.de/c-sharp/puppeteersharp-failed-to-launch-browser-could-not-load-xpcom>
     - You need to add `&shy;` to the title.
     - You might need to create a fake HTML element in the DOM, set the string as `innerHTML` and then return its `innerText` to display.
     - This is convoluted but might be the only way to get it done.
     - Check all articles to see if full HTML could be useful in their titles.
 10. Remove article list pages (i.e. category pages) from Google, if possible.
+    - The problem here is that so many pages aren't indexed by Google at the moment, so the index pages are in a way my only hope.
+    - On the other hand, those index pages won't score well on conversions, I'd guess
 11. Logo active-but-not-hover style is messy. Can we create specific exceptions for the logo so that the active style, whether hovering or not, looks a certain way?
-12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on.
-13. The Next version is stuck on 14 because, I think, Tailwind isn't up to scratch. However, to install a newer Tailwind, a larger refactor is possibly needed. Requires investigation.
-14. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
+12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on (which is silly of them, but they're not to know).
+13. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
+14. Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode). Needs a fix.
+15. Switch from zero-indexed lists to normal ones, to avoid confusion.
+16. Add share links to make blog look more professional
+17. Look at <https://www.reddit.com/r/TechSEO/comments/16vignb/understanding_the_cause_of_google_search_consoles/> for advice on improving Google score.
