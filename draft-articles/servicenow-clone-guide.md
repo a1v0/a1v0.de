@@ -85,7 +85,7 @@ Asking your devs about this doesn't normally yield a helpful response, which is 
 
 Think about the kind of data that nobody ever thinks about, e.g. categories, subcategories etc. Losing these things would be seriously irritating.
 
-Note, also, that, if a table exists in the dev instance but not in production, you won't always be able to apply a preserver/exclusion. This data needs to be exported as XML and then re-imported after the clone.
+Note, also, that, if a table or field exists in the dev instance but not in production, you won't always be able to apply a preserver/exclusion. This data needs to be exported as XML and then re-imported after the clone.
 
 #### 3. Clean up useless update sets in all target instances
 
