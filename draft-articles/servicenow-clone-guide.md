@@ -196,7 +196,12 @@ Export the following data, if applicable, and if not already covered by your clo
 
 Note that the way ServiceNow handles these items changes with every release. As such, it may not be necessary separately to export these items&mdash;you may be able to exclude and preserve them in the conventional way, instead.
 
-8. Make a list of anything that you consider worth testing explicitly following the clone. This will vary from instance to instance and from client to client, but instance branding and portal pages are usually a good place to begin.
+#### 8. Identify things to test
+
+Make a list of anything that you consider worth testing explicitly following the clone.
+
+This will vary from instance to instance and from organisation to organisation, but instance branding, portal pages and custom apps are usually a good place to begin.
+
 9. Schedule the clone.
   - Sounds stupid, but make sure you select the correct instance and clone profile!
   - You need to be on hand at the start of the clone, just to ensure that it starts successfully. Once the clone has begun, you'll need to check in with it every 30 minutes or so.
