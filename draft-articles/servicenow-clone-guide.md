@@ -313,18 +313,77 @@ Now that you've thinned out the update sets, go into each instance in dev-to-pro
 
 ### In the source instance
 
-1. In the source instance (typically production), make sure _all_ local update sets that aren't named Default are set to "Ignore". If not, they'll have to be re-imported up all instances and it'll become unmanageable.
-  - If a local update set is batched, then only the parent needs to be marked as "Ignore".
-  - This script will do the work for you. However, check the query before running the script, to make sure there aren't any update sets that get incorrectly ignored, like sets called "Default 2":
-  - var gr = new GlideRecord("sys_update_set");
-  - gr.addEncodedQuery("state!=ignore^ORstate=NULL^parentISEMPTY^name!=Default^ORname=NULL");
-  - gr.query();
-  - counter = 0; // Counter to verify that the correct amount of update sets are updated
-  - while (gr.next()) {
-  - gs.info(++counter);
-  - gr.state = "ignore";
-  - gr.update();
-  - }
+#### 1. Ignore all update sets
+
+In the source instance (typically production), make sure _all_ local update sets that aren't named Default are set to "Ignore". If not, they'll have to be re-imported up all instances and it'll become unmanageable.
+
+If a local update set is batched, then only the parent needs to be marked as "Ignore".
+
+This script will do the work for you. However, check the query before running the script, to make sure there aren't any update sets that get incorrectly ignored, like sets called "Default 2":
+
+```js
+var updateSetGr = new GlideRecord("sys_update_set");
+updateSetGr.addQuery("state", "!=", "ignore");
+updateSetGr.addNullQuery("parent");
+updateSetGr.addQuery("name", "!=", "Default");
+// 
+// 
+// 
+// 
+// 
+// make sure this script works. I've changed it from using an encoded query to an addQuery one
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+updateSetGr.query();
+counter = 0; // Counter to verify that the correct amount of update sets are updated
+while (updateSetGr.next()) {
+    gs.info(++counter);
+    updateSetGr.state = "ignore";
+    updateSetGr.update();
+}
+```
+
 2. Go to the Remote Update Sets **[ADD PAGE ROUTE]** page and export all uncommitted remote update sets as well as all of their contents in the form of XML **[ADD TABLE NAMES FOR BOTH OF THESE]**. Yes, all this stuff would be copied down during the cloning process, but it's very helpful to have some files handy.
   - This won't be the last time you export XML during the clone process. Make sure you give the files clear names, referring to the instance that they've been extracted from, so that you can easily identify the file later on.
 
