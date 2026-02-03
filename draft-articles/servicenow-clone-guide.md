@@ -311,7 +311,12 @@ Your batch might have a mountain of preview errors. It's often a tricky process 
 
 Work through all the preview errors and then commit. This will make your instance behave similar to the way it did prior to the clone, minus any purged config.
 
-4. Once you've committed the batch, find the local update set that corresponds to that batch. Set its state to "Ignore". This will prevent all those updates from being re-imported up the chain of instances.
+#### 4. Ignore local batch
+
+Once you've committed the batch, find the local update set that corresponds to that batch. Set its state to "Ignore".
+
+This will prevent all those updates from being re-imported up the chain of instances. Since they exist in all higher instances, there's no need to migrate them upwards.
+
 5. Import all open update sets from before the clone and mark them all as In Progress.
 6. Insert all uncommitted remote update sets and all their contents. Don't commit them into the system.
   - Do not press "Retrieve Remote Update Sets", whatever you do! This will cause you a major headache.
