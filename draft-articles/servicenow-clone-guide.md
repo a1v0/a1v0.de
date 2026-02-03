@@ -65,7 +65,191 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 
 ## Pre-clone activities
 
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+> add section about creating a clone user profile in target instances
+>
+
 ### Before you do anything else
+
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
+> explain creation of a clone profile, as well as the unusual/comfusing related lists etc. Make it really obvious what needs to be done and how to do it.
+>
 
 #### 1. Issue a change freeze
 
@@ -358,11 +542,11 @@ Make sure, especially, that production data has not made it into non-production 
 
 # Sections:
 # - pre-clone activities
-#   - before everything
-#   - in source instance
-#   - in target instance
+#   --- before everything
+#   --- in source instance
+#   --- in target instance
 # - post-clone activities
-#   - after one clone
-#   - after all clones
+#   --- after one clone
+#   --- after all clones
 
 # do I need a bit about preparing a clone user for each clone profile?
