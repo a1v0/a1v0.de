@@ -329,8 +329,11 @@ Insert all uncommitted remote update sets and all their contents. Don't commit t
 
 **Do not** press "Retrieve Remote Update Sets", whatever you do! Doing so can cause you a major headache.
 
-7. Perform all post-clone checks that you identified before the clone, e.g. branding and portals.
-  - The client can also support you here. They may be able to spot things that you've not noticed.
+#### 7. Post-clone checks
+
+Perform all post-clone checks that you identified before the clone, e.g. branding and portals.
+
+Your client can also support you here. They may be able to spot things that you've not noticed, especially if you're a jaded, ivory-tower system adminisatrator who seldom uses the instance to perform everyday tasks.
 
 ### After all clones
 
