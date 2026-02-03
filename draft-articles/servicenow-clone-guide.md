@@ -317,7 +317,12 @@ Once you've committed the batch, find the local update set that corresponds to t
 
 This will prevent all those updates from being re-imported up the chain of instances. Since they exist in all higher instances, there's no need to migrate them upwards.
 
-5. Import all open update sets from before the clone and mark them all as In Progress.
+#### 5. Import in-progress update sets
+
+Import all open update sets from before the clone. You can import by loading the exported XML file into the instance, then visiting the Remote Update Sets table **(check that this is correct and/or well phrase)**.
+
+Find the newly created local update sets for the imported ones and mark them as In Progress, so that you can continue to work on them.
+
 6. Insert all uncommitted remote update sets and all their contents. Don't commit them into the system.
   - Do not press "Retrieve Remote Update Sets", whatever you do! This will cause you a major headache.
 7. Perform all post-clone checks that you identified before the clone, e.g. branding and portals.
