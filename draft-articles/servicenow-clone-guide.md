@@ -214,9 +214,15 @@ You need to be on hand at the start of the clone, just to ensure that it starts 
 
 ### After one close
 
-1. Find out which plugins are missing since the clone. This can be done by exporting a list of installed plugins from `sys_plugins`, as you did before.
-  - Copy the list of plugins from the pre-clone instance into the spreadsheet.
-  - Add a `COUNTIF` function in Excel to check how often each plugin ID exists in your combined list. If something appears only once, then this is part of the delta.
+#### 1. Identify missing plugins
+
+Find out which plugins are missing since the clone. This can be done by exporting a list of installed plugins from `sys_plugins`, as you did before.
+
+Depending on the amount of plugins, you may be able to see which plugins are missing very easily. Otherwise, take the following steps:
+
+1. Copy the list of plugins from the pre-clone instance into the spreadsheet.
+2. Add a `COUNTIF` function in Excel to check how often each plugin ID exists in your combined list. If something appears only once, then this is part of the delta.
+
 2. Install any plugins as necessary.
   - Your list might contain plugins that you don't need anymore, so use this as an opportunity to purge old config.
   - The list will probably contain loads of plugins that you can't find in the Plugin Manager. This is normal and stems from the fact that ServiceNow doesn't really have a good way to get a user-friendly overview of installed plugins. It's unlikely to be the end of the world if you can't installed all plugins at this stage.
