@@ -150,7 +150,12 @@ Now that you've thinned out the update sets, go into each instance in dev-to-pro
 
 Make sure that there's a recent backup of your instance, just in case. You can check this on [Now Support](https://support.servicenow.com/).
 
-2. Retrieve any remote update sets from lower instances, but don't commit.
+#### 2. Retrieve any remote update sets from lower instances, but don't commit
+
+Go to the relevent Remote Instance **(get the proper name or a way to access the page)** and press Retrieve Remote Update Sets **(check that this is the correct wording)**.
+
+Do not commit any of the update sets, though.
+
 3. Preserve any custom applications (as these aren't always captured in update sets). Ask your dev team to support you here. You can usually export an entire application via the Studio. [This article](https://www.servicenow.com/docs/bundle/yokohama-application-development/page/build/applications/task/preserve-applications-during-clone.html) provides some more info.
 4. Preserve any open local update sets that aren't named "Default".
   - The easiest way to do this is to create a batch inside the Global scope for all of these.
