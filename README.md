@@ -80,3 +80,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 15. Switch from zero-indexed lists to normal ones, to avoid confusion.
 16. Add share links to make blog look more professional
 17. Look at <https://www.reddit.com/r/TechSEO/comments/16vignb/understanding_the_cause_of_google_search_consoles/> for advice on improving Google score.
+18. Change contact page, since LinkedIn is no more.
