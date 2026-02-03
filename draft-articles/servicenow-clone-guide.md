@@ -146,7 +146,10 @@ Now that you've thinned out the update sets, go into each instance in dev-to-pro
 
 ### In the target instance
 
-1. Make sure that there's a recent backup of your instance, just in case. You can check this on [Now Support](https://support.servicenow.com/).
+#### 1. Back up the instance
+
+Make sure that there's a recent backup of your instance, just in case. You can check this on [Now Support](https://support.servicenow.com/).
+
 2. Retrieve any remote update sets from lower instances, but don't commit.
 3. Preserve any custom applications (as these aren't always captured in update sets). Ask your dev team to support you here. You can usually export an entire application via the Studio. [This article](https://www.servicenow.com/docs/bundle/yokohama-application-development/page/build/applications/task/preserve-applications-during-clone.html) provides some more info.
 4. Preserve any open local update sets that aren't named "Default".
@@ -216,4 +219,3 @@ Sections:
 - post-clone activities
   - after one clone
   - after all clones
-Make sure it's all zero-indexed
