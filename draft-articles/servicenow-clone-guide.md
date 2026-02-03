@@ -1,5 +1,5 @@
 ---
-title: A comprehensive ServiceNow clone guide
+title: A comprehensive guide to cloning your ServiceNow instance
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
