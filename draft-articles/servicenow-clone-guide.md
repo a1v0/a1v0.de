@@ -156,7 +156,12 @@ Go to the relevent Remote Instance **(get the proper name or a way to access the
 
 Do not commit any of the update sets, though.
 
-3. Preserve any custom applications (as these aren't always captured in update sets). Ask your dev team to support you here. You can usually export an entire application via the Studio. [This article](https://www.servicenow.com/docs/bundle/yokohama-application-development/page/build/applications/task/preserve-applications-during-clone.html) provides some more info.
+#### 3. Preserve any custom applications
+
+Preserve any custom applications, as these aren't always captured in update sets. Ask your dev team to support you here. You can usually export an entire application via Studio or App Engine Studio.
+
+[This article](https://www.servicenow.com/docs/bundle/yokohama-application-development/page/build/applications/task/preserve-applications-during-clone.html) provides some more info. **(check this link and see if there's any way to get a permalink)**
+
 4. Preserve any open local update sets that aren't named "Default".
   - The easiest way to do this is to create a batch inside the Global scope for all of these.
   - Make sure you use the "Export to XML" UI Action (it's in the Related Links section of the page). You can only do this if you mark the batch as Complete.
