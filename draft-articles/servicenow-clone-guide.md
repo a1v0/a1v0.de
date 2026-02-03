@@ -323,8 +323,12 @@ Import all open update sets from before the clone. You can import by loading the
 
 Find the newly created local update sets for the imported ones and mark them as In Progress, so that you can continue to work on them.
 
-6. Insert all uncommitted remote update sets and all their contents. Don't commit them into the system.
-  - Do not press "Retrieve Remote Update Sets", whatever you do! This will cause you a major headache.
+#### 6. Insert uncommitted remote update sets
+
+Insert all uncommitted remote update sets and all their contents. Don't commit them into the system.
+
+**Do not** press "Retrieve Remote Update Sets", whatever you do! Doing so can cause you a major headache.
+
 7. Perform all post-clone checks that you identified before the clone, e.g. branding and portals.
   - The client can also support you here. They may be able to spot things that you've not noticed.
 
