@@ -178,8 +178,14 @@ Go into the `sys_remote_update_set` table and find any uncommitted sets that you
 
 Then go to the `sys_update_xml` table and find all records whose Remote Update Set is one of the sets you would like to export. Export these as XML, too.
 
-6. Export a list of all installed plugins installed since the last clone or upgrade. The best way is to go to the `sys_plugins` table. Ensure that the ID and installation date columns are visible. The parent field is also useful sometimes. Then export to Excel.
-  - It's a little clunky, but ServiceNow, at point of writing, doesn't have a better way to do this.
+#### 6. Export a list of all installed plugins
+
+Export a list of all plugins installed since the last clone or upgrade.
+
+The best way is to go to the `sys_plugins` table. Ensure that the ID and installation date columns are visible. The parent field is also useful sometimes. Export to Excel.
+
+> It's a little clunky, but ServiceNow, at point of writing, doesn't have a better way to do this.
+
 7. Export the following data, if applicable, and if not already covered by your clone profile:
   - MID server config
   - Data sources
