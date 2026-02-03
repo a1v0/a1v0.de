@@ -162,10 +162,17 @@ Preserve any custom applications, as these aren't always captured in update sets
 
 [This article](https://www.servicenow.com/docs/bundle/yokohama-application-development/page/build/applications/task/preserve-applications-during-clone.html) provides some more info. **(check this link and see if there's any way to get a permalink)**
 
-4. Preserve any open local update sets that aren't named "Default".
-  - The easiest way to do this is to create a batch inside the Global scope for all of these.
-  - Make sure you use the "Export to XML" UI Action (it's in the Related Links section of the page). You can only do this if you mark the batch as Complete.
-  - Check the open update sets for any that you no longer need, and ignore these.
+#### 4. Preserve non-default update sets
+
+Preserve any open local update sets that aren't named "Default".
+
+The easiest way to do this is to create a batch inside the Global scope for all of these.
+
+Make sure you use the "Export to XML" UI Action (it's in the Related Links section of the page). You can only do this if you mark the batch as Complete.
+
+Before you batch, check the open update sets for any that you no longer need, and ignore them.
+
+
 5. Export any uncommitted remote update sets and their contents as XML.
 6. Export a list of all installed plugins installed since the last clone or upgrade. The best way is to go to the `sys_plugins` table. Ensure that the ID and installation date columns are visible. The parent field is also useful sometimes. Then export to Excel.
   - It's a little clunky, but ServiceNow, at point of writing, doesn't have a better way to do this.
