@@ -186,10 +186,16 @@ The best way is to go to the `sys_plugins` table. Ensure that the ID and install
 
 > It's a little clunky, but ServiceNow, at point of writing, doesn't have a better way to do this.
 
-7. Export the following data, if applicable, and if not already covered by your clone profile:
-  - MID server config
-  - Data sources
-  - Integration endpoints and other parameters specific to your environment
+#### 7. Additional data exports
+
+Export the following data, if applicable, and if not already covered by your clone profile:
+
+- MID server config
+- Data sources
+- Integration endpoints and other parameters specific to your environment
+
+Note that the way ServiceNow handles these items changes with every release. As such, it may not be necessary separately to export these items&mdash;you may be able to exclude and preserve them in the conventional way, instead.
+
 8. Make a list of anything that you consider worth testing explicitly following the clone. This will vary from instance to instance and from client to client, but instance branding and portal pages are usually a good place to begin.
 9. Schedule the clone.
   - Sounds stupid, but make sure you select the correct instance and clone profile!
