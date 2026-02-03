@@ -337,7 +337,10 @@ Your client can also support you here. They may be able to spot things that you'
 
 ### After all clones
 
-1. Ask the dev team to check whether all their update sets are as they should be. They need to be able to resume their development activities pretty much where they left off.
+#### 1. Check local updates sets are as they should be
+
+Check&mdash;and ask the dev team to check&mdash;whether all in-progress update sets are as they should be. Devs need to be able to resume their development activities pretty much where they left off.
+
 2. Ask anybody who uses non-production instances (that'll mostly be developers and testers) to report anything unexpected, e.g. missing data or buggy pages. Make a note of any observations and incorporate these findings into your clone profile.
   - Make sure, especially, that production data has not made it into non-production environments. Such data often creeps into the instances via tables that you didn't know existed, e.g. `sys_scim_user`. Some data may be sensitive, even if it's not personal data, e.g. knowledge articles. Always check with your stakeholders if in doubt.
   - Clone profiles should be reviewed after every clone. There's always something else you could add to them for a smoother experience.
