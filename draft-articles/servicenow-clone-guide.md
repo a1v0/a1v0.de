@@ -229,23 +229,88 @@ Install any plugins as necessary. Your list might contain plugins that you don't
 
 The list may contain plugins that you can't find in the Plugin Manager. This is normal and stems from the fact that ServiceNow doesn't really have a good way to get a user-friendly overview of installed plugins. It's unlikely to be the end of the world if you can't installed all plugins at this stage.
 
-3. Insert all remote update sets that you exported from higher instances, and their contents. Put them all into one big batch. This script will automate the process for you, so that you don't need to switch scope all the time:
-  - // Script to create parent
-  - var parentGr = new GlideRecord("sys_remote_update_set");
-  - parentGr.initialize();
-  - parentGr.name = "Post-clone batch";
-  - parentGr.description = "Post-clone batch";
-  - var PARENT = parentGr.insert();
-  - var batchedUpdateSetGr = new GlideRecord("sys_remote_update_set");
-  - batchedUpdateSetGr.addEncodedQuery("state!=committed^ORstate=NULL^parent=NULL");
-  - batchedUpdateSetGr.query();
-  - var counter = 0; // Counter to verify that the correct amount of update sets are updated
-  - while (batchedUpdateSetGr.next()) {
-  - gs.info(++counter);
-  - batchedUpdateSetGr.parent = PARENT;
-  - batchedUpdateSetGr.update();
-  - }
-  - Your batch might have a mountain of preview errors. It's often a tricky process to work through these. However, if many of the errors relate to one particular thing, then it could be that you are missing a plugin. Install it, re-preview the batch, and then, hopefully, you'll have far fewer errors to resolve. Make sure you install all plugins _before_ skipping/accepting updates.
+#### 3. Insert remote update sets from higher instances
+
+Insert all remote update sets that you exported from all higher instances, and their contents. Put them all into one big batch.
+
+This script will automate the process for you, so that you don't need to switch scope all the time:
+
+```js
+// Script to create parent
+var parentGr = new GlideRecord("sys_remote_update_set");
+parentGr.initialize();
+parentGr.name = "Post-clone batch";
+parentGr.description = "Post-clone batch";
+var PARENT = parentGr.insert();
+
+var batchedUpdateSetGr = new GlideRecord("sys_remote_update_set");
+batchedUpdateSetGr.addQuery("state", "!=", "committed");
+batchedUpdateSetGr.addNullQuery("parent");
+// 
+// 
+// 
+// 
+// 
+// make sure this script works. I've changed it from using an encoded query to an addQuery one
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+batchedUpdateSetGr.query();
+
+var counter = 0; // Counter to verify that the correct amount of update sets are updated
+while (batchedUpdateSetGr.next()) {
+    gs.info(++counter);
+    batchedUpdateSetGr.parent = PARENT;
+    batchedUpdateSetGr.update();
+}
+```
+
+Your batch might have a mountain of preview errors. It's often a tricky process to work through these. However, if many of the errors relate to one particular thing, then it could be that you are missing a plugin. Install it, re-preview the batch, and then, hopefully, you'll have far fewer errors to resolve.
+
+> Make sure you install all plugins _before_ skipping/accepting updates.
+
+Work through all the preview errors and then commit. This will make your instance behave similar to the way it did prior to the clone, minus any purged config.
+
 4. Once you've committed the batch, find the local update set that corresponds to that batch. Set its state to "Ignore". This will prevent all those updates from being re-imported up the chain of instances.
 5. Import all open update sets from before the clone and mark them all as In Progress.
 6. Insert all uncommitted remote update sets and all their contents. Don't commit them into the system.
