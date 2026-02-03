@@ -223,9 +223,12 @@ Depending on the amount of plugins, you may be able to see which plugins are mis
 1. Copy the list of plugins from the pre-clone instance into the spreadsheet.
 2. Add a `COUNTIF` function in Excel to check how often each plugin ID exists in your combined list. If something appears only once, then this is part of the delta.
 
-2. Install any plugins as necessary.
-  - Your list might contain plugins that you don't need anymore, so use this as an opportunity to purge old config.
-  - The list will probably contain loads of plugins that you can't find in the Plugin Manager. This is normal and stems from the fact that ServiceNow doesn't really have a good way to get a user-friendly overview of installed plugins. It's unlikely to be the end of the world if you can't installed all plugins at this stage.
+#### 2. Install missing plugins
+
+Install any plugins as necessary. Your list might contain plugins that you don't need anymore, so use this as an opportunity to purge old config.
+
+The list may contain plugins that you can't find in the Plugin Manager. This is normal and stems from the fact that ServiceNow doesn't really have a good way to get a user-friendly overview of installed plugins. It's unlikely to be the end of the world if you can't installed all plugins at this stage.
+
 3. Insert all remote update sets that you exported from higher instances, and their contents. Put them all into one big batch. This script will automate the process for you, so that you don't need to switch scope all the time:
   - // Script to create parent
   - var parentGr = new GlideRecord("sys_remote_update_set");
