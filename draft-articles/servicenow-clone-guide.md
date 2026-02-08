@@ -384,7 +384,13 @@ while (updateSetGr.next()) {
 }
 ```
 
-#### 2. Go to the Remote Update Sets **[ADD PAGE ROUTE]** page and export all uncommitted remote update sets as well as all of their contents in the form of XML **[ADD TABLE NAMES FOR BOTH OF THESE]**. Yes, all this stuff would be copied down during the cloning process, but it's very helpful to have some files handy. This won't be the last time you export XML during the clone process. Make sure you give the files clear names, referring to the instance that they've been extracted from, so that you can easily identify the file later on.
+#### 2. Export uncommitted config from PROD
+
+Go to the Remote Update Sets **[ADD PAGE ROUTE]** page and export all uncommitted remote update sets as well as all of their contents in the form of XML **[ADD TABLE NAMES FOR BOTH OF THESE]**.
+
+Yes, all this stuff will normally be copied down during the cloning process, but it's very helpful to have some files handy.
+
+This won't be the last time you export XML during the clone process. Make sure you give the files clear names, referring to the instance that they've been extracted from, so that you can easily identify the file later on.
 
 ### In the target instance
 
@@ -583,7 +589,7 @@ Your client can also support you here. They may be able to spot things that you'
 
 Check&mdash;and ask the dev team to check&mdash;whether all in-progress update sets are as they should be. Devs need to be able to resume their development activities pretty much where they left off.
 
-### 2. Review clone profile
+#### 2. Review clone profile
 
 Clone profiles should be reviewed after every clone. There's always something else you could add to them for a smoother experience.
 
