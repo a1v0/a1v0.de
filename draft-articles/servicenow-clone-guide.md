@@ -152,7 +152,17 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 
 ### Before you do anything else
 
-> explain creation of a clone profile, as well as the unusual/confusing related lists etc. Make it really obvious what needs to be done and how to do it.
+#### Set up clone users in target instances
+
+- create web-service only user in each instance to be cloned, called e.g. clone_admin.
+- user needs admin and clone_admin role
+- set up a password
+- link that instance to PROD by creating a clone profile record (see next step)
+
+#### Set up clone profile
+
+#### Populate clone profile with preservers and exclusions
+
 >
 > explain creation of a clone profile, as well as the unusual/confusing related lists etc. Make it really obvious what needs to be done and how to do it.
 >
@@ -611,3 +621,4 @@ Make sure, especially, that production data has not made it into non-production 
 - during the clone
 - post-clone
 - at the end of it all
+# do I need a bit about preparing a clone user for each clone profile?
