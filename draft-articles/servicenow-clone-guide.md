@@ -622,3 +622,7 @@ Make sure, especially, that production data has not made it into non-production 
 - post-clone
 - at the end of it all
 # do I need a bit about preparing a clone user for each clone profile?
+
+
+
+# add to clone article: the script to identify empty update sets needs either to check for empty batch parents, or add a comment to show that it'll return empty batch parents
