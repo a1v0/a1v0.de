@@ -626,3 +626,5 @@ Make sure, especially, that production data has not made it into non-production 
 
 
 # add to clone article: the script to identify empty update sets needs either to check for empty batch parents, or add a comment to show that it'll return empty batch parents
+# clone script to ignore update sets in prod: gs.info(++counter + " " + gr.name); (can't remember what I meant when I wrote this...)
+# explain how to export remote update set contents by going to sys_update_xml
