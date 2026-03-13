@@ -1,66 +1,8 @@
 ---
 title: How to flash a Lily58 keyboard
-date: 2025-07-11
+date: 2026-01-18
 category: general
-# 
-# 
-# 
-# 
-# 
-# UPDATE PUBLICATION DATE
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 ---
-
-# 
-# 
-# 
-# THIS ARTICLE NEEDS TO BE UPDATED TO INCLUDE A NON-WINDOWS PERSPECTIVE
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 
 I recently purchased a Lily58 from [Mechboards](https://mechboards.co.uk/). I was about to embark on a typing journey from which I haven't looked back.
 
@@ -68,9 +10,9 @@ When I first received the keyboard, though, I couldn't work out how to flash it.
 
 ## Whom this guide is for
 
-This guide is for anybody with a Lily58 keyboard with Pro Micro controllers, where the controllers have a "RESET" button.
+This guide is for anybody with a Lily58 keyboard with Pro Micro controllers, where the controllers have a "RESET" button. If you don't have these things, my solution may still work, but I can't say for sure.
 
-If you don't have these things, my solution may still work, but I can't say for sure.
+I did all this on a Windows machine with WSL, but the instructions apply to Linux, too.
 
 ## Installing QMK
 
@@ -87,7 +29,7 @@ Once you've made and compiled a Lily58 keymap with QMK, you'll have a file to lo
 Here's how you can flash that file onto the keyboard:
 
 0. Unplug the keyboard from your computer, then disconnect the keyboard halves from each other. **DO NOT** disconnect the keyboard halves until the keyboard has been unplugged from the computer. Remove the TRRS cable entirely.
-1. Open the My Computer folder in Windows, and have your `.uf2` file at the ready.
+1. Open the My Computer folder in Windows, or a view on Linux that shows you all connected devices, and have your `.uf2` file at the ready.
 2. Plug one keyboard half into the computer.
 3. Double-press your keyboard half's "RESET" button. Your keyboard will enter flashing mode and it will appear as a storage device in My Computer. (If you can't see the keyboard on your screen, try again; it doesn't always work first time.)
 4. Paste the `.uf2` file into the keyboard "drive" in My Computer.
