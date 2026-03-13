@@ -63,6 +63,20 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 > it should be possible to reduce the nesting depth of the headings by recategorising the to-dos into stuff to be done before anything, and then stuff in preparation for an actual clone. just need to find the appropriate wording for it.
 >
 
+## Before you even _think_ about cloning
+
+> instructions on determining the objective of the clone. who are the stakeholders? what liabilities are there? Is a clone actually necessary?
+
+## Before all clones
+
+## Preparing for an individual clone
+
+## During a clone
+
+## After an individual clone
+
+## After all clones
+
 ## Pre-clone activities
 
 > add section about creating a clone user profile in target instances
@@ -611,20 +625,7 @@ Make sure, especially, that production data has not made it into non-production 
 
 > It's vital to ensure you've not unintentionally cloned production data into a non-prod instance.
 
-
-
-
-# Sections:
-
-- Before you do anything else (this section maybe needs a better title)
-- pre-clone prep
-- during the clone
-- post-clone
-- at the end of it all
-# do I need a bit about preparing a clone user for each clone profile?
-
-
-
 # add to clone article: the script to identify empty update sets needs either to check for empty batch parents, or add a comment to show that it'll return empty batch parents
 # clone script to ignore update sets in prod: gs.info(++counter + " " + gr.name); (can't remember what I meant when I wrote this...)
 # explain how to export remote update set contents by going to sys_update_xml
+# do I need a bit about preparing a clone user for each clone profile?
