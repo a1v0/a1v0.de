@@ -67,6 +67,28 @@ If you have any suggestions or corrections, please don't hesitate to [get in tou
 
 > instructions on determining the objective of the clone. who are the stakeholders? what liabilities are there? Is a clone actually necessary?
 
+It's important to know what you're trying to achieve with the clone, and what challenges the clone will pose for you. Let's start by thinking about what a clone does.
+
+It sounds obvious, but cloning is all about making all of your instances _identical_. This isn't always a desirable outcome, so beware.
+
+> The idea behind cloning is to make all instances identical.
+
+- what is cloning good for?
+  - removing obsolete/abandoned config from sub-prod instances
+  - making lower envs match prod as closely as possible
+- when do we normally clone
+  - depends on client. ServiceNow recommends at least quarterly (get citation)
+  - clone before an upgrade
+- when is cloning easy?
+  - when there's not much config to preserve
+  - when there's already not too myuch divergence between prod and non-prod
+- when is it awkward?
+  - lots of divergence
+  - lots of open workstreams
+  - lots of devs working on stuff
+  - when PROD contains not just sensitive data (like most PRODs do) but extra-sensitive data, e.g. SecOps or HR
+- **maybe all of the above belongs in its own article. it's plenty of content**
+
 ## Before all clones
 
 ## Preparing for an individual clone
