@@ -1,39 +1,7 @@
 ---
 title: Empty table of contents in LaTeX
-date: 2025-12-15
+date: 2026-03-14
 category: general
-# 
-# 
-# 
-# 
-# 
-# UPDATE PUBLICATION DATE
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 ---
 
 # 
