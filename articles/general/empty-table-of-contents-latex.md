@@ -4,32 +4,6 @@ date: 2026-03-14
 category: general
 ---
 
-# 
-# 
-# 
-# THIS ARTICLE NEEDS TO BE UPDATED TO REFLECT THE DOUBLE-COMPILE PROBLEM I ENCOUNTERED DURING "RESEARCH METHODS" MODULE
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-
 If your `\tableofcontents` command in LaTeX is producing an empty table of contents, then here are three potential solutions.
 
 To be clear about the symptoms, the `\tableofcontents` command isn't producing a compiler error, but your document simply shows the default heading of "Contents" with nothing underneath.
@@ -55,20 +29,18 @@ Depending on the amount of packages you're using, this can be a long and annoyin
 
 If you know why packages sometimes conflict with the `\tableofcontents` command, or if you know a better way to troubleshoot, please [do let me know](/contact). I would be grateful to learn.
 
-## If you're using LaTeX Workshop in Visual Studio Code
+## Using LaTeX Workshop in Visual Studio Code
 
-[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) is an excellent extension for using LaTeX in VS Code. However, it can have its quirks.
+[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) is an excellent extension for using LaTeX in VS Code. However, it has its quirks. If you're a user, you may be affected.
 
-Normally, when you build a PDF in LaTeX Workshop, the compilation process is run twice. By this, I don't mean the ordinary two-compile LaTeX, which is necessary for computing BibTeX citations and TOCs. Instead, it seems to run the whole process twice.
-
-What this means is that, sometimes, the TOC compiles fine the first time but disappears the second time,
+Normally, when you build a PDF in LaTeX Workshop, the full compilation process is run twice. What this means is that, sometimes, the TOC compiles fine the first time but disappears the second time,
 
 You might not notice that this is happening. Here's how you can check:
 
 1. Open the PDF file in a web browser, not in an ordinary PDF viewer.
 2. Compile with LaTeX Workshop.
-3. As the compilation job is running, refresh the browser window.
-4. If, at any point, a TOC appears, stop refreshing. Save this PDF using Ctrl+S. Now you have a copy with a TOC.
+3. As the compilation job is running, refresh the browser window until the updated PDF appears.
+4. If, at any point, a TOC is showing in the PDF, stop refreshing. Save this PDF using Ctrl+S. Now you have a copy with a TOC.
 
 The original document will continue to compile and, eventually, your TOC will be overwritten. However, your copy will be perfect.
 
