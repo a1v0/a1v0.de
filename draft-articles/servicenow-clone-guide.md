@@ -117,6 +117,16 @@ There are many things you must do before any cloning can happen. If it's your fi
 - explain that, even if you have a lovely clone profile, it's important to review it before every clone, to make sure it encompasses any new changes that were put in since the last clone
   - you may have installed an application that has a raft of new tables that need to be protected/preserved
 
+### Issue a change freeze
+
+Ensure that a change freeze is issued across all of your instances.
+
+Make sure that all developers and other stakeholders are aware that they need to keep any of their active config safe in the clone target. (While it's stipulated here that all users should keep their own config safe, this clone guide actually involves _you_ protecting all config.)
+
+Make sure, in particular, that nobody migrates anything up from the development instance during the change freeze.
+
+If any emergency changes need to be pushed through during the clone period, make sure you keep thorough track of it, because it could otherwise cause you a big headache down the line. It might be safest to migrate emergency updates via XML, rather than through the conventional means.\
+
 ## Preparing for an individual clone
 
 ## During a clone
