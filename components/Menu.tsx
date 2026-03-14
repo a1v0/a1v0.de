@@ -5,7 +5,7 @@ import { categoriesMap } from "@/app/article-categories";
 export default function Menu() {
 	return (
 		<section className="dark:bg-dark-mode-background-light-grey bg-background-grey">
-			<div className="clear-gutters dark:text-dark-mode-text-light flex flex-col justify-stretch pb-8 pt-4 sm:flex-row">
+			<div className="clear-gutters dark:text-dark-mode-text-light flex flex-col justify-stretch pt-4 pb-8 sm:flex-row">
 				<div className="flex-1">
 					<h2>Topics</h2>
 					<ul className="flush">

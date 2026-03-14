@@ -34,4 +34,3 @@ This was due to testing your internal data retention policies which involved del
 
 See KB0963051 for more insight into this and for guidance on best practices -
 --> https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB0963051#:~:text=Deleting%20the%20user%20will%20cause,and%20Locked%20out%20as%20True.
-

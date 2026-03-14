@@ -22,9 +22,13 @@ export async function generateMetadata({
 
 	const categoryName = categoriesMap[category].displayName;
 	return { title: categoryName };
-};
+}
 
-export default async function PostLayout({ params }: { params: Promise<{ category: string }> }) {
+export default async function PostLayout({
+	params
+}: {
+	params: Promise<{ category: string }>;
+}) {
 	const categoryInfo = await params;
 	const category = categoryInfo.category.toLowerCase();
 	const categoryExists = validateCategory(category);
@@ -33,7 +37,7 @@ export default async function PostLayout({ params }: { params: Promise<{ categor
 	const categoryName = categoriesMap[category].displayName;
 
 	return (
-		<main className="dark:bg-dark-mode-background-grey grow bg-background-white">
+		<main className="dark:bg-dark-mode-background-grey bg-background-white grow">
 			<article className="clear-gutters text-content dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light bg-background-white">
 				<div>
 					<h1>{categoryName}</h1>
@@ -55,4 +59,4 @@ export default async function PostLayout({ params }: { params: Promise<{ categor
 			</article>
 		</main>
 	);
-};
+}

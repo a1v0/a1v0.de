@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function Contact() {
 	return (
-		<main className="dark:bg-dark-mode-background-grey flex grow flex-col bg-background-white">
+		<main className="dark:bg-dark-mode-background-grey bg-background-white flex grow flex-col">
 			<div>
 				<article className="clear-gutters text-content dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light bg-background-white">
 					<h1>Contact a1v0</h1>
