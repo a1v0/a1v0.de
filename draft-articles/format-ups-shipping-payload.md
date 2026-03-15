@@ -22,9 +22,9 @@ date: 2024-01-01
 category: ups-api
 ---
 
-The UPS documentation page [INSERT LINK!] is pretty unwieldy at times. Not only does it not work properly on browsers other than Chrome [INSERT LINK!], but it's also generally user-unfriendly:
+The UPS API documentation page [INSERT LINK!] is pretty unwieldy at times. Not only does it not work properly on browsers other than Chrome [INSERT LINK!], but it's also generally user-unfriendly:
 
-They've overridden the standard Ctrl+F, in favour of an inferior custom "find" utility; there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions; and their indication of what is and isn't mandatory isn't quite right.
+They've overridden the standard Ctrl+F, in favour of an inferior custom "find" utility [VERIFY!]; there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions [VERIFY!]; and their indication of what is and isn't mandatory isn't quite right.
 
 ## Minimum viable payload for UPS Shipping API
 
