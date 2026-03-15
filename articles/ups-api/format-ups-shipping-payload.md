@@ -4,9 +4,9 @@ date: 2026-03-15
 category: ups-api
 ---
 
-The UPS API documentation pages are pretty unwieldy at times. Not only do they not work properly on browsers [other than Chrome](/ups-api/ups-website-only-works-on-chrome), but they're also generally user-unfriendly:
+The UPS API documentation pages are pretty unwieldy at times. Not only do they not work properly on browsers [other than Chrome](/ups-api/ups-website-only-works-on-chrome), but they're also generally user-unfriendly.
 
-They've overridden the standard Ctrl+F, in favour of an inferior custom "find" utility [VERIFY!]; there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions [VERIFY!]; and their indication of what is and isn't mandatory isn't quite right.
+For instance, there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions; and their indication of what is and isn't mandatory isn't quite right.
 
 ## Minimum viable payload for UPS Shipping API
 
@@ -14,7 +14,7 @@ To make your life easier, here's the bare minimum JSON payload for a shipment us
 
 Not all values in the fields are desirable for every user, so don't just copy and paste. Make sure you use the option values that apply to your company.
 
-Also, there are additional requirements if you're shipping abroad. The minimum requirements for this are incredibly varied and depend on whether you're US-based, so these details haven't been included below.
+Also, there are additional requirements if you're shipping abroad. The minimum requirements for this are incredibly varied and depend on where you're based. These details have therefore not been included below.
 
 ```json
 {
