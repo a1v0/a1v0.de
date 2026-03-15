@@ -40,7 +40,7 @@ export async function generateMetadata({
 	}
 
 	return { title: article.title };
-};
+}
 
 const getPostContent = (articleName: string, category: string) => {
 	category = category.toLowerCase();
@@ -93,7 +93,7 @@ export default async function PostLayout({
 	const content = await renderMarkdown(article.content);
 
 	return (
-		<main className="grow bg-background-white dark:bg-dark-mode-background-grey">
+		<main className="bg-background-white dark:bg-dark-mode-background-grey grow">
 			<div>
 				<article className="clear-gutters text-content bg-background-white dark:bg-dark-mode-background-grey dark:text-dark-mode-text-light">
 					<div>
@@ -111,5 +111,4 @@ export default async function PostLayout({
 			</div>
 		</main>
 	);
-};
-
+}

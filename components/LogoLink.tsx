@@ -7,9 +7,9 @@ export default function LogoLink() {
 		<Link
 			aria-label="Homepage"
 			href="/"
-			className="group flex flex-row items-center pr-2.5 text-xl font-medium text-text-dark no-underline visited:text-text-dark visited:no-underline hover:rounded-bl hover:text-text-dark hover:no-underline active:rounded-br-2xl active:rounded-tl-2xl active:rounded-tr dark:text-dark-mode-text-light dark:visited:text-dark-mode-text-light dark:hover:text-dark-mode-text-light dark:active:text-dark-mode-background-dark-grey"
+			className="group text-text-dark visited:text-text-dark hover:text-text-dark dark:text-dark-mode-text-light dark:visited:text-dark-mode-text-light dark:hover:text-dark-mode-text-light dark:active:text-dark-mode-background-dark-grey flex flex-row items-center pr-2.5 text-xl font-medium no-underline visited:no-underline hover:rounded-bl hover:no-underline active:rounded-tl-2xl active:rounded-tr active:rounded-br-2xl"
 		>
-			<div className="mr-2.5 inline-block rounded-bl-2xl rounded-br rounded-tl rounded-tr-2xl bg-accent-colour p-2.5 transition-all duration-500 ease-in-out group-hover:rounded-bl group-hover:rounded-br-2xl group-hover:rounded-tl-2xl group-hover:rounded-tr dark:bg-dark-mode-accent-colour">
+			<div className="bg-accent-colour dark:bg-dark-mode-accent-colour mr-2.5 inline-block rounded-tl rounded-tr-2xl rounded-br rounded-bl-2xl p-2.5 transition-all duration-500 ease-in-out group-hover:rounded-tl-2xl group-hover:rounded-tr group-hover:rounded-br-2xl group-hover:rounded-bl">
 				<Logo classNames="h-6" />
 			</div>
 			a1v0.de

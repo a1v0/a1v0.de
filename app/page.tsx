@@ -49,7 +49,8 @@ export default function Home() {
 						something new. My current interests include C# and a11y,
 						but I also care deeply about the difference between the
 						-, &ndash;, &mdash; and &#8213; characters. (That I use
-						these characters does not make me an AI. Merely a stickler.)
+						these characters does not make me an AI. Merely a
+						stickler.)
 					</p>
 				</article>
 			</div>

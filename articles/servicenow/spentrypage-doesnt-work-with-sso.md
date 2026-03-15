@@ -28,11 +28,11 @@ As stated above, installation exits override standard login behaviours. This isn
 
 One solution to our original problem, therefore, is as follows:
 
-0. Identify the relevant installation exit script from the list within the **Multi-SSO** module in your ServiceNow navigation menu.
+1. Identify the relevant installation exit script from the list within the **Multi-SSO** module in your ServiceNow navigation menu.
     - If you don't know which script is being run, narrow it down by filtering out all inactive scripts from the list, along with any scripts that handle anything other than login or authentication. Then add a `gs.info()` into the `initialize` method of each script.
     - If your message appears in the System Logs after SSO login, you've found the correct script.
     - Out of the box, there should be only one script that runs during SSO login. On my Washington instance, that script overrides `ExternalAuthentication`.
-1. Find a suitable place for your custom logic within the script and see if you can get it to work. **But be careful:** messing around with SSO scripts could potentially cause problems, including security issues. Only do these things if you're confident in your scripting ability.
+2. Find a suitable place for your custom logic within the script and see if you can get it to work. **But be careful:** messing around with SSO scripts could potentially cause problems, including security issues. Only do these things if you're confident in your scripting ability.
 
 > Be careful. Edits to the installation exit login script could go wrong in any number of ways.
 

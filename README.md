@@ -77,7 +77,6 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 12. Main menu: Add some sort of on-click state change to hide the menu. This is to prevent the menu remaining visible if a user clicks a link to a page they're already on (which is silly of them, but they're not to know).
 13. Check articles for broken links. Add a note to the disclaimer page and/or anywhere else to explain that I may occasionally check for broken links.
 14. Active (i.e. clicked) breadcrumbs are hard to read (definitely in dark mode, possibly also in light mode). Needs a fix.
-15. Switch from zero-indexed lists to normal ones, to avoid confusion.
-16. Add share links to make blog look more professional
-17. Look at <https://www.reddit.com/r/TechSEO/comments/16vignb/understanding_the_cause_of_google_search_consoles/> for advice on improving Google score.
-18. Change contact page, since LinkedIn is no more.
+15. Add share links to make blog look more professional
+16. Look at <https://www.reddit.com/r/TechSEO/comments/16vignb/understanding_the_cause_of_google_search_consoles/> for advice on improving Google score.
+17. Change contact page, since LinkedIn is no more.

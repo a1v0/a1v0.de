@@ -8,7 +8,7 @@ Is one of your Next.js pages not compiling after you run `npm run dev`?
 
 Is Next consuming all of your CPU resources?
 
-This issue has an unknown cause&mdash;at least not one that I've found&mdash;but I suspect it's caused, like so many things, by running `npm update`...
+This issue has an unknown cause&mdash;at least not one that I've found&mdash;but I suspect it's caused, like so many things, by a breaking change introduced by running `npm update`...
 
 The solution is nice and simple: delete the `.next` folder. Then run `npm install` and you'll be right as rain.
 

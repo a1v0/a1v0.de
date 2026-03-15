@@ -5,7 +5,7 @@ category: linux
 ---
 
 > **Affected distros:** Ubuntu, Fedora, Mint, possibly others.
-> 
+>
 > **Affected desktop environments:** KDE Plasma, GNOME, Cinnamon, possibly others.
 
 A common problem with Zoom on Linux is that you somehow can't join meetings. You click a meeting link, but no meeting room ever appears. However, when you close the application, you're asked whether you want to leave the meeting that never even started in the first place.

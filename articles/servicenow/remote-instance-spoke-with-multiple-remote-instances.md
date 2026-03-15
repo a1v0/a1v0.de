@@ -36,11 +36,11 @@ In other words, if worst absolutely came to worst, you could build the logic fro
 
 The solution for allowing multiple remote connections outbound is quite straightforward:
 
-0. Make sure you're in the right scope, i.e. "ServiceNow Remote Instance Spoke". It doesn't work very well when you mix and match scopes.
-1. Find the Flow Action that you would like to modify, e.g. "Export Record Using Import Set".
-2. Create a copy of the Action (the OOB Action won't be editable).
-3. Add a new input: a reference field that refers to the Connection & Credential Alias table.
-4. In the REST Step of the Flow Action, instead of hard-coding the endpoint, put in your new input.
+1. Make sure you're in the right scope, i.e. "ServiceNow Remote Instance Spoke". It doesn't work very well when you mix and match scopes.
+2. Find the Flow Action that you would like to modify, e.g. "Export Record Using Import Set".
+3. Create a copy of the Action (the OOB Action won't be editable).
+4. Add a new input: a reference field that refers to the Connection & Credential Alias table.
+5. In the REST Step of the Flow Action, instead of hard-coding the endpoint, put in your new input.
 
 You must also follow the above steps for any dependent Actions, e.g. the Action that retrieves remote import sets.
 
@@ -56,10 +56,10 @@ If you're fortunate enough to have a Pro subscription, have a look to see what t
 
 For anyone else, the solution is fairly straightforward:
 
-0. Make sure you're in the right scope, i.e. "ServiceNow Remote Instance Spoke". It doesn't work very well when you mix and match scopes.
-1. Create a new Flow Action (don't copy the existing Action).
-2. Create variables and a REST step similar to the outbound Actions. You'll need to change some bits of config, because we're retrieving, rather than sending.
-3. Add logic to send the retrieved data into a local (not remote) import set.
+1. Make sure you're in the right scope, i.e. "ServiceNow Remote Instance Spoke". It doesn't work very well when you mix and match scopes.
+2. Create a new Flow Action (don't copy the existing Action).
+3. Create variables and a REST step similar to the outbound Actions. You'll need to change some bits of config, because we're retrieving, rather than sending.
+4. Add logic to send the retrieved data into a local (not remote) import set.
 
 It's not hugely complicated, though you'll need to write much of this code yourself, instead of relying on OOB code like we did for outbound connections.
 

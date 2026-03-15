@@ -4,7 +4,6 @@ date: 2024-11-13
 category: servicenow
 ---
 
-
 You've configured your Contextual Search functionality in ServiceNow and it seems to be working. But something's not quite right: "Why is it only showing me _some_ of the results I'm expecting," you ask yourself.
 
 There are two main reasons for this, assuming that you have configured the Contextual Search feature correctly.

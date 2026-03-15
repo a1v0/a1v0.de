@@ -69,11 +69,11 @@ The second app handles all the `PATCH` requests. `PATCH` requests are formatted 
 
 Then set your provisioning jobs to run so that the first app always runs before the second, so that any new user accounts will always be created with the simple `POST` app and enhanced with additional fields via the `PATCH` app.
 
-### Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],  "Operations" : [ { "op" : "add",   "path" : "addresses[type eq \"home\"].country",   "value" : "GB" } ] }
+### Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ], "Operations" : [ { "op" : "add", "path" : "addresses[type eq \"home\"].country", "value" : "GB" } ] }
 
-**Full error message:** "SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],  "Operations" : [ { "op" : "add",   "path" : "addresses[type eq \"home\"].country",   "value" : "GB" } ] }"
+**Full error message:** "SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ], "Operations" : [ { "op" : "add", "path" : "addresses[type eq \"home\"].country", "value" : "GB" } ] }"
 
-**Common variant:** "SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],  "Operations" : [ { "op" : "add",   "path" : "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",   "value" : "GB" } ] }"
+**Common variant:** "SCIM PROVIDER - Invalid patch request payload: { "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ], "Operations" : [ { "op" : "add", "path" : "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User", "value" : "GB" } ] }"
 
 #### What causes the error?
 
