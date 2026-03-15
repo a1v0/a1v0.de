@@ -30,8 +30,74 @@ They've overridden the standard Ctrl+F, in favour of an inferior custom "find" u
 
 To make your life easier, here's the bare minimum JSON payload for a shipment. It's a little more than the docs would have you believe.
 
-[THE BELOW ISN'T QUITE THE BARE MINIMUM. USE METRO API AS A GUIDE]
-[ADD PROPER 4-SPACE INDENTATION TO BELOW]
+```json
+{
+    "ShipmentRequest": {
+        "Request": {
+            "RequestOption": "validate"
+        },
+        "Shipment": {
+            "ShipTo": {
+                "Name": "Thomas & French Ltd",
+                "AttentionName": "Lord Wilmore",
+                "Address": {
+                    "AddressLine": ["34, rue du Château d'If"],
+                    "City": "Marseille",
+                    "PostalCode": "13001",
+                    "CountryCode": "FR"
+                }
+            },
+            "ReferenceNumber": {
+                "Value": "#12345"
+            },
+            "Service": {
+                "Code": "65"
+            },
+            "Shipper": {
+                "Name": "Morrel & Sons",
+                "AttentionName": "Luigi Vampa",
+                "Phone": {
+                    "Number": "123456789"
+                },
+                "Address": {
+                    "AddressLine": ["12 rue Sinbad-le-marin"],
+                    "City": "Paris",
+                    "PostalCode": "12345",
+                    "CountryCode": "FR"
+                },
+                "ShipperNumber": "XY12345", // This is your UPS account name
+            },
+            "PaymentInformation": {
+                "ShipmentCharge": {
+                    "Type": "01",
+                    "BillShipper": {
+                        "AccountNumber": "XY12345"
+                    }
+                }
+            },
+            "Package": [
+                {
+                    "Packaging": {
+                        "Code": "Packaging code"
+                    },
+                    "PackageWeight": {
+                        "UnitOfMeasurement": {
+                            "Code": "KGS"
+                        },
+                        "Weight": "Package weight"
+                    }
+                }
+            ],
+            "ShipmentRatingOptions": {
+                // This isn't strictly a minimum requirement,
+                // but it is needed to ensure you get the
+                // discount that you probably have on your account.
+                "NegotiatedRatesIndicator": "Y"
+            }
+        }
+    }
+}
+```
 
 ```json
 {
