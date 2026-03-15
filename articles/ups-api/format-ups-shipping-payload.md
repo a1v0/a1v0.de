@@ -4,7 +4,7 @@ date: 2026-03-15
 category: ups-api
 ---
 
-The UPS API documentation pages are pretty unwieldy at times. Not only do they not work properly on browsers [other than Chrome](http://localhost:3000/ups-api/ups-website-only-works-on-chrome), but they're also generally user-unfriendly:
+The UPS API documentation pages are pretty unwieldy at times. Not only do they not work properly on browsers [other than Chrome](/ups-api/ups-website-only-works-on-chrome), but they're also generally user-unfriendly:
 
 They've overridden the standard Ctrl+F, in favour of an inferior custom "find" utility [VERIFY!]; there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions [VERIFY!]; and their indication of what is and isn't mandatory isn't quite right.
 
