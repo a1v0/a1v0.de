@@ -6,8 +6,8 @@ category: general
 
 I was working on WYSIWYG content editor website at work recently. It runs on [Vue](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/) and has two main elements:
 
-0. An off-canvas config panel, where users can modify the content, CSS and functionality of their page's content
-1. A full, working preview of what the page will look like once published
+1. An off-canvas config panel, where users can modify the content, CSS and functionality of their page's content
+2. A full, working preview of what the page will look like once published
 
 The problem is that some HTML elements have properties/attributes that can only be set when the page loads. For instance, the `autoplay` attribute on Bootstrap's carousel component doesn't work if you set `autoplay` to `true` _after_ the carousel has loaded.
 
@@ -40,19 +40,19 @@ In the below code sample, the `<div>` that contains the template's content has b
 
 There are three use cases (that I know of!) for rerendering an entire component.
 
-### 0. To get something to behave 'like new'
+### 1. To get something to behave 'like new'
 
 As I intimated at the beginning, I was in a position where my component wouldn't work as intended unless I reloaded it from scratch.
 
 There will be plenty of times when you need a fresh start. Rerendering a full component can be a helpful hard reset.
 
-### 1. Triggering a transition
+### 2. Triggering a transition
 
 The [`<Transition>` component](https://vuejs.org/guide/built-ins/transition.html#the-transition-component) is built in to Vue and allows you to create transition effects, e.g. when a component loads.
 
 If you want to force that transition to happen after the component has already loaded, you can update the element's `key` attribute.
 
-### 2. Triggering lifecycle hooks
+### 3. Triggering lifecycle hooks
 
 Related to the `<Transition>` component, you can also force Vue's [lifecycle hooks](https://vuejs.org/guide/essentials/lifecycle.html) to run by changing the key of an element.
 
