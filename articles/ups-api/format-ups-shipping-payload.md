@@ -4,7 +4,7 @@ date: 2026-03-15
 category: ups-api
 ---
 
-The UPS API documentation pages are pretty unwieldy at times. Not only do they not work properly on browsers [other than Chrome](/ups-api/ups-website-only-works-on-chrome), but they're also generally user-unfriendly.
+The UPS API documentation pages are pretty unwieldy at times. Not only do they [contain errors](/ups-api/ups-shipping-api-returns-201) and not work properly on browsers [other than Chrome](/ups-api/ups-website-only-works-on-chrome), but they're also generally user-unfriendly.
 
 For instance, there's no "expand all" or "collapse all" button to show/hide the full contents of the API's payload descriptions; and their indication of what is and isn't mandatory isn't quite right.
 
