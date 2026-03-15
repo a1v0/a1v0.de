@@ -22,6 +22,82 @@ date: 2024-01-01
 category: servicenow
 ---
 
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+<!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
+
 I am always perturbed that ServiceNow has never published any real guidance on cloning. In theory, it's an easy process, but reality typically gets in the way.
 
 ServiceNow's own advice tends to assume that the cloner's aim is to destroy all config that isn't already in production which, for many organisations using ServiceNow, is not a viable approach.
@@ -446,7 +522,7 @@ Make a list of anything that you consider worth testing explicitly following the
 
 This will vary from instance to instance and from organisation to organisation, but instance branding, portal pages and custom apps are usually a good place to begin.
 
-### 9. Schedule the clone
+#### 9. Schedule the clone
 
 Now you are ready to schedule the clone.
 
