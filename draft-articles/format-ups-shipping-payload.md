@@ -28,7 +28,11 @@ They've overridden the standard Ctrl+F, in favour of an inferior custom "find" u
 
 ## Minimum viable payload for UPS Shipping API
 
-To make your life easier, here's the bare minimum JSON payload for a shipment. It's a little more than the docs would have you believe.
+To make your life easier, here's the bare minimum JSON payload for a shipment using the Shipping API. It's a little more than the docs would have you believe.
+
+Not all values in the fields are desirable for every user, so don't just copy and paste. Make sure you use the option values that apply to your company.
+
+Also, there are additional requirements if you're shipping abroad. The minimum requirements for this are incredibly varied and depend on whether you're US-based, so these details haven't been included below.
 
 ```json
 {
