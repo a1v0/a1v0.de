@@ -18,70 +18,70 @@ Also, there are additional requirements if you're shipping abroad. The minimum r
 
 ```json
 {
-    "ShipmentRequest": {
-        "Request": {
-            "RequestOption": "validate"
-        },
-        "Shipment": {
-            "ShipTo": {
-                "Name": "Thomas & French Ltd",
-                "AttentionName": "Lord Wilmore",
-                "Address": {
-                    "AddressLine": ["34, rue du Château d'If"],
-                    "City": "Marseille",
-                    "PostalCode": "13001",
-                    "CountryCode": "FR"
-                }
-            },
-            "ReferenceNumber": {
-                "Value": "#12345"
-            },
-            "Service": {
-                "Code": "65"
-            },
-            "Shipper": {
-                "Name": "Morrel & Sons",
-                "AttentionName": "Luigi Vampa",
-                "Phone": {
-                    "Number": "123456789"
-                },
-                "Address": {
-                    "AddressLine": ["12 rue Sinbad-le-marin"],
-                    "City": "Paris",
-                    "PostalCode": "12345",
-                    "CountryCode": "FR"
-                },
-                "ShipperNumber": "XY12345", // This is your UPS account name
-            },
-            "PaymentInformation": {
-                "ShipmentCharge": {
-                    "Type": "01",
-                    "BillShipper": {
-                        "AccountNumber": "XY12345"
-                    }
-                }
-            },
-            "Package": [
-                {
-                    "Packaging": {
-                        "Code": "Packaging code"
-                    },
-                    "PackageWeight": {
-                        "UnitOfMeasurement": {
-                            "Code": "KGS"
-                        },
-                        "Weight": "Package weight"
-                    }
-                }
-            ],
-            "ShipmentRatingOptions": {
-                // This isn't strictly a minimum requirement,
-                // but it is needed to ensure you get the
-                // discount that you probably have on your account.
-                "NegotiatedRatesIndicator": "Y"
-            }
+  "ShipmentRequest": {
+    "Request": {
+      "RequestOption": "validate"
+    },
+    "Shipment": {
+      "ShipTo": {
+        "Name": "Thomas & French Ltd",
+        "AttentionName": "Lord Wilmore",
+        "Address": {
+          "AddressLine": ["34, rue du Château d'If"],
+          "City": "Marseille",
+          "PostalCode": "13001",
+          "CountryCode": "FR"
         }
+      },
+      "ReferenceNumber": {
+        "Value": "#12345"
+      },
+      "Service": {
+        "Code": "65"
+      },
+      "Shipper": {
+        "Name": "Morrel & Sons",
+        "AttentionName": "Luigi Vampa",
+        "Phone": {
+          "Number": "123456789"
+        },
+        "Address": {
+          "AddressLine": ["12 rue Sinbad-le-marin"],
+          "City": "Paris",
+          "PostalCode": "12345",
+          "CountryCode": "FR"
+        },
+        "ShipperNumber": "XY12345", // This is your UPS account name
+      },
+      "PaymentInformation": {
+        "ShipmentCharge": {
+          "Type": "01",
+          "BillShipper": {
+            "AccountNumber": "XY12345"
+          }
+        }
+      },
+      "Package": [
+        {
+          "Packaging": {
+            "Code": "Packaging code"
+          },
+          "PackageWeight": {
+            "UnitOfMeasurement": {
+              "Code": "KGS"
+            },
+            "Weight": "Package weight"
+          }
+        }
+      ],
+      "ShipmentRatingOptions": {
+        // This isn't strictly a minimum requirement,
+        // but it is needed to ensure you get the
+        // discount that you probably have on your account.
+        "NegotiatedRatesIndicator": "Y"
+      }
     }
+  }
 }
 ```
 
