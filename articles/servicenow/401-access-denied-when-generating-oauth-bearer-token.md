@@ -10,9 +10,9 @@ Specifically, my solution works for when you are using the Authorization Code gr
 
 Here's what you're experiencing:
 
-0. You're generating an authorization code and you're sure that this is working correctly.
-1. You're making a request via Curl or through a tool like Postman.
-2. You receive a `401` error and a JSON payload that looks like this:
+1. You're generating an authorization code and you're sure that this is working correctly.
+2. You're making a request via Curl or through a tool like Postman.
+3. You receive a `401` error and a JSON payload that looks like this:
 
 ```json
 {
