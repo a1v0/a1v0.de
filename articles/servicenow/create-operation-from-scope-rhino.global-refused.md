@@ -16,8 +16,8 @@ This is why you're most likely to experience this problem if you've just created
 
 The solution is as follows:
 
-0. Open the table's config settings, for example by going to **Configure > Table** in the context menu within one of the records of that table.
-1. Open the Application Access tab.
-2. Make sure that the accessibility settings match what you want to achieve: should it be accessible from all scopes? Should there be read/write/update/delete access from those scopes?
+1. Open the table's config settings, for example by going to **Configure > Table** in the context menu within one of the records of that table.
+2. Open the Application Access tab.
+3. Make sure that the accessibility settings match what you want to achieve: should it be accessible from all scopes? Should there be read/write/update/delete access from those scopes?
 
 Once you've updated these settings, the bug should be fixed.
