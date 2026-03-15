@@ -28,12 +28,12 @@ Once you've made and compiled a Lily58 keymap with QMK, you'll have a file to lo
 
 Here's how you can flash that file onto the keyboard:
 
-0. Unplug the keyboard from your computer, then disconnect the keyboard halves from each other. **DO NOT** disconnect the keyboard halves until the keyboard has been unplugged from the computer. Remove the TRRS cable entirely.
-1. Open the My Computer folder in Windows, or a view on Linux that shows you all connected devices, and have your `.uf2` file at the ready.
-2. Plug one keyboard half into the computer.
-3. Double-press your keyboard half's "RESET" button. Your keyboard will enter flashing mode and it will appear as a storage device in My Computer. (If you can't see the keyboard on your screen, try again; it doesn't always work first time.)
-4. Paste the `.uf2` file into the keyboard "drive" in My Computer.
-5. The drive will disappear from My Computer shortly afterwards and, if you have an OLED, it might turn off and on again. The keyboard is restarting.
-6. Unplug the keyboard half and repeat the process for the other half.
+1. Unplug the keyboard from your computer, then disconnect the keyboard halves from each other. **DO NOT** disconnect the keyboard halves until the keyboard has been unplugged from the computer. Remove the TRRS cable entirely.
+2. Open the My Computer folder in Windows, or a view on Linux that shows you all connected devices, and have your `.uf2` file at the ready.
+3. Plug one keyboard half into the computer.
+4. Double-press your keyboard half's "RESET" button. Your keyboard will enter flashing mode and it will appear as a storage device in My Computer. (If you can't see the keyboard on your screen, try again; it doesn't always work first time.)
+5. Paste the `.uf2` file into the keyboard "drive" in My Computer.
+6. The drive will disappear from My Computer shortly afterwards and, if you have an OLED, it might turn off and on again. The keyboard is restarting.
+7. Unplug the keyboard half and repeat the process for the other half.
 
 That's all it takes! Happy typing!
