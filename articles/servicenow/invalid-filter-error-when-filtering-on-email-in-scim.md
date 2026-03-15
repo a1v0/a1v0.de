@@ -56,10 +56,10 @@ The email address was the only field we could use to avoid duplication of users,
 
 The solution was to do the following before the initial provisioning job:
 
-0. Set the `externalId` field in Entra to be the primary matcher, not email.
-1. Set the value of `externalId` in Entra to be the user's email address.
-2. Copy every user account into the `sys_scim_user` table via script and set the value of `external_id` to be the email address.
-3. Run the provisioning job (use a small number of users at first, to make sure it works!).
+1. Set the `externalId` field in Entra to be the primary matcher, not email.
+2. Set the value of `externalId` in Entra to be the user's email address.
+3. Copy every user account into the `sys_scim_user` table via script and set the value of `external_id` to be the email address.
+4. Run the provisioning job (use a small number of users at first, to make sure it works!).
 
 Under the hood, ServiceNow checks for users within the `sys_scim_user` table before it does any further matching. By copying everybody into this table and by matching on the `externalId` field, you circumvent ServiceNow's inflexibility with the email field.
 
