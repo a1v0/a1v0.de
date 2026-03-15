@@ -51,7 +51,7 @@ Also, there are additional requirements if you're shipping abroad. The minimum r
           "PostalCode": "12345",
           "CountryCode": "FR"
         },
-        "ShipperNumber": "XY12345", // This is your UPS account name
+        "ShipperNumber": "XY12345", // Your UPS account no.
       },
       "PaymentInformation": {
         "ShipmentCharge": {
@@ -76,8 +76,8 @@ Also, there are additional requirements if you're shipping abroad. The minimum r
       ],
       "ShipmentRatingOptions": {
         // This isn't strictly a minimum requirement,
-        // but it is needed to ensure you get the
-        // discount that you probably have on your account.
+        // but you need it to apply the discount that
+        // you probably have on your account.
         "NegotiatedRatesIndicator": "Y"
       }
     }
