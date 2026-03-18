@@ -80,3 +80,4 @@ The colours in my Highlight.JS theme were incredibly hard to pick well, so I end
 15. Add share links to make blog look more professional
 16. Look at <https://www.reddit.com/r/TechSEO/comments/16vignb/understanding_the_cause_of_google_search_consoles/> for advice on improving Google score.
 17. Change contact page, since LinkedIn is no more.
+18. Format article dates in British format, using ordinals (1st, 2nd, 3rd etc.)
