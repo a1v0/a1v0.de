@@ -22,6 +22,11 @@ date: 2024-01-01
 category: servicenow
 ---
 
+## New plan
+
+1. in this article, write an intro and give a list of sections. Like in GOV.UK, add a link with a right-arrow that takes you to the next item in the list
+2. Split clone guide into separate documents, all with a title that means they show up in the correct order when listed
+
 <!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
 <!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
 <!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
