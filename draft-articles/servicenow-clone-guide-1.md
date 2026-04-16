@@ -53,6 +53,23 @@ This clone guide is for anybody who is cloning instances that contain in-flight 
 If you have any suggestions or corrections, please don't hesitate to [get in touch](/contact).
 
 Skip to the guide's [table of contents](#clone-guide-sections).
+
+## Reasons to clone
+
+These reasons kind of overlap
+
+- to clear out old update sets
+- to align all instances perfectly
+- to effectively undo a lot of experimental/abandoned stuff in DEV
+- to baseline everything following a major release
+
+## Types of clone
+
+Maybe this section should just be part of the previous section
+
+- pre-upgrade clone
+- clone to fully align everything
+- clone to clear out clutter
 ## Clone guide sections
 
 <!-- Make sure these titles match the article titles -->
