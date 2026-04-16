@@ -27,6 +27,21 @@ category: servicenow
 1. in this article, write an intro and give a list of sections. Like in GOV.UK, add a link with a right-arrow that takes you to the next item in the list
 2. Split clone guide into separate documents, all with a title that means they show up in the correct order when listed
 
+Headings:
+
+1. intro
+   1. why you might clone (and why you might not clone)
+   2. different types of clone
+   3. list of clone-guide pages
+2. before your first ever clone (this title isn't so good. Maybe something like "Laying the foundations"?)
+   1. make clear that this section is hopefully a one-off and you'll not need to do it every time
+   2. identify sequence of clones and what each clone should achieve etc.
+3. Preparing for one clone aka pre-clone activities
+4. Scheduling the clone
+   1. also include stuff that happens during the clone
+5. After one clone aka post-clone activities
+6. After all clones
+
 <!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
 <!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
 <!-- heading depth doesn't actually matter so much, after all. Maybe it's best to start this article from scratch -->
