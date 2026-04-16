@@ -52,7 +52,17 @@ This clone guide is for anybody who is cloning instances that contain in-flight 
 
 If you have any suggestions or corrections, please don't hesitate to [get in touch](/contact).
 
+Skip to the guide's [table of contents](#clone-guide-sections).
+## Clone guide sections
 
+<!-- Make sure these titles match the article titles -->
+
+1. **A comprehensive guide to cloning your ServiceNow instance**
+2. [Link to other article](/)
+3. [Link to other article](/)
+4. [Link to other article](/)
+5. [Link to other article](/)
+6. [Link to other article](/)
 
 # add to clone article: the script to identify empty update sets needs either to check for empty batch parents, or add a comment to show that it'll return empty batch parents
 # clone script to ignore update sets in prod: gs.info(++counter + " " + gr.name); (can't remember what I meant when I wrote this...)
