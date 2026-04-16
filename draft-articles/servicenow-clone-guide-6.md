@@ -1,5 +1,5 @@
 ---
-title: Cloning: ADD GOOD TITLE
+title: Cloning: Once you've completed all clones
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
