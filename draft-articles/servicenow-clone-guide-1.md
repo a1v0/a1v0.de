@@ -70,6 +70,13 @@ Maybe this section should just be part of the previous section
 - pre-upgrade clone
 - clone to fully align everything
 - clone to clear out clutter
+
+## How often should I clone?
+
+- some people clone weekly
+- some people clone quarterly
+- clients often think frequent cloning is amazing because it "destroys tech debt", but it can actually be a burden. make sure you schedule only what suits you.
+
 ## Clone guide sections
 
 <!-- Make sure these titles match the article titles -->
