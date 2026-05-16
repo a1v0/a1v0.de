@@ -66,13 +66,7 @@ A clone helps to clear out all this unused stuff, so that your development envir
 
 Cloning makes sure that the post-upgrade checks you do in the dev environment are as representative of prod as they can reasonably be.
 
-## Types of clone
-
-Maybe this section should just be part of the previous section
-
-- pre-upgrade clone
-- clone to fully align everything
-- clone to clear out clutter
+**Creating a blank slate:** sometimes, we want an exact copy of prod (with or without all the data) for testing purposes. This applies chiefly to pre-prod environments (wherein we wan't to simulate real prod work) and sandbox environments (in which we want to experiment on a clean slate).
 
 ## How often should I clone?
 
