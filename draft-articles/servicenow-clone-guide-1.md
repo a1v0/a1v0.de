@@ -56,12 +56,15 @@ Skip to the guide's [table of contents](#clone-guide-sections).
 
 ## Reasons to clone
 
-These reasons kind of overlap
+There are several reasons you might want to clone over your ServiceNow instances. The reasons fall into these categories:
 
-- to clear out old update sets
-- to align all instances perfectly
-- to effectively undo a lot of experimental/abandoned stuff in DEV
-- to baseline everything following a major release
+**Clearing out experimental/unused configuration:** over time, our sub-prod instances (especially development and sandbox environments) diverge from production. They contain a lot of experimental changes that never make it to prod. These things can get in the way of your development work, can cause problems during UAT, and can cause big trouble on go-live days.
+
+A clone helps to clear out all this unused stuff, so that your development environment matches prod as closely as possible.
+
+**De-risking updates/upgrades:** updates and upgrades can have major impacts on our instances. A typical upgrade process involves upgrading the development environment first and assessing the results. If all is well, you would proceed to higher instances. If dev and prod are not well aligned, this process becomes risky.
+
+Cloning makes sure that the post-upgrade checks you do in the dev environment are as representative of prod as they can reasonably be.
 
 ## Types of clone
 
