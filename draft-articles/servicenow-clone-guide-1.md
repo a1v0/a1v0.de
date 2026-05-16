@@ -70,9 +70,13 @@ Cloning makes sure that the post-upgrade checks you do in the dev environment ar
 
 ## How often should I clone?
 
-- some people clone weekly
-- some people clone quarterly
-- clients often think frequent cloning is amazing because it "destroys tech debt", but it can actually be a burden. make sure you schedule only what suits you.
+Clone frequency is a subjective issue and can be a cause of tension between sysadmins and clients.
+
+Some people clone weekly, others quarterly. It mostly depends on your development pipeline: do you release new features every single week? Is the level of in-flight config at a level where frequent cloning isn't inconvenient and won't slow you down?
+
+Clients often think that frequent cloning is amazing, because it "destroys tech debt," but it can definitely be a burden. It takes time, it requires a change freeze, it can be risky.
+
+Not to mention the fact that the benefits a clone provides aren't always very big. You might do very little dev work, overall, so that dev and prod aren't particularly divergent. A clone will hardly benefit you here, no matter whether the client wants it.
 
 ## Clone guide sections
 
