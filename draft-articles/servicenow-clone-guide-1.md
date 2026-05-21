@@ -80,7 +80,5 @@ Not to mention the fact that the benefits a clone provides aren't always very bi
 5. [Link to other article](/)
 6. [Link to other article](/)
 
-# add to clone article: the script to identify empty update sets needs either to check for empty batch parents, or add a comment to show that it'll return empty batch parents
-# clone script to ignore update sets in prod: gs.info(++counter + " " + gr.name); (can't remember what I meant when I wrote this...)
-# explain how to export remote update set contents by going to sys_update_xml
-# do I need a bit about preparing a clone user for each clone profile?
+# ADD ONE OF THOSE RIGHT-ARROW BUTTONS LIKE IN GOV.UK TO GUIDE THE USER TO THE NEXT ARTICLE
+
