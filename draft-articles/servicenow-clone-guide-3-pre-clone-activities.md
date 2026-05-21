@@ -109,7 +109,7 @@ updateSetGr.addQuery("name", "!=", "Default");
 updateSetGr.query();
 counter = 0; // Counter to verify that the correct amount of update sets are updated
 while (updateSetGr.next()) {
-    gs.info(++counter);
+    gs.info(++counter + ": " + updateSetGr.getValue("name"));
     updateSetGr.state = "ignore";
     updateSetGr.update();
 }
