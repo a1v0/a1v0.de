@@ -30,4 +30,5 @@ category: servicenow
 - add some sort of a script or links to a page wherein you can easily create new preservers/exclusions, rather than using the conventional UI
 - reminder that you can only preserve data in tables that exist in prod
 - clone_data_exclude and clone_data_preserver are the tables for creating the records. Then you need to assign them to clone profiles
-    - in most cases, you'll want all of your custom pres/excl to apply to all instances
+  - in most cases, you'll want all of your custom pres/excl to apply to all instances
+- oauth/credential aliases etc.
