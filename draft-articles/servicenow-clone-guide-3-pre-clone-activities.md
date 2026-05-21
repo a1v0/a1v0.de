@@ -22,6 +22,22 @@ date: 2024-01-01
 category: servicenow
 ---
 
+1. intro: this article is about preparing for an indivisual clone. if you haven't lain the groundwork yet, go to [LINK TO PREVIOUS ARTICLE]
+2. in source instance (usually PROD)
+   1. (this section only needs to be completed once per set of clones)
+   2. ignore all local update sets
+   3. export any uncommitted remote update sets and store them in a safe place
+3. in target instance
+   1. back up the instance
+   2. retrieve any remote update sets from lower instance (but don't commit anything)
+      1. you should already have done this, per the previous article, but better safe than sorry
+   3. preserve custom applications
+   4. preserve non-default local update sets
+   5. export any uncommitted remote uipdate sets and their contents as XML
+   6. export list of installed plugins
+   7. additional data exports
+   8. identify things to test
+
 ### Issue a change freeze
 
 ## Preparing for an individual clone
