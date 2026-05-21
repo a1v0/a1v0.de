@@ -149,6 +149,40 @@ updateSetGr.addQuery("state", "!=", "complete");
 updateSetGr.addQuery("state", "!=", "ignore");
 updateSetGr.addQuery("name", "!=", "Default");
 
+// 
+// 
+// 
+// this script will return empty batch parents, which is not good
+// adjust this script to exclude any update set that's in a batch, since batches never get in anyone's way
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
 updateSetGr.query();
 
 while (updateSetGr.next()) {
