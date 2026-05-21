@@ -78,6 +78,17 @@ Clients often think that frequent cloning is amazing, because it "destroys tech 
 
 Not to mention the fact that the benefits a clone provides aren't always very big. You might do very little dev work, overall, so that dev and prod aren't particularly divergent. A clone will hardly benefit you here, no matter whether the client wants it.
 
+## Is cloning easy?
+
+- when is cloning easy?
+  - when there's not much config to preserve
+  - when there's already not too myuch divergence between prod and non-prod
+- when is it awkward?
+  - lots of divergence
+  - lots of open workstreams
+  - lots of devs working on stuff
+  - when PROD contains not just sensitive data (like most PRODs do) but extra-sensitive data, e.g. SecOps or HR
+
 ## Clone guide sections
 
 <!-- Make sure these titles match the article titles -->
