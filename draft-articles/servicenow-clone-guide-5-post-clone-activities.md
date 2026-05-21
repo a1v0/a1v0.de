@@ -22,6 +22,17 @@ date: 2024-01-01
 category: servicenow
 ---
 
+1. intro: this article is about what to do after one clone. next article (ADD LINK) is for cleaning up after one clone
+2. identify missing plugins
+3. install missing plyugins
+   1. don't bother with any that you no longer need
+4. insert remote updates from higher instance
+5. install local update sets
+6. ignore local batch
+7. import in-progress update sets
+8. insert uncommitted remote update sets
+9. post-clone checks (i.e. testing the stuff you identified before the clone)
+10. "if something went wrong"? something about rolling back?
 
 ## After an individual clone
 
