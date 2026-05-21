@@ -22,6 +22,10 @@ date: 2024-01-01
 category: servicenow
 ---
 
+1. intro: tasks for after you've finished all clones. for individual post-clone stuff, see (LINK TO PREVIOUS ARTICLE)
+2. check local update sets are as they should be
+3. review clone profile
+
 ## After all clones
 
 ### After all clones
