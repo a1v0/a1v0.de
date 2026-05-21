@@ -66,14 +66,15 @@ Not to mention the fact that the benefits a clone provides aren't always very bi
 
 ## Is cloning easy?
 
-- when is cloning easy?
-  - when there's not much config to preserve
-  - when there's already not too myuch divergence between prod and non-prod
-- when is it awkward?
-  - lots of divergence
-  - lots of open workstreams
-  - lots of devs working on stuff
-  - when PROD contains not just sensitive data (like most PRODs do) but extra-sensitive data, e.g. SecOps or HR
+The simplicity of a clone really depends on your organisation. Some instances are chaotic, full of in-flight work and tech debt, others are quite clean.
+
+**When is cloning easy?** When there isn't much unreleased configuration to preserve and/or when prod and non-prod don't diverge by a lot.
+
+**When is cloning awkward?** Lots of divergence between instances, many open workstreams, many people working on many different things. These things all cause headaches for cloners.
+
+Additionally, cloning can be tricky when production contains extra-sensitive data (e.g. HR or SecOps), because making sure that none of that sensitive data has been cloned down by mistake can be challenging.
+
+> Regular release cycles make cloning much easier, because you need to support less tech debt.
 
 ## Clone guide sections
 
