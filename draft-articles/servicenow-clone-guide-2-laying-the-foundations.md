@@ -22,6 +22,31 @@ date: 2024-01-01
 category: servicenow
 ---
 
+1. Intro: before you can even think about cloning your instances, you need to lay some groundwork
+   1. Some parts of this article will take longer or shorter, depending on how experienced you are and whether this is your instance's first-ever clone
+   2. these are activities you need to perform before you clone anything. Setting up and preparing for individual clones is given in [LINK TO NEXT ARTICLE]
+2. think about what you're trying to achieve
+   1. does this section actually belong in the first article?
+   2. making all instances perfectly identical isn't usually a desirable outcome
+   3. you need to think about what data is OK to exist in DEV, for example. And how much data do you want? Keeping old dummy data may be nice, but do you want years' worth of the stuff? Or are the last six months sufficient?
+   4. you want to remove obsolete/abandoned config from lower environments to de-risk stuff
+3. create a clone user in all target instances
+4. Set up or review your clone profile(s)
+   1. One for each instance (whether they're identical or not)
+   2. need to consider what you want the instance to be like
+   3. explain preservers and exclusions
+   4. reviewing the profile should be an ongoing task in the back of the sysadmin's mind at all times, so that all sorts of random stuff can be added as it's identified
+   5. reference the clone-profile article
+5. issue a change freeze
+   1. for simplicity's sake, this should include a moratorium on moving update sets between non-prod instances, too. (If strictly necessary, you can break this rule, but you need to be careful that you don't confuse yourself)
+6. Clean up local update sets in all instances
+   1. remove empty ones
+   2. ignore any open-but-obsolete ones
+7. clean up remote update sets in all instances
+   1. retrieve remote update sets in each instance
+   2. check if anything is OK to delete
+   3. make sure that you do not retrieve remote update sets again after this
+
 ## Before you even _think_ about cloning
 
 > instructions on determining the objective of the clone. who are the stakeholders? what liabilities are there? Is a clone actually necessary?
