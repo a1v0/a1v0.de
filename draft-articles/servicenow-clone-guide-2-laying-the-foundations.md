@@ -59,9 +59,49 @@ The clone runs "as" a user in the target instance. While you _can_ run a clone a
 
 You'll need a user with a username (e.g. `clone_user`), a password, and the `clone_admin` and `soap` roles. For simplicity's sake, it's best to retain the same username and password across all target instances.
 
+## Set up or review your clone profile(s)
 
+Clone profiles determine the parameters of a clone. For example, you can use it to specify which files are overwritten and which are preserved.
 
+You'll need one clone profile per target instance. If you're starting from scratch, it can be a little bit laborious to set these up.
 
+Use the default clone profile as a starting point and build/modify from there.
+
+For each clone profile, you need to consider what you want that instance to be like following the clone. Do you want to copy real users from production into dev? Do you want to wipe all of the dummy data in the UAT instance?
+
+You can specify these things using **table exclusions** and **data preservers**.
+
+### Exclusions
+
+An exclusion in a clone profile is when a table's contents are wiped in the target, but not overwritten by data from the source. You would end up with an empty table.
+
+If you want the clone to clean out any dummy data on the `change_request` table, you might create an exclusion for that table.
+
+### Preservers
+
+A preserver is almost the opposite of an exclusion. When you preserve a record, it is not deleted by the clone and it is not overwritten by data from the source.
+
+You can apply reference qualifiers to preservers. For example, you might choose to preserve all `incident` records created in the last three months. The clone will copy down all incidents from the source, but all incidents from the last three months in the target instance will remain. Everything else will be wiped.
+
+### Coupling preservation with exclusion
+
+The most common use-case is when one preserves _and_ excludes records from the same table.
+
+For example, a) you may not want users from production being copied into dev; and b) you probably want to keep all existing users in dev.
+
+By preserving and excluding the `sys_user` table, you ensure that the table is unaffected by the clone.
+
+### Keeping your clone profiles ship-shape
+
+Clone profiles are tricky business and can cause headaches left, right and centre. Even a robust clone profile can cause grief when one installs new plugins into the instance.
+
+Clone profiles must thus be reviewed constantly. It is the job of the sysadmin to constantly observe discrepancies between instances, and note them for potential additions to the clone profile.
+
+ServiceNow does not help you here, unfortunately. Often, it is trial and error.
+
+For more information on what to include in your clone profile, check out [THIS ARTICLE].
+
+[THIS SECTION COULD DO WITH MORE CONTENT]
 
 
 
