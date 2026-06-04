@@ -23,8 +23,8 @@ category: servicenow
 ---
 
 1. Intro: before you can even think about cloning your instances, you need to lay some groundwork
-   1. Some parts of this article will take longer or shorter, depending on how experienced you are and whether this is your instance's first-ever clone
    2. these are activities you need to perform before you clone anything. Setting up and preparing for individual clones is given in [LINK TO NEXT ARTICLE]
+   1. Some parts of this article will take longer or shorter, depending on how experienced you are and whether this is your instance's first-ever clone
 2. think about what you're trying to achieve
    1. does this section actually belong in the first article?
    2. making all instances perfectly identical isn't usually a desirable outcome
@@ -46,6 +46,92 @@ category: servicenow
    1. retrieve remote update sets in each instance
    2. check if anything is OK to delete
    3. make sure that you do not retrieve remote update sets again after this
+
+Before you even think about cloning, you'll need to lay some groundwork.
+
+This article lists activities you need to perform before you clone _anything_. Setting up individual clones is explained in [LINK TO ARTICLE].
+
+Some parts of this article will take longer or shorter, depending on how experienced you are and whether this is your instance's first-ever clone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Before you even _think_ about cloning
 
