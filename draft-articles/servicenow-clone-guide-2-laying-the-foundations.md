@@ -51,9 +51,13 @@ Before you even think about cloning, you'll need to lay some groundwork.
 
 This article lists activities you need to perform before you clone _anything_. Setting up individual clones is explained in [LINK TO ARTICLE].
 
-Some parts of this article will take longer or shorter, depending on how experienced you are and whether this is your instance's first-ever clone.
+Some parts of this article will take longer or shorter, depending on how experienced you are and whether this is your instance's first-ever clone. You may find you can skip some sections, too.
 
+## Create a clone user in all target instances
 
+The clone runs "as" a user in the target instance. While you _can_ run a clone as yourself, it's usually better to create a dedicated clone user.
+
+You'll need a user with a username (e.g. `clone_user`), a password, and the `clone_admin` and `soap` roles. For simplicity's sake, it's best to retain the same username and password across all target instances.
 
 
 
